@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #07070b;
+  --bg-soft: #0c0c14;
+  --panel: #11111c;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.14);
+  --text: #f4f4f8;
+  --text-dim: #a0a0b0;
+  --text-faint: #7a7368;
+  --brand: #e8b923;
+  --brand-2: #f5d76e;
+  --brand-deep: #b8860b;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-panel: var(--panel);
+  --color-text: var(--text);
+  --color-dim: var(--text-dim);
+  --color-brand: var(--brand);
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Ambient background glow */
+.bg-aurora {
+  background-image:
+    radial-gradient(60% 50% at 15% 0%, rgba(232, 185, 35, 0.16), transparent 70%),
+    radial-gradient(50% 45% at 95% 10%, rgba(245, 215, 110, 0.10), transparent 70%),
+    radial-gradient(60% 60% at 50% 100%, rgba(184, 134, 11, 0.10), transparent 70%);
+}
+
+.grid-mask {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(70% 60% at 50% 0%, #000 30%, transparent 80%);
+  mask-image: radial-gradient(70% 60% at 50% 0%, #000 30%, transparent 80%);
+}
+
+.text-gradient {
+  background: linear-gradient(120deg, #fff 10%, #f5d76e 50%, #e8b923 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gold {
+  background: linear-gradient(120deg, #f5d76e 0%, #e8b923 50%, #b8860b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.card-glow:hover {
+  border-color: var(--border-strong);
+}
+
+@keyframes float-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  animation: float-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+::selection {
+  background: rgba(232, 185, 35, 0.35);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: #26263a;
+  border-radius: 8px;
+}
