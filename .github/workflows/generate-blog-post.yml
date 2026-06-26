@@ -29,45 +29,19 @@ jobs:
           DATE=$(date -u +%Y-%m-%d)
           DATETIME=$(date -u +%Y-%m-%dT%H:%M:%S+06:00)
 
-          PROMPT="You are a blog writer for OfBuilder, an indie mobile app studio. Write a $SESSION blog post for today ($DATE). Pick one of these topics: OfBuilder app update or feature highlight, AI news relevant to mobile users, tech tip for Flutter or mobile UX, indie app development insight. Return ONLY a valid JSON object with these exact fields: slug (kebab-case string including the date like $DATE-my-title), title (string), excerpt (one sentence string), category (one of: Studio News, AI News, Tech Tips, App Update, Dev Insights), body (string with 3-4 paragraphs separated by \\n\\n). No text outside the JSON."
+          PROMPT="You are a blog writer for OfBuilder, an indie mobile app studio. Write a $SESSION blog post for today ($DATE). Pick one of these topics: OfBuilder app update or feature highlight (DreamNest AI, Driving Theory Test UK, Mental Math Master, My Expenses), AI news for mobile users, tech tip for Flutter or mobile UX, indie app development insight. Return ONLY a valid JSON object with these exact fields: slug (kebab-case string like $DATE-my-title), title, excerpt (one sentence), category (one of: Studio News, AI News, Tech Tips, App Update, Dev Insights), body (3-4 paragraphs separated by newline newline). No text outside the JSON object."
 
           RESPONSE=$(curl -s https://openrouter.ai/api/v1/chat/completions \
             -H "Authorization: Bearer $OPENROUTER_API_KEY" \
             -H "Content-Type: application/json" \
             -H "HTTP-Referer: https://ofbuilder.com" \
             -H "X-Title: OfBuilder Blog" \
-            -d "{\"model\": \"openai/gpt-4o-mini\", \"messages\": [{\"role\": \"user\", \"content\": $(echo "$PROMPT" | python3 -c 'import json,sys; print(json.dumps(sys.stdin.read()))')}]}")
+            -d "{\"model\": \"openai/gpt-4o-mini\", \"messages\": [{\"role\": \"user\", \"content\": $(python3 -c "import json,sys; print(json.dumps(sys.argv[1]))" "$PROMPT")}]}")
 
-          echo "API Response: $RESPONSE"
+          echo "$RESPONSE" > /tmp/api_response.json
+          echo "$DATETIME" > /tmp/datetime.txt
 
-          python3 << EOF
-          import json, sys
-
-          response = '''$RESPONSE'''
-          data = json.loads(response)
-
-          if 'error' in data:
-              print("API Error:", data['error'])
-              sys.exit(1)
-
-          content = data['choices'][0]['message']['content'].strip()
-
-          # Strip markdown code fences if present
-          if content.startswith('\`\`\`'):
-              lines = content.split('\n')
-              lines = lines[1:]  # remove first line (```json)
-              if lines[-1].strip() == '\`\`\`':
-                  lines = lines[:-1]
-              content = '\n'.join(lines)
-
-          post = json.loads(content)
-          post['date'] = '$DATETIME'
-
-          filename = 'content/blog/' + post['slug'] + '.json'
-          with open(filename, 'w') as f:
-              json.dump(post, f, indent=2)
-          print('Written: ' + filename)
-          EOF
+          python3 scripts/parse_blog_post.py
 
       - name: Commit and push
         run: |
