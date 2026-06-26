@@ -35,7 +35,7 @@ jobs:
             -H "Authorization: Bearer $OPENROUTER_API_KEY" \
             -H "Content-Type: application/json" \
             -d "{
-              \"model\": \"anthropic/claude-haiku-4-5\",
+              \"model\": \"openai/gpt-4o-mini\",
               \"messages\": [{
                 \"role\": \"user\",
                 \"content\": \"You are a blog writer for OfBuilder, an indie mobile app studio. Write a $SESSION blog post for today ($DATE). Pick one topic from: $TOPICS. Return ONLY a valid JSON object with these fields: slug (kebab-case, unique, include date like 2026-06-26-my-title), title, excerpt (1 sentence), category (one of: Studio News, AI News, Tech Tips, App Update, Dev Insights), body (3-4 paragraphs separated by double newlines, no markdown headers, bold with **word** is ok). Do not include any text outside the JSON.\"
