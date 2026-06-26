@@ -1,0 +1,8 @@
+{
+  "slug": "welcome-to-ofbuilder-blog",
+  "title": "Welcome to the OfBuilder Blog",
+  "excerpt": "We're launching our blog — a space for app updates, AI news, and indie dev tips from the OfBuilder studio.",
+  "category": "Studio News",
+  "date": "2026-06-26T08:00:00+06:00",
+  "body": "Welcome to the OfBuilder blog! This is our space to share what we're building, what we're learning, and what's happening in the world of AI and mobile development.\n\nWe ship focused, useful apps — from UK driving theory test prep to AI-powered bedtime stories for kids. Along the way we pick up a lot of lessons about indie development, AI tooling, and building products people actually use.\n\nExpect posts on:\n- **OfBuilder app updates** — new features, launches, and behind-the-scenes looks at our products\n- **AI news** — the developments in AI that matter for app builders and everyday users\n- **Tech tips** — practical advice on Flutter, Next.js, mobile UX, and more\n\nWe publish twice a day. See you tomorrow morning."
+}
