@@ -558,4 +558,4 @@ export const playDeveloperUrl =
 
 export const facebookUrl = "https://www.facebook.com/ofbuilder/";
 
-export const contactEmail = "hello@ofbuilder.com";
+export const contactEmail = "ofbuilder.apps@gmail.com";
