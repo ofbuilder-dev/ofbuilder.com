@@ -386,19 +386,20 @@ export const projects: Project[] = [
   },
   {
     slug: "passly",
-    name: "Passly",
+    name: "Driving Theory Test",
     tagline: "Pass your UK driving theory test first time.",
     description:
       "Full UK theory test prep for 2026 — practice questions, hazard perception, and an AI tutor. One-time unlock, no subscription.",
     longDescription: [
-      "Passly is everything you need to pass the UK driving theory test on your first attempt. Work through the full 2026 question bank, train on hazard perception clips with a deterministic scoring engine, and learn the 'why' behind every answer with a built-in AI tutor.",
+      "Driving Theory Test is everything you need to pass the UK driving theory test on your first attempt. Work through the full 2026 question bank, train on hazard perception clips with a deterministic scoring engine, and learn the 'why' behind every answer with a built-in AI tutor.",
       "No confusing subscriptions — one affordable unlock gets you the whole thing, forever.",
     ],
     category: "Education",
     emoji: "🚗",
     accent: "#ef4444",
-    status: "soon",
+    status: "live",
     packageId: "com.drivingtheorytest.uk",
+    playUrl: "https://play.google.com/store/apps/details?id=com.drivingtheorytest.uk",
     subdomain: "https://passly.ofbuilder.com",
     tags: ["AI Tutor", "Exam Prep"],
     features: [
