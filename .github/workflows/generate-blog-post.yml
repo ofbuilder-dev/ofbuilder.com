@@ -29,42 +29,50 @@ jobs:
           DATE=$(date -u +%Y-%m-%d)
           DATETIME=$(date -u +%Y-%m-%dT%H:%M:%S+06:00)
 
-          TOPICS='["OfBuilder app update or feature highlight (DreamNest AI, Driving Theory Test UK, Mental Math Master, My Expenses, IlmAI, NurseUp, Shishu AI, SleepWise AI)", "AI news relevant to mobile app users or indie developers", "Tech tip for Flutter, Next.js, or mobile UX", "Indie app development insight or lesson", "AI-powered app trend or use case"]'
+          PROMPT="You are a blog writer for OfBuilder, an indie mobile app studio. Write a $SESSION blog post for today ($DATE). Pick one of these topics: OfBuilder app update or feature highlight, AI news relevant to mobile users, tech tip for Flutter or mobile UX, indie app development insight. Return ONLY a valid JSON object with these exact fields: slug (kebab-case string including the date like $DATE-my-title), title (string), excerpt (one sentence string), category (one of: Studio News, AI News, Tech Tips, App Update, Dev Insights), body (string with 3-4 paragraphs separated by \\n\\n). No text outside the JSON."
 
           RESPONSE=$(curl -s https://openrouter.ai/api/v1/chat/completions \
             -H "Authorization: Bearer $OPENROUTER_API_KEY" \
             -H "Content-Type: application/json" \
-            -d "{
-              \"model\": \"openai/gpt-4o-mini\",
-              \"messages\": [{
-                \"role\": \"user\",
-                \"content\": \"You are a blog writer for OfBuilder, an indie mobile app studio. Write a $SESSION blog post for today ($DATE). Pick one topic from: $TOPICS. Return ONLY a valid JSON object with these fields: slug (kebab-case, unique, include date like 2026-06-26-my-title), title, excerpt (1 sentence), category (one of: Studio News, AI News, Tech Tips, App Update, Dev Insights), body (3-4 paragraphs separated by double newlines, no markdown headers, bold with **word** is ok). Do not include any text outside the JSON.\"
-              }]
-            }")
+            -H "HTTP-Referer: https://ofbuilder.com" \
+            -H "X-Title: OfBuilder Blog" \
+            -d "{\"model\": \"openai/gpt-4o-mini\", \"messages\": [{\"role\": \"user\", \"content\": $(echo "$PROMPT" | python3 -c 'import json,sys; print(json.dumps(sys.stdin.read()))')}]}")
 
-          echo "$RESPONSE" | python3 -c "
-          import sys, json
-          data = json.load(sys.stdin)
+          echo "API Response: $RESPONSE"
+
+          python3 << EOF
+          import json, sys
+
+          response = '''$RESPONSE'''
+          data = json.loads(response)
+
+          if 'error' in data:
+              print("API Error:", data['error'])
+              sys.exit(1)
+
           content = data['choices'][0]['message']['content'].strip()
-          # strip markdown code fences if present
+
+          # Strip markdown code fences if present
           if content.startswith('\`\`\`'):
-              content = content.split('\`\`\`')[1]
-              if content.startswith('json'):
-                  content = content[4:]
+              lines = content.split('\n')
+              lines = lines[1:]  # remove first line (```json)
+              if lines[-1].strip() == '\`\`\`':
+                  lines = lines[:-1]
+              content = '\n'.join(lines)
+
           post = json.loads(content)
           post['date'] = '$DATETIME'
-          filename = 'content/blog/$DATE-' + post['slug'].replace('$DATE-','').replace('2026-06-26-','') + '.json'
-          # use slug as filename base
+
           filename = 'content/blog/' + post['slug'] + '.json'
           with open(filename, 'w') as f:
               json.dump(post, f, indent=2)
           print('Written: ' + filename)
-          "
+          EOF
 
       - name: Commit and push
         run: |
           git config user.name "ofbuilder-bot"
           git config user.email "hello@ofbuilder.com"
           git add content/blog/
-          git diff --staged --quiet || git commit -m "blog: scheduled post $(date -u +%Y-%m-%d\ %H:%M) UTC"
+          git diff --staged --quiet || git commit -m "blog: scheduled post $(date -u +%Y-%m-%d) $(date -u +%H:%M) UTC"
           git push
