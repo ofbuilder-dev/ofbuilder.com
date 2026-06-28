@@ -118,7 +118,7 @@ export default function Home() {
         </div>
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((p) => (
+          {[...projects].sort((a, b) => (a.status === b.status ? 0 : a.status === "live" ? -1 : 1)).map((p) => (
             <ProjectCard key={p.slug} project={p} />
           ))}
         </div>
