@@ -188,7 +188,7 @@ export default function Home() {
                 href={`mailto:${contactEmail}`}
                 className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-b from-[#f5d76e] to-[#e8b923] px-6 py-3 text-sm font-semibold text-black transition-transform hover:scale-[1.02] sm:w-auto"
               >
-                {contactEmail}
+                Gmail
               </a>
               <a
                 href={facebookUrl}
