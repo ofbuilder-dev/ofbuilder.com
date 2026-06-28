@@ -557,5 +557,8 @@ export const playDeveloperUrl =
   "https://play.google.com/store/apps/dev?id=8090522541816028633";
 
 export const facebookUrl = "https://www.facebook.com/ofbuilder/";
+export const instagramUrl = "https://www.instagram.com/ofbuilder/";
+export const linkedinUrl = "https://bd.linkedin.com/company/ofbuilder";
+export const youtubeUrl = "https://www.youtube.com/@OfBuilder";
 
 export const contactEmail = "ofbuilder.apps@gmail.com";
