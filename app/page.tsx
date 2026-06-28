@@ -189,8 +189,11 @@ export default function Home() {
             <div className="mt-8 flex items-center justify-center">
               <a
                 href={`mailto:${contactEmail}`}
-                className="inline-flex items-center justify-center rounded-full bg-gradient-to-b from-[#f5d76e] to-[#e8b923] px-8 py-3 text-sm font-semibold text-black transition-transform hover:scale-[1.02]"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-b from-[#f5d76e] to-[#e8b923] px-8 py-3 text-sm font-semibold text-black transition-transform hover:scale-[1.02]"
               >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-.44.177-.861.494-1.171L12 13.09 23.506 4.286c.317.31.494.73.494 1.171z"/>
+                </svg>
                 Send us an email
               </a>
             </div>
