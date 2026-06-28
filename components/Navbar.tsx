@@ -30,7 +30,7 @@ export default function Navbar() {
       }`}
     >
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
-        <a href="#top" aria-label="OfBuilder home">
+        <a href="/" aria-label="OfBuilder home">
           <Logo size={32} />
         </a>
 
