@@ -2,8 +2,7 @@ name: Generate Blog Post
 
 on:
   schedule:
-    - cron: "0 2 * * *"   # 8:00 AM Bangladesh (UTC+6)
-    - cron: "0 14 * * *"  # 8:00 PM Bangladesh (UTC+6)
+    - cron: "0 2 * * 1"   # Every Monday 8:00 AM Bangladesh (UTC+6)
   workflow_dispatch:
 
 jobs:
@@ -19,17 +18,10 @@ jobs:
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: |
-          HOUR=$(date -u +%H)
-          if [ "$HOUR" = "02" ]; then
-            SESSION="morning"
-          else
-            SESSION="evening"
-          fi
-
           DATE=$(date -u +%Y-%m-%d)
           DATETIME=$(date -u +%Y-%m-%dT%H:%M:%S+06:00)
 
-          PROMPT="You are a blog writer for OfBuilder, an indie mobile app studio. Write a $SESSION blog post for today ($DATE). Pick one of these topics: OfBuilder app update or feature highlight (DreamNest AI, Driving Theory Test UK, Mental Math Master, My Expenses), AI news for mobile users, tech tip for Flutter or mobile UX, indie app development insight. Return ONLY a valid JSON object with these exact fields: slug (kebab-case string like $DATE-my-title), title, excerpt (one sentence), category (one of: Studio News, AI News, Tech Tips, App Update, Dev Insights), body (3-4 paragraphs separated by newline newline). No text outside the JSON object."
+          PROMPT="You are a blog writer for OfBuilder, an indie mobile app studio. Write a weekly blog post for this week ($DATE). Pick one of these topics: OfBuilder app update or feature highlight (DreamNest AI, Driving Theory Test UK, Mental Math Master, My Expenses), AI news for mobile users, tech tip for Flutter or mobile UX, indie app development insight. Return ONLY a valid JSON object with these exact fields: slug (kebab-case string like $DATE-my-title), title, excerpt (one sentence), category (one of: Studio News, AI News, Tech Tips, App Update, Dev Insights), body (3-4 paragraphs separated by newline newline). No text outside the JSON object."
 
           RESPONSE=$(curl -s https://openrouter.ai/api/v1/chat/completions \
             -H "Authorization: Bearer $OPENROUTER_API_KEY" \
