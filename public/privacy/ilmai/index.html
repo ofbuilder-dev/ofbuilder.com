@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — IlmAI</title>
+  <style>
+    :root {
+      --primary:          #1B5E20;
+      --primary-light:    #2E7D32;
+      --primary-dark:     #0A3D0A;
+      --secondary:        #F9A825;
+      --secondary-light:  #FFCC02;
+      --background:       #FAFAF7;
+      --surface:          #FFFFFF;
+      --surface-variant:  #F5F5EE;
+      --divider:          #E0E0D8;
+      --text-primary:     #1A1A2E;
+      --text-secondary:   #5A5A6E;
+      --text-hint:        #9E9EAB;
+      --error:            #B00020;
+      --success:          #388E3C;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background-color: var(--background);
+      color: var(--text-primary);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 60%, var(--primary-light) 100%);
+      color: #fff;
+      padding: 56px 24px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: rgba(249, 168, 37, 0.12);
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; left: -30px;
+      width: 260px; height: 260px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .logo-icon {
+      width: 64px;
+      height: 64px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      font-size: 32px;
+      backdrop-filter: blur(8px);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    header .subtitle {
+      font-size: 0.95rem;
+      opacity: 0.8;
+      margin-bottom: 20px;
+    }
+
+    .badges {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 999px;
+      padding: 4px 14px;
+      font-size: 0.8rem;
+      backdrop-filter: blur(4px);
+    }
+
+    /* ── Layout ── */
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    /* ── Effective date card ── */
+    .meta-card {
+      background: var(--surface);
+      border: 1px solid var(--divider);
+      border-left: 4px solid var(--secondary);
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 36px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .meta-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-hint);
+      font-weight: 600;
+    }
+
+    .meta-value {
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    /* ── Sections ── */
+    section {
+      background: var(--surface);
+      border: 1px solid var(--divider);
+      border-radius: 12px;
+      padding: 28px 28px 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--divider);
+    }
+
+    .section-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      flex-shrink: 0;
+    }
+
+    section h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+
+    section h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin: 18px 0 8px;
+    }
+
+    section h3:first-of-type {
+      margin-top: 0;
+    }
+
+    p {
+      color: var(--text-secondary);
+      font-size: 0.93rem;
+      margin-bottom: 10px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ── Tables ── */
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 14px;
+      border-radius: 8px;
+      border: 1px solid var(--divider);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+
+    thead {
+      background: var(--surface-variant);
+    }
+
+    th {
+      text-align: left;
+      padding: 11px 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border-bottom: 1px solid var(--divider);
+    }
+
+    td {
+      padding: 11px 14px;
+      border-bottom: 1px solid var(--divider);
+      color: var(--text-secondary);
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover td {
+      background: var(--surface-variant);
+    }
+
+    td a {
+      color: var(--primary-light);
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    td a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Local-only chip ── */
+    .chip {
+      display: inline-block;
+      background: #E8F5E9;
+      color: var(--success);
+      border: 1px solid #C8E6C9;
+      border-radius: 999px;
+      padding: 2px 10px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    /* ── Info / warning boxes ── */
+    .info-box {
+      background: #E8F5E9;
+      border: 1px solid #C8E6C9;
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-top: 14px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 0.88rem;
+      color: #2E7D32;
+    }
+
+    .info-box .icon { flex-shrink: 0; font-size: 16px; margin-top: 1px; }
+
+    .warn-box {
+      background: #FFF8E1;
+      border: 1px solid #FFE082;
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-top: 14px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 0.88rem;
+      color: #795548;
+    }
+
+    /* ── Lists ── */
+    ul {
+      padding-left: 18px;
+      color: var(--text-secondary);
+      font-size: 0.93rem;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      color: #fff;
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .contact-card h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .contact-card p {
+      color: rgba(255,255,255,0.8);
+      font-size: 0.9rem;
+    }
+
+    .contact-email {
+      display: inline-block;
+      margin-top: 14px;
+      background: var(--secondary);
+      color: var(--text-primary);
+      font-weight: 700;
+      padding: 10px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .contact-email:hover {
+      background: var(--secondary-light);
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 0.8rem;
+      color: var(--text-hint);
+      border-top: 1px solid var(--divider);
+    }
+
+    footer a {
+      color: var(--primary-light);
+      text-decoration: none;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      header { padding: 40px 16px 36px; }
+      header h1 { font-size: 1.5rem; }
+      main { padding: 24px 14px 60px; }
+      section { padding: 20px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════ HEADER ═══════════════════ -->
+<header>
+  <div class="logo-icon">🕌</div>
+  <h1>Privacy Policy</h1>
+  <p class="subtitle">IlmAI – Islamic Q&amp;A</p>
+  <div class="badges">
+    <span class="badge">com.ilmai.islamicqa</span>
+    <span class="badge">Effective: June 27, 2026</span>
+  </div>
+</header>
+
+<!-- ═══════════════════ MAIN ═══════════════════ -->
+<main>
+
+  <!-- Meta card -->
+  <div class="meta-card">
+    <div class="meta-item">
+      <span class="meta-label">App Name</span>
+      <span class="meta-value">IlmAI – Islamic Q&amp;A</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Package</span>
+      <span class="meta-value">com.ilmai.islamicqa</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Effective Date</span>
+      <span class="meta-value">June 27, 2026</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Contact</span>
+      <span class="meta-value">ofbuilder.apps@gmail.com</span>
+    </div>
+  </div>
+
+  <!-- 1. Introduction -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">📖</div>
+      <h2>1. Introduction</h2>
+    </div>
+    <p>
+      IlmAI ("we", "us", or "our") is an Islamic Q&amp;A app that provides AI-powered answers to
+      Islamic questions, a Quran reader, and a Hadith explorer. This Privacy Policy explains what
+      information we collect, how we use it, and your rights.
+    </p>
+    <p>By using IlmAI, you agree to the terms of this Privacy Policy.</p>
+  </section>
+
+  <!-- 2. Information We Collect -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">📋</div>
+      <h2>2. Information We Collect</h2>
+    </div>
+
+    <h3>2.1 Account Information</h3>
+    <p>When you create an account, we collect:</p>
+    <ul>
+      <li>Email address</li>
+      <li>Password (hashed securely via Supabase Auth — we never see your raw password)</li>
+      <li>Profile information you optionally provide</li>
+    </ul>
+
+    <h3>2.2 Questions &amp; Chat History</h3>
+    <p>
+      Questions you submit to the AI are sent to our backend (Supabase Edge Function) and forwarded
+      to OpenRouter's API to generate a response. Your conversation history is stored on our Supabase
+      database to allow access across devices. Chat data is also cached locally on your device.
+    </p>
+
+    <h3>2.3 App Settings &amp; Preferences <span class="chip">Stored locally only</span></h3>
+    <p>The following are stored only on your device and are never sent to our servers:</p>
+    <ul>
+      <li>Selected language and madhab (Islamic school of thought)</li>
+      <li>Text size preferences</li>
+      <li>Last-read position in Quran and Hadith</li>
+      <li>Daily question usage count</li>
+    </ul>
+    <div class="info-box">
+      <span class="icon">✅</span>
+      <span>Your personal preferences stay on your device. Uninstalling the app removes them entirely.</span>
+    </div>
+
+    <h3>2.4 Quran Content</h3>
+    <p>
+      Quran text files (Arabic, English, Bengali) are downloaded from our Supabase Storage on first
+      launch and saved to your device. These files are static Islamic texts and contain no personal data.
+    </p>
+
+    <h3>2.5 Subscription &amp; Purchase Information</h3>
+    <p>
+      If you subscribe to IlmAI Pro, purchase transactions are processed by RevenueCat and the
+      respective app store (Google Play). We do not store your payment card details.
+    </p>
+
+    <h3>2.6 Usage Data</h3>
+    <p>
+      We may collect anonymous usage analytics (e.g., feature usage frequency, error reports) to
+      improve the service. This data does not identify you personally.
+    </p>
+  </section>
+
+  <!-- 3. How We Use Your Information -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">⚙️</div>
+      <h2>3. How We Use Your Information</h2>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Email / account</td><td>Authentication and account management</td></tr>
+          <tr><td>Questions / chat</td><td>Generating AI responses; storing your chat history</td></tr>
+          <tr><td>Settings</td><td>Personalizing your in-app experience (stored locally)</td></tr>
+          <tr><td>Purchase data</td><td>Verifying Pro subscription status</td></tr>
+          <tr><td>Usage analytics</td><td>App improvement and bug fixing</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="warn-box">
+      <span class="icon">🔒</span>
+      <span>We do <strong>not</strong> sell your personal data to third parties.</span>
+    </div>
+  </section>
+
+  <!-- 4. Third-Party Services -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">🔗</div>
+      <h2>4. Third-Party Services</h2>
+    </div>
+    <p>IlmAI uses the following third-party services, each with their own privacy policies:</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Purpose</th>
+            <th>Privacy Policy</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Supabase</td>
+            <td>Authentication, database, file storage</td>
+            <td><a href="https://supabase.com/privacy" target="_blank">supabase.com/privacy</a></td>
+          </tr>
+          <tr>
+            <td>OpenRouter</td>
+            <td>AI response generation</td>
+            <td><a href="https://openrouter.ai/privacy" target="_blank">openrouter.ai/privacy</a></td>
+          </tr>
+          <tr>
+            <td>RevenueCat</td>
+            <td>Subscription management</td>
+            <td><a href="https://www.revenuecat.com/privacy" target="_blank">revenuecat.com/privacy</a></td>
+          </tr>
+          <tr>
+            <td>Google Play</td>
+            <td>App distribution and billing</td>
+            <td><a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:14px;">
+      Your questions are processed by OpenRouter and may be handled by the underlying AI model providers
+      (e.g., OpenAI). Please review OpenRouter's privacy policy for details.
+    </p>
+  </section>
+
+  <!-- 5. Data Retention -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">🗂️</div>
+      <h2>5. Data Retention</h2>
+    </div>
+    <ul>
+      <li><strong>Account data:</strong> Retained as long as your account is active. You may request deletion at any time.</li>
+      <li><strong>Chat history:</strong> Stored until you delete conversations or your account.</li>
+      <li><strong>Local data:</strong> Stored on your device; deleted when you uninstall the app or clear app data.</li>
+      <li><strong>Purchase records:</strong> Retained by RevenueCat and the app store per their policies.</li>
+    </ul>
+  </section>
+
+  <!-- 6. Data Security -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">🛡️</div>
+      <h2>6. Data Security</h2>
+    </div>
+    <p>We take reasonable measures to protect your data:</p>
+    <ul>
+      <li>All data in transit is encrypted using HTTPS / TLS.</li>
+      <li>Supabase enforces Row Level Security (RLS) so users can only access their own data.</li>
+      <li>Passwords are hashed and never stored in plaintext.</li>
+    </ul>
+    <p style="margin-top:10px;">
+      No method of transmission or storage is 100% secure. We cannot guarantee absolute security.
+    </p>
+  </section>
+
+  <!-- 7. Children's Privacy -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">👶</div>
+      <h2>7. Children's Privacy</h2>
+    </div>
+    <p>
+      IlmAI is not directed at children under the age of 13. We do not knowingly collect personal
+      information from children under 13. If you believe a child has provided us with personal
+      information, please contact us and we will delete it promptly.
+    </p>
+  </section>
+
+  <!-- 8. Your Rights -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">✊</div>
+      <h2>8. Your Rights</h2>
+    </div>
+    <p>Depending on your location, you may have the right to:</p>
+    <ul>
+      <li><strong>Access</strong> the personal data we hold about you</li>
+      <li><strong>Correct</strong> inaccurate data</li>
+      <li><strong>Delete</strong> your account and all associated data</li>
+      <li><strong>Export</strong> your data</li>
+      <li><strong>Withdraw consent</strong> at any time</li>
+    </ul>
+    <div class="info-box" style="margin-top:16px;">
+      <span class="icon">📧</span>
+      <span>
+        To delete your account, email us at <strong>ofbuilder.apps@gmail.com</strong> with the subject line:<br>
+        <em>"Delete My Account — IlmAI"</em>. We will respond within 30 days.
+      </span>
+    </div>
+  </section>
+
+  <!-- 9. Cookies & Tracking -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">🍪</div>
+      <h2>9. Cookies &amp; Tracking</h2>
+    </div>
+    <p>
+      IlmAI is a mobile app and does not use browser cookies. We do not use cross-app tracking or
+      advertising identifiers.
+    </p>
+  </section>
+
+  <!-- 10. Changes to this Policy -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">🔄</div>
+      <h2>10. Changes to This Policy</h2>
+    </div>
+    <p>
+      We may update this Privacy Policy from time to time. When we do, we will update the
+      <strong>Effective Date</strong> at the top of this page. Continued use of the app after
+      changes constitutes acceptance of the updated policy.
+    </p>
+  </section>
+
+  <!-- Contact -->
+  <div class="contact-card">
+    <h2>Contact Us</h2>
+    <p>Have questions, concerns, or requests? We're here to help.</p>
+    <a class="contact-email" href="mailto:ofbuilder.apps@gmail.com">ofbuilder.apps@gmail.com</a>
+  </div>
+
+</main>
+
+<footer>
+  <p>
+    &copy; 2026 IlmAI – Islamic Q&amp;A &nbsp;·&nbsp;
+    <a href="https://github.com/ofbuilder-dev/privacy-policy" target="_blank">GitHub</a>
+  </p>
+  <p style="margin-top:6px;">Last updated: June 27, 2026</p>
+</footer>
+
+</body>
+</html>
