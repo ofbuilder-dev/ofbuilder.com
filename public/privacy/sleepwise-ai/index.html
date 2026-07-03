@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SleepWise — Privacy Policy</title>
+<style>
+  :root {
+    --bg: #0D0D1A;
+    --surface: #161626;
+    --surface-v: #1E1E32;
+    --primary: #7B6CF0;
+    --secondary: #9B8EF8;
+    --text-primary: #EEEEFF;
+    --text-secondary: #9090B8;
+    --text-hint: #484860;
+    --divider: #252538;
+    --success: #5CC8A0;
+    --radius: 16px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+    min-height: 100vh;
+  }
+  .hero {
+    background: linear-gradient(135deg, #1A1040 0%, #0F0C28 50%, #0A0818 100%);
+    border-bottom: 1px solid var(--divider);
+    padding: 56px 24px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -80px; left: 50%; transform: translateX(-50%);
+    width: 480px; height: 480px;
+    background: radial-gradient(circle, rgba(123,108,240,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .logo-ring {
+    width: 72px; height: 72px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(123,108,240,0.25), rgba(90,77,208,0.15));
+    border: 1.5px solid rgba(123,108,240,0.4);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 30px;
+  }
+  .hero h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+  }
+  .hero .tagline { color: var(--text-secondary); font-size: 14px; }
+  .badge {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 5px 14px;
+    border-radius: 20px;
+    background: rgba(92,200,160,0.12);
+    border: 1px solid rgba(92,200,160,0.25);
+    color: var(--success);
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+  .section {
+    background: var(--surface);
+    border: 1px solid var(--divider);
+    border-radius: var(--radius);
+    padding: 28px;
+    margin-bottom: 16px;
+  }
+  .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+  .icon-circle {
+    width: 38px; height: 38px; flex-shrink: 0;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 17px;
+  }
+  .ic-purple { background: rgba(123,108,240,0.15); border: 1px solid rgba(123,108,240,0.25); }
+  .ic-green  { background: rgba(92,200,160,0.12);  border: 1px solid rgba(92,200,160,0.2);  }
+  .ic-amber  { background: rgba(232,160,48,0.12);  border: 1px solid rgba(232,160,48,0.22); }
+  .ic-red    { background: rgba(255,107,138,0.12); border: 1px solid rgba(255,107,138,0.22); }
+  .ic-blue   { background: rgba(155,142,248,0.12); border: 1px solid rgba(155,142,248,0.22); }
+  .section-header h2 { font-size: 16px; font-weight: 700; color: var(--text-primary); }
+  p, li { color: var(--text-secondary); font-size: 14px; line-height: 1.8; }
+  ul { padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  ul li { padding-left: 20px; position: relative; }
+  ul li::before {
+    content: '·';
+    position: absolute; left: 6px;
+    color: var(--primary);
+    font-weight: 700; font-size: 16px; line-height: 1.6;
+  }
+  .divider { height: 1px; background: var(--divider); margin: 16px 0; }
+  .data-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  .data-table th {
+    text-align: left; padding: 8px 12px;
+    background: var(--surface-v);
+    color: var(--text-hint);
+    font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px;
+    border-bottom: 1px solid var(--divider);
+  }
+  .data-table th:first-child { border-radius: 8px 0 0 0; }
+  .data-table th:last-child  { border-radius: 0 8px 0 0; }
+  .data-table td { padding: 10px 12px; color: var(--text-secondary); border-bottom: 1px solid var(--divider); vertical-align: top; }
+  .data-table tr:last-child td { border-bottom: none; }
+  .chip { display: inline-block; padding: 2px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; }
+  .chip-yes { background: rgba(92,200,160,0.12); color: var(--success); border: 1px solid rgba(92,200,160,0.2); }
+  .chip-no  { background: rgba(72,72,96,0.3); color: var(--text-hint); border: 1px solid var(--divider); }
+  .highlight-box {
+    background: rgba(123,108,240,0.08);
+    border: 1px solid rgba(123,108,240,0.2);
+    border-radius: 12px;
+    padding: 16px 18px; margin-top: 14px;
+  }
+  .highlight-box p { color: var(--secondary); font-size: 13px; }
+  .contact-card {
+    background: var(--surface-v);
+    border-radius: 12px; padding: 18px;
+    display: flex; align-items: center; gap: 14px;
+    margin-top: 12px; text-decoration: none;
+    border: 1px solid var(--divider);
+  }
+  .contact-card .label { color: var(--text-hint); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3px; }
+  .contact-card .value { color: var(--primary); font-size: 14px; font-weight: 600; }
+  .updated { text-align: center; color: var(--text-hint); font-size: 12px; margin-bottom: 32px; }
+  footer { text-align: center; padding: 32px 24px; border-top: 1px solid var(--divider); color: var(--text-hint); font-size: 12px; }
+  footer a { color: var(--primary); text-decoration: none; }
+  strong { color: var(--text-primary); font-weight: 600; }
+  @media (max-width: 480px) {
+    .hero { padding: 40px 20px 36px; }
+    .hero h1 { font-size: 22px; }
+    .container { padding: 32px 16px 60px; }
+    .section { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="logo-ring">🌙</div>
+  <h1>Privacy Policy</h1>
+  <p class="tagline">SleepWise: AI Sleep Coach &middot; com.sleepwiseai.app</p>
+  <span class="badge">&#10003; We never sell your data</span>
+</div>
+
+<div class="container">
+  <p class="updated">Last updated: July 3, 2026</p>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="icon-circle ic-purple">📋</div>
+      <h2>Overview</h2>
+    </div>
+    <p>SleepWise is built to help you sleep better. This policy explains what data we collect, why we collect it, and how it is handled. We collect only what is necessary to deliver the app's features and we never sell your personal information to third parties.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="icon-circle ic-blue">📊</div>
+      <h2>Data we collect</h2>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr><th>Data type</th><th>Why</th><th>Shared</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Email address</strong></td>
+          <td>Account creation via Google Sign-In</td>
+          <td><span class="chip chip-no">No</span></td>
+        </tr>
+        <tr>
+          <td><strong>Display name</strong></td>
+          <td>Personalise your routines and coach</td>
+          <td><span class="chip chip-no">No</span></td>
+        </tr>
+        <tr>
+          <td><strong>Sleep logs</strong><br><span style="font-size:12px;color:#484860">quality, duration, mood, notes</span></td>
+          <td>Track patterns, generate insights</td>
+          <td><span class="chip chip-no">No</span></td>
+        </tr>
+        <tr>
+          <td><strong>Check-in data</strong><br><span style="font-size:12px;color:#484860">stress level, mood, sleep issues</span></td>
+          <td>Generate your personalised routine</td>
+          <td><span class="chip chip-no">No</span></td>
+        </tr>
+        <tr>
+          <td><strong>App activity</strong><br><span style="font-size:12px;color:#484860">features used, session counts</span></td>
+          <td>Analytics to improve the app</td>
+          <td><span class="chip chip-no">No</span></td>
+        </tr>
+        <tr>
+          <td><strong>Device ID</strong></td>
+          <td>Purchase verification (RevenueCat)</td>
+          <td><span class="chip chip-yes">RevenueCat</span></td>
+        </tr>
+        <tr>
+          <td><strong>Purchase history</strong></td>
+          <td>Verify Pro subscription status</td>
+          <td><span class="chip chip-yes">RevenueCat</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="highlight-box">
+      <p>All data is transmitted over HTTPS and stored securely in Supabase (hosted on AWS). We never store your Google password — authentication is handled entirely by Google.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="icon-circle ic-green">🤖</div>
+      <h2>AI features</h2>
+    </div>
+    <p>SleepWise uses OpenAI (gpt-4o-mini) to generate personalised sleep routines, weekly insights, and sleep coaching responses. When you request an AI feature, your sleep profile and relevant session data are sent to OpenAI's API to generate the response.</p>
+    <div class="divider"></div>
+    <ul>
+      <li>No data is used to train OpenAI's models under the API terms</li>
+      <li>Only the minimum context needed is sent per request</li>
+      <li>AI-generated content is stored in your account so you can revisit it</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="icon-circle ic-amber">🔔</div>
+      <h2>Third-party services</h2>
+    </div>
+    <ul>
+      <li><strong>Supabase</strong> — database, authentication, and file storage (AWS infrastructure)</li>
+      <li><strong>OpenAI</strong> — AI routine generation, weekly insights, sleep coach</li>
+      <li><strong>RevenueCat</strong> — subscription management and purchase verification</li>
+      <li><strong>Google Sign-In</strong> — authentication only; we do not access your Google account beyond your name and email</li>
+      <li><strong>Google Play</strong> — app distribution and in-app purchases</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="icon-circle ic-purple">🔒</div>
+      <h2>Data security</h2>
+    </div>
+    <ul>
+      <li>All data is encrypted in transit using TLS/HTTPS</li>
+      <li>Database access is protected by row-level security — you can only read your own data</li>
+      <li>We do not store payment card details; all billing is handled by Google Play</li>
+      <li>Anonymous guest mode is available — no personal information required to use core features</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="icon-circle ic-red">🗑️</div>
+      <h2>Your rights and data deletion</h2>
+    </div>
+    <p>You can request deletion of all your data at any time.</p>
+    <div class="divider"></div>
+    <ul>
+      <li><strong>In-app:</strong> Settings &rarr; Delete account — permanently deletes all your sleep logs, routines, sessions, and profile data</li>
+      <li><strong>By email:</strong> Send a request to the address below and we will process it within 7 days</li>
+      <li>Subscription receipts are retained by Google Play as required by their terms; we cannot delete those on your behalf</li>
+      <li>You may also request a copy of your data or ask us to correct inaccurate information</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="icon-circle ic-green">👶</div>
+      <h2>Children's privacy</h2>
+    </div>
+    <p>SleepWise is not intended for children under 13. We do not knowingly collect personal information from anyone under 13. If you believe a child has provided us with personal information, please contact us and we will delete it promptly.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="icon-circle ic-blue">📝</div>
+      <h2>Changes to this policy</h2>
+    </div>
+    <p>We may update this policy from time to time. When we do, we will update the date at the top of this page. Continued use of the app after changes constitutes acceptance of the updated policy. For significant changes, we will notify you in-app.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="icon-circle ic-purple">✉️</div>
+      <h2>Contact us</h2>
+    </div>
+    <p>Questions about this policy or your data?</p>
+    <a class="contact-card" href="mailto:ofbuilder.apps@gmail.com">
+      <div class="icon-circle ic-purple" style="width:42px;height:42px;font-size:18px">📧</div>
+      <div>
+        <div class="label">Email</div>
+        <div class="value">ofbuilder.apps@gmail.com</div>
+      </div>
+    </a>
+  </div>
+
+</div>
+
+<footer>
+  <p>&copy; 2026 SleepWise &middot; <a href="mailto:ofbuilder.apps@gmail.com">ofbuilder.apps@gmail.com</a></p>
+  <p style="margin-top:6px">SleepWise: AI Sleep Coach &middot; com.sleepwiseai.app</p>
+</footer>
+
+</body>
+</html>
