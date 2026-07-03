@@ -289,8 +289,9 @@ export const projects: Project[] = [
     category: "Lifestyle",
     emoji: "🕌",
     accent: "#14b8a6",
-    status: "soon",
+    status: "live",
     packageId: "com.ilmai.islamicqa",
+    playUrl: "https://play.google.com/store/apps/details?id=com.ilmai.islamicqa",
     subdomain: "https://ilmai.ofbuilder.com",
     tags: ["AI", "Multilingual"],
     features: [
@@ -506,8 +507,9 @@ export const projects: Project[] = [
     category: "Health & Wellness",
     emoji: "😴",
     accent: "#6366f1",
-    status: "soon",
+    status: "live",
     packageId: "com.sleepwiseai.app",
+    playUrl: "https://play.google.com/store/apps/details?id=com.sleepwiseai.app",
     subdomain: "https://sleepwise.ofbuilder.com",
     tags: ["AI", "Wellness", "Flutter"],
     features: [
