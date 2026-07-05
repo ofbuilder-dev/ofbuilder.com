@@ -564,5 +564,6 @@ export const linkedinUrl = "https://bd.linkedin.com/company/ofbuilder";
 export const youtubeUrl = "https://www.youtube.com/@OfBuilder";
 export const tiktokUrl = "https://www.tiktok.com/@ofbuilder";
 export const pinterestUrl = "https://www.pinterest.com/ofbuilder/";
+export const twitterUrl = "https://x.com/OfBuilderDev";
 
 export const contactEmail = "ofbuilder.apps@gmail.com";
