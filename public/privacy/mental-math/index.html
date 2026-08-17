@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy — Mental Math Master</title>
+<meta name="description" content="Privacy Policy for the Mental Math Master mobile app." />
+<style>
+  /*
+   * Deliberately single-theme: matches the app's real "Number Land" candy
+   * system (lib/core/theme/app_colors.dart — navy base, teal chrome, gold
+   * rewards), which is dark-only, so this page doesn't invent a light mode.
+   */
+  :root {
+    --bg: #1b2945;
+    --bg-band: #223155;
+    --ink: #ffffff;
+    --ink-muted: #c2cce0;
+    --ink-faint: #8291b3;
+    --rule: #2f4068;
+    --accent: #44c2b1;
+    --accent-ink: #5fd3c2;
+    --gold: #f5a623;
+    --card: #26365a;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .band {
+    background: var(--bg-band);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .band-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2.75rem 1.5rem 2rem;
+  }
+
+  .mark {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: ui-sans-serif, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+    margin-bottom: 1.4rem;
+  }
+
+  .mark-glyph {
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 0.4rem;
+    background: var(--accent);
+    color: var(--bg-band);
+    display: grid;
+    place-items: center;
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.85rem;
+    font-weight: 700;
+    flex: none;
+  }
+
+  h1 {
+    font-family: ui-sans-serif, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: clamp(1.7rem, 4vw, 2.3rem);
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    margin: 0 0 0.9rem;
+  }
+
+  .meta {
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.8rem;
+    color: var(--ink-muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.4rem;
+  }
+
+  .meta strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2.4rem 1.5rem 5rem;
+  }
+
+  .lede {
+    font-size: 1.05rem;
+    color: var(--ink-muted);
+    margin: 0 0 2.4rem;
+    max-width: 62ch;
+  }
+
+  nav.toc {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 1.3rem 1.5rem;
+    margin-bottom: 2.6rem;
+    box-shadow: var(--shadow);
+  }
+
+  nav.toc p {
+    font-family: ui-sans-serif, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--ink-faint);
+    margin: 0 0 0.7rem;
+  }
+
+  nav.toc ol {
+    columns: 2;
+    column-gap: 1.6rem;
+    margin: 0;
+    padding: 0 0 0 1.2rem;
+    font-family: ui-sans-serif, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.88rem;
+  }
+
+  nav.toc li { break-inside: avoid; margin-bottom: 0.45rem; }
+  nav.toc a { color: var(--ink); text-decoration: none; border-bottom: 1px solid transparent; }
+  nav.toc a:hover { border-bottom-color: var(--accent); }
+  nav.toc a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  section {
+    padding-top: 2.2rem;
+    margin-top: 2.2rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  section:first-of-type { border-top: none; margin-top: 0; }
+
+  h2 {
+    font-family: ui-sans-serif, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.28rem;
+    font-weight: 800;
+    letter-spacing: -0.005em;
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin: 0 0 1rem;
+    scroll-margin-top: 1.5rem;
+  }
+
+  h2 .num {
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent-ink);
+    flex: none;
+  }
+
+  h3 {
+    font-family: ui-sans-serif, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 1.4rem 0 0.5rem;
+  }
+
+  p { margin: 0 0 1rem; max-width: 66ch; }
+
+  ul, ol.plain {
+    margin: 0 0 1rem;
+    padding-left: 1.3rem;
+    max-width: 64ch;
+  }
+
+  li { margin-bottom: 0.5rem; }
+
+  .card-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+    display: grid;
+    gap: 0.7rem;
+  }
+
+  .card-list li {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 9px;
+    padding: 0.9rem 1.1rem;
+    box-shadow: var(--shadow);
+  }
+
+  .card-list .who {
+    font-family: ui-sans-serif, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 0.92rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.6rem;
+    align-items: baseline;
+    margin-bottom: 0.25rem;
+  }
+
+  .card-list .who a {
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--accent-ink);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .card-list .who a:hover { text-decoration: underline; }
+
+  .card-list p { margin: 0; font-size: 0.92rem; color: var(--ink-muted); }
+
+  strong { color: var(--ink); }
+
+  a { color: var(--accent-ink); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .callout {
+    background: var(--bg-band);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 8px 8px 0;
+    padding: 0.9rem 1.1rem;
+    font-size: 0.92rem;
+    color: var(--ink-muted);
+    margin: 0 0 1rem;
+  }
+
+  .callout strong { color: var(--ink); }
+
+  address {
+    font-style: normal;
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 9px;
+    padding: 1.1rem 1.3rem;
+    box-shadow: var(--shadow);
+    max-width: 62ch;
+    font-family: ui-sans-serif, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.92rem;
+    line-height: 1.9;
+  }
+
+  address a { color: var(--accent-ink); text-decoration: none; }
+  address a:hover { text-decoration: underline; }
+
+  .back-top {
+    display: inline-block;
+    margin-top: 3rem;
+    font-family: ui-sans-serif, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.82rem;
+    color: var(--ink-faint);
+    text-decoration: none;
+  }
+
+  .back-top:hover { color: var(--accent-ink); }
+
+  @media (max-width: 560px) {
+    nav.toc ol { columns: 1; }
+  }
+</style>
+</head>
+<body>
+
+<div class="band">
+  <div class="band-inner">
+    <div class="mark"><span class="mark-glyph">∑</span> Mental Math Master</div>
+    <h1>Privacy Policy</h1>
+    <div class="meta">
+      <span><strong>Effective date:</strong> August 17, 2026</span>
+      <span><strong>App package:</strong> com.thenoob.mental_math_master</span>
+    </div>
+  </div>
+</div>
+
+<main>
+  <p class="lede">
+    This policy explains what information Mental Math Master collects, how it is used, and
+    who it is shared with. We built the app so you can play as a guest with nothing leaving
+    your device — the sections below cover what changes once you choose to sign in.
+  </p>
+
+  <nav class="toc" aria-label="Table of contents">
+    <p>Contents</p>
+    <ol>
+      <li><a href="#collect">Information we collect</a></li>
+      <li><a href="#use">How we use it</a></li>
+      <li><a href="#third-parties">Third-party services</a></li>
+      <li><a href="#sharing">Data sharing</a></li>
+      <li><a href="#children">Children's privacy</a></li>
+      <li><a href="#security">Data security</a></li>
+      <li><a href="#retention">Retention &amp; deletion</a></li>
+      <li><a href="#rights">Your rights</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact us</a></li>
+    </ol>
+  </nav>
+
+  <section id="collect">
+    <h2><span class="num">01</span> Information we collect</h2>
+
+    <h3>Guest play</h3>
+    <p>
+      You can use Mental Math Master without creating an account. In guest mode, the app
+      generates a random identifier on your device and stores your progress, scores, and
+      settings locally in the app's own storage. This information is never sent to our
+      servers.
+    </p>
+
+    <h3>Signing in with Google</h3>
+    <p>
+      If you choose to sign in, we receive your name, email address, and profile photo from
+      Google so we can create your account and sync your progress across devices. We do not
+      receive your Google password.
+    </p>
+
+    <h3>Gameplay and progress data</h3>
+    <p>
+      For signed-in accounts, we store the data needed to save your progress: level
+      completion and star ratings, streaks, unlocked achievements, and your in-app currency
+      balances (coins, gems, points, stars) along with the transaction history behind them.
+    </p>
+
+    <h3>Purchase information</h3>
+    <p>
+      In-app purchases (coin/gem packs and any premium subscription) are handled by Google
+      Play Billing and processed on our behalf by RevenueCat. We receive confirmation that a
+      purchase was made, the product purchased, and your subscription status — we do not
+      receive or store your card number or other payment credentials.
+    </p>
+
+    <h3>Automatically collected information</h3>
+    <p>
+      Like any app that talks to a server, requests to our backend (Supabase) pass through
+      standard infrastructure logs (e.g. IP address, timestamps) used for security and abuse
+      prevention. We do not currently use third-party advertising or analytics SDKs.
+    </p>
+  </section>
+
+  <section id="use">
+    <h2><span class="num">02</span> How we use it</h2>
+    <ul>
+      <li>Operate the app and save your progress between sessions and devices</li>
+      <li>Authenticate you and keep your account secure</li>
+      <li>Process purchases and unlock the entitlements you paid for</li>
+      <li>Maintain shared features like leaderboards, which are visible to other players</li>
+      <li>Respond to support requests you send us</li>
+    </ul>
+    <p>We do not use your information for targeted advertising.</p>
+  </section>
+
+  <section id="third-parties">
+    <h2><span class="num">03</span> Third-party services</h2>
+    <p>We rely on a small number of service providers to run the app:</p>
+    <ul class="card-list">
+      <li>
+        <div class="who">Supabase <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></div>
+        <p>Hosts our database and handles authentication. Your account and gameplay data live here.</p>
+      </li>
+      <li>
+        <div class="who">Google Sign-In <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></div>
+        <p>Lets you sign in with your Google account instead of creating a new password.</p>
+      </li>
+      <li>
+        <div class="who">RevenueCat <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a></div>
+        <p>Manages in-app purchases and subscription status on our behalf.</p>
+      </li>
+      <li>
+        <div class="who">Google Play Billing <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></div>
+        <p>Processes the actual payment when you buy something in the app.</p>
+      </li>
+    </ul>
+    <p>Each provider's own privacy policy governs how they handle data on their side.</p>
+  </section>
+
+  <section id="sharing">
+    <h2><span class="num">04</span> Data sharing</h2>
+    <p>
+      We do not sell your personal information. We share it only with the service providers
+      listed above, only as needed to operate the app, and where required by law.
+    </p>
+  </section>
+
+  <section id="children">
+    <h2><span class="num">05</span> Children's privacy</h2>
+    <p>
+      Mental Math Master is designed to be enjoyed by players of all ages, including
+      children practicing math skills. We do not knowingly collect personal information from
+      a child under 13 without parental consent. If you are a parent or guardian and believe
+      your child has provided us with personal information, please contact us and we will
+      remove it.
+    </p>
+  </section>
+
+  <section id="security">
+    <h2><span class="num">06</span> Data security</h2>
+    <p>
+      Your data is protected by row-level access rules on our database, meaning your account
+      data is only readable by your own account, and by industry-standard encryption in
+      transit between the app and our servers. No method of transmission or storage is 100%
+      secure, but we work to protect your information using commercially reasonable means.
+    </p>
+  </section>
+
+  <section id="retention">
+    <h2><span class="num">07</span> Retention &amp; deletion</h2>
+    <p>
+      Guest progress stays on your device until you uninstall the app or clear its storage.
+      Signed-in account data is retained for as long as your account is active. To request
+      deletion of your account and associated data, contact us using the details below and
+      we will process the request.
+    </p>
+    <div class="callout">
+      <strong>Note:</strong> because purchase records are kept as an immutable ledger for
+      accounting and fraud-prevention purposes, transaction history tied to real-money
+      purchases may be retained in de-identified form after an account deletion request.
+    </div>
+  </section>
+
+  <section id="rights">
+    <h2><span class="num">08</span> Your rights</h2>
+    <p>Depending on where you live, you may have the right to:</p>
+    <ul>
+      <li>Ask what personal information we hold about you</li>
+      <li>Ask us to correct inaccurate information</li>
+      <li>Ask us to delete your account and associated data</li>
+    </ul>
+    <p>To exercise any of these, contact us using the details below.</p>
+  </section>
+
+  <section id="changes">
+    <h2><span class="num">09</span> Changes to this policy</h2>
+    <p>
+      As we add new features to the app, we may update this policy to reflect them. We will
+      update the effective date at the top of this page when we do. Continued use of the app
+      after a change means you accept the updated policy.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2><span class="num">10</span> Contact us</h2>
+    <p>Questions about this policy or your data? Reach out directly:</p>
+    <address>
+      Mental Math Master<br />
+      Email: <a href="mailto:ofbuilder.apps@gmail.com">ofbuilder.apps@gmail.com</a><br />
+      App package: com.thenoob.mental_math_master
+    </address>
+  </section>
+
+  <a class="back-top" href="#top">↑ Back to top</a>
+</main>
+
+</body>
+</html>
