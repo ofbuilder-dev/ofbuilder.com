@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy — BudgetWise: Personal Finance</title>
+<meta name="description" content="Privacy Policy for the BudgetWise: Personal Finance mobile app." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0e1a;
+    --bg-raise: #0d1220;
+    --surface: #111827;
+    --surface-glass: rgba(255, 255, 255, 0.04);
+    --border: #232b3d;
+    --border-soft: rgba(255, 255, 255, 0.08);
+    --text-primary: #f9fafb;
+    --text-secondary: #9ca3af;
+    --text-tertiary: #6b7280;
+    --accent: #6c63ff;
+    --accent-light: #8b83ff;
+    --accent-wash: rgba(108, 99, 255, 0.12);
+    --positive: #10b981;
+    --positive-wash: rgba(16, 185, 129, 0.1);
+    --font-display: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+    --font-body: "Inter", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--accent-light); }
+  a:focus-visible,
+  button:focus-visible,
+  summary:focus-visible {
+    outline: 2px solid var(--accent-light);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  ::selection { background: var(--accent-wash); color: var(--text-primary); }
+
+  /* ---------- ambient backdrop ---------- */
+  .backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: var(--bg);
+    overflow: hidden;
+  }
+  .backdrop::before,
+  .backdrop::after {
+    content: "";
+    position: absolute;
+    width: 640px;
+    height: 640px;
+    border-radius: 50%;
+    filter: blur(20px);
+    opacity: 0.16;
+  }
+  .backdrop::before {
+    top: -280px;
+    right: -220px;
+    background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+  }
+  .backdrop::after {
+    bottom: -320px;
+    left: -260px;
+    background: radial-gradient(circle, var(--positive) 0%, transparent 70%);
+    opacity: 0.09;
+  }
+
+  /* ---------- shell ---------- */
+  .shell {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 56px;
+    align-items: start;
+  }
+
+  @media (max-width: 860px) {
+    .shell { grid-template-columns: 1fr; gap: 28px; padding: 32px 18px 72px; }
+  }
+
+  /* ---------- header ---------- */
+  .header {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding-bottom: 40px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .mark {
+    flex: none;
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, var(--accent) 0%, #4f46e5 100%);
+    box-shadow: 0 10px 28px -8px rgba(108, 99, 255, 0.55);
+  }
+  .mark svg { width: 26px; height: 26px; }
+
+  .header h1 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 4vw, 38px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 2px 0 6px;
+    text-wrap: balance;
+  }
+
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    color: var(--text-tertiary);
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    letter-spacing: 0.01em;
+  }
+  .meta-row strong { color: var(--text-secondary); font-weight: 500; }
+
+  .lede {
+    color: var(--text-secondary);
+    font-size: 16px;
+    max-width: 62ch;
+    margin: 14px 0 0;
+  }
+
+  /* ---------- sidebar toc ---------- */
+  .toc {
+    position: sticky;
+    top: 32px;
+  }
+  .toc-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-tertiary);
+    margin: 0 0 14px;
+  }
+  .toc ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .toc a {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    padding: 7px 10px;
+    border-radius: 10px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 13.5px;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .toc a:hover { background: var(--surface-glass); color: var(--text-primary); }
+  .toc a .n {
+    font-family: var(--font-mono);
+    color: var(--text-tertiary);
+    font-size: 12px;
+    min-width: 1.4em;
+  }
+
+  @media (max-width: 860px) {
+    .toc { position: static; }
+    .toc ol {
+      flex-direction: row;
+      overflow-x: auto;
+      gap: 8px;
+      padding-bottom: 10px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .toc a {
+      white-space: nowrap;
+      background: var(--surface);
+      border: 1px solid var(--border);
+    }
+  }
+
+  /* ---------- at-a-glance cards ---------- */
+  .glance {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 8px 0 44px;
+  }
+  @media (max-width: 640px) { .glance { grid-template-columns: 1fr; } }
+
+  .glance-card {
+    background: var(--surface-glass);
+    border: 1px solid var(--border-soft);
+    border-radius: 16px;
+    padding: 18px;
+  }
+  .glance-card .icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
+    display: grid;
+    place-items: center;
+    background: var(--positive-wash);
+    margin-bottom: 12px;
+  }
+  .glance-card .icon svg { width: 16px; height: 16px; stroke: var(--positive); }
+  .glance-card h3 {
+    font-family: var(--font-display);
+    font-size: 14.5px;
+    font-weight: 700;
+    margin: 0 0 4px;
+  }
+  .glance-card p { margin: 0; color: var(--text-tertiary); font-size: 13px; }
+
+  /* ---------- content ---------- */
+  main { min-width: 0; }
+
+  section { scroll-margin-top: 28px; margin-bottom: 40px; }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+  .section-head .n {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--accent-light);
+    background: var(--accent-wash);
+    border-radius: 999px;
+    padding: 3px 10px;
+  }
+  .section-head h2 {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+
+  section p, section li { color: var(--text-secondary); }
+  section p { margin: 0 0 12px; max-width: 68ch; }
+  section ul { margin: 0 0 12px; padding-left: 1.15em; max-width: 66ch; }
+  section li { margin-bottom: 6px; }
+  section li::marker { color: var(--text-tertiary); }
+  strong { color: var(--text-primary); font-weight: 600; }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px 22px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    margin-top: 4px;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  th {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-tertiary);
+    font-weight: 500;
+  }
+  td:first-child { color: var(--text-primary); font-weight: 500; white-space: nowrap; }
+  tr:last-child td { border-bottom: none; }
+  .table-wrap { overflow-x: auto; }
+
+  .pill-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 12px; }
+  .pill {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    padding: 5px 11px;
+    border-radius: 999px;
+    background: var(--surface-glass);
+    border: 1px solid var(--border-soft);
+    color: var(--text-secondary);
+  }
+
+  .contact-card {
+    background: linear-gradient(160deg, var(--accent-wash), transparent 65%);
+    border: 1px solid var(--border-soft);
+    border-radius: 18px;
+    padding: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .contact-card h2 {
+    font-family: var(--font-display);
+    font-size: 18px;
+    margin: 0 0 4px;
+  }
+  .contact-card p { margin: 0; color: var(--text-secondary); font-size: 14px; }
+  .contact-btn {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+    background: linear-gradient(135deg, var(--accent), #4f46e5);
+    padding: 11px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    white-space: nowrap;
+    box-shadow: 0 10px 24px -10px rgba(108, 99, 255, 0.6);
+  }
+
+  footer {
+    grid-column: 1 / -1;
+    margin-top: 8px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--text-tertiary);
+    font-size: 12.5px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+</style>
+</head>
+<body>
+
+<div class="backdrop"></div>
+
+<div class="shell">
+
+  <header class="header">
+    <div class="mark">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 12a8 8 0 1 1 8 8" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <path d="M4 12v5h5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="12" cy="12" r="2.4" fill="white"/>
+      </svg>
+    </div>
+    <div>
+      <h1>Privacy Policy</h1>
+      <div class="meta-row">
+        <span><strong>BudgetWise: Personal Finance</strong></span>
+        <span>Effective &amp; last updated <strong>August 23, 2026</strong></span>
+        <span>Package <strong>com.xihadulislam.myexpenses</strong></span>
+      </div>
+      <p class="lede">
+        BudgetWise is built local-first, on purpose: your accounts, transactions, and budgets
+        live on your device first. This page explains exactly what that means, what little
+        ever leaves it, and why we built it this way.
+      </p>
+    </div>
+  </header>
+
+  <nav class="toc" aria-label="Table of contents">
+    <p class="toc-label">On this page</p>
+    <ol>
+      <li><a href="#overview"><span class="n">01</span>Overview</a></li>
+      <li><a href="#collect"><span class="n">02</span>What we collect</a></li>
+      <li><a href="#use"><span class="n">03</span>How it's used</a></li>
+      <li><a href="#sync"><span class="n">04</span>Cloud sync</a></li>
+      <li><a href="#third-party"><span class="n">05</span>Third parties</a></li>
+      <li><a href="#ai"><span class="n">06</span>On-device AI</a></li>
+      <li><a href="#security"><span class="n">07</span>Security</a></li>
+      <li><a href="#rights"><span class="n">08</span>Your choices</a></li>
+      <li><a href="#children"><span class="n">09</span>Children</a></li>
+      <li><a href="#changes"><span class="n">10</span>Changes</a></li>
+      <li><a href="#contact"><span class="n">11</span>Contact</a></li>
+    </ol>
+  </nav>
+
+  <main>
+
+    <div class="glance">
+      <div class="glance-card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <h3>No bank linking, ever</h3>
+        <p>We never ask for bank credentials, card numbers, or account access. Every number is one you type in.</p>
+      </div>
+      <div class="glance-card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <h3>Local-first storage</h3>
+        <p>Your data lives on your device by default and works fully offline. Cloud sync is optional, not required.</p>
+      </div>
+      <div class="glance-card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <h3>No ads, no trackers</h3>
+        <p>No advertising SDKs, no analytics, no data brokers. Nothing here is monetized by watching you.</p>
+      </div>
+    </div>
+
+    <section id="overview">
+      <div class="section-head"><span class="n">01</span><h2>Overview</h2></div>
+      <p>
+        BudgetWise (the "app," "we," "us") is a personal budgeting, net worth, debt, and bill
+        tracker. This policy describes what information the app handles when you use it,
+        published to accompany the Google Play listing for
+        <strong>com.xihadulislam.myexpenses</strong>.
+      </p>
+      <p>
+        The short version: your financial entries are yours, stored on your device, never sold,
+        never shown ads against. If you choose to sign in, a copy is best-effort synced to a
+        private cloud database scoped only to your account, purely so your data can follow you
+        to a second device — nothing more.
+      </p>
+    </section>
+
+    <section id="collect">
+      <div class="section-head"><span class="n">02</span><h2>What we collect</h2></div>
+      <p>Everything below falls into one of two buckets — what you give us, and what the app computes from it.</p>
+      <div class="table-wrap card">
+        <table>
+          <thead>
+            <tr><th>Category</th><th>What it includes</th><th>Where it's stored</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Account identity</td>
+              <td>If you sign in with Google: your name, email, and Google account ID. If you continue as Guest: nothing — an anonymous session only.</td>
+              <td>Supabase (auth only)</td>
+            </tr>
+            <tr>
+              <td>Financial entries</td>
+              <td>Accounts, transactions, budgets, net worth snapshots, debts, bills, savings goals, and categories you create.</td>
+              <td>On your device; optionally synced (see §04)</td>
+            </tr>
+            <tr>
+              <td>Receipt photos</td>
+              <td>Images you capture or pick to auto-fill a transaction via on-device text recognition.</td>
+              <td>On your device only — never uploaded</td>
+            </tr>
+            <tr>
+              <td>Purchase records</td>
+              <td>Subscription status and transaction receipts, handled entirely by Google Play Billing and RevenueCat.</td>
+              <td>Google / RevenueCat (see §05)</td>
+            </tr>
+            <tr>
+              <td>Notifications</td>
+              <td>Bill and budget-threshold reminders you schedule for yourself.</td>
+              <td>On your device — scheduled locally, no push server involved</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="use">
+      <div class="section-head"><span class="n">03</span><h2>How it's used</h2></div>
+      <ul>
+        <li>To run the app's core features — budgets, net worth tracking, debt payoff planning, bill reminders, analytics — computed directly on your device.</li>
+        <li>To back up and sync your data across devices, only if you're signed in and only for the data types listed in §04.</li>
+        <li>To verify and manage your Pro subscription through Google Play Billing.</li>
+        <li>To send you the bill and budget reminders you've configured.</li>
+      </ul>
+      <p>We do not use your financial data for advertising, and we do not sell or rent it to anyone, under any circumstances.</p>
+    </section>
+
+    <section id="sync">
+      <div class="section-head"><span class="n">04</span><h2>Cloud sync, precisely</h2></div>
+      <p>
+        Local storage is always the source of truth — the app works fully offline whether or
+        not you're signed in. If you're signed in (Google or Guest), a best-effort background
+        sync additionally mirrors the following to a private, access-controlled database:
+      </p>
+      <div class="pill-list">
+        <span class="pill">accounts</span>
+        <span class="pill">categories</span>
+        <span class="pill">transactions</span>
+        <span class="pill">budgets</span>
+        <span class="pill">net worth snapshots</span>
+        <span class="pill">debts</span>
+        <span class="pill">bills</span>
+        <span class="pill">savings goals</span>
+      </div>
+      <p>
+        Each row is protected by row-level security scoped to your account — no other user, and
+        no BudgetWise employee in the normal course of operating the service, can query another
+        person's rows. Receipt photos, household-member labels, and app preferences are never
+        synced; they stay on-device.
+      </p>
+    </section>
+
+    <section id="third-party">
+      <div class="section-head"><span class="n">05</span><h2>Third parties we rely on</h2></div>
+      <p>We keep this list short on purpose. Each service below performs one job and sees only what that job requires.</p>
+      <div class="table-wrap card">
+        <table>
+          <thead><tr><th>Service</th><th>Purpose</th></tr></thead>
+          <tbody>
+            <tr><td>Supabase</td><td>Authentication (Google Sign-In / Guest) and optional encrypted cloud sync of the data listed in §04.</td></tr>
+            <tr><td>Google Sign-In</td><td>Lets you create an account without a new password; we receive your name and email only if you choose this option.</td></tr>
+            <tr><td>Google Play Billing</td><td>Processes subscription payments. We never see or store your card details.</td></tr>
+            <tr><td>RevenueCat</td><td>Verifies subscription status against Google Play on our behalf.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>We do not use advertising networks, analytics SDKs, or crash-reporting services that collect personal data. There are no trackers in this app.</p>
+    </section>
+
+    <section id="ai">
+      <div class="section-head"><span class="n">06</span><h2>On-device AI</h2></div>
+      <p>
+        The AI Assistant's spending insights, savings suggestions, and anomaly flags are
+        computed with rule-based logic that runs entirely on your device — nothing about your
+        transactions or balances is sent to any AI or language-model service to produce them.
+        Should a cloud-based AI feature ever be introduced in the future, this policy will be
+        updated in advance to describe exactly what would be sent and why.
+      </p>
+    </section>
+
+    <section id="security">
+      <div class="section-head"><span class="n">07</span><h2>Security</h2></div>
+      <p>
+        Data stored on your device is protected by your device's own operating system and lock
+        screen. Data in transit to our sync backend and RevenueCat is sent over encrypted (TLS)
+        connections, and cloud-stored rows are access-controlled to your account only. No
+        method of storage or transmission is perfectly secure, and we can't guarantee absolute
+        security — but no bank credentials ever pass through our systems in the first place,
+        which removes an entire category of risk by design.
+      </p>
+    </section>
+
+    <section id="rights">
+      <div class="section-head"><span class="n">08</span><h2>Your choices</h2></div>
+      <ul>
+        <li><strong>Use it without an account.</strong> Guest mode never asks for your name or email.</li>
+        <li><strong>Export anytime.</strong> The Transactions and Analytics screens include a CSV export you control, sent only where you choose to send it.</li>
+        <li><strong>Turn off sync.</strong> Everything works fully offline; signing out stops future syncing.</li>
+        <li><strong>Delete your data.</strong> Uninstalling removes everything stored locally. To remove your synced cloud copy, contact us at the email in §11 and we'll delete it.</li>
+      </ul>
+    </section>
+
+    <section id="children">
+      <div class="section-head"><span class="n">09</span><h2>Children's privacy</h2></div>
+      <p>
+        BudgetWise is not directed at children under 13, and we do not knowingly collect
+        personal information from children. If you believe a child has provided us personal
+        information, contact us and we'll remove it.
+      </p>
+    </section>
+
+    <section id="changes">
+      <div class="section-head"><span class="n">10</span><h2>Changes to this policy</h2></div>
+      <p>
+        If this policy changes in a way that affects what we collect or how it's used, we'll
+        update the date at the top of this page and, for material changes, note it in the app.
+        Continuing to use BudgetWise after a change means you accept the updated policy.
+      </p>
+    </section>
+
+    <section id="contact" class="contact-card">
+      <div>
+        <h2>Questions about your data?</h2>
+        <p>Reach out directly — we read every message ourselves.</p>
+        <p style="margin-top:10px;"><a href="https://ofbuilder.com/" target="_blank" rel="noopener">ofbuilder.com</a></p>
+      </div>
+      <a class="contact-btn" href="mailto:ofbuilder.apps@gmail.com">ofbuilder.apps@gmail.com</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <span>© 2026 BudgetWise: Personal Finance · <a href="https://ofbuilder.com/" target="_blank" rel="noopener" style="color:inherit;">ofbuilder.com</a></span>
+    <span>com.xihadulislam.myexpenses</span>
+  </footer>
+
+</div>
+
+</body>
+</html>
