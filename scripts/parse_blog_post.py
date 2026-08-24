@@ -15,15 +15,19 @@ if 'error' in data:
 content = data['choices'][0]['message']['content'].strip()
 
 # Strip markdown code fences if present
-content = re.sub(r'^```json\s*', '', content)
-content = re.sub(r'^```\s*', '', content)
-content = re.sub(r'\s*```$', '', content)
+content = re.sub(r'^```json\s*', '', content, flags=re.MULTILINE)
+content = re.sub(r'^```\s*', '', content, flags=re.MULTILINE)
+content = re.sub(r'\s*```$', '', content, flags=re.MULTILINE)
 content = content.strip()
 
 post = json.loads(content)
 post['date'] = datetime_str
 
+# Ensure new fields have defaults if missing
+post.setdefault('description', post.get('excerpt', ''))
+post.setdefault('tags', [])
+
 filename = 'content/blog/' + post['slug'] + '.json'
 with open(filename, 'w') as f:
-    json.dump(post, f, indent=2)
+    json.dump(post, f, indent=2, ensure_ascii=False)
 print('Written: ' + filename)

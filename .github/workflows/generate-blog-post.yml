@@ -21,7 +21,171 @@ jobs:
           DATE=$(date -u +%Y-%m-%d)
           DATETIME=$(date -u +%Y-%m-%dT%H:%M:%S+06:00)
 
-          PROMPT="You are a blog writer for OfBuilder, an indie mobile app studio. Write a weekly blog post for this week ($DATE). Pick one of these topics: OfBuilder app update or feature highlight (DreamNest AI, Driving Theory Test UK, Mental Math Master, My Expenses), AI news for mobile users, tech tip for Flutter or mobile UX, indie app development insight. Return ONLY a valid JSON object with these exact fields: slug (kebab-case string like $DATE-my-title), title, excerpt (one sentence), category (one of: Studio News, AI News, Tech Tips, App Update, Dev Insights), body (3-4 paragraphs separated by newline newline). No text outside the JSON object."
+          # Pick topic by week number (cycles through 14 topics)
+          WEEK=$(date -u +%V | sed 's/^0*//')
+          TOPIC_INDEX=$(( (WEEK - 1) % 14 ))
+
+          case $TOPIC_INDEX in
+            0)
+              TOPIC="Mental Math Master: from Kotlin to Flutter rebuild"
+              APP="Mental Math Master"
+              PLAY_LINK="https://play.google.com/store/apps/details?id=com.thenoob.mental_math_master"
+              KEYWORD="mental math app android"
+              SECONDARY="brain training app, flutter math game, mental arithmetic android"
+              APP_SLUG="mentalmath"
+              ;;
+            1)
+              TOPIC="How SleepWise uses CBT-I to fix insomnia"
+              APP="SleepWise: AI Sleep Coach"
+              PLAY_LINK="https://play.google.com/store/apps/details?id=com.sleepwiseai.app"
+              KEYWORD="CBT-I sleep app android"
+              SECONDARY="insomnia app, AI sleep coach, sleep quality tracker"
+              APP_SLUG="sleepwise"
+              ;;
+            2)
+              TOPIC="Building an Islamic AI app: IlmAI story"
+              APP="IlmAI: Islamic AI & Quran"
+              PLAY_LINK="https://play.google.com/store/apps/details?id=com.ilmai.islamicqa"
+              KEYWORD="Islamic AI app Quran"
+              SECONDARY="Islamic Q&A app, Quran hadith app, Muslim AI assistant"
+              APP_SLUG="ilmai"
+              ;;
+            3)
+              TOPIC="Why we built a UK driving theory app from Bangladesh"
+              APP="Driving Theory Test UK: DVSA"
+              PLAY_LINK="https://play.google.com/store/apps/details?id=com.drivingtheorytest.uk"
+              KEYWORD="UK driving theory test app"
+              SECONDARY="DVSA practice questions, hazard perception app, driving test prep"
+              APP_SLUG="passly"
+              ;;
+            4)
+              TOPIC="DreamNest AI: personalized bedtime stories for kids"
+              APP="DreamNest AI"
+              PLAY_LINK="https://play.google.com/store/apps/details?id=com.dreamnest.ai"
+              KEYWORD="AI bedtime stories app"
+              SECONDARY="personalized kids stories, bedtime app, AI children stories"
+              APP_SLUG="dreamnest"
+              ;;
+            5)
+              TOPIC="Renu: why we never link to your bank"
+              APP="Renu: Subscription Tracker"
+              PLAY_LINK="https://play.google.com/store/apps/details?id=com.ofbuilder.renu"
+              KEYWORD="subscription tracker no bank"
+              SECONDARY="subscription manager app, recurring payments tracker, privacy finance app"
+              APP_SLUG="renu"
+              ;;
+            6)
+              TOPIC="BudgetWise vs Monarch: why we built a cheaper alternative"
+              APP="BudgetWise: Personal Finance"
+              PLAY_LINK="https://play.google.com/store/apps/details?id=com.xihadulislam.myexpenses"
+              KEYWORD="personal finance app no bank linking"
+              SECONDARY="budget tracker app, offline finance app, debt payoff planner"
+              APP_SLUG="budgetwise"
+              ;;
+            7)
+              TOPIC="Building Muslim Wise: Islamic finance tools for Gulf users"
+              APP="Muslim Wise"
+              PLAY_LINK="https://play.google.com/store/apps/details?id=com.ofbuilder.muslimwise"
+              KEYWORD="Islamic finance app halal stocks"
+              SECONDARY="halal stock screener, zakat calculator, Islamic app Gulf"
+              APP_SLUG="muslimwise"
+              ;;
+            8)
+              TOPIC="LifeWise: AI life coach at a fraction of the price of BetterUp"
+              APP="LifeWise: AI Life Coach"
+              PLAY_LINK="https://play.google.com/store/apps/details?id=com.ofbuilder.lifewise"
+              KEYWORD="AI life coach app"
+              SECONDARY="personal development app, daily action plan app, book summaries app"
+              APP_SLUG="lifewise"
+              ;;
+            9)
+              TOPIC="How we validate app ideas using market research and Google Trends"
+              APP="OfBuilder studio"
+              PLAY_LINK="https://ofbuilder.com"
+              KEYWORD="how to validate app idea"
+              SECONDARY="indie app development, app market research, flutter app ideas"
+              APP_SLUG=""
+              ;;
+            10)
+              TOPIC="ShishuAI: AI baby care app for new parents"
+              APP="ShishuAI: Baby Care"
+              PLAY_LINK="https://play.google.com/store/apps/details?id=com.shishuai.app"
+              KEYWORD="AI baby care app"
+              SECONDARY="baby tracker app, WHO growth chart app, vaccine tracker android"
+              APP_SLUG="shishuai"
+              ;;
+            11)
+              TOPIC="Sakinah Fit: modest fitness app for Muslim women"
+              APP="Sakinah Fit"
+              PLAY_LINK="https://play.google.com/store/apps/details?id=com.ofbuilder.sakinahfit"
+              KEYWORD="Muslim women fitness app"
+              SECONDARY="modest workout app, Ramadan fitness, halal nutrition app"
+              APP_SLUG="sakinahfit"
+              ;;
+            12)
+              TOPIC="MindfulMuslim: Islamic meditation and dhikr app"
+              APP="MindfulMuslim"
+              PLAY_LINK="https://play.google.com/store/apps/details?id=com.ofbuilder.mindfulmuslim"
+              KEYWORD="Islamic meditation app"
+              SECONDARY="dhikr app, muraqabah app, Muslim mindfulness"
+              APP_SLUG="mindfulmuslim"
+              ;;
+            13)
+              TOPIC="One developer, 12 apps: the OfBuilder story"
+              APP="OfBuilder studio"
+              PLAY_LINK="https://ofbuilder.com"
+              KEYWORD="indie app developer story"
+              SECONDARY="indie hacker apps, flutter app portfolio, solo developer"
+              APP_SLUG=""
+              ;;
+          esac
+
+          if [ -n "$APP_SLUG" ]; then
+            PRODUCT_LINK="https://ofbuilder.com/products/${APP_SLUG}/"
+          else
+            PRODUCT_LINK="https://ofbuilder.com"
+          fi
+
+          PROMPT="You are a blog writer for OfBuilder — an indie app studio based in Sylhet, Bangladesh that builds AI-powered Flutter apps.
+
+WRITER PERSONA:
+Write as the founder — a real developer sharing genuine insights. First-person (I, we). Conversational but knowledgeable. Like a developer's personal blog, not a corporate press release. Think: levels.io, pieter levels, indie hackers tone.
+
+THIS WEEK'S POST:
+Topic: ${TOPIC}
+App focus: ${APP}
+Play Store link: ${PLAY_LINK}
+Target keyword: ${KEYWORD}
+Secondary keywords: ${SECONDARY}
+Date: ${DATE}
+
+STRICT RULES:
+1. HUMAN TONE — NO: 'In today's fast-paced world', 'We are excited to announce', 'Discover the amazing features', 'Transforming your experience', 'Unlock your potential'. YES: Short sentences. Real thoughts. Start with a specific story or problem. Include one honest struggle. Mention real numbers.
+2. Word count: 600-900 words exactly.
+3. Do NOT use: journey, game-changer, revolutionary, seamless, robust, leverage.
+4. Include Play Store link and https://ofbuilder.com as backlinks naturally in the text.
+
+STRUCTURE:
+- Hook (2-3 sentences): specific problem, story, or fact — not generic
+- The Problem (1 paragraph): what the app solves and why it exists
+- The Build / Story (1-2 paragraphs): how it was built, one real challenge, one honest admission
+- Key Features (H2 section): 3-4 features in plain English, 1-2 sentences each
+- Real Numbers / Proof (1 paragraph): downloads, countries, feedback — be honest, small numbers are fine
+- Play Store CTA: natural sentence linking to the Play Store URL
+- Closing (2-3 sentences): what is next, one human thought
+
+OUTPUT FORMAT — Return ONLY a valid JSON object with these exact fields:
+{
+  \"slug\": \"url-slug-with-keyword-${DATE}\",
+  \"title\": \"SEO title 50-60 chars with primary keyword\",
+  \"description\": \"Meta description 150-160 chars with keyword and CTA\",
+  \"excerpt\": \"One sentence summary of the post\",
+  \"category\": \"App Update or Studio News or Dev Tips or AI News\",
+  \"tags\": [\"tag1\", \"tag2\", \"tag3\"],
+  \"body\": \"Full markdown blog post content (no frontmatter, just the body starting with # H1 title)\"
+}
+
+No text outside the JSON object. Body must be full markdown with H1, H2 subheadings, and paragraphs."
 
           RESPONSE=$(curl -s https://openrouter.ai/api/v1/chat/completions \
             -H "Authorization: Bearer $OPENROUTER_API_KEY" \
@@ -41,4 +205,5 @@ jobs:
           git config user.email "hello@ofbuilder.com"
           git add content/blog/
           git diff --staged --quiet || git commit -m "blog: scheduled post $(date -u +%Y-%m-%d) $(date -u +%H:%M) UTC"
+          git pull origin main --rebase
           git push

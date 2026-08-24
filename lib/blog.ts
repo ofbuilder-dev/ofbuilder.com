@@ -5,7 +5,9 @@ export type BlogPost = {
   slug: string;
   title: string;
   excerpt: string;
+  description?: string;
   category: string;
+  tags?: string[];
   date: string;
   body: string;
 };
