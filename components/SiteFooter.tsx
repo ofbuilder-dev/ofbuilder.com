@@ -14,6 +14,7 @@ export default function SiteFooter() {
           <a href="/#products" className="hover:text-white">Products</a>
           <a href="/#about" className="hover:text-white">About</a>
           <a href="/blog" className="hover:text-white">Blog</a>
+          <a href="/privacy" className="hover:text-white">Privacy</a>
           <a href="/#contact" className="hover:text-white">Contact</a>
         </div>
       </div>
