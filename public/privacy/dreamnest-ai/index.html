@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — DreamNest AI</title>
+<meta name="description" content="Privacy Policy for DreamNest AI: Bedtime Stories.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-dark: #12103A;
+    --bg-primary: #1E1B4B;
+    --bg-card: #2B2660;
+    --bg-surface: #352F6E;
+
+    --gold: #D4A843;
+    --gold-light: #E8C96E;
+    --gold-dark: #B8882A;
+
+    --text-primary: #F5E6C8;
+    --text-secondary: #D4C4A8;
+    --text-muted: #9B8FA8;
+
+    --star: #FFF9ED;
+    --success: #4CAF7D;
+    --border: rgba(212,168,67,0.18);
+  }
+
+  *{ box-sizing: border-box; }
+
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin: 0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, rgba(212,168,67,0.10), transparent 60%),
+      radial-gradient(900px 500px at 110% 10%, rgba(232,201,110,0.08), transparent 55%),
+      linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-dark) 100%);
+    background-attachment: fixed;
+    color: var(--text-primary);
+    font-family: 'Nunito', system-ui, sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* subtle stars in the hero */
+  .stars{
+    position: absolute; inset: 0; overflow: hidden; pointer-events: none;
+  }
+  .stars span{
+    position: absolute;
+    width: 3px; height: 3px;
+    background: var(--star);
+    border-radius: 50%;
+    opacity: 0.55;
+    box-shadow: 0 0 6px 1px rgba(255,249,237,0.5);
+  }
+
+  a{ color: var(--gold-light); text-decoration: none; }
+  a:hover{ text-decoration: underline; color: var(--gold); }
+
+  .wrap{
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 24px 96px;
+  }
+
+  header.hero{
+    position: relative;
+    padding: 72px 24px 56px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+  }
+
+  .brand{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 28px;
+  }
+  .brand .moon{
+    width: 22px; height: 22px;
+    display: inline-block;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, var(--gold-light), var(--gold-dark) 70%);
+    box-shadow: 0 0 16px rgba(212,168,67,0.55);
+  }
+
+  header.hero h1{
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: clamp(30px, 5vw, 46px);
+    margin: 0 0 14px;
+    color: var(--text-primary);
+    letter-spacing: 0.01em;
+  }
+
+  header.hero p.tagline{
+    margin: 0 auto;
+    max-width: 520px;
+    color: var(--text-secondary);
+    font-size: 16px;
+  }
+
+  .meta-row{
+    margin-top: 26px;
+    display: inline-flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .pill{
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--bg-dark);
+    background: linear-gradient(135deg, var(--gold-light), var(--gold));
+    padding: 6px 14px;
+    border-radius: 999px;
+    letter-spacing: 0.02em;
+  }
+  .pill.outline{
+    color: var(--text-secondary);
+    background: transparent;
+    border: 1px solid var(--border);
+    font-weight: 600;
+  }
+
+  nav.toc{
+    margin: 40px auto 0;
+    max-width: 880px;
+    padding: 0 24px;
+  }
+  nav.toc .card{
+    background: linear-gradient(180deg, var(--bg-card), var(--bg-surface));
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 22px 24px;
+    box-shadow: 0 12px 30px -12px rgba(0,0,0,0.5);
+  }
+  nav.toc h2{
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin: 0 0 14px;
+  }
+  nav.toc ol{
+    columns: 2;
+    column-gap: 28px;
+    margin: 0;
+    padding-left: 20px;
+    color: var(--text-secondary);
+  }
+  nav.toc li{ margin-bottom: 9px; break-inside: avoid; }
+  nav.toc a{ color: var(--text-secondary); font-weight: 600; font-size: 14.5px; }
+  nav.toc a:hover{ color: var(--gold-light); }
+
+  main{ margin-top: 8px; }
+
+  section{
+    padding: 40px 0;
+    border-bottom: 1px solid var(--border);
+    scroll-margin-top: 24px;
+  }
+  section:last-of-type{ border-bottom: none; }
+
+  section .num{
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+
+  h2{
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--text-primary);
+    margin: 0 0 16px;
+  }
+
+  h3{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    color: var(--gold-light);
+    margin: 24px 0 10px;
+  }
+
+  p{ color: var(--text-secondary); margin: 0 0 14px; }
+  strong{ color: var(--text-primary); }
+
+  ul, ol.plain{
+    margin: 0 0 14px;
+    padding-left: 22px;
+    color: var(--text-secondary);
+  }
+  ul li, ol.plain li{ margin-bottom: 8px; }
+  ul li::marker{ color: var(--gold); }
+
+  .table-wrap{
+    overflow-x: auto;
+    margin: 6px 0 18px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+  table{
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 560px;
+    font-size: 14.5px;
+  }
+  thead th{
+    text-align: left;
+    background: var(--bg-surface);
+    color: var(--gold-light);
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  tbody td{
+    padding: 12px 16px;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  tbody tr:last-child td{ border-bottom: none; }
+  tbody tr:nth-child(odd){ background: rgba(43,38,96,0.35); }
+
+  .callout{
+    background: linear-gradient(180deg, var(--bg-card), var(--bg-surface));
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+  .callout p{ margin: 0; color: var(--text-secondary); }
+  .callout p + p{ margin-top: 8px; }
+
+  .contact-card{
+    background: linear-gradient(180deg, var(--bg-card), var(--bg-surface));
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    text-align: center;
+  }
+  .contact-card h2{ margin-bottom: 8px; }
+  .contact-card p{ margin-bottom: 18px; }
+  .contact-btn{
+    display: inline-block;
+    background: linear-gradient(135deg, var(--gold-light), var(--gold));
+    color: var(--bg-dark);
+    font-weight: 800;
+    font-size: 14.5px;
+    padding: 12px 26px;
+    border-radius: 999px;
+    letter-spacing: 0.01em;
+  }
+  .contact-btn:hover{ text-decoration: none; filter: brightness(1.05); }
+
+  footer{
+    text-align: center;
+    padding: 40px 24px 60px;
+    color: var(--text-muted);
+    font-size: 13.5px;
+  }
+  footer .moon-small{
+    width: 14px; height: 14px;
+    display: inline-block;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, var(--gold-light), var(--gold-dark) 70%);
+    vertical-align: middle;
+    margin: 0 6px;
+  }
+
+  .back-to-top{
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold-light), var(--gold));
+    color: var(--bg-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    box-shadow: 0 10px 24px -8px rgba(0,0,0,0.6);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    transform: translateY(8px);
+  }
+  .back-to-top.show{ opacity: 1; pointer-events: auto; transform: translateY(0); }
+  .back-to-top:hover{ text-decoration: none; filter: brightness(1.05); }
+
+  @media (max-width: 560px){
+    nav.toc ol{ columns: 1; }
+    header.hero{ padding: 56px 20px 40px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="stars" id="stars"></div>
+  <span class="brand"><span class="moon"></span> DreamNest AI</span>
+  <h1>Privacy Policy</h1>
+  <p class="tagline">How we collect, use, and protect your family's information across DreamNest AI: Bedtime Stories.</p>
+  <div class="meta-row">
+    <span class="pill">Effective Aug 26, 2026</span>
+    <span class="pill outline">com.dreamnest.ai</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <div class="card">
+    <h2>On this page</h2>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#information-we-collect">Information we collect</a></li>
+      <li><a href="#how-we-use">How we use information</a></li>
+      <li><a href="#third-parties">Third-party services</a></li>
+      <li><a href="#childrens-privacy">Children's privacy</a></li>
+      <li><a href="#subscriptions">Subscriptions & payments</a></li>
+      <li><a href="#data-retention">Data retention</a></li>
+      <li><a href="#security">Data security</a></li>
+      <li><a href="#your-rights">Your rights & choices</a></li>
+      <li><a href="#guest-mode">Guest mode & device ID</a></li>
+      <li><a href="#international">International transfers</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact us</a></li>
+    </ol>
+  </div>
+</nav>
+
+<div class="wrap">
+<main>
+
+  <section id="overview">
+    <span class="num">01</span>
+    <h2>Overview</h2>
+    <p>
+      DreamNest AI: Bedtime Stories ("DreamNest," "we," "us," or "our") is an app for parents
+      that creates calming, emotion-based bedtime stories for children. This policy explains what
+      information we collect when you use the app, why we collect it, who we share it with, and
+      the choices you have.
+    </p>
+    <p>
+      DreamNest is designed for use <strong>by parents and guardians on behalf of their children</strong>.
+      Children do not create accounts, sign in, or interact with the app's settings directly — a
+      parent sets up each child's profile and manages the app.
+    </p>
+  </section>
+
+  <section id="information-we-collect">
+    <span class="num">02</span>
+    <h2>Information we collect</h2>
+
+    <h3>Account information</h3>
+    <p>
+      If you sign in with Google, we receive your name, email address, and profile photo from
+      Google Sign-In. If you use the app as a guest, no account information is collected — we
+      generate an anonymous session instead.
+    </p>
+
+    <h3>Child profile information</h3>
+    <p>
+      Information you enter for each child profile, provided voluntarily by the parent:
+    </p>
+    <ul>
+      <li>Child's first name and age</li>
+      <li>Favorite story theme</li>
+      <li>Gender (optional)</li>
+      <li>Sleep difficulty notes (optional)</li>
+    </ul>
+
+    <h3>Story & usage data</h3>
+    <ul>
+      <li>The emotion or topic selected for each story (e.g. fear of dark, sharing, confidence)</li>
+      <li>Generated story text, title, and moral</li>
+      <li>Story language and, if applicable, religion/faith preference you opt into</li>
+      <li>Favorited and recently read stories</li>
+      <li>Number of stories generated, used to apply free-tier weekly limits</li>
+    </ul>
+
+    <h3>Device information</h3>
+    <p>
+      We use a device identifier (Android's <code>Settings.Secure.ANDROID_ID</code>, or a
+      locally generated identifier as a fallback) to track free-tier story limits for guest
+      users before they create an account. This identifier does not contain personal
+      information and is not used for advertising.
+    </p>
+
+    <h3>Purchase information</h3>
+    <p>
+      If you subscribe to DreamNest Premium, our payment provider (RevenueCat) and Google Play
+      process your purchase. We receive subscription status, product identifier, and expiration
+      date — never your payment card details, which are handled entirely by Google Play.
+    </p>
+  </section>
+
+  <section id="how-we-use">
+    <span class="num">03</span>
+    <h2>How we use information</h2>
+    <ul>
+      <li>To generate personalized bedtime stories tailored to your child's context and emotional needs</li>
+      <li>To narrate stories aloud using on-device text-to-speech in the story's language</li>
+      <li>To save favorites and reading history so stories are available across sessions and devices</li>
+      <li>To sync your data when you sign in with Google, or convert from a guest account</li>
+      <li>To apply free-tier usage limits and manage Premium subscription entitlements</li>
+      <li>To maintain and improve the safety, reliability, and performance of the app</li>
+    </ul>
+    <div class="callout">
+      <p>
+        <strong>We do not sell your data or your child's data.</strong> We do not use child
+        profile information for advertising, and we do not build advertising profiles from
+        story content.
+      </p>
+    </div>
+  </section>
+
+  <section id="third-parties">
+    <span class="num">04</span>
+    <h2>Third-party services</h2>
+    <p>We work with a small number of trusted service providers, each acting under contract and only for the purpose described:</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Provider</th><th>Purpose</th><th>Data shared</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Supabase</strong></td>
+            <td>Authentication, database, and file storage</td>
+            <td>Account info, child profiles, stories, audio/cover assets</td>
+          </tr>
+          <tr>
+            <td><strong>OpenAI / Google Gemini</strong></td>
+            <td>Story generation (via secure server-side function only)</td>
+            <td>Emotion, age range, theme, language — no names or direct identifiers</td>
+          </tr>
+          <tr>
+            <td><strong>RevenueCat</strong></td>
+            <td>Subscription management and entitlement verification</td>
+            <td>Anonymous or account user ID, purchase/subscription status</td>
+          </tr>
+          <tr>
+            <td><strong>Google Play Billing</strong></td>
+            <td>Payment processing</td>
+            <td>Purchase transaction data (handled entirely by Google)</td>
+          </tr>
+          <tr>
+            <td><strong>Google Sign-In</strong></td>
+            <td>Optional account authentication</td>
+            <td>Name, email address, profile photo</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      Story generation requests never call AI providers directly from your device — they are
+      routed through our server-side functions, which strip unnecessary identifying details
+      before sending the request.
+    </p>
+  </section>
+
+  <section id="childrens-privacy">
+    <span class="num">05</span>
+    <h2>Children's privacy</h2>
+    <p>
+      DreamNest is intended to be operated by a parent or guardian. We do not knowingly collect
+      personal information directly from children, and children cannot create their own accounts,
+      change settings, or make purchases within the app.
+    </p>
+    <p>
+      Child profile information (name, age, preferences) is entered voluntarily by the parent and
+      is used solely to personalize story content. Parents can edit or delete a child's profile,
+      and all associated stories, at any time from within the app.
+    </p>
+    <p>
+      If you believe a child has provided us with personal information outside of a
+      parent-managed profile, please <a href="#contact">contact us</a> so we can remove it.
+    </p>
+  </section>
+
+  <section id="subscriptions">
+    <span class="num">06</span>
+    <h2>Subscriptions & payments</h2>
+    <p>
+      DreamNest offers a free tier (5 stories per week, 1 child profile) and a Premium
+      subscription (unlimited stories, multiple children) billed monthly, yearly, or as a
+      one-time purchase. All payments are processed by Google Play — DreamNest never sees or
+      stores your payment card details.
+    </p>
+    <p>
+      Subscription status is verified server-side through RevenueCat and Google Play. You can
+      manage or cancel your subscription at any time from the Google Play Store's subscriptions
+      page.
+    </p>
+  </section>
+
+  <section id="data-retention">
+    <span class="num">07</span>
+    <h2>Data retention</h2>
+    <ul>
+      <li>Account, child profile, and story data are retained until you delete them or delete your account</li>
+      <li>Purchase verification records are automatically pruned after 90 days</li>
+      <li>Guest usage data is tied to your device and cleared if you uninstall the app or clear app data</li>
+    </ul>
+    <p>
+      You may request deletion of your account and all associated data at any time — see
+      <a href="#your-rights">Your rights & choices</a> below.
+    </p>
+  </section>
+
+  <section id="security">
+    <span class="num">08</span>
+    <h2>Data security</h2>
+    <ul>
+      <li>All data is transmitted over encrypted (HTTPS/TLS) connections</li>
+      <li>Database access is protected by row-level security policies scoped to your account</li>
+      <li>Sensitive operations (story generation, subscription writes) are only permitted through authenticated server-side functions, never directly from the app</li>
+      <li>We never hardcode or expose API credentials in the app itself</li>
+    </ul>
+    <p>
+      While we take reasonable steps to protect your information, no method of transmission or
+      storage is 100% secure, and we cannot guarantee absolute security.
+    </p>
+  </section>
+
+  <section id="your-rights">
+    <span class="num">09</span>
+    <h2>Your rights & choices</h2>
+    <ul>
+      <li><strong>Access & correction</strong> — edit your child's profile, preferences, and account details directly in the app</li>
+      <li><strong>Deletion</strong> — request deletion of your account and all associated data by contacting us</li>
+      <li><strong>Portability</strong> — request an export of your stored data</li>
+      <li><strong>Withdraw consent</strong> — sign out or delete your account at any time; guest data can be cleared by uninstalling the app</li>
+    </ul>
+    <p>
+      Depending on where you live, you may have additional rights under laws such as the GDPR or
+      CCPA/CPRA. To exercise any of these rights, <a href="#contact">contact us</a> and we will
+      respond within a reasonable timeframe.
+    </p>
+  </section>
+
+  <section id="guest-mode">
+    <span class="num">10</span>
+    <h2>Guest mode & device identifiers</h2>
+    <p>
+      DreamNest lets you try the app without creating an account. In guest mode, your stories
+      and profile are stored locally on your device and linked to an anonymous session. If you
+      later sign in with Google, your local data is automatically carried over to your new
+      account.
+    </p>
+    <p>
+      We use a device identifier only to apply weekly story limits fairly for guest users. This
+      identifier is not shared with advertisers and is not used to track you across other apps
+      or websites.
+    </p>
+  </section>
+
+  <section id="international">
+    <span class="num">11</span>
+    <h2>International data transfers</h2>
+    <p>
+      Your information may be processed and stored on servers located outside your country of
+      residence, including in jurisdictions where our service providers operate. We rely on
+      appropriate contractual and technical safeguards to protect your information wherever it
+      is processed.
+    </p>
+  </section>
+
+  <section id="changes">
+    <span class="num">12</span>
+    <h2>Changes to this policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time to reflect changes in our practices or
+      for legal, operational, or regulatory reasons. We will update the "Effective" date at the
+      top of this page, and if changes are material, we will provide additional notice within
+      the app.
+    </p>
+  </section>
+
+  <section id="contact" style="border-bottom: none;">
+    <span class="num">13</span>
+    <div class="contact-card">
+      <h2>Contact us</h2>
+      <p>Questions about this policy or your data? We're happy to help.</p>
+      <a class="contact-btn" href="mailto:builder.apps@gmail.com">builder.apps@gmail.com</a>
+    </div>
+  </section>
+
+</main>
+</div>
+
+<footer>
+  DreamNest AI<span class="moon-small"></span>Stories for emotional growth
+  <br>© 2026 DreamNest AI. All rights reserved.
+</footer>
+
+<a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">↑</a>
+
+<script>
+  // scatter a few soft stars in the hero
+  (function(){
+    var host = document.getElementById('stars');
+    var count = 26;
+    for (var i = 0; i < count; i++){
+      var s = document.createElement('span');
+      s.style.left = (Math.random() * 100) + '%';
+      s.style.top = (Math.random() * 100) + '%';
+      s.style.opacity = (0.25 + Math.random() * 0.5).toFixed(2);
+      var size = (1.5 + Math.random() * 2).toFixed(1) + 'px';
+      s.style.width = size;
+      s.style.height = size;
+      host.appendChild(s);
+    }
+  })();
+
+  // back-to-top visibility
+  var btn = document.getElementById('backToTop');
+  window.addEventListener('scroll', function(){
+    if (window.scrollY > 480) btn.classList.add('show');
+    else btn.classList.remove('show');
+  });
+  btn.addEventListener('click', function(e){
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+</body>
+</html>
