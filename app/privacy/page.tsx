@@ -8,6 +8,7 @@ const policies = [
   { name: "Driving Theory Test", slug: "driving-theory", emoji: "🚗" },
   { name: "Mental Math Master", slug: "mental-math", emoji: "🧠" },
   { name: "Renu", slug: "renu", emoji: "🔄" },
+  { name: "BudgetWise", slug: "budgetwise", emoji: "💰" },
   { name: "ShishuAI", slug: "shishuai", emoji: "👶" },
 ];
 
