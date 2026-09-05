@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — ArrowGo</title>
+<meta name="description" content="Privacy Policy for ArrowGo — an offline-first maze-fill puzzle game. No ads, no analytics, no tracking.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Privacy Policy — ArrowGo">
+<meta property="og:description" content="ArrowGo plays offline. No ads, no analytics, no third-party trackers.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  /* ── ArrowGo palette, taken from lib/app/theme/app_colors.dart ───────────── */
+  :root{
+    --bg:          #F4F6FB;
+    --surface:     #FFFFFF;
+    --hero:        #14204A;
+    --on-hero:     #F4F6FB;
+    --ink:         #14204A;
+    --ink-muted:   #7A86A3;
+    --fill:        #FF7A22;
+    --cell:        #E4E9F5;
+    --cell-border: #D7DEEE;
+    --key:         #16BFD0;
+    --win:         #2FBF71;
+    --gold:        #F5B921;
+    --error:       #F2585C;
+    --shadow:      rgba(20, 32, 74, 0.10);
+
+    --r-sm: 10px;
+    --r-md: 18px;
+    --r-lg: 28px;
+    --step: 8px;
+  }
+
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:          #0E1426;
+      --surface:     #172038;
+      --hero:        #1E2C52;
+      --on-hero:     #F4F6FB;
+      --ink:         #F4F6FB;
+      --ink-muted:   #7E8AAB;
+      --fill:        #FF8A3D;
+      --cell:        #22304F;
+      --cell-border: #2C3A5C;
+      --shadow:      rgba(0, 0, 0, 0.40);
+    }
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+  body{
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Outfit', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 500;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap{
+    max-width: 760px;
+    margin: 0 auto;
+    padding: calc(var(--step) * 4) calc(var(--step) * 3) calc(var(--step) * 8);
+  }
+
+  /* ── Hero ───────────────────────────────────────────────────────────────── */
+  .hero{
+    background: var(--hero);
+    border-radius: var(--r-lg);
+    padding: calc(var(--step) * 5) calc(var(--step) * 4);
+    box-shadow: 0 18px 40px -12px var(--shadow);
+    text-align: center;
+  }
+
+  .mark{
+    width: 76px;
+    height: 76px;
+    display: block;
+    margin: 0 auto calc(var(--step) * 3);
+  }
+
+  .eyebrow{
+    margin: 0 0 calc(var(--step) * 1.5);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--fill);
+  }
+
+  .hero h1{
+    margin: 0;
+    font-size: clamp(2rem, 6vw, 2.75rem);
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    color: var(--on-hero);
+  }
+
+  .hero p{
+    margin: calc(var(--step) * 2) auto 0;
+    max-width: 46ch;
+    color: var(--on-hero);
+    opacity: 0.78;
+    font-weight: 500;
+  }
+
+  .updated{
+    display: inline-block;
+    margin-top: calc(var(--step) * 3);
+    padding: 6px 16px;
+    border-radius: 999px;
+    background: rgba(244, 246, 251, 0.10);
+    border: 1px solid rgba(244, 246, 251, 0.18);
+    color: var(--on-hero);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  /* ── Callout ────────────────────────────────────────────────────────────── */
+  .callout{
+    display: flex;
+    gap: calc(var(--step) * 2);
+    align-items: flex-start;
+    margin-top: calc(var(--step) * 4);
+    padding: calc(var(--step) * 2.5) calc(var(--step) * 3);
+    background: var(--surface);
+    border: 1px solid var(--cell-border);
+    border-left: 4px solid var(--win);
+    border-radius: var(--r-md);
+  }
+  .callout svg{ flex: none; margin-top: 2px; }
+  .callout strong{
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  /* ── Sections ───────────────────────────────────────────────────────────── */
+  section{
+    margin-top: calc(var(--step) * 4);
+    padding: calc(var(--step) * 3.5) calc(var(--step) * 3);
+    background: var(--surface);
+    border: 1px solid var(--cell-border);
+    border-radius: var(--r-md);
+  }
+
+  h2{
+    margin: 0 0 calc(var(--step) * 2);
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+  h2::after{
+    content: "";
+    display: block;
+    width: 32px;
+    height: 3px;
+    margin-top: calc(var(--step) * 1.5);
+    border-radius: 999px;
+    background: var(--fill);
+  }
+
+  section p{
+    margin: 0 0 calc(var(--step) * 1.5);
+    color: var(--ink-muted);
+  }
+  section p:last-child{ margin-bottom: 0; }
+
+  /* ── Contact ────────────────────────────────────────────────────────────── */
+  .contact{
+    border-color: transparent;
+    background:
+      linear-gradient(var(--surface), var(--surface)) padding-box,
+      linear-gradient(120deg, var(--fill), var(--gold)) border-box;
+    border: 1.5px solid transparent;
+  }
+  .contact a{
+    color: var(--fill);
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 2px solid color-mix(in srgb, var(--fill) 35%, transparent);
+  }
+  .contact a:hover{ border-bottom-color: var(--fill); }
+
+  /* ── Footer ─────────────────────────────────────────────────────────────── */
+  footer{
+    margin-top: calc(var(--step) * 6);
+    text-align: center;
+    color: var(--ink-muted);
+    font-size: 0.8rem;
+  }
+  footer .brand{
+    font-weight: 800;
+    letter-spacing: 0.04em;
+  }
+  footer .brand b{ color: var(--fill); }
+
+  @media (max-width: 480px){
+    .wrap{ padding: calc(var(--step) * 2) calc(var(--step) * 2) calc(var(--step) * 6); }
+    .hero{ padding: calc(var(--step) * 4) calc(var(--step) * 2.5); }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <!-- The ArrowGo mark: a 3×3 board with a painted path and the arrow at its end. -->
+    <svg class="mark" viewBox="0 0 100 100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="100" height="100" rx="24" fill="#14204A"/>
+      <g>
+        <rect x="19.17" y="19.17" width="16.32" height="16.32" rx="4.9" fill="#FF7A22"/>
+        <rect x="41.84" y="19.17" width="16.32" height="16.32" rx="4.9" fill="#F4F6FB" fill-opacity="0.22"/>
+        <rect x="64.50" y="19.17" width="16.32" height="16.32" rx="4.9" fill="#F4F6FB" fill-opacity="0.22"/>
+        <rect x="19.17" y="41.84" width="16.32" height="16.32" rx="4.9" fill="#FF7A22"/>
+        <rect x="41.84" y="41.84" width="16.32" height="16.32" rx="4.9" fill="#F4F6FB" fill-opacity="0.22"/>
+        <rect x="64.50" y="41.84" width="16.32" height="16.32" rx="4.9" fill="#F4F6FB" fill-opacity="0.22"/>
+        <rect x="19.17" y="64.50" width="16.32" height="16.32" rx="4.9" fill="#FF7A22"/>
+        <rect x="41.84" y="64.50" width="16.32" height="16.32" rx="4.9" fill="#FF7A22"/>
+        <rect x="64.50" y="64.50" width="16.32" height="16.32" rx="4.9" fill="#FF7A22"/>
+        <polygon points="79.0,72.66 69.6,77.5 72.0,72.66 69.6,67.8" fill="#FFFFFF"/>
+      </g>
+    </svg>
+    <p class="eyebrow">ArrowGo</p>
+    <h1>Privacy Policy</h1>
+    <p>Swipe. Paint. Solve. — an offline-first maze-fill puzzle game with no ads, no analytics, and no third-party trackers.</p>
+    <span class="updated">Last updated 5 September 2026</span>
+  </header>
+
+  <div class="callout">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z" fill="#2FBF71" fill-opacity="0.16"/>
+      <path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z" stroke="#2FBF71" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="m8.5 12 2.4 2.4L16 9.3" stroke="#2FBF71" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span><strong>The short version:</strong> ArrowGo works completely offline. You do not need an account, and nothing you do in the game leaves your device unless you deliberately turn on cloud backup. There are no adverts, no analytics, and no third-party trackers.</span>
+  </div>
+
+  <section>
+    <h2>What is stored on your device</h2>
+    <p>Your progress is saved in a database on your phone: which levels you have completed, your stars, best move counts and times, coins, hints, daily puzzle results, achievements and the cosmetics you own.</p>
+    <p>Your settings are stored the same way: sound, music, haptics, appearance, and whether you have seen the tour.</p>
+    <p>Deleting the app removes all of it.</p>
+  </section>
+
+  <section>
+    <h2>What leaves your device, and only if you ask</h2>
+    <p>Cloud backup is off by default. If you sign in and turn it on, the progress and settings listed above are copied to our Supabase project so you can restore them on another device.</p>
+    <p>That copy is tied to your account and readable only by you. It is enforced by database rules on the server, not just by the app.</p>
+    <p>To sign in we store your email address and an authentication token. We never see or store your password.</p>
+    <p>You can sign out at any time, which stops any further syncing. Ask us to delete your account and the stored copy goes with it.</p>
+  </section>
+
+  <section>
+    <h2>What we never collect</h2>
+    <p>Your location, contacts, photos, microphone or camera.</p>
+    <p>Advertising identifiers or any cross-app tracking.</p>
+    <p>Analytics about how you play.</p>
+  </section>
+
+  <section>
+    <h2>Children</h2>
+    <p>ArrowGo is suitable for all ages and collects no personal data from anyone by default. If you choose to enable cloud backup, an email address is required, so that feature is intended for players aged 13 and over.</p>
+  </section>
+
+  <section>
+    <h2>Purchases</h2>
+    <p>Premium is handled by the App Store or Google Play. Payment details go to them and never reach us; the app only ever learns whether a purchase succeeded.</p>
+  </section>
+
+  <section>
+    <h2>Your choices</h2>
+    <p>Reset progress, in Settings, clears everything stored on this device.</p>
+    <p>Sign out, in Settings, stops cloud backup.</p>
+    <p>Uninstalling the app removes all local data.</p>
+  </section>
+
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>Questions, or a request to delete your stored copy: <a href="mailto:ofbuilder.apps@gmail.com">ofbuilder.apps@gmail.com</a>.</p>
+  </section>
+
+  <footer>
+    <p class="brand">ARROW<b>GO</b></p>
+    <p>This policy describes what the app actually does. If data handling changes, it changes with it.</p>
+  </footer>
+
+</div>
+</body>
+</html>

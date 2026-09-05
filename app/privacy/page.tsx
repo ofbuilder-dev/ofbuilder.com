@@ -10,6 +10,7 @@ const policies = [
   { name: "Renu", slug: "renu", emoji: "🔄" },
   { name: "BudgetWise", slug: "budgetwise", emoji: "💰" },
   { name: "Passly (UK Theory Tests)", slug: "passly", emoji: "🚦" },
+  { name: "ArrowGo", slug: "arrowgo", emoji: "🏹" },
   { name: "ShishuAI", slug: "shishuai", emoji: "👶" },
 ];
 
