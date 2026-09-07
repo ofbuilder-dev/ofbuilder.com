@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy &ndash; Citizenship Test Prep apps</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <style>
+    /* ── Sunrise design tokens ──────────────────────────────────────────────
+       Matches the in-app palette (lib/core/constants/app_colors.dart):
+       #C43D0B is the only ember that carries white text (5.22:1). Every
+       neutral is warm-tinted. Radius is a closed scale: 11 / 17 / 20 / 24 / 28.
+    */
+    :root {
+      --primary:        #C43D0B;
+      --primary-dark:   #96300A;
+      --primary-faint:  #FFF0E4;
+      --glow:           #FFA94D;
+      --sun:            #FFD8A8;
+
+      --bg:             #FFF8F3;
+      --surface:        #FFFFFF;
+      --surface-variant:#F5E7DC;
+      --border:         #F0E2D7;
+      --text-primary:   #241A15;
+      --text-reading:   #3A2C25;
+      --text-secondary: #7C6A5F;
+      --highlight:      #FFE9D4;
+
+      --brand-text:     var(--primary);
+      --card-shadow:    0 10px 30px rgba(196, 61, 11, .09);
+      --hero-shadow:    0 8px 22px rgba(196, 61, 11, .28);
+
+      --r-chip:  11px;
+      --r-tile:  17px;
+      --r-btn:   20px;
+      --r-card:  24px;
+      --r-hero:  28px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --primary-faint:  #33211A;
+        --bg:             #17110F;
+        --surface:        #221A17;
+        --surface-variant:#2A211D;
+        --border:         #372B26;
+        --text-primary:   #FBF3ED;
+        --text-reading:   #EADFD7;
+        --text-secondary: #A99287;
+        --highlight:      #33211A;
+        --brand-text:     #FFA94D;
+        --card-shadow:    0 10px 30px rgba(0, 0, 0, .35);
+      }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.72;
+      color: var(--text-reading);
+      background: var(--bg);
+      padding: 0 0 72px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Bricolage Grotesque', 'Figtree', sans-serif;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(150deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: #fff;
+      padding: 56px 24px 44px;
+      text-align: center;
+    }
+    .hero .mark {
+      width: 76px; height: 76px;
+      margin: 0 auto 22px;
+      display: block;
+      filter: drop-shadow(0 6px 14px rgba(0, 0, 0, .22));
+    }
+    .hero h1 { font-size: 28px; font-weight: 800; color: #fff; margin-bottom: 10px; }
+    .hero .subtitle { font-size: 14px; opacity: .82; font-weight: 500; }
+
+    /* ── Container ── */
+    .container { max-width: 720px; margin: 0 auto; padding: 0 16px; }
+
+    /* ── Summary card ── */
+    .summary {
+      background: var(--surface);
+      border-radius: var(--r-card);
+      padding: 24px;
+      margin: 28px 0 4px;
+      border-left: 4px solid var(--primary);
+      box-shadow: var(--card-shadow);
+    }
+    .summary p { margin: 0; font-size: 15px; color: var(--text-secondary); }
+    .summary strong { color: var(--text-primary); }
+
+    /* ── Section ── */
+    .section {
+      background: var(--surface);
+      border-radius: var(--r-card);
+      padding: 24px;
+      margin-top: 16px;
+      box-shadow: var(--card-shadow);
+    }
+    .section h2 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section h2 .num {
+      background: var(--primary-faint);
+      color: var(--brand-text);
+      font-family: 'Figtree', sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      width: 30px; height: 30px;
+      border-radius: var(--r-chip);
+      display: inline-flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .section p { font-size: 15px; color: var(--text-secondary); margin-bottom: 12px; }
+    .section p:last-child { margin-bottom: 0; }
+    .section strong { color: var(--text-primary); }
+    .section a { color: var(--brand-text); }
+
+    /* ── Clean list ── */
+    ul.clean { list-style: none; padding: 0; margin: 4px 0 0; }
+    ul.clean li {
+      display: flex;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 15px;
+      color: var(--text-secondary);
+    }
+    ul.clean li:last-child { border-bottom: none; padding-bottom: 0; }
+    ul.clean li .dot {
+      width: 7px; height: 7px;
+      background: var(--primary);
+      border-radius: 50%;
+      margin-top: 9px;
+      flex-shrink: 0;
+    }
+    ul.clean li strong { color: var(--text-primary); }
+
+    /* ── Table ── */
+    .table-wrap { overflow-x: auto; margin: 12px 0 0; border-radius: var(--r-tile); border: 1px solid var(--border); }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th {
+      background: var(--surface-variant);
+      text-align: left;
+      padding: 11px 14px;
+      font-weight: 700;
+      color: var(--text-primary);
+      white-space: nowrap;
+    }
+    td {
+      padding: 11px 14px;
+      border-top: 1px solid var(--border);
+      vertical-align: top;
+      color: var(--text-secondary);
+    }
+    td strong { color: var(--text-primary); }
+    td code {
+      font-size: 12.5px;
+      background: var(--primary-faint);
+      color: var(--brand-text);
+      padding: 1px 6px;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+
+    /* ── Rights grid ── */
+    .rights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 6px;
+    }
+    .right-item {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--r-tile);
+      padding: 13px 15px;
+    }
+    .right-item strong { display: block; font-size: 14px; color: var(--text-primary); margin-bottom: 2px; }
+    .right-item span { font-size: 13px; color: var(--text-secondary); }
+
+    /* ── Callout ── */
+    .callout {
+      background: var(--highlight);
+      border-radius: var(--r-tile);
+      padding: 14px 16px;
+      margin-top: 14px;
+      font-size: 14px;
+      color: var(--text-reading);
+    }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: linear-gradient(150deg, var(--primary) 0%, var(--primary-dark) 100%);
+      border-radius: var(--r-card);
+      padding: 28px 24px;
+      margin-top: 20px;
+      color: #fff;
+      text-align: center;
+      box-shadow: var(--hero-shadow);
+    }
+    .contact-card h2 { font-size: 19px; font-weight: 800; margin-bottom: 8px; color: #fff; }
+    .contact-card p { font-size: 14px; opacity: .88; margin-bottom: 18px; }
+    .contact-card a {
+      display: inline-block;
+      background: rgba(255, 255, 255, .16);
+      border: 1px solid rgba(255, 255, 255, .32);
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 26px;
+      border-radius: var(--r-btn);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 480px) {
+      .hero { padding: 44px 20px 36px; }
+      .hero h1 { font-size: 23px; }
+      .rights { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <div class="hero">
+    <svg class="mark" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M14 66 H82" stroke="#fff" stroke-width="6" stroke-linecap="round" />
+      <path d="M22 66 a26 26 0 0 1 52 0" stroke="#fff" stroke-width="6" stroke-linecap="round" />
+      <circle cx="48" cy="66" r="11" fill="#fff" />
+      <g stroke="#fff" stroke-width="5" stroke-linecap="round">
+        <path d="M48 30 v-9" />
+        <path d="M25 40 l-6 -6" />
+        <path d="M71 40 l6 -6" />
+      </g>
+    </svg>
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">Citizenship &amp; Naturalisation Test Prep apps &nbsp;&middot;&nbsp; Effective 7 September 2026</p>
+  </div>
+
+  <div class="container">
+
+    <!-- Summary -->
+    <div class="summary">
+      <p>These apps are built to work <strong>offline, with no account and no sign-in</strong>.
+      Your study progress, scores, notes and settings never leave your phone. We do not run
+      ads, we do not use analytics or tracking, and we never sell or share your data. The
+      only time the app talks to the internet is to download study content, to verify a
+      one-time Pro purchase, and &mdash; if you use the optional AI Tutor &mdash; to answer
+      your question.</p>
+    </div>
+
+    <!-- 1 -->
+    <div class="section">
+      <h2><span class="num">1</span> Who this policy covers</h2>
+      <p>This policy is published by the independent developer trading as <strong>OfBuilder</strong>
+      and applies to the following Android apps (the &ldquo;apps&rdquo;), which share one
+      codebase and the same privacy practices:</p>
+      <div class="table-wrap">
+        <table>
+          <tr><th>App</th><th>Package ID</th><th>Country</th></tr>
+          <tr><td><strong>Life in the UK Test 2026</strong></td><td><code>com.ofbuilder.lifeuk</code></td><td>United Kingdom</td></tr>
+          <tr><td><strong>Australian Citizenship Test</strong></td><td><code>com.ofbuilder.auscitizenship</code></td><td>Australia</td></tr>
+          <tr><td><strong>US Naturalization Test Prep</strong></td><td><code>com.ofbuilder.usnaturalization</code></td><td>United States</td></tr>
+          <tr><td><strong>Inburgeringsexamen Prep</strong></td><td><code>com.ofbuilder.nlinburgering</code></td><td>Netherlands</td></tr>
+          <tr><td><strong>Danish Citizenship Test</strong></td><td><code>com.ofbuilder.dkcitizenshiptest</code></td><td>Denmark</td></tr>
+          <tr><td><strong>Einb&uuml;rgerungstest 2026</strong></td><td><code>com.ofbuilder.einburgerungstest</code></td><td>Germany</td></tr>
+          <tr><td><strong>Canadian Citizenship Test</strong></td><td><code>com.ofbuilder.canacitizenship</code></td><td>Canada</td></tr>
+        </table>
+      </div>
+      <div class="callout">
+        <strong>Not affiliated with any government.</strong> These are independent practice
+        apps based on publicly available study material. They are not endorsed by, produced
+        by, or connected with the UK Home Office, the Australian Department of Home Affairs,
+        USCIS, the Dutch government (DUO), the Danish Immigration Service (SIRI), the German
+        Federal Office for Migration and Refugees (BAMF), or Immigration, Refugees and
+        Citizenship Canada (IRCC).
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="section">
+      <h2><span class="num">2</span> Data the app keeps on your device</h2>
+      <p>All of the following is stored <strong>only on your device</strong>, in the app&rsquo;s
+      private storage. It is never uploaded to us, and we cannot see it:</p>
+      <ul class="clean">
+        <li><span class="dot"></span><span><strong>Study progress</strong> &mdash; questions answered, correct/incorrect history, spaced-repetition state, mastery per topic</span></li>
+        <li><span class="dot"></span><span><strong>Mock test results</strong> &mdash; scores and history used for the readiness / pass predictor</span></li>
+        <li><span class="dot"></span><span><strong>Streaks, XP and daily goals</strong></span></li>
+        <li><span class="dot"></span><span><strong>Bookmarks, mistakes journal, and handbook highlights &amp; notes</strong></span></li>
+        <li><span class="dot"></span><span><strong>Settings</strong> &mdash; chosen test date, question language, reminder preferences, light/dark theme</span></li>
+      </ul>
+      <p style="margin-top:14px;">You can erase all of it at any time with
+      <strong>Settings &rarr; Reset progress</strong>, or by uninstalling the app.</p>
+    </div>
+
+    <!-- 3 -->
+    <div class="section">
+      <h2><span class="num">3</span> When the app uses the internet</h2>
+      <p>There are only three cases, and none of them involve an account or your personal identity:</p>
+      <div class="table-wrap">
+        <table>
+          <tr><th>Purpose</th><th>What is sent</th><th>Sent to</th></tr>
+          <tr>
+            <td><strong>Downloading study content</strong><br>Questions and handbook text, on first run and after content updates</td>
+            <td>A plain file request. No personal data. (Content is also bundled in the app, so it works fully offline.)</td>
+            <td>Our content host (Supabase Storage CDN)</td>
+          </tr>
+          <tr>
+            <td><strong>Pro unlock &amp; &ldquo;Restore purchases&rdquo;</strong><br>One-time in-app purchase, no subscription</td>
+            <td>An app-generated anonymous ID and the store purchase receipt, to verify and restore your unlock</td>
+            <td>RevenueCat and Google Play</td>
+          </tr>
+          <tr>
+            <td><strong>AI Tutor</strong> (optional, Pro)<br>Only when you open it and send a message</td>
+            <td>The text of the message you type and the current question context, to generate an answer</td>
+            <td>Anthropic (Claude API)</td>
+          </tr>
+        </table>
+      </div>
+      <p style="margin-top:14px;">We do not keep server-side copies of AI Tutor conversations.
+      Messages you send are processed by Anthropic under its own privacy policy and are not
+      used by us for any other purpose.</p>
+    </div>
+
+    <!-- 4 -->
+    <div class="section">
+      <h2><span class="num">4</span> What we never collect</h2>
+      <p>The apps do <strong>not</strong> collect or access any of the following:</p>
+      <div class="rights">
+        <div class="right-item"><strong>Identity</strong><span>No name, email, phone or address</span></div>
+        <div class="right-item"><strong>Location</strong><span>No GPS or approximate location</span></div>
+        <div class="right-item"><strong>Contacts &amp; media</strong><span>No contacts, photos, camera or microphone</span></div>
+        <div class="right-item"><strong>Advertising</strong><span>No ads, no advertising ID, no ad SDKs</span></div>
+        <div class="right-item"><strong>Analytics</strong><span>No usage analytics or crash-tracking SDKs</span></div>
+        <div class="right-item"><strong>Tracking</strong><span>No cross-app or cross-site tracking</span></div>
+      </div>
+      <p style="margin-top:14px;">We do not sell, rent, or share your data, and there is no
+      third-party advertising or marketing profiling in these apps.</p>
+    </div>
+
+    <!-- 5 -->
+    <div class="section">
+      <h2><span class="num">5</span> Permissions the app requests</h2>
+      <div class="table-wrap">
+        <table>
+          <tr><th>Permission</th><th>Why</th></tr>
+          <tr><td><strong>Internet</strong></td><td>Download study content, verify purchases, and run the AI Tutor</td></tr>
+          <tr><td><strong>Notifications</strong></td><td>Optional study reminders and streak alerts &mdash; scheduled on your device</td></tr>
+          <tr><td><strong>Run at startup &amp; vibrate</strong></td><td>Re-schedule your reminders after the phone restarts</td></tr>
+        </table>
+      </div>
+      <p style="margin-top:14px;">Notifications are off unless you enable them, and can be
+      turned off at any time in the app or in your device settings. No data is sent anywhere
+      to produce a reminder.</p>
+    </div>
+
+    <!-- 6 -->
+    <div class="section">
+      <h2><span class="num">6</span> Third-party services</h2>
+      <div class="table-wrap">
+        <table>
+          <tr><th>Service</th><th>Role</th><th>Privacy policy</th></tr>
+          <tr><td><strong>Google Play</strong></td><td>App distribution and payment processing</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td></tr>
+          <tr><td><strong>RevenueCat</strong></td><td>In-app purchase verification and restore</td><td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a></td></tr>
+          <tr><td><strong>Supabase</strong></td><td>Static hosting / CDN for study-content files</td><td><a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></td></tr>
+          <tr><td><strong>Anthropic</strong></td><td>AI Tutor responses (only if you use the feature)</td><td><a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">anthropic.com/legal/privacy</a></td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="section">
+      <h2><span class="num">7</span> Data retention &amp; deletion</h2>
+      <p><strong>On your device:</strong> kept until you use <strong>Settings &rarr; Reset
+      progress</strong>, clear the app&rsquo;s data, or uninstall the app. We hold no copy.</p>
+      <p><strong>Purchases:</strong> RevenueCat and Google Play retain purchase records so
+      your Pro unlock can be restored. To request deletion of the purchase record linked to
+      your anonymous app ID, email us and we will action it within 30 days.</p>
+      <p><strong>AI Tutor:</strong> we keep no conversation history on our servers.</p>
+    </div>
+
+    <!-- 8 -->
+    <div class="section">
+      <h2><span class="num">8</span> Children&rsquo;s privacy</h2>
+      <p>These apps are study tools for adults preparing for a citizenship or naturalisation
+      test. They are not directed at children, and because the apps collect no personal
+      information, none is collected from children.</p>
+    </div>
+
+    <!-- 9 -->
+    <div class="section">
+      <h2><span class="num">9</span> Your rights</h2>
+      <p>Depending on where you live (for example under the UK GDPR, EU GDPR, or the
+      California CCPA/CPRA) you may have the rights below. Because we hold almost no personal
+      data &mdash; only an anonymous purchase record via RevenueCat &mdash; most requests
+      are limited to that record.</p>
+      <div class="rights">
+        <div class="right-item"><strong>Access</strong><span>Request a copy of what we hold</span></div>
+        <div class="right-item"><strong>Rectification</strong><span>Correct inaccurate data</span></div>
+        <div class="right-item"><strong>Erasure</strong><span>Request deletion</span></div>
+        <div class="right-item"><strong>Portability</strong><span>Receive it in a readable format</span></div>
+        <div class="right-item"><strong>Restriction</strong><span>Limit how we process it</span></div>
+        <div class="right-item"><strong>Objection</strong><span>Object to processing</span></div>
+      </div>
+      <p style="margin-top:14px;">To exercise any right, email
+      <a href="mailto:ofbuilder.apps@gmail.com">ofbuilder.apps@gmail.com</a>. We respond
+      within 30 days. You also have the right to complain to your local data protection
+      authority.</p>
+    </div>
+
+    <!-- 10 -->
+    <div class="section">
+      <h2><span class="num">10</span> Security</h2>
+      <p>Every network request the app makes uses HTTPS/TLS encryption. Data stored on your
+      device sits in the app&rsquo;s private, OS-sandboxed storage. Payment card details are
+      never seen or stored by us &mdash; all payments are handled by Google Play.</p>
+    </div>
+
+    <!-- 11 -->
+    <div class="section">
+      <h2><span class="num">11</span> Changes to this policy</h2>
+      <p>If this policy changes, the updated version will be posted on this page with a new
+      effective date. Significant changes will also be noted in the app&rsquo;s release
+      notes.</p>
+    </div>
+
+    <!-- Contact -->
+    <div class="contact-card">
+      <h2>Questions or requests?</h2>
+      <p>We&rsquo;re happy to help with any privacy question or data request.</p>
+      <a href="mailto:ofbuilder.apps@gmail.com">ofbuilder.apps@gmail.com</a>
+    </div>
+
+    <footer>
+      &copy; 2026 OfBuilder &nbsp;&middot;&nbsp; Citizenship &amp; Naturalisation Test Prep apps<br />
+      Independent practice apps &mdash; not affiliated with any government body.
+    </footer>
+
+  </div>
+</body>
+</html>
