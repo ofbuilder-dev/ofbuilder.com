@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Use &ndash; Citizenship Test Prep apps</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <style>
+    /* ── Sunrise design tokens ──────────────────────────────────────────────
+       Matches the in-app palette (lib/core/constants/app_colors.dart):
+       #C43D0B is the only ember that carries white text (5.22:1). Every
+       neutral is warm-tinted. Radius is a closed scale: 11 / 17 / 20 / 24 / 28.
+    */
+    :root {
+      --primary:        #C43D0B;
+      --primary-dark:   #96300A;
+      --primary-faint:  #FFF0E4;
+      --glow:           #FFA94D;
+      --sun:            #FFD8A8;
+
+      --bg:             #FFF8F3;
+      --surface:        #FFFFFF;
+      --surface-variant:#F5E7DC;
+      --border:         #F0E2D7;
+      --text-primary:   #241A15;
+      --text-reading:   #3A2C25;
+      --text-secondary: #7C6A5F;
+      --highlight:      #FFE9D4;
+
+      --brand-text:     var(--primary);
+      --card-shadow:    0 10px 30px rgba(196, 61, 11, .09);
+      --hero-shadow:    0 8px 22px rgba(196, 61, 11, .28);
+
+      --r-chip:  11px;
+      --r-tile:  17px;
+      --r-btn:   20px;
+      --r-card:  24px;
+      --r-hero:  28px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --primary-faint:  #33211A;
+        --bg:             #17110F;
+        --surface:        #221A17;
+        --surface-variant:#2A211D;
+        --border:         #372B26;
+        --text-primary:   #FBF3ED;
+        --text-reading:   #EADFD7;
+        --text-secondary: #A99287;
+        --highlight:      #33211A;
+        --brand-text:     #FFA94D;
+        --card-shadow:    0 10px 30px rgba(0, 0, 0, .35);
+      }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.72;
+      color: var(--text-reading);
+      background: var(--bg);
+      padding: 0 0 72px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Bricolage Grotesque', 'Figtree', sans-serif;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(150deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: #fff;
+      padding: 56px 24px 44px;
+      text-align: center;
+    }
+    .hero .mark {
+      width: 76px; height: 76px;
+      margin: 0 auto 22px;
+      display: block;
+      filter: drop-shadow(0 6px 14px rgba(0, 0, 0, .22));
+    }
+    .hero h1 { font-size: 28px; font-weight: 800; color: #fff; margin-bottom: 10px; }
+    .hero .subtitle { font-size: 14px; opacity: .82; font-weight: 500; }
+
+    /* ── Container ── */
+    .container { max-width: 720px; margin: 0 auto; padding: 0 16px; }
+
+    /* ── Summary card ── */
+    .summary {
+      background: var(--surface);
+      border-radius: var(--r-card);
+      padding: 24px;
+      margin: 28px 0 4px;
+      border-left: 4px solid var(--primary);
+      box-shadow: var(--card-shadow);
+    }
+    .summary p { margin: 0; font-size: 15px; color: var(--text-secondary); }
+    .summary strong { color: var(--text-primary); }
+
+    /* ── Section ── */
+    .section {
+      background: var(--surface);
+      border-radius: var(--r-card);
+      padding: 24px;
+      margin-top: 16px;
+      box-shadow: var(--card-shadow);
+    }
+    .section h2 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section h2 .num {
+      background: var(--primary-faint);
+      color: var(--brand-text);
+      font-family: 'Figtree', sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      width: 30px; height: 30px;
+      border-radius: var(--r-chip);
+      display: inline-flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .section p { font-size: 15px; color: var(--text-secondary); margin-bottom: 12px; }
+    .section p:last-child { margin-bottom: 0; }
+    .section strong { color: var(--text-primary); }
+    .section a { color: var(--brand-text); }
+
+    /* ── Clean list ── */
+    ul.clean { list-style: none; padding: 0; margin: 4px 0 0; }
+    ul.clean li {
+      display: flex;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 15px;
+      color: var(--text-secondary);
+    }
+    ul.clean li:last-child { border-bottom: none; padding-bottom: 0; }
+    ul.clean li .dot {
+      width: 7px; height: 7px;
+      background: var(--primary);
+      border-radius: 50%;
+      margin-top: 9px;
+      flex-shrink: 0;
+    }
+    ul.clean li strong { color: var(--text-primary); }
+
+    /* ── Table ── */
+    .table-wrap { overflow-x: auto; margin: 12px 0 0; border-radius: var(--r-tile); border: 1px solid var(--border); }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th {
+      background: var(--surface-variant);
+      text-align: left;
+      padding: 11px 14px;
+      font-weight: 700;
+      color: var(--text-primary);
+      white-space: nowrap;
+    }
+    td {
+      padding: 11px 14px;
+      border-top: 1px solid var(--border);
+      vertical-align: top;
+      color: var(--text-secondary);
+    }
+    td strong { color: var(--text-primary); }
+    td code {
+      font-size: 12.5px;
+      background: var(--primary-faint);
+      color: var(--brand-text);
+      padding: 1px 6px;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+
+    /* ── Rights grid ── */
+    .rights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 6px;
+    }
+    .right-item {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--r-tile);
+      padding: 13px 15px;
+    }
+    .right-item strong { display: block; font-size: 14px; color: var(--text-primary); margin-bottom: 2px; }
+    .right-item span { font-size: 13px; color: var(--text-secondary); }
+
+    /* ── Callout ── */
+    .callout {
+      background: var(--highlight);
+      border-radius: var(--r-tile);
+      padding: 14px 16px;
+      margin-top: 14px;
+      font-size: 14px;
+      color: var(--text-reading);
+    }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: linear-gradient(150deg, var(--primary) 0%, var(--primary-dark) 100%);
+      border-radius: var(--r-card);
+      padding: 28px 24px;
+      margin-top: 20px;
+      color: #fff;
+      text-align: center;
+      box-shadow: var(--hero-shadow);
+    }
+    .contact-card h2 { font-size: 19px; font-weight: 800; margin-bottom: 8px; color: #fff; }
+    .contact-card p { font-size: 14px; opacity: .88; margin-bottom: 18px; }
+    .contact-card a {
+      display: inline-block;
+      background: rgba(255, 255, 255, .16);
+      border: 1px solid rgba(255, 255, 255, .32);
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 26px;
+      border-radius: var(--r-btn);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 480px) {
+      .hero { padding: 44px 20px 36px; }
+      .hero h1 { font-size: 23px; }
+      .rights { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <div class="hero">
+    <svg class="mark" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M14 66 H82" stroke="#fff" stroke-width="6" stroke-linecap="round" />
+      <path d="M22 66 a26 26 0 0 1 52 0" stroke="#fff" stroke-width="6" stroke-linecap="round" />
+      <circle cx="48" cy="66" r="11" fill="#fff" />
+      <g stroke="#fff" stroke-width="5" stroke-linecap="round">
+        <path d="M48 30 v-9" />
+        <path d="M25 40 l-6 -6" />
+        <path d="M71 40 l6 -6" />
+      </g>
+    </svg>
+    <h1>Terms of Use</h1>
+    <p class="subtitle">Citizenship &amp; Naturalisation Test Prep apps &nbsp;&middot;&nbsp; Effective 11 September 2026</p>
+  </div>
+
+    <div class="container">
+
+    <div class="summary">
+      <p>These are practice apps. They help you study for a citizenship or
+      naturalisation test. They are <strong>not affiliated with any government</strong>,
+      they are <strong>not immigration or legal advice</strong>, and they cannot promise
+      that you will pass. Please read the short sections below before buying Pro.</p>
+    </div>
+
+    <div class="section">
+      <h2><span class="num">1</span> Who these terms cover</h2>
+      <p>These terms apply to the citizenship and naturalisation test practice apps published by the independent developer trading as <strong>OfBuilder</strong>, listed in our <a href="https://ofbuilder.com/privacy/citizenship/">Privacy Policy</a>. By installing or using an app you agree to these terms.</p>
+    </div>
+    <div class="section">
+      <h2><span class="num">2</span> Not a government service</h2>
+      <p>The apps are independent study tools. They are not affiliated with, endorsed by, or connected to any government, government department or testing body, including the UK Home Office, the Australian Department of Home Affairs, USCIS, DUO, SIRI, the BAMF or IRCC. They do not represent a government entity.</p>
+      <p>The apps cannot book a test, submit or process any application, or affect the outcome of one. For anything official, use the government source linked inside each app.</p>
+    </div>
+    <div class="section">
+      <h2><span class="num">3</span> Not immigration or legal advice</h2>
+      <p>Nothing in the apps is immigration advice, legal advice or advice about your personal circumstances. Where the apps describe eligibility rules, fees, residence periods or other requirements, that is general information for study only, and it may be out of date.</p>
+      <p>Immigration rules change and depend on your situation. Before you apply for anything, check the official government guidance or speak to a qualified, regulated adviser. In the UK, immigration advice may only be given by advisers regulated by the Immigration Advice Authority or by qualified lawyers.</p>
+    </div>
+    <div class="section">
+      <h2><span class="num">4</span> Accuracy, and no guarantee of passing</h2>
+      <p>We work hard to keep questions accurate and in line with the official study material, and every answer cites where it comes from so you can check it. Even so, we cannot guarantee that every question, answer or explanation is complete, current or error free, or that it matches the real test.</p>
+      <p>Using the apps does not guarantee that you will pass. Your result depends on your own preparation and on the official test itself. If you find a mistake, please tell us and we will fix it.</p>
+    </div>
+    <div class="section">
+      <h2><span class="num">5</span> Pro purchase and refunds</h2>
+      <p>Pro is a one-time, non-subscription purchase that unlocks the full app on the store account you bought it with. You can restore it on another device signed in to the same store account, with no separate account needed.</p>
+      <p>Purchases are processed and billed by Google Play, which acts as the seller. Refunds are handled under Google Play&rsquo;s refund policy. Nothing in these terms limits any right to a refund or remedy you have under the consumer law of the country where you live.</p>
+    </div>
+    <div class="section">
+      <h2><span class="num">6</span> Using the apps</h2>
+      <p>You may use the apps for your own personal study. Please do not copy, resell or redistribute the question bank or study guide, or try to extract or reverse engineer them.</p>
+    </div>
+    <div class="section">
+      <h2><span class="num">7</span> Content and ownership</h2>
+      <p>The questions, explanations and study guide text in the apps are written by us and are protected by copyright. Official publications, government materials, names, flags and emblems referred to in the apps belong to their respective owners and are used only to identify and describe the subject being studied.</p>
+      <p>The Australian app is adapted from <em>Australian Citizenship: Our Common Bond</em>, &copy; Commonwealth of Australia (Department of Home Affairs), used under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International licence</a>. Questions and explanations are adapted rather than reproduced, and the Commonwealth Coat of Arms is not used. The US civics questions and the German BAMF question catalogue are public domain official works.</p>
+    </div>
+    <div class="section">
+      <h2><span class="num">8</span> Limitation of liability</h2>
+      <p>The apps are provided as they are. To the extent the law allows, we are not liable for any loss arising from your use of the apps, including a failed test, a refused or delayed application, or reliance on information that turns out to be wrong. Nothing in these terms excludes or limits liability that cannot be excluded or limited by law.</p>
+    </div>
+    <div class="section">
+      <h2><span class="num">9</span> Changes to these terms</h2>
+      <p>We may update these terms from time to time. The current version is always on this page with its effective date. Significant changes will also be noted in the app&rsquo;s release notes.</p>
+    </div>
+
+    <div class="contact-card">
+      <h2>Questions about these terms?</h2>
+      <p>Get in touch and we will reply as soon as we can.</p>
+      <a href="mailto:ofbuilder.apps@gmail.com">ofbuilder.apps@gmail.com</a>
+    </div>
+
+    <footer>
+      &copy; 2026 OfBuilder &nbsp;&middot;&nbsp; Citizenship &amp; Naturalisation Test Prep apps<br />
+      Independent practice apps, not affiliated with any government body.
+    </footer>
+
+  </div>
+</body>
+</html>
