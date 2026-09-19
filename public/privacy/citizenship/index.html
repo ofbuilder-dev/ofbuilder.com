@@ -270,7 +270,7 @@
       </g>
     </svg>
     <h1>Privacy Policy</h1>
-    <p class="subtitle">Citizenship &amp; Naturalisation Test Prep apps &nbsp;&middot;&nbsp; Effective 8 September 2026</p>
+    <p class="subtitle">Citizenship &amp; Naturalisation Test Prep apps &nbsp;&middot;&nbsp; Effective 19 September 2026</p>
   </div>
 
   <div class="container">
@@ -282,14 +282,19 @@
       ads, we do not use analytics or tracking, and we never sell or share your data. The
       only time the app talks to the internet is to download study content (once, when you
       first open it, and again when that content is updated), to verify a one-time Pro
-      purchase, and, if you use the optional AI Tutor, to answer your question.</p>
+      purchase (every app except the free Canadian app), and, if you use the optional AI
+      Tutor, to answer your question. Like any internet request, these reveal your IP
+      address to the service that receives them (see section 3).</p>
     </div>
 
     <!-- 1 -->
     <div class="section">
       <h2><span class="num">1</span> Who this policy covers</h2>
-      <p>This policy is published by the independent developer trading as <strong>OfBuilder</strong>
-      and applies to the following Android apps (the &ldquo;apps&rdquo;), which share one
+      <p>This policy is published by the independent developer trading as <strong>OfBuilder</strong>,
+      which is the controller of the limited data described below. Contact:
+      <a href="mailto:ofbuilder.apps@gmail.com">ofbuilder.apps@gmail.com</a>.
+      <!-- TODO before EU launch: add legal name and postal address here (Play DSA trader details + GDPR Art. 13). -->
+      It applies to the following Android apps (the &ldquo;apps&rdquo;), which share one
       codebase and the same privacy practices:</p>
       <div class="table-wrap">
         <table>
@@ -303,6 +308,8 @@
           <tr><td><strong>Canadian Citizenship Test</strong></td><td><code>com.ofbuilder.cacitizenship</code></td><td>Canada</td></tr>
         </table>
       </div>
+      <p style="margin-top:14px;">The Canadian app is completely free. It has no in-app purchases
+      and does not contact RevenueCat, so the purchase sections below do not apply to it.</p>
       <div class="callout">
         <strong>Not affiliated with any government.</strong> These are independent practice
         apps based on publicly available study material. They are not endorsed by, produced
@@ -332,18 +339,18 @@
     <!-- 3 -->
     <div class="section">
       <h2><span class="num">3</span> When the app uses the internet</h2>
-      <p>There are only three cases, and none of them involve an account or your personal identity:</p>
+      <p>There are only three cases, and none of them involve an account, your name or your contact details:</p>
       <div class="table-wrap">
         <table>
           <tr><th>Purpose</th><th>What is sent</th><th>Sent to</th></tr>
           <tr>
             <td><strong>Downloading study content</strong><br>Questions and handbook text, on first run and after content updates</td>
-            <td>A plain file request. No personal data, no account. A connection is needed the first time you open the app; after that the content is stored on your device and the app works offline.</td>
+            <td>A plain file request. No account and no data from your device beyond what any web request carries: your IP address and basic request details, which the host may log to deliver the file and keep the service secure. A connection is needed the first time you open the app; after that the content is stored on your device and the app works offline.</td>
             <td>Our content host (Supabase Storage CDN)</td>
           </tr>
           <tr>
             <td><strong>Pro unlock &amp; &ldquo;Restore purchases&rdquo;</strong><br>One-time in-app purchase, no subscription</td>
-            <td>An app-generated anonymous ID and the store purchase receipt, to verify and restore your unlock</td>
+            <td>An app-generated anonymous ID and the store purchase receipt, to verify and restore your unlock. RevenueCat also receives your IP address and basic device and app details (such as app version and store country) as part of the request. Not used by the Canadian app.</td>
             <td>RevenueCat and Google Play</td>
           </tr>
           <tr>
@@ -360,7 +367,22 @@
 
     <!-- 4 -->
     <div class="section">
-      <h2><span class="num">4</span> What we never collect</h2>
+      <h2><span class="num">4</span> Legal bases &amp; international transfers</h2>
+      <p>If you are in the UK or EEA, we process the limited data above on these bases:</p>
+      <ul class="clean">
+        <li><span class="dot"></span><span><strong>Contract</strong> (UK/EU GDPR Art. 6(1)(b)): verifying and restoring a Pro purchase.</span></li>
+        <li><span class="dot"></span><span><strong>Legitimate interests</strong> (Art. 6(1)(f)): delivering study content and keeping the content service secure, which involves technical request data such as your IP address.</span></li>
+        <li><span class="dot"></span><span><strong>Consent</strong> (Art. 6(1)(a)): study reminders (the Android permission prompt) and sending a message to the optional AI Tutor. You can withdraw consent at any time by turning the feature off.</span></li>
+      </ul>
+      <p style="margin-top:14px;">Google, RevenueCat, Supabase and Anthropic may process data outside
+      your country, including in the United States. Where that happens, they rely on safeguards
+      such as the EU-US Data Privacy Framework or Standard Contractual Clauses, described in
+      their own privacy policies linked in section 7. We do not otherwise transfer data.</p>
+    </div>
+
+    <!-- 5 -->
+    <div class="section">
+      <h2><span class="num">5</span> What we never collect</h2>
       <p>The apps do <strong>not</strong> collect or access any of the following:</p>
       <div class="rights">
         <div class="right-item"><strong>Identity</strong><span>No name, email, phone or address</span></div>
@@ -374,9 +396,9 @@
       third-party advertising or marketing profiling in these apps.</p>
     </div>
 
-    <!-- 5 -->
+    <!-- 6 -->
     <div class="section">
-      <h2><span class="num">5</span> Permissions the app requests</h2>
+      <h2><span class="num">6</span> Permissions the app requests</h2>
       <div class="table-wrap">
         <table>
           <tr><th>Permission</th><th>Why</th></tr>
@@ -385,47 +407,52 @@
           <tr><td><strong>Run at startup &amp; vibrate</strong></td><td>Re-schedule your reminders after the phone restarts</td></tr>
         </table>
       </div>
-      <p style="margin-top:14px;">Notifications are off unless you enable them, and can be
-      turned off at any time in the app or in your device settings. No data is sent anywhere
+      <p style="margin-top:14px;">Study reminders are offered during first-time setup and can be
+      turned off at any time in the app or in your device settings. The app asks Android for
+      permission before it sends any notification, and you can decline. No data is sent anywhere
       to produce a reminder.</p>
     </div>
 
-    <!-- 6 -->
+    <!-- 7 -->
     <div class="section">
-      <h2><span class="num">6</span> Third-party services</h2>
+      <h2><span class="num">7</span> Third-party services</h2>
       <div class="table-wrap">
         <table>
           <tr><th>Service</th><th>Role</th><th>Privacy policy</th></tr>
           <tr><td><strong>Google Play</strong></td><td>App distribution and payment processing</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td></tr>
-          <tr><td><strong>RevenueCat</strong></td><td>In-app purchase verification and restore</td><td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a></td></tr>
+          <tr><td><strong>RevenueCat</strong></td><td>In-app purchase verification and restore (not used by the Canadian app)</td><td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a></td></tr>
           <tr><td><strong>Supabase</strong></td><td>Static hosting / CDN for study-content files</td><td><a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></td></tr>
           <tr><td><strong>Anthropic</strong></td><td>AI Tutor responses (only if you use the feature)</td><td><a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">anthropic.com/legal/privacy</a></td></tr>
         </table>
       </div>
     </div>
 
-    <!-- 7 -->
+    <!-- 8 -->
     <div class="section">
-      <h2><span class="num">7</span> Data retention &amp; deletion</h2>
+      <h2><span class="num">8</span> Data retention &amp; deletion</h2>
       <p><strong>On your device:</strong> kept until you use <strong>Settings &rarr; Reset
       progress</strong>, clear the app&rsquo;s data, or uninstall the app. We hold no copy.</p>
-      <p><strong>Purchases:</strong> RevenueCat and Google Play retain purchase records so
-      your Pro unlock can be restored. To request deletion of the purchase record linked to
-      your anonymous app ID, email us and we will action it within 30 days.</p>
+      <p><strong>Purchases:</strong> RevenueCat and Google Play retain purchase records for as long
+      as needed to restore your Pro unlock and to meet their legal and tax obligations. To request
+      deletion of the purchase record linked to your anonymous app ID, email us and we will action
+      it within 30 days (records Google must keep by law are outside our control).</p>
+      <p><strong>Server logs:</strong> the content host and RevenueCat may keep technical request
+      logs (including IP addresses) for a short period under their own retention rules. We do not
+      receive or keep a copy.</p>
       <p><strong>AI Tutor:</strong> we keep no conversation history on our servers.</p>
     </div>
 
-    <!-- 8 -->
+    <!-- 9 -->
     <div class="section">
-      <h2><span class="num">8</span> Children&rsquo;s privacy</h2>
+      <h2><span class="num">9</span> Children&rsquo;s privacy</h2>
       <p>These apps are study tools for adults preparing for a citizenship or naturalisation
       test. They are not directed at children, and because the apps collect no personal
       information, none is collected from children.</p>
     </div>
 
-    <!-- 9 -->
+    <!-- 10 -->
     <div class="section">
-      <h2><span class="num">9</span> Your rights</h2>
+      <h2><span class="num">10</span> Your rights</h2>
       <p>Depending on where you live (for example under the UK GDPR, EU GDPR, or the
       California CCPA/CPRA) you may have the rights below. Because we hold almost no personal
       data (only an anonymous purchase record via RevenueCat), most requests
@@ -438,23 +465,27 @@
         <div class="right-item"><strong>Restriction</strong><span>Limit how we process it</span></div>
         <div class="right-item"><strong>Objection</strong><span>Object to processing</span></div>
       </div>
-      <p style="margin-top:14px;">To exercise any right, email
+      <p style="margin-top:14px;">Where we rely on your consent (for example study reminders or
+      sending a message to the AI Tutor) you can withdraw it at any time by turning the feature off.
+      We do not sell or share personal information (as those terms are used in the CCPA/CPRA) and
+      we do not use it for targeted advertising.</p>
+      <p>To exercise any right, email
       <a href="mailto:ofbuilder.apps@gmail.com">ofbuilder.apps@gmail.com</a>. We respond
       within 30 days. You also have the right to complain to your local data protection
       authority.</p>
     </div>
 
-    <!-- 10 -->
+    <!-- 11 -->
     <div class="section">
-      <h2><span class="num">10</span> Security</h2>
+      <h2><span class="num">11</span> Security</h2>
       <p>Every network request the app makes uses HTTPS/TLS encryption. Data stored on your
       device sits in the app&rsquo;s private, OS-sandboxed storage. Payment card details are
       never seen or stored by us. All payments are handled by Google Play.</p>
     </div>
 
-    <!-- 11 -->
+    <!-- 12 -->
     <div class="section">
-      <h2><span class="num">11</span> Changes to this policy</h2>
+      <h2><span class="num">12</span> Changes to this policy</h2>
       <p>If this policy changes, the updated version will be posted on this page with a new
       effective date. Significant changes will also be noted in the app&rsquo;s release
       notes.</p>
