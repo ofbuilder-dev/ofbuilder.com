@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delete Your Account — DreamNest AI</title>
+<meta name="description" content="How to request deletion of your DreamNest AI account and data.">
+<link rel="canonical" href="https://ofbuilder.com/delete-account/dreamnest-ai/">
+<meta property="og:title" content="Delete Your Account — DreamNest AI">
+<meta property="og:description" content="How to request deletion of your DreamNest AI account and data.">
+<meta property="og:url" content="https://ofbuilder.com/delete-account/dreamnest-ai/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-dark: #12103A;
+    --bg-primary: #1E1B4B;
+    --bg-card: #2B2660;
+    --bg-surface: #352F6E;
+
+    --gold: #D4A843;
+    --gold-light: #E8C96E;
+    --gold-dark: #B8882A;
+
+    --text-primary: #F5E6C8;
+    --text-secondary: #D4C4A8;
+    --text-muted: #9B8FA8;
+
+    --star: #FFF9ED;
+    --danger: #E57373;
+    --border: rgba(212,168,67,0.18);
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin: 0;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, rgba(212,168,67,0.10), transparent 60%),
+      radial-gradient(900px 500px at 110% 10%, rgba(232,201,110,0.08), transparent 55%),
+      linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-dark) 100%);
+    background-attachment: fixed;
+    color: var(--text-primary);
+    font-family: 'Nunito', system-ui, sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .stars{ position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+  .stars span{
+    position: absolute;
+    width: 3px; height: 3px;
+    background: var(--star);
+    border-radius: 50%;
+    opacity: 0.55;
+    box-shadow: 0 0 6px 1px rgba(255,249,237,0.5);
+  }
+
+  a{ color: var(--gold-light); text-decoration: none; }
+  a:hover{ text-decoration: underline; color: var(--gold); }
+
+  .wrap{ max-width: 780px; margin: 0 auto; padding: 0 24px 96px; }
+
+  header.hero{
+    position: relative;
+    padding: 72px 24px 56px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+  }
+
+  .brand{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 28px;
+  }
+  .brand .moon{
+    width: 22px; height: 22px;
+    display: inline-block;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, var(--gold-light), var(--gold-dark) 70%);
+    box-shadow: 0 0 16px rgba(212,168,67,0.55);
+  }
+
+  header.hero h1{
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: clamp(28px, 5vw, 42px);
+    margin: 0 0 14px;
+    color: var(--text-primary);
+  }
+
+  header.hero p.tagline{
+    margin: 0 auto;
+    max-width: 520px;
+    color: var(--text-secondary);
+    font-size: 16px;
+  }
+
+  .meta-row{
+    margin-top: 26px;
+    display: inline-flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .pill{
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--bg-dark);
+    background: linear-gradient(135deg, var(--gold-light), var(--gold));
+    padding: 6px 14px;
+    border-radius: 999px;
+  }
+  .pill.outline{
+    color: var(--text-secondary);
+    background: transparent;
+    border: 1px solid var(--border);
+    font-weight: 600;
+  }
+
+  main{ margin-top: 48px; }
+
+  section{ padding: 0 0 40px; }
+
+  h2{
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--text-primary);
+    margin: 0 0 16px;
+  }
+
+  p{ color: var(--text-secondary); margin: 0 0 14px; }
+  strong{ color: var(--text-primary); }
+
+  /* Steps */
+  .steps{
+    list-style: none;
+    margin: 0 0 8px;
+    padding: 0;
+    counter-reset: step;
+  }
+  .steps li{
+    counter-increment: step;
+    display: flex;
+    gap: 16px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .steps li:last-child{ border-bottom: none; }
+  .steps li::before{
+    content: counter(step);
+    flex: 0 0 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold-light), var(--gold));
+    color: var(--bg-dark);
+    font-weight: 800;
+    font-family: 'Cinzel', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+  }
+  .steps .step-body p{ margin: 0; }
+  .steps .step-body p.label{
+    color: var(--text-primary);
+    font-weight: 800;
+    margin-bottom: 4px;
+  }
+
+  .table-wrap{
+    overflow-x: auto;
+    margin: 6px 0 8px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+  table{ width: 100%; border-collapse: collapse; min-width: 520px; font-size: 14.5px; }
+  thead th{
+    text-align: left;
+    background: var(--bg-surface);
+    color: var(--gold-light);
+    font-weight: 800;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  tbody td{
+    padding: 12px 16px;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  tbody tr:last-child td{ border-bottom: none; }
+  tbody tr:nth-child(odd){ background: rgba(43,38,96,0.35); }
+
+  .callout{
+    background: linear-gradient(180deg, var(--bg-card), var(--bg-surface));
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--danger);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 8px 0 0;
+  }
+  .callout p{ margin: 0; color: var(--text-secondary); }
+  .callout p + p{ margin-top: 8px; }
+
+  .contact-card{
+    background: linear-gradient(180deg, var(--bg-card), var(--bg-surface));
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+    text-align: center;
+  }
+  .contact-card h2{ margin-bottom: 8px; }
+  .contact-card p{ margin-bottom: 18px; }
+  .contact-btn{
+    display: inline-block;
+    background: linear-gradient(135deg, var(--gold-light), var(--gold));
+    color: var(--bg-dark);
+    font-weight: 800;
+    font-size: 14.5px;
+    padding: 12px 26px;
+    border-radius: 999px;
+  }
+  .contact-btn:hover{ text-decoration: none; filter: brightness(1.05); }
+
+  footer{
+    text-align: center;
+    padding: 40px 24px 60px;
+    color: var(--text-muted);
+    font-size: 13.5px;
+  }
+  footer .moon-small{
+    width: 14px; height: 14px;
+    display: inline-block;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, var(--gold-light), var(--gold-dark) 70%);
+    vertical-align: middle;
+    margin: 0 6px;
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="stars" id="stars"></div>
+  <span class="brand"><span class="moon"></span> DreamNest AI</span>
+  <h1>Delete Your Account</h1>
+  <p class="tagline">How to request deletion of your DreamNest AI account and the data associated with it.</p>
+  <div class="meta-row">
+    <span class="pill outline">com.dreamnest.ai</span>
+    <span class="pill outline">DreamNest AI: Bedtime Stories</span>
+  </div>
+</header>
+
+<div class="wrap">
+<main>
+
+  <section>
+    <h2>How to request deletion</h2>
+    <ol class="steps">
+      <li>
+        <div class="step-body">
+          <p class="label">Email us from your account's address</p>
+          <p>Send a request to <a href="mailto:builder.apps@gmail.com?subject=Delete%20My%20DreamNest%20Account">builder.apps@gmail.com</a> from the email address you signed in with (Google Sign-In), with the subject "Delete My DreamNest Account." If you used the app as a guest, tell us that instead — we'll locate your data by device.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-body">
+          <p class="label">We confirm your identity</p>
+          <p>We may reply asking you to confirm details (such as the child profile names on the account) to make sure the request is really from the account owner.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-body">
+          <p class="label">Your account and data are deleted</p>
+          <p>We permanently delete your account and associated data within <strong>30 days</strong> of a confirmed request. If you have an active Premium subscription, cancel it separately from the Google Play Store — account deletion does not automatically cancel a subscription.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>What gets deleted</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Data</th><th>What happens</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Account info (name, email)</td>
+            <td>Deleted</td>
+          </tr>
+          <tr>
+            <td>Child profiles (name, age, preferences)</td>
+            <td>Deleted</td>
+          </tr>
+          <tr>
+            <td>Stories, favorites, and reading history</td>
+            <td>Deleted</td>
+          </tr>
+          <tr>
+            <td>Device / guest usage record</td>
+            <td>Deleted</td>
+          </tr>
+          <tr>
+            <td>Purchase verification records</td>
+            <td>Kept up to 90 days for fraud prevention and billing compliance, then automatically purged</td>
+          </tr>
+          <tr>
+            <td>Records Google Play itself retains for your purchase</td>
+            <td>Governed by Google's own retention policy, not DreamNest's — see Google Play's terms</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout">
+      <p><strong>This cannot be undone.</strong> Once deletion is complete, your stories, child profiles, and account cannot be recovered.</p>
+    </div>
+  </section>
+
+  <section style="padding-bottom: 0;">
+    <div class="contact-card">
+      <h2>Need help?</h2>
+      <p>Questions about deleting your account or data? We're happy to help.</p>
+      <a class="contact-btn" href="mailto:builder.apps@gmail.com">builder.apps@gmail.com</a>
+    </div>
+  </section>
+
+</main>
+</div>
+
+<footer>
+  DreamNest AI<span class="moon-small"></span>Stories for emotional growth
+  <br>© 2026 DreamNest AI. All rights reserved.
+</footer>
+
+<script>
+  (function(){
+    var host = document.getElementById('stars');
+    for (var i = 0; i < 26; i++){
+      var s = document.createElement('span');
+      s.style.left = (Math.random() * 100) + '%';
+      s.style.top = (Math.random() * 100) + '%';
+      s.style.opacity = (0.25 + Math.random() * 0.5).toFixed(2);
+      var size = (1.5 + Math.random() * 2).toFixed(1) + 'px';
+      s.style.width = size;
+      s.style.height = size;
+      host.appendChild(s);
+    }
+  })();
+</script>
+
+</body>
+</html>
