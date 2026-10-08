@@ -13,6 +13,7 @@ const policies = [
   { name: "ArrowGo", slug: "arrowgo", emoji: "🏹" },
   { name: "Citizenship Test Prep", slug: "citizenship", emoji: "🏛️" },
   { name: "ShishuAI", slug: "shishuai", emoji: "👶" },
+  { name: "BrightKids", slug: "brightkids", emoji: "🦊" },
 ];
 
 export default function PrivacyPage() {
