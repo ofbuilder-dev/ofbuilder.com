@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — BrightKids</title>
+<meta name="description" content="Privacy Policy for BrightKids: Learning for Kids, a learning app for children aged 2–8.">
+<link rel="canonical" href="https://ofbuilder.com/privacy/brightkids/">
+<meta property="og:title" content="Privacy Policy — BrightKids">
+<meta property="og:description" content="Privacy Policy for BrightKids: Learning for Kids, a learning app for children aged 2–8.">
+<meta property="og:url" content="https://ofbuilder.com/privacy/brightkids/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #FDF9E9;
+    --card: #FFFFFF;
+    --ink: #2B1D5C;
+    --ink-2: #5E5480;
+    --muted: #8A83A3;
+    --orange: #FB8A24;
+    --orange-dark: #E06F0B;
+    --yellow: #FFD54A;
+    --purple: #6D28D9;
+    --green-bg: #E3F7EA;
+    --green: #15803D;
+    --border: rgba(43,29,92,0.10);
+  }
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin: 0;
+    background:
+      radial-gradient(900px 500px at 10% -10%, rgba(255,213,74,0.35), transparent 60%),
+      radial-gradient(800px 480px at 110% 0%, rgba(251,138,36,0.18), transparent 55%),
+      var(--bg);
+    color: var(--ink);
+    font-family: 'Nunito', system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  a{ color: var(--purple); font-weight: 700; text-decoration: none; }
+  a:hover{ text-decoration: underline; }
+  .wrap{ max-width: 860px; margin: 0 auto; padding: 0 20px 96px; }
+
+  header.hero{ padding: 64px 20px 44px; text-align: center; }
+  .brand{
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 20px;
+    color: var(--orange-dark); margin-bottom: 18px;
+  }
+  .brand .logo{
+    width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center;
+    background: var(--yellow); font-size: 24px; box-shadow: 0 6px 16px -6px rgba(224,111,11,0.6);
+  }
+  header.hero h1{
+    font-family: 'Fredoka', sans-serif; font-weight: 600;
+    font-size: clamp(32px, 6vw, 48px); margin: 0 0 10px; line-height: 1.1;
+  }
+  header.hero p.tagline{ margin: 0 auto; max-width: 560px; color: var(--ink-2); font-size: 17px; }
+  .meta-row{ margin-top: 22px; display: inline-flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+  .pill{
+    font-size: 13px; font-weight: 800; color: #fff; background: var(--orange);
+    padding: 6px 14px; border-radius: 999px;
+  }
+  .pill.outline{ color: var(--ink-2); background: #fff; border: 1px solid var(--border); font-weight: 700; }
+
+  .summary{
+    background: var(--green-bg); border-radius: 20px; padding: 20px 24px; margin: 8px 0 28px;
+  }
+  .summary h2{ font-size: 18px; margin: 0 0 8px; color: var(--green); }
+  .summary ul{ margin: 0; padding-left: 20px; }
+  .summary li{ margin: 4px 0; }
+
+  nav.toc .card, section{
+    background: var(--card); border: 1px solid var(--border); border-radius: 20px;
+    box-shadow: 0 10px 28px -18px rgba(43,29,92,0.35);
+  }
+  nav.toc .card{ padding: 20px 24px; margin-bottom: 20px; }
+  nav.toc h2{ font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange-dark); margin: 0 0 10px; }
+  nav.toc ol{ columns: 2; column-gap: 28px; margin: 0; padding-left: 20px; color: var(--muted); }
+  nav.toc li{ margin-bottom: 6px; break-inside: avoid; }
+  nav.toc a{ color: var(--ink-2); font-size: 15px; }
+
+  section{ padding: 26px 26px 20px; margin-bottom: 16px; scroll-margin-top: 16px; }
+  section .num{ font-family: 'Fredoka', sans-serif; color: var(--orange); font-weight: 600; font-size: 14px; }
+  h2{ font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 24px; margin: 2px 0 12px; }
+  h3{ font-size: 17px; margin: 18px 0 6px; }
+  p, li{ color: var(--ink-2); }
+  strong{ color: var(--ink); }
+  ul{ padding-left: 22px; }
+  table{ width: 100%; border-collapse: collapse; margin: 10px 0 6px; font-size: 15px; }
+  th, td{ text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th{ color: var(--ink); font-weight: 800; }
+  td{ color: var(--ink-2); }
+  .note{ background: #FFF6E0; border-radius: 14px; padding: 12px 16px; margin: 12px 0; }
+
+  footer{ text-align: center; color: var(--muted); font-size: 14px; padding: 8px 20px 40px; }
+
+  @media (max-width: 600px){
+    nav.toc ol{ columns: 1; }
+    section{ padding: 22px 18px 16px; }
+    table, thead, tbody, tr, th, td{ display: block; }
+    thead{ display: none; }
+    td{ border-bottom: none; padding: 4px 0; }
+    tr{ border-bottom: 1px solid var(--border); padding: 8px 0; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <span class="brand"><span class="logo">🦊</span> BrightKids</span>
+  <h1>Privacy Policy</h1>
+  <p class="tagline">How BrightKids: Learning for Kids handles information, written for the parents of our learners aged 2–8.</p>
+  <div class="meta-row">
+    <span class="pill">Effective Oct 9, 2026</span>
+    <span class="pill outline">com.ofbuilder.brightkids</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="summary">
+    <h2>The short version</h2>
+    <ul>
+      <li>BrightKids is made for children aged <strong>2–8</strong> and is set up and managed by a parent.</li>
+      <li>Your child's name, progress and settings are stored <strong>only on your device</strong>. We never receive them.</li>
+      <li><strong>No ads, no analytics, no tracking, no chat, no accounts.</strong> The app works offline.</li>
+      <li>If you subscribe, Google Play and our subscription provider RevenueCat process the purchase under an anonymous ID.</li>
+      <li>We <strong>never sell</strong> any data.</li>
+    </ul>
+  </div>
+
+  <nav class="toc">
+    <div class="card">
+      <h2>On this page</h2>
+      <ol>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#on-device">Information kept on your device</a></li>
+        <li><a href="#subscriptions">Subscription information</a></li>
+        <li><a href="#not-collected">What we don't collect</a></li>
+        <li><a href="#device-features">Read-aloud &amp; fingerprint</a></li>
+        <li><a href="#how-we-use">How information is used</a></li>
+        <li><a href="#third-parties">Third-party services</a></li>
+        <li><a href="#childrens-privacy">Children's privacy (ages 2–8)</a></li>
+        <li><a href="#retention">Data retention &amp; deletion</a></li>
+        <li><a href="#security">Data security</a></li>
+        <li><a href="#your-rights">Your rights &amp; choices</a></li>
+        <li><a href="#international">International transfers</a></li>
+        <li><a href="#changes">Changes to this policy</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ol>
+    </div>
+  </nav>
+
+  <main>
+
+    <section id="overview">
+      <span class="num">01</span>
+      <h2>Overview</h2>
+      <p>
+        BrightKids: Learning for Kids ("BrightKids", "we", "us" or "our") is an educational app for
+        <strong>children aged 2 to 8</strong>, published by OfBuilder. Children learn through short lessons,
+        quizzes and rewards in English, Bangla and Hindi.
+      </p>
+      <p>
+        BrightKids is designed to be <strong>set up and managed by a parent or guardian</strong>. There are no
+        accounts and no sign-in. A grown-up check (a fingerprint or a simple sum) protects the parents' area and
+        every purchase, so children can't change settings or buy anything on their own.
+      </p>
+      <p>This policy explains what information exists when your family uses BrightKids, where it stays, and your choices.</p>
+    </section>
+
+    <section id="on-device">
+      <span class="num">02</span>
+      <h2>Information kept on your device</h2>
+      <p>BrightKids stores the following <strong>only on your phone or tablet</strong>, inside the app's private storage:</p>
+      <table>
+        <thead><tr><th>What</th><th>Examples</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Child profile</strong></td><td>The first name or nickname you enter, and the buddy character your child picks. We don't ask for a surname, birth date, photo or contact details.</td></tr>
+          <tr><td><strong>Learning progress</strong></td><td>Stars, levels completed, right and wrong answers, questions to practise again, coins, stickers, badges and streaks.</td></tr>
+          <tr><td><strong>Parent settings</strong></td><td>App language, read-aloud, visible subjects, daily play-time limit, play breaks, bedtime hours and difficulty settings.</td></tr>
+          <tr><td><strong>Play-time counters</strong></td><td>Minutes played per day, used for limits and the weekly report.</td></tr>
+        </tbody>
+      </table>
+      <p>
+        This information is <strong>never sent to us or to anyone else</strong>. We have also turned off Android's
+        automatic app backup for BrightKids, so it isn't copied to cloud backups either.
+      </p>
+    </section>
+
+    <section id="subscriptions">
+      <span class="num">03</span>
+      <h2>Subscription information</h2>
+      <p>
+        BrightKids is free to start. BrightKids Pro is an optional subscription bought by a parent through
+        <strong>Google Play</strong>. We use <strong>RevenueCat</strong> to check whether a subscription is active.
+        Only when the app checks or makes a purchase, RevenueCat receives:
+      </p>
+      <ul>
+        <li>a <strong>random, anonymous app user ID</strong> created by RevenueCat (not your name, email or your child's name);</li>
+        <li><strong>purchase records</strong> from Google Play: which plan, purchase and renewal dates, trial status and a purchase token;</li>
+        <li><strong>basic technical information</strong> needed to answer the request, such as app version, operating system version, device model, store country and language, and the IP address of the connection.</li>
+      </ul>
+      <p>
+        <strong>Payments are handled entirely by Google Play.</strong> We never see or store card numbers or other
+        payment details. Your Google account details are governed by Google's privacy policy.
+      </p>
+    </section>
+
+    <section id="not-collected">
+      <span class="num">04</span>
+      <h2>What we don't collect</h2>
+      <ul>
+        <li>No advertising, no ad networks and no advertising ID.</li>
+        <li>No analytics, crash-reporting or tracking tools.</li>
+        <li>No location, contacts, photos, camera or microphone access.</li>
+        <li>No chat, messaging, social features or user-generated content shared with others.</li>
+        <li>No accounts, email addresses or phone numbers.</li>
+      </ul>
+    </section>
+
+    <section id="device-features">
+      <span class="num">05</span>
+      <h2>Read-aloud &amp; fingerprint</h2>
+      <h3>Read-aloud</h3>
+      <p>
+        Questions and lessons are read aloud by your device's own <strong>text-to-speech engine</strong> (for example
+        Google's speech services). BrightKids prefers voices that work offline. If the only voice installed for a
+        language is an online voice, the text being read is processed by that engine's provider under its own privacy
+        policy. This text is lesson and question text, plus your child's nickname once, in the welcome greeting when a
+        profile is created. You can turn read-aloud off in the parents' area.
+      </p>
+      <h3>Fingerprint unlock</h3>
+      <p>
+        The grown-up check can use your device's fingerprint or screen lock. This is handled entirely by your
+        device's operating system. BrightKids only learns whether the check passed; it never receives fingerprint data.
+      </p>
+    </section>
+
+    <section id="how-we-use">
+      <span class="num">06</span>
+      <h2>How information is used</h2>
+      <ul>
+        <li>On your device: to show your child's progress and rewards, apply your settings and limits, choose easier questions after mistakes, and build the weekly report.</li>
+        <li>Subscription information: only to unlock Pro, restore a subscription on a new device, and handle refunds, cancellations and legal or tax obligations.</li>
+      </ul>
+      <p>We do not use any information for advertising, profiling or selling, and we do not sell or rent data to anyone.</p>
+    </section>
+
+    <section id="third-parties">
+      <span class="num">07</span>
+      <h2>Third-party services</h2>
+      <table>
+        <thead><tr><th>Service</th><th>Purpose</th><th>Privacy policy</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Google Play</strong></td><td>App download, payments and subscription management</td><td><a href="https://policies.google.com/privacy" rel="noopener">policies.google.com/privacy</a></td></tr>
+          <tr><td><strong>RevenueCat</strong></td><td>Checking and restoring subscriptions</td><td><a href="https://www.revenuecat.com/privacy" rel="noopener">revenuecat.com/privacy</a></td></tr>
+          <tr><td><strong>Your device's text-to-speech engine</strong></td><td>Reading questions aloud (see section 05)</td><td>Your engine provider's policy, e.g. Google</td></tr>
+        </tbody>
+      </table>
+      <p>These providers process information only to deliver their service and may not use it for advertising to children.</p>
+    </section>
+
+    <section id="childrens-privacy">
+      <span class="num">08</span>
+      <h2>Children's privacy (ages 2–8)</h2>
+      <p>
+        BrightKids is directed to children aged 2–8, and protecting them is the core of how the app is built. We follow
+        the principles of the U.S. Children's Online Privacy Protection Act (COPPA), the EU and UK GDPR rules for
+        children, India's Digital Personal Data Protection Act, and Google Play's Families Policy:
+      </p>
+      <ul>
+        <li><strong>We do not knowingly collect personal information from children.</strong> The nickname and progress a parent sets up stay on the device and never reach us.</li>
+        <li><strong>No ads, no tracking and no third-party analytics</strong> are included in the app.</li>
+        <li><strong>Children can't buy anything or change settings</strong>: purchases and the parents' area are behind a grown-up check.</li>
+        <li><strong>No links that take children out of the app.</strong> The only external link ("Manage subscription", which opens Google Play) is inside the protected parents' area.</li>
+        <li><strong>No chat or social features</strong>, so children can't share information with others.</li>
+      </ul>
+      <p>
+        If you believe a child's personal information has reached us in any way, please <a href="#contact">contact us</a>
+        and we will delete it promptly.
+      </p>
+    </section>
+
+    <section id="retention">
+      <span class="num">09</span>
+      <h2>Data retention &amp; deletion</h2>
+      <ul>
+        <li><strong>On-device information</strong> stays until you delete it. Uninstalling BrightKids, or clearing its storage (Settings → Apps → BrightKids → Storage → Clear data), removes all profiles, progress and settings permanently.</li>
+        <li><strong>Subscription records</strong> are kept by Google Play and RevenueCat for as long as needed to manage your subscription and to meet legal, tax and accounting obligations.</li>
+      </ul>
+    </section>
+
+    <section id="security">
+      <span class="num">10</span>
+      <h2>Data security</h2>
+      <p>
+        On-device information lives in the app's private storage, which other apps can't read. Communication with
+        Google Play and RevenueCat is encrypted in transit (HTTPS). No system is perfectly secure, but because almost
+        everything stays on your device, very little information ever leaves it.
+      </p>
+    </section>
+
+    <section id="your-rights">
+      <span class="num">11</span>
+      <h2>Your rights &amp; choices</h2>
+      <ul>
+        <li><strong>Review and delete:</strong> everything about your child is visible in the app and can be removed by uninstalling or clearing the app's storage.</li>
+        <li><strong>Read-aloud:</strong> can be switched off in the parents' area.</li>
+        <li><strong>Subscription:</strong> cancel anytime in Google Play (Account → Payments &amp; subscriptions), or from "Manage subscription" in the parents' area.</li>
+        <li><strong>Subscription records:</strong> to ask for access to or deletion of purchase records held by RevenueCat, email us your Google Play order number (it starts with "GPA.") and we will handle the request with RevenueCat.</li>
+      </ul>
+      <p>Depending on where you live (for example the EU, UK, US states or India), you may have further rights; contact us and we'll help.</p>
+    </section>
+
+    <section id="international">
+      <span class="num">12</span>
+      <h2>International transfers</h2>
+      <p>
+        Google and RevenueCat may process subscription information in the United States and other countries.
+        They use legal safeguards such as standard contractual clauses for these transfers. Information kept on your
+        device is not transferred anywhere.
+      </p>
+    </section>
+
+    <section id="changes">
+      <span class="num">13</span>
+      <h2>Changes to this policy</h2>
+      <p>
+        If we change how BrightKids handles information, we will update this page and its effective date. If a change
+        means collecting new information about children, we will ask for a parent's consent before it applies.
+      </p>
+    </section>
+
+    <section id="contact">
+      <span class="num">14</span>
+      <h2>Contact us</h2>
+      <p>
+        Questions, requests or concerns about privacy? Email <a href="mailto:ofbuilder.apps@gmail.com">ofbuilder.apps@gmail.com</a>.
+        We aim to reply within 7 days.
+      </p>
+      <p><strong>Publisher:</strong> OfBuilder · <strong>App:</strong> BrightKids: Learning for Kids (com.ofbuilder.brightkids)</p>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  🦊 BrightKids · Playful learning for growing minds<br>© 2026 OfBuilder. All rights reserved.
+</footer>
+
+</body>
+</html>
