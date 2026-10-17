@@ -14,6 +14,7 @@ const policies = [
   { name: "Citizenship Test Prep", slug: "citizenship", emoji: "🏛️" },
   { name: "ShishuAI", slug: "shishuai", emoji: "👶" },
   { name: "BrightKids", slug: "brightkids", emoji: "🦊" },
+  { name: "CompTIA Exam Prep (Security+, A+, Network+, CySA+, PenTest+)", slug: "comptia", emoji: "🛡️" },
 ];
 
 export default function PrivacyPage() {
