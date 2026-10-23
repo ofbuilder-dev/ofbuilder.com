@@ -193,6 +193,7 @@ type CitizenInput = {
   handbook: string;
   flag: string[];
   tagline: string;
+  playId: string;
   stats: Stat[];
   extraFaq?: Faq;
 };
@@ -211,7 +212,7 @@ function citizenship(c: CitizenInput): App {
     icon: `/icons/${c.slug}.png`,
     theme: { primary: "#f97316", secondary: c.flag[0], soft: "#fff4e8", flag: c.flag },
     motif: "sunrise",
-    playUrl: playDeveloperUrl,
+    playUrl: play(c.playId),
     stats: c.stats,
     features: [
       { icon: "ListChecks", title: "Official-style question bank", body: `Questions that cover every chapter of ${c.handbook}, written in plain, clear language.` },
@@ -383,6 +384,7 @@ export const apps: App[] = [
     slug: "life-in-the-uk", name: "Life in the UK Test 2026", shortName: "Life in the UK Test",
     country: "United Kingdom", test: "Life in the UK test", handbook: "the official handbook",
     flag: ["#012169", "#c8102e", "#ffffff"],
+    playId: "com.ofbuilder.lifeuk",
     tagline: "Pass the Life in the UK test first time.",
     stats: [{ value: "24", label: "questions in the real test" }, { value: "45 min", label: "time limit" }, { value: "75%", label: "pass mark" }],
   }),
@@ -390,6 +392,7 @@ export const apps: App[] = [
     slug: "us-citizenship", name: "US Citizenship Test 2026 Prep", shortName: "US Citizenship Test",
     country: "United States", test: "USCIS naturalization civics test", handbook: "the USCIS civics questions",
     flag: ["#3c3b6e", "#b22234", "#ffffff"],
+    playId: "com.ofbuilder.uscitizenship",
     tagline: "Ace the USCIS civics test with confidence.",
     stats: [{ value: "Civics", label: "full topic coverage" }, { value: "Mock", label: "interview-style practice" }, { value: "Offline", label: "study anywhere" }],
     extraFaq: { q: "Does it cover the latest civics test?", a: "The question set follows the current USCIS civics test. Always check uscis.gov for the version that applies to your application date." },
@@ -398,6 +401,7 @@ export const apps: App[] = [
     slug: "canadian-citizenship", name: "Canadian Citizenship Test 2026", shortName: "Canadian Citizenship Test",
     country: "Canada", test: "Canadian citizenship test", handbook: "Discover Canada",
     flag: ["#d52b1e", "#ffffff", "#d52b1e"],
+    playId: "com.ofbuilder.cacitizenship",
     tagline: "Discover Canada, then pass with ease.",
     stats: [{ value: "20", label: "questions in the real test" }, { value: "45 min", label: "time limit" }, { value: "75%", label: "pass mark" }],
   }),
@@ -405,6 +409,7 @@ export const apps: App[] = [
     slug: "australian-citizenship", name: "Australian Citizenship Test", shortName: "Australian Citizenship Test",
     country: "Australia", test: "Australian citizenship test", handbook: "Our Common Bond",
     flag: ["#012169", "#e4002b", "#ffffff"],
+    playId: "com.ofbuilder.auscitizenship",
     tagline: "Learn Our Common Bond and pass with confidence.",
     stats: [{ value: "20", label: "questions in the real test" }, { value: "45 min", label: "time limit" }, { value: "75%", label: "pass mark" }],
     extraFaq: { q: "What about the values questions?", a: "The app gives Australian values extra practice, because you must answer every values question correctly to pass." },
@@ -413,6 +418,7 @@ export const apps: App[] = [
     slug: "german-citizenship", name: "German Citizenship Test 2026", shortName: "Einbürgerungstest",
     country: "Germany", test: "Einbürgerungstest (Leben in Deutschland)", handbook: "the official question catalogue",
     flag: ["#000000", "#dd0000", "#ffce00"],
+    playId: "com.ofbuilder.einburgerungstest",
     tagline: "Leben in Deutschland, made simple.",
     stats: [{ value: "33", label: "questions in the real test" }, { value: "60 min", label: "time limit" }, { value: "17", label: "correct answers to pass" }],
     extraFaq: { q: "Are the state-specific questions included?", a: "Yes. Choose your federal state and you'll practise its questions alongside the general catalogue." },
@@ -421,6 +427,7 @@ export const apps: App[] = [
     slug: "danish-citizenship", name: "Danish Citizenship Test 2026", shortName: "Danish Citizenship Test",
     country: "Denmark", test: "Danish citizenship test (Indfødsretsprøven)", handbook: "the official learning material",
     flag: ["#c8102e", "#ffffff", "#c8102e"],
+    playId: "com.ofbuilder.dkindfodsret",
     tagline: "Prepare for Indfødsretsprøven the smart way.",
     stats: [{ value: "Topics", label: "history, society & culture" }, { value: "Mock", label: "timed exam practice" }, { value: "Offline", label: "study anywhere" }],
   }),
@@ -428,6 +435,7 @@ export const apps: App[] = [
     slug: "knm-inburgering", name: "KNM Inburgering Exam Practice", shortName: "KNM Inburgering",
     country: "Netherlands", test: "KNM (Kennis van de Nederlandse Maatschappij) exam", handbook: "the KNM exam themes",
     flag: ["#ae1c28", "#ffffff", "#21468b"],
+    playId: "com.ofbuilder.nlinburgering",
     tagline: "Know Dutch society. Pass your KNM exam.",
     stats: [{ value: "8", label: "KNM themes covered" }, { value: "Mock", label: "exam simulator" }, { value: "Offline", label: "study anywhere" }],
   }),
