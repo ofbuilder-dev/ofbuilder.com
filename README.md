@@ -57,7 +57,7 @@ helpers; the rest are full objects. Each app has:
 
 - Palette: cream (`#fffbf5`) + ink (`#0f0f1a`) with a rainbow accent (coral → amber → lime → sky → violet)
 - Fonts: Bricolage Grotesque (display) + Inter (body)
-- Logo: white crown-B on a rainbow tile — see `components/site/Logo.tsx` / `app/icon.svg`
+- Logo: a "B" of two stacked blocks with a spark, on a coral→violet→blue tile — SVG/PNG files in `public/brand/`, component in `components/site/Logo.tsx`
 - Facebook: https://www.facebook.com/ofbuilder/
 - Google Play: https://play.google.com/store/apps/dev?id=8090522541816028633
 ```

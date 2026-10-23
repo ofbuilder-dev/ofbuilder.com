@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs><linearGradient id="ofb-g" x1="0" y1="0" x2="256" y2="256" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF5A6E"/><stop offset=".35" stop-color="#FF8A3D"/>
+      <stop offset=".7" stop-color="#7C5CFF"/><stop offset="1" stop-color="#3B82F6"/></linearGradient>
+    <radialGradient id="ofb-h" cx="64" cy="24" r="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>
+  <rect width="256" height="256" rx="64" fill="url(#ofb-g)"/>
+    <rect width="256" height="256" rx="64" fill="url(#ofb-h)"/>
+    <g fill="#fff" fill-rule="evenodd">
+      <path d="M78 56h70a32 32 0 0 1 0 64H78a14 14 0 0 1-14-14V70a14 14 0 0 1 14-14zM102 79v18h44a9 9 0 0 0 0-18z"/>
+      <path d="M78 128h78a36 36 0 0 1 0 72H78a14 14 0 0 1-14-14v-44a14 14 0 0 1 14-14zM102 150v28h52a14 14 0 0 0 0-28z"/>
+    </g>
+    <path fill="#fff" d="M206 30c2.4 12.5 6.5 16.6 19 19-12.5 2.4-16.6 6.5-19 19-2.4-12.5-6.5-16.6-19-19 12.5-2.4 16.6-6.5 19-19z"/>
+</svg>
