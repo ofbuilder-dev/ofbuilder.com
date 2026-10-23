@@ -66,7 +66,14 @@ export default function Home() {
       <div className="relative">
         <Blobs />
         <div aria-hidden className="dot-grid absolute inset-0 [mask-image:radial-gradient(70%_60%_at_50%_40%,#000,transparent)]" />
-        <Hero playUrl={playDeveloperUrl} />
+        <Hero
+          playUrl={playDeveloperUrl}
+          suites={suites.map(({ id, short, emoji, color }) => ({ id, short, emoji, color }))}
+          showcase={(["driving-theory", "dreamnest", "security-plus"] as const).map((slug) => {
+            const a = getApp(slug)!;
+            return { slug: a.slug, name: a.shortName, icon: a.icon, theme: a.theme, screen: a.screens[slug === "dreamnest" ? 1 : 0] };
+          })}
+        />
       </div>
 
       {/* Marquee */}
