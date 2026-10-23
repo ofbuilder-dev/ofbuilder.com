@@ -667,7 +667,7 @@ export const apps: App[] = [
     icon: "/icons/brightkids.png",
     theme: { primary: "#f97316", secondary: "#22c55e", soft: "#fff7e6" },
     motif: "shapes",
-    playUrl: playDeveloperUrl,
+    playUrl: play("com.ofbuilder.brightkids"),
     stats: [{ value: "ABC", label: "letters & phonics" }, { value: "123", label: "numbers & counting" }, { value: "●▲■", label: "shapes & colours" }],
     features: [
       { icon: "ALargeSmall", title: "Letters & phonics", body: "Learn the alphabet with sounds, tracing and matching games." },
@@ -763,7 +763,7 @@ export const apps: App[] = [
     icon: "/icons/arrowgo.png",
     theme: { primary: "#2563eb", secondary: "#facc15", soft: "#eef4ff" },
     motif: "maze",
-    playUrl: playDeveloperUrl,
+    playUrl: play("com.ofbuilder.arrowgo"),
     rating: 4.8,
     stats: [{ value: "4.8★", label: "on Google Play" }, { value: "100s", label: "of levels" }, { value: "1 finger", label: "to play" }],
     features: [
@@ -858,7 +858,7 @@ export const apps: App[] = [
     icon: "/icons/budgetwise.png",
     theme: { primary: "#7c3aed", secondary: "#10b981", soft: "#f3effe" },
     motif: "donut",
-    playUrl: playDeveloperUrl,
+    playUrl: play("com.xihadulislam.myexpenses"),
     stats: [{ value: "50/30/20", label: "instant budget setup" }, { value: "0", label: "bank logins needed" }, { value: "100%", label: "on-device data" }],
     features: [
       { icon: "ChartPie", title: "50/30/20 budget", body: "Set up a proven budget in seconds, then tweak it to fit your life." },
