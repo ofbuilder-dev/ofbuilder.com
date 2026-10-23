@@ -1,18 +1,20 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import Navbar from "@/components/Navbar";
-import SiteFooter from "@/components/SiteFooter";
+import Nav from "@/components/site/Nav";
+import Footer from "@/components/site/Footer";
 import { getAllPosts, getPost } from "@/lib/blog";
 
 export async function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));
 }
 
-export default async function BlogPostPage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const post = getPost((await params).slug);
+  return post ? { title: post.title, description: post.description ?? post.excerpt } : {};
+}
+
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) notFound();
@@ -21,38 +23,25 @@ export default async function BlogPostPage({
 
   return (
     <div className="relative">
-      <Navbar />
-      <article className="mx-auto max-w-3xl px-5 py-24 pt-32">
-        <Link
-          href="/blog"
-          className="text-sm text-[var(--text-dim)] hover:text-white transition-colors"
-        >
+      <Nav />
+      <article className="mx-auto max-w-3xl px-5 pb-12 pt-36">
+        <Link href="/blog/" className="text-sm font-semibold text-[#6b6b80] transition-colors hover:text-[#0f0f1a]">
           ← Back to blog
         </Link>
-
         <div className="mt-8">
-          <span className="inline-flex w-fit rounded-full bg-[var(--brand)]/10 px-2.5 py-1 text-xs font-medium text-[var(--brand)]">
-            {post.category}
-          </span>
-          <h1 className="mt-4 text-3xl font-semibold leading-snug tracking-tight sm:text-4xl">
-            {post.title}
-          </h1>
-          <p className="mt-2 text-sm text-[var(--text-faint)]">
-            {new Date(post.date).toLocaleDateString("en-GB", {
-              day: "numeric",
-              month: "long",
-              year: "numeric",
-            })}
+          <span className="inline-flex rounded-full bg-[#8b5cf6]/10 px-3 py-1 text-xs font-bold text-[#8b5cf6]">{post.category}</span>
+          <h1 className="font-display mt-4 text-4xl font-extrabold leading-tight sm:text-5xl">{post.title}</h1>
+          <p className="mt-3 text-sm text-[#6b6b80]">
+            {new Date(post.date).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}
           </p>
         </div>
-
-        <div className="mt-10 space-y-5 text-[var(--text-dim)] leading-relaxed">
+        <div className="mt-10 space-y-5 text-lg leading-relaxed text-[#3d3d52]">
           {paragraphs.map((para, i) => (
             <p key={i}>{para.replace(/\*\*(.*?)\*\*/g, "$1")}</p>
           ))}
         </div>
       </article>
-      <SiteFooter />
+      <Footer />
     </div>
   );
 }

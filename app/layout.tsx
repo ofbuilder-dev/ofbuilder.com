@@ -1,49 +1,40 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Bricolage_Grotesque, Inter } from "next/font/google";
 import "./globals.css";
 
-const geist = Geist({
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
+const display = Bricolage_Grotesque({
   subsets: ["latin"],
-  variable: "--font-geist",
+  variable: "--font-display",
   display: "swap",
+  weight: ["500", "700", "800"],
 });
 
 const siteUrl = "https://ofbuilder.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "OfBuilder — A studio building useful apps people love",
+  title: {
+    default: "OfBuilder: apps that help you learn, pass, sleep & grow",
+    template: "%s · OfBuilder",
+  },
   description:
-    "OfBuilder is an indie software studio shipping AI-powered mobile apps across education, health, parenting and productivity. Explore our products.",
-  keywords: [
-    "OfBuilder",
-    "app studio",
-    "indie SaaS",
-    "Flutter apps",
-    "AI apps",
-    "mobile apps",
-  ],
+    "OfBuilder is an indie app studio with 24 Android apps across citizenship and driving theory tests, CompTIA exam prep, AI sleep and wellness, learning games and private money tools.",
+  keywords: ["OfBuilder", "app studio", "citizenship test app", "driving theory test app", "CompTIA exam prep", "AI apps"],
   authors: [{ name: "OfBuilder" }],
   openGraph: {
-    title: "OfBuilder — A studio building useful apps people love",
-    description:
-      "AI-powered mobile apps across education, health, parenting and productivity.",
+    title: "OfBuilder: apps that help you learn, pass, sleep & grow",
+    description: "24 thoughtfully built Android apps across 5 suites.",
     url: siteUrl,
     siteName: "OfBuilder",
     type: "website",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "OfBuilder",
-    description: "A studio building useful apps people love.",
-  },
+  twitter: { card: "summary_large_image", title: "OfBuilder", description: "Apps that help you learn, pass, sleep & grow." },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={geist.variable}>
+    <html lang="en" className={`${inter.variable} ${display.variable}`}>
       <body>{children}</body>
     </html>
   );
