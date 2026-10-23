@@ -1,11 +1,10 @@
 "use client";
 
-/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
+import { BookOpen, Brain, Car, Earth, GraduationCap, Moon, Puzzle, ShieldCheck, Wallet, type LucideIcon } from "lucide-react";
 import { AnimatePresence, motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
 
-type IconItem = { slug: string; name: string; icon: string };
 
 const WORDS = [
   { w: "learn", c: "#ff6b6b" },
@@ -14,23 +13,54 @@ const WORDS = [
   { w: "grow", c: "#10b981" },
 ];
 
-// Positions (in % of the hero box) for the floating icons; mirrored left/right of the headline.
-const SPOTS = [
-  { x: 4, y: 18, s: 76, r: -10 },
-  { x: 13, y: 48, s: 64, r: 8 },
-  { x: 3, y: 74, s: 70, r: -4 },
-  { x: 18, y: 84, s: 56, r: 12 },
-  { x: 20, y: 10, s: 54, r: 6 },
-  { x: 88, y: 14, s: 72, r: 10 },
-  { x: 80, y: 42, s: 60, r: -8 },
-  { x: 90, y: 66, s: 78, r: 6 },
-  { x: 76, y: 82, s: 58, r: -12 },
-  { x: 72, y: 8, s: 52, r: -6 },
-  { x: 29, y: 92, s: 48, r: 4 },
-  { x: 64, y: 93, s: 50, r: -4 },
+// Floating decorations around the headline: themed icon tiles (one per thing our apps help with) and soft shapes.
+type Tile = { kind: "tile"; x: number; y: number; s: number; r: number; Icon: LucideIcon; from: string; to: string };
+type Shape = { kind: "ring" | "dot" | "spark" | "pill"; x: number; y: number; s: number; r: number; c: string };
+const FLOATERS: (Tile | Shape)[] = [
+  { kind: "tile", x: 6, y: 20, s: 84, r: -10, Icon: GraduationCap, from: "#ff6b6b", to: "#ffb347" },
+  { kind: "tile", x: 15, y: 52, s: 68, r: 8, Icon: Car, from: "#3b82f6", to: "#4cc9f0" },
+  { kind: "tile", x: 5, y: 76, s: 74, r: -6, Icon: Earth, from: "#f97316", to: "#facc15" },
+  { kind: "tile", x: 21, y: 12, s: 58, r: 6, Icon: Brain, from: "#14b8a6", to: "#8ee55e" },
+  { kind: "tile", x: 86, y: 16, s: 80, r: 10, Icon: Moon, from: "#6366f1", to: "#c084fc" },
+  { kind: "tile", x: 80, y: 46, s: 64, r: -8, Icon: ShieldCheck, from: "#8b5cf6", to: "#22d3ee" },
+  { kind: "tile", x: 89, y: 72, s: 78, r: 6, Icon: Wallet, from: "#10b981", to: "#4cc9f0" },
+  { kind: "tile", x: 74, y: 84, s: 58, r: -12, Icon: Puzzle, from: "#f59e0b", to: "#ff6b6b" },
+  { kind: "tile", x: 26, y: 86, s: 54, r: 4, Icon: BookOpen, from: "#ec4899", to: "#f97316" },
+  { kind: "ring", x: 70, y: 10, s: 46, r: 0, c: "#8b5cf6" },
+  { kind: "ring", x: 30, y: 30, s: 26, r: 0, c: "#ff6b6b" },
+  { kind: "dot", x: 92, y: 40, s: 18, r: 0, c: "#ffb347" },
+  { kind: "dot", x: 11, y: 38, s: 14, r: 0, c: "#4cc9f0" },
+  { kind: "dot", x: 62, y: 92, s: 16, r: 0, c: "#10b981" },
+  { kind: "spark", x: 68, y: 28, s: 30, r: 0, c: "#f59e0b" },
+  { kind: "spark", x: 34, y: 70, s: 24, r: 0, c: "#8b5cf6" },
+  { kind: "pill", x: 94, y: 90, s: 60, r: -30, c: "#ff6b6b" },
+  { kind: "pill", x: 2, y: 4, s: 54, r: 35, c: "#8ee55e" },
 ];
 
-export default function Hero({ icons, playUrl }: { icons: IconItem[]; playUrl: string }) {
+function Floater({ f }: { f: Tile | Shape }) {
+  if (f.kind === "tile") {
+    const { Icon } = f;
+    return (
+      <span
+        className="relative grid place-items-center overflow-hidden shadow-[0_24px_48px_-16px_rgba(15,15,26,0.45)] ring-1 ring-white/40"
+        style={{ width: f.s, height: f.s, borderRadius: f.s * 0.3, background: `linear-gradient(145deg, ${f.from}, ${f.to})` }}
+      >
+        <span className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/45 to-transparent" />
+        <Icon className="relative text-white drop-shadow" size={f.s * 0.46} strokeWidth={2.2} />
+      </span>
+    );
+  }
+  if (f.kind === "ring") return <span className="block rounded-full" style={{ width: f.s, height: f.s, border: `${Math.max(5, f.s / 7)}px solid ${f.c}`, opacity: 0.75 }} />;
+  if (f.kind === "dot") return <span className="block rounded-full" style={{ width: f.s, height: f.s, background: f.c, boxShadow: `0 8px 20px -6px ${f.c}` }} />;
+  if (f.kind === "pill") return <span className="block rounded-full" style={{ width: f.s, height: f.s * 0.34, background: f.c, opacity: 0.8 }} />;
+  return (
+    <svg width={f.s} height={f.s} viewBox="-20 -20 40 40" style={{ color: f.c }}>
+      <path fill="currentColor" d="M0 -19c2.4 12.5 6.5 16.6 19 19-12.5 2.4-16.6 6.5-19 19-2.4-12.5-6.5-16.6-19-19 12.5-2.4 16.6-6.5 19-19z" />
+    </svg>
+  );
+}
+
+export default function Hero({ playUrl }: { playUrl: string }) {
   const [i, setI] = useState(0);
   const mx = useMotionValue(0);
   const my = useMotionValue(0);
@@ -54,32 +84,22 @@ export default function Hero({ icons, playUrl }: { icons: IconItem[]; playUrl: s
         my.set(e.clientY / window.innerHeight - 0.5);
       }}
     >
-      {/* floating icons */}
+      {/* floating decorations */}
       <div aria-hidden className="pointer-events-none absolute inset-0 hidden sm:block">
-        {SPOTS.map((p, idx) => {
-          const app = icons[idx % icons.length];
-          return (
-            <motion.div
-              key={idx}
-              className="absolute"
-              style={{ left: `${p.x}%`, top: `${p.y}%`, x: idx % 2 ? px : pxInv, y: idx % 2 ? py : pyInv }}
-              initial={{ opacity: 0, scale: 0.3, rotate: p.r * 3 }}
-              animate={{ opacity: 1, scale: 1, rotate: p.r }}
-              transition={{ delay: 0.3 + idx * 0.07, type: "spring", stiffness: 120, damping: 12 }}
-            >
-              <div className="animate-bob" style={{ animationDelay: `${-idx * 0.7}s`, animationDuration: `${4 + (idx % 4)}s`, ["--r" as string]: `${p.r}deg` }}>
-                <img
-                  src={app.icon}
-                  alt=""
-                  width={p.s}
-                  height={p.s}
-                  className="shadow-[0_20px_40px_-12px_rgba(15,15,26,0.35)]"
-                  style={{ width: p.s, height: p.s, borderRadius: p.s * 0.24 }}
-                />
-              </div>
-            </motion.div>
-          );
-        })}
+        {FLOATERS.map((f, idx) => (
+          <motion.div
+            key={idx}
+            className="absolute"
+            style={{ left: `${f.x}%`, top: `${f.y}%`, x: idx % 2 ? px : pxInv, y: idx % 2 ? py : pyInv }}
+            initial={{ opacity: 0, scale: 0.3, rotate: f.r * 3 }}
+            animate={{ opacity: 1, scale: 1, rotate: f.r }}
+            transition={{ delay: 0.3 + idx * 0.05, type: "spring", stiffness: 120, damping: 12 }}
+          >
+            <div className="animate-bob" style={{ animationDelay: `${-idx * 0.7}s`, animationDuration: `${4 + (idx % 4)}s`, ["--r" as string]: "0deg" }}>
+              <Floater f={f} />
+            </div>
+          </motion.div>
+        ))}
       </div>
 
       <div className="relative z-10 mx-auto max-w-4xl text-center">
@@ -168,21 +188,15 @@ export default function Hero({ icons, playUrl }: { icons: IconItem[]; playUrl: s
           </a>
         </motion.div>
 
-        {/* mobile icon row */}
-        <div className="mt-12 flex justify-center -space-x-3 sm:hidden">
-          {icons.slice(0, 6).map((a, idx) => (
-            <motion.img
-              key={a.slug}
-              src={a.icon}
-              alt=""
-              width={52}
-              height={52}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 + idx * 0.08 }}
-              className="h-13 w-13 rounded-2xl ring-4 ring-[#fffbf5]"
-            />
-          ))}
+        {/* mobile tile row */}
+        <div className="mt-12 flex justify-center gap-3 sm:hidden">
+          {FLOATERS.filter((f): f is Tile => f.kind === "tile")
+            .slice(0, 5)
+            .map((f, idx) => (
+              <motion.div key={idx} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 + idx * 0.08 }}>
+                <Floater f={{ ...f, s: 52 }} />
+              </motion.div>
+            ))}
         </div>
       </div>
 

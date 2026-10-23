@@ -12,8 +12,6 @@ import Icon from "@/components/ui/Icon";
 import AppIcon from "@/components/ui/AppIcon";
 import { apps, appsInSuite, contactEmail, getApp, labApps, playDeveloperUrl, suites, type App } from "@/lib/apps";
 
-const HERO_ORDER = ["dreamnest", "security-plus", "life-in-the-uk", "arrowgo", "sleepwise", "driving-theory", "brightkids", "network-plus", "mental-math", "us-citizenship", "ilmai", "renu"];
-
 const VALUES = [
   { icon: "Lock", title: "Privacy-first", body: "No bank linking, minimal data and clear policies for every app.", color: "#8b5cf6" },
   { icon: "WifiOff", title: "Works offline", body: "Study on the train or read stories on a plane. No signal needed.", color: "#4cc9f0" },
@@ -54,7 +52,6 @@ function BentoCard({ app, className = "", big = false }: { app: App; className?:
 }
 
 export default function Home() {
-  const heroIcons = HERO_ORDER.map((s) => getApp(s)!).map((a) => ({ slug: a.slug, name: a.shortName, icon: a.icon }));
   const suiteCards = suites.map((s) => ({
     ...s,
     apps: appsInSuite(s.id).map((a) => ({ slug: a.slug, shortName: a.shortName, icon: a.icon })),
@@ -69,7 +66,7 @@ export default function Home() {
       <div className="relative">
         <Blobs />
         <div aria-hidden className="dot-grid absolute inset-0 [mask-image:radial-gradient(70%_60%_at_50%_40%,#000,transparent)]" />
-        <Hero icons={heroIcons} playUrl={playDeveloperUrl} />
+        <Hero playUrl={playDeveloperUrl} />
       </div>
 
       {/* Marquee */}
