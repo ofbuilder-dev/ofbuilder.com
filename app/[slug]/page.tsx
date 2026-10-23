@@ -91,7 +91,7 @@ export default async function AppPage({ params }: { params: Promise<{ slug: stri
             </Reveal>
             <Reveal delay={0.34} className="mt-9 flex flex-wrap items-center gap-3">
               <PlayBadge href={app.playUrl} dark={!dark} />
-              <a href="#features" className={`rounded-2xl px-6 py-4 font-semibold transition-transform hover:-translate-y-1 ${dark ? "bg-white/10 text-white ring-1 ring-white/20" : "bg-white ring-1 ring-black/10"}`}>
+              <a href="#features" className={`inline-flex h-16 items-center rounded-2xl px-6 text-base font-semibold transition-transform hover:-translate-y-1 ${dark ? "bg-white/10 text-white ring-1 ring-white/20" : "bg-white ring-1 ring-black/10"}`}>
                 Explore features ↓
               </a>
             </Reveal>
