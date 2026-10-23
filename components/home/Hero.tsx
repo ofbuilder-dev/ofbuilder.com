@@ -1,10 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { BookOpen, Brain, Car, Earth, GraduationCap, Moon, Puzzle, ShieldCheck, Wallet, type LucideIcon } from "lucide-react";
-import { AnimatePresence, motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { useEffect, useState } from "react";
+import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import type { Screen } from "@/lib/apps";
+import { PhoneFrame, ScreenMock, type ScreenTheme } from "@/components/app/ScreenMock";
 
+export type ShowcaseApp = { slug: string; name: string; icon: string; theme: ScreenTheme; screen: Screen };
+type SuiteChip = { id: string; short: string; emoji: string; color: string };
 
 const WORDS = [
   { w: "learn", c: "#ff6b6b" },
@@ -13,63 +16,19 @@ const WORDS = [
   { w: "grow", c: "#10b981" },
 ];
 
-// Floating decorations around the headline: themed icon tiles (one per thing our apps help with) and soft shapes.
-type Tile = { kind: "tile"; x: number; y: number; s: number; r: number; Icon: LucideIcon; from: string; to: string };
-type Shape = { kind: "ring" | "dot" | "spark" | "pill"; x: number; y: number; s: number; r: number; c: string };
-const FLOATERS: (Tile | Shape)[] = [
-  { kind: "tile", x: 6, y: 20, s: 84, r: -10, Icon: GraduationCap, from: "#ff6b6b", to: "#ffb347" },
-  { kind: "tile", x: 15, y: 52, s: 68, r: 8, Icon: Car, from: "#3b82f6", to: "#4cc9f0" },
-  { kind: "tile", x: 5, y: 76, s: 74, r: -6, Icon: Earth, from: "#f97316", to: "#facc15" },
-  { kind: "tile", x: 21, y: 12, s: 58, r: 6, Icon: Brain, from: "#14b8a6", to: "#8ee55e" },
-  { kind: "tile", x: 86, y: 16, s: 80, r: 10, Icon: Moon, from: "#6366f1", to: "#c084fc" },
-  { kind: "tile", x: 80, y: 46, s: 64, r: -8, Icon: ShieldCheck, from: "#8b5cf6", to: "#22d3ee" },
-  { kind: "tile", x: 89, y: 72, s: 78, r: 6, Icon: Wallet, from: "#10b981", to: "#4cc9f0" },
-  { kind: "tile", x: 74, y: 84, s: 58, r: -12, Icon: Puzzle, from: "#f59e0b", to: "#ff6b6b" },
-  { kind: "tile", x: 26, y: 86, s: 54, r: 4, Icon: BookOpen, from: "#ec4899", to: "#f97316" },
-  { kind: "ring", x: 70, y: 10, s: 46, r: 0, c: "#8b5cf6" },
-  { kind: "ring", x: 30, y: 30, s: 26, r: 0, c: "#ff6b6b" },
-  { kind: "dot", x: 92, y: 40, s: 18, r: 0, c: "#ffb347" },
-  { kind: "dot", x: 11, y: 38, s: 14, r: 0, c: "#4cc9f0" },
-  { kind: "dot", x: 62, y: 92, s: 16, r: 0, c: "#10b981" },
-  { kind: "spark", x: 68, y: 28, s: 30, r: 0, c: "#f59e0b" },
-  { kind: "spark", x: 34, y: 70, s: 24, r: 0, c: "#8b5cf6" },
-  { kind: "pill", x: 94, y: 90, s: 60, r: -30, c: "#ff6b6b" },
-  { kind: "pill", x: 2, y: 4, s: 54, r: 35, c: "#8ee55e" },
+// Fan layout for the three hero phones: left, centre, right.
+const FAN = [
+  { x: "-78%", rotate: -9, y: 56, scale: 0.86, z: 0 },
+  { x: "0%", rotate: 0, y: 0, scale: 1, z: 2 },
+  { x: "78%", rotate: 9, y: 56, scale: 0.86, z: 1 },
 ];
 
-function Floater({ f }: { f: Tile | Shape }) {
-  if (f.kind === "tile") {
-    const { Icon } = f;
-    return (
-      <span
-        className="relative grid place-items-center overflow-hidden shadow-[0_24px_48px_-16px_rgba(15,15,26,0.45)] ring-1 ring-white/40"
-        style={{ width: f.s, height: f.s, borderRadius: f.s * 0.3, background: `linear-gradient(145deg, ${f.from}, ${f.to})` }}
-      >
-        <span className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/45 to-transparent" />
-        <Icon className="relative text-white drop-shadow" size={f.s * 0.46} strokeWidth={2.2} />
-      </span>
-    );
-  }
-  if (f.kind === "ring") return <span className="block rounded-full" style={{ width: f.s, height: f.s, border: `${Math.max(5, f.s / 7)}px solid ${f.c}`, opacity: 0.75 }} />;
-  if (f.kind === "dot") return <span className="block rounded-full" style={{ width: f.s, height: f.s, background: f.c, boxShadow: `0 8px 20px -6px ${f.c}` }} />;
-  if (f.kind === "pill") return <span className="block rounded-full" style={{ width: f.s, height: f.s * 0.34, background: f.c, opacity: 0.8 }} />;
-  return (
-    <svg width={f.s} height={f.s} viewBox="-20 -20 40 40" style={{ color: f.c }}>
-      <path fill="currentColor" d="M0 -19c2.4 12.5 6.5 16.6 19 19-12.5 2.4-16.6 6.5-19 19-2.4-12.5-6.5-16.6-19-19 12.5-2.4 16.6-6.5 19-19z" />
-    </svg>
-  );
-}
-
-export default function Hero({ playUrl }: { playUrl: string }) {
+export default function Hero({ playUrl, showcase, suites }: { playUrl: string; showcase: ShowcaseApp[]; suites: SuiteChip[] }) {
   const [i, setI] = useState(0);
-  const mx = useMotionValue(0);
-  const my = useMotionValue(0);
-  const sx = useSpring(mx, { stiffness: 50, damping: 15 });
-  const sy = useSpring(my, { stiffness: 50, damping: 15 });
-  const px = useTransform(sx, (v) => v * 30);
-  const py = useTransform(sy, (v) => v * 30);
-  const pxInv = useTransform(sx, (v) => v * -18);
-  const pyInv = useTransform(sy, (v) => v * -18);
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
+  const spread = useTransform(scrollYProgress, [0, 1], [1, 1.25]);
+  const lift = useTransform(scrollYProgress, [0, 1], [0, -80]);
 
   useEffect(() => {
     const t = setInterval(() => setI((n) => (n + 1) % WORDS.length), 2200);
@@ -77,31 +36,7 @@ export default function Hero({ playUrl }: { playUrl: string }) {
   }, []);
 
   return (
-    <section
-      className="relative flex min-h-[100svh] items-center justify-center overflow-hidden px-5 pb-20 pt-32"
-      onPointerMove={(e) => {
-        mx.set(e.clientX / window.innerWidth - 0.5);
-        my.set(e.clientY / window.innerHeight - 0.5);
-      }}
-    >
-      {/* floating decorations */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 hidden sm:block">
-        {FLOATERS.map((f, idx) => (
-          <motion.div
-            key={idx}
-            className="absolute"
-            style={{ left: `${f.x}%`, top: `${f.y}%`, x: idx % 2 ? px : pxInv, y: idx % 2 ? py : pyInv }}
-            initial={{ opacity: 0, scale: 0.3, rotate: f.r * 3 }}
-            animate={{ opacity: 1, scale: 1, rotate: f.r }}
-            transition={{ delay: 0.3 + idx * 0.05, type: "spring", stiffness: 120, damping: 12 }}
-          >
-            <div className="animate-bob" style={{ animationDelay: `${-idx * 0.7}s`, animationDuration: `${4 + (idx % 4)}s`, ["--r" as string]: "0deg" }}>
-              <Floater f={f} />
-            </div>
-          </motion.div>
-        ))}
-      </div>
-
+    <section ref={ref} className="relative overflow-hidden px-5 pt-36 sm:pt-40">
       <div className="relative z-10 mx-auto max-w-4xl text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -120,7 +55,7 @@ export default function Hero({ playUrl }: { playUrl: string }) {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="font-display mt-7 text-[clamp(2.8rem,9vw,7.2rem)] font-extrabold leading-[0.92]"
+          className="font-display mt-7 text-[clamp(2.8rem,8.5vw,6.8rem)] font-extrabold leading-[0.92]"
         >
           Apps that help
           <br />
@@ -172,7 +107,7 @@ export default function Hero({ playUrl }: { playUrl: string }) {
         >
           <Link
             href="/apps/"
-            className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-[#0f0f1a] px-7 py-4 text-base font-semibold text-white shadow-xl shadow-black/20 transition-transform hover:-translate-y-1 active:scale-95"
+            className="group relative inline-flex h-14 items-center gap-2 overflow-hidden rounded-full bg-[#0f0f1a] px-7 text-base font-semibold text-white shadow-xl shadow-black/20 transition-transform hover:-translate-y-1 active:scale-95"
           >
             <span className="bg-rainbow absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
             <span className="relative">Explore all apps</span>
@@ -182,34 +117,57 @@ export default function Hero({ playUrl }: { playUrl: string }) {
             href={playUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-4 text-base font-semibold text-[#0f0f1a] shadow-lg ring-1 ring-black/5 transition-transform hover:-translate-y-1 active:scale-95"
+            className="inline-flex h-14 items-center gap-2 rounded-full bg-white px-7 text-base font-semibold text-[#0f0f1a] shadow-lg ring-1 ring-black/5 transition-transform hover:-translate-y-1 active:scale-95"
           >
             ▶ View on Google Play
           </a>
         </motion.div>
 
-        {/* mobile tile row */}
-        <div className="mt-12 flex justify-center gap-3 sm:hidden">
-          {FLOATERS.filter((f): f is Tile => f.kind === "tile")
-            .slice(0, 5)
-            .map((f, idx) => (
-              <motion.div key={idx} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 + idx * 0.08 }}>
-                <Floater f={{ ...f, s: 52 }} />
-              </motion.div>
-            ))}
-        </div>
+        {/* suite chips */}
+        <motion.div
+          initial="hidden"
+          animate="show"
+          variants={{ show: { transition: { staggerChildren: 0.06, delayChildren: 0.7 } } }}
+          className="mt-10 flex flex-wrap justify-center gap-2"
+        >
+          {suites.map((s) => (
+            <motion.div key={s.id} variants={{ hidden: { opacity: 0, y: 12 }, show: { opacity: 1, y: 0 } }}>
+              <Link
+                href={`/suites/${s.id}/`}
+                className="inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-2 text-sm font-semibold text-[#3d3d52] ring-1 ring-black/5 backdrop-blur transition-all hover:-translate-y-0.5 hover:bg-white hover:shadow-md"
+              >
+                <span className="h-2 w-2 rounded-full" style={{ background: s.color }} />
+                {s.short}
+              </Link>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
 
-      <motion.div
-        aria-hidden
-        className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-xs font-medium text-[#6b6b80] sm:flex"
-        animate={{ y: [0, 8, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        Scroll
-        <span className="h-8 w-5 rounded-full border-2 border-[#6b6b80]/40 p-1">
-          <span className="block h-2 w-full rounded-full bg-[#6b6b80]/60" />
-        </span>
+      {/* phone fan */}
+      <motion.div style={{ y: lift }} className="relative mx-auto mt-14 h-[360px] max-w-5xl sm:h-[460px]">
+        {showcase.slice(0, 3).map((a, idx) => {
+          const f = FAN[idx];
+          return (
+            <motion.div
+              key={a.slug}
+              className="absolute left-1/2 top-0 -ml-[85px] w-[170px] sm:-ml-[120px] sm:w-[240px]"
+              style={{ zIndex: f.z }}
+              initial={{ opacity: 0, y: 160, rotate: 0, x: "0%", scale: 0.9 }}
+              animate={{ opacity: 1, y: f.y, rotate: f.rotate, x: f.x, scale: f.scale }}
+              transition={{ delay: 0.6 + idx * 0.12, type: "spring", stiffness: 70, damping: 16 }}
+            >
+              <motion.div style={{ scale: idx === 1 ? 1 : spread }} whileHover={{ y: -14 }} transition={{ type: "spring", stiffness: 200, damping: 18 }}>
+                <Link href={`/${a.slug}/`} aria-label={a.name} className="block">
+                  <PhoneFrame>
+                    <ScreenMock screen={a.screen} theme={a.theme} name={a.name} icon={a.icon} />
+                  </PhoneFrame>
+                </Link>
+              </motion.div>
+            </motion.div>
+          );
+        })}
+        <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-40 bg-gradient-to-t from-[#fffbf5] to-transparent" />
       </motion.div>
     </section>
   );
