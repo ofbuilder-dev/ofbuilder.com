@@ -451,16 +451,19 @@ export const apps: App[] = [
   driving({
     slug: "motorcycle-theory", name: "Motorcycle Theory Test UK 2026", shortName: "Motorcycle Theory UK",
     vehicle: "motorcycle", icon: "Bike", tagline: "Ride into your motorcycle theory test ready.",
+    playUrl: play("com.ofbuilder.motorcycletheory"),
     stats: [{ value: "50", label: "questions in the real test" }, { value: "43", label: "correct answers to pass" }, { value: "SM-2", label: "spaced repetition" }],
   }),
   driving({
     slug: "lgv-hgv-theory", name: "LGV & HGV Theory Test UK 2026", shortName: "LGV & HGV Theory",
     vehicle: "LGV/HGV", icon: "Truck", tagline: "Your fast lane to an LGV licence.",
+    playUrl: play("com.ofbuilder.lgvtheory"),
     stats: [{ value: "100", label: "multiple-choice questions" }, { value: "85", label: "correct answers to pass" }, { value: "SM-2", label: "spaced repetition" }],
   }),
   driving({
     slug: "pcv-bus-theory", name: "PCV & Bus Theory Test UK 2026", shortName: "PCV & Bus Theory",
     vehicle: "PCV (bus and coach)", icon: "Bus", tagline: "Get your bus and coach theory test done, first time.",
+    playUrl: play("com.ofbuilder.pcvtheory"),
     stats: [{ value: "100", label: "multiple-choice questions" }, { value: "85", label: "correct answers to pass" }, { value: "SM-2", label: "spaced repetition" }],
   }),
 
