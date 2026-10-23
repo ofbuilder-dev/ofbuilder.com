@@ -69,7 +69,7 @@ export default function Home() {
         <Hero
           playUrl={playDeveloperUrl}
           suites={suites.map(({ id, short, emoji, color }) => ({ id, short, emoji, color }))}
-          showcase={(["driving-theory", "dreamnest", "security-plus"] as const).map((slug) => {
+          showcase={(["driving-theory", "dreamnest", "security-plus", "sleepwise"] as const).map((slug) => {
             const a = getApp(slug)!;
             return { slug: a.slug, name: a.shortName, icon: a.icon, theme: a.theme, screen: a.screens[slug === "dreamnest" ? 1 : 0] };
           })}
