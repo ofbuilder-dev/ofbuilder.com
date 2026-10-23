@@ -1,55 +1,52 @@
-import Navbar from "@/components/Navbar";
-import SiteFooter from "@/components/SiteFooter";
+import type { Metadata } from "next";
+import Nav from "@/components/site/Nav";
+import Footer from "@/components/site/Footer";
+import Reveal from "@/components/ui/Reveal";
+
+export const metadata: Metadata = { title: "Privacy policies", description: "Privacy policies for every OfBuilder app." };
 
 const policies = [
   { name: "DreamNest AI", slug: "dreamnest-ai", emoji: "🌙" },
   { name: "SleepWise", slug: "sleepwise", emoji: "😴" },
   { name: "IlmAI", slug: "ilmai", emoji: "🕌" },
-  { name: "Driving Theory Test", slug: "driving-theory", emoji: "🚗" },
+  { name: "Driving Theory Test UK", slug: "driving-theory", emoji: "🚗" },
+  { name: "Passly (UK Theory Tests)", slug: "passly", emoji: "🚦" },
+  { name: "Citizenship Test Prep", slug: "citizenship", emoji: "🏛️" },
+  { name: "CompTIA Exam Prep (Security+, A+, Network+, CySA+)", slug: "comptia", emoji: "🛡️" },
   { name: "Mental Math Master", slug: "mental-math", emoji: "🧠" },
+  { name: "ArrowGo", slug: "arrowgo", emoji: "🏹" },
+  { name: "BrightKids", slug: "brightkids", emoji: "🦊" },
   { name: "Renu", slug: "renu", emoji: "🔄" },
   { name: "BudgetWise", slug: "budgetwise", emoji: "💰" },
-  { name: "Passly (UK Theory Tests)", slug: "passly", emoji: "🚦" },
-  { name: "ArrowGo", slug: "arrowgo", emoji: "🏹" },
-  { name: "Citizenship Test Prep", slug: "citizenship", emoji: "🏛️" },
   { name: "ShishuAI", slug: "shishuai", emoji: "👶" },
-  { name: "BrightKids", slug: "brightkids", emoji: "🦊" },
-  { name: "CompTIA Exam Prep (Security+, A+, Network+, CySA+)", slug: "comptia", emoji: "🛡️" },
 ];
 
 export default function PrivacyPage() {
   return (
     <div className="relative">
-      <Navbar />
-      <main className="mx-auto max-w-3xl px-5 pt-32 pb-24">
-        <p className="text-sm font-medium text-[var(--brand)]">Legal</p>
-        <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
-          Privacy Policies
-        </h1>
-        <p className="mt-3 text-[var(--text-dim)]">
-          Select an app to view its privacy policy.
-        </p>
-
-        <div className="mt-10 grid gap-3 sm:grid-cols-2">
-          {policies.map((p) => (
-            <a
-              key={p.slug}
-              href={`/privacy/${p.slug}/`}
-              className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 transition-colors hover:border-white/20 hover:bg-white/10"
-            >
-              <span className="text-2xl">{p.emoji}</span>
-              <div>
-                <div className="font-medium">{p.name}</div>
-                <div className="text-xs text-[var(--text-faint)]">Privacy Policy</div>
-              </div>
-              <svg className="ml-auto text-[var(--text-faint)]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M9 18l6-6-6-6" />
-              </svg>
-            </a>
+      <Nav />
+      <main className="mx-auto max-w-4xl px-5 pb-12 pt-40">
+        <Reveal>
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#8b5cf6]">Legal</p>
+          <h1 className="font-display mt-3 text-5xl font-extrabold sm:text-7xl">Privacy policies</h1>
+          <p className="mt-4 text-lg text-[#3d3d52]">Pick an app to read its privacy policy.</p>
+        </Reveal>
+        <div className="mt-12 grid gap-3 sm:grid-cols-2">
+          {policies.map((p, i) => (
+            <Reveal key={p.slug} delay={(i % 2) * 0.05}>
+              <a href={`/privacy/${p.slug}/`} className="group flex items-center gap-4 rounded-2xl bg-white px-5 py-4 ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:shadow-lg">
+                <span className="text-2xl transition-transform group-hover:scale-125">{p.emoji}</span>
+                <span>
+                  <span className="block font-semibold">{p.name}</span>
+                  <span className="block text-xs text-[#6b6b80]">Privacy policy</span>
+                </span>
+                <span className="ml-auto text-[#6b6b80] transition-transform group-hover:translate-x-1">→</span>
+              </a>
+            </Reveal>
           ))}
         </div>
       </main>
-      <SiteFooter />
+      <Footer />
     </div>
   );
 }

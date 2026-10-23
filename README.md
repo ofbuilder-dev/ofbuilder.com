@@ -23,39 +23,41 @@ npm start        # serve production build
 
 ```
 app/
-  layout.tsx        # metadata, fonts
-  page.tsx          # the one-page portfolio (hero, products, about, contact)
-  globals.css       # design system + gold/black brand theme
-  icon.svg          # favicon (crown-B mark)
+  page.tsx              # home: animated hero, suites, featured bento, studio
+  [slug]/page.tsx       # one standalone mini-site per app  → ofbuilder.com/<slug>/
+  suites/[id]/page.tsx  # suite landing pages              → ofbuilder.com/suites/<id>/
+  apps/page.tsx         # filterable directory of every app
+  contact/, privacy/, blog/
+  products/[slug]/      # redirects from the old /products/<slug>/ URLs
 components/
-  Navbar.tsx        # sticky nav (client component, mobile menu)
-  Logo.tsx          # gold crown-B brand mark (SVG)
-  ProjectCard.tsx   # per-product card
+  site/                 # global nav, footer, logo
+  home/                 # home hero, stacked suite cards, directory
+  app/                  # per-app page: animated motifs, phone mockups, gallery, FAQ
+  ui/                   # Reveal, CountUp, Tilt, Blobs, PlayBadge, AppIcon, Icon
 lib/
-  projects.ts       # SINGLE SOURCE OF TRUTH for all products + links
+  apps.ts               # SINGLE SOURCE OF TRUTH for suites + apps
+public/icons/           # app icons (one PNG per app slug)
 ```
 
-## Adding / editing a product
+## Adding / editing an app
 
-Everything lives in [`lib/projects.ts`](lib/projects.ts). Each product has a
-`status` of `live` (shows the Google Play button) or `soon` (shows "In the
-works"). The `subdomain` field is the "Learn more" landing-page URL.
+Everything lives in [`lib/apps.ts`](lib/apps.ts). Citizenship, driving theory
+and CompTIA apps are built with the `citizenship()`, `driving()` and `cert()`
+helpers; the rest are full objects. Each app has:
 
-## Subdomain landing pages (planned)
-
-Each product is intended to get its own subdomain landing page
-(`dreamnest.ofbuilder.com`, etc.). When ready, those can be added either as:
-
-- separate sites, or
-- routes in this app served per-subdomain via Next.js middleware (rewrite the
-  `Host` header to `/p/[slug]`).
-
-The `subdomain` URLs in `lib/projects.ts` already point at the target hosts.
+- `playUrl` — the exact Google Play link (falls back to the developer page)
+- `theme` + `motif` — colours and the animated hero background
+  (`sunrise`, `road`, `circuit`, `breath`, `stars`, `geometric`, `shapes`,
+  `math`, `maze`, `orbit`, `donut`)
+- `screens[]` — set `src: "/screens/<slug>-1.png"` to replace the illustrated
+  mock screen with a real screenshot
+- `reviews[]` — real reviews only; the section hides when empty
 
 ## Brand
 
-- Palette: gold (`#e8b923` → `#f5d76e`) on near-black (`#07070b`)
-- Logo: crown over a serif **B** — see `components/Logo.tsx` / `app/icon.svg`
+- Palette: cream (`#fffbf5`) + ink (`#0f0f1a`) with a rainbow accent (coral → amber → lime → sky → violet)
+- Fonts: Bricolage Grotesque (display) + Inter (body)
+- Logo: a "B" of two stacked blocks with a spark, on a coral→violet→blue tile — SVG/PNG files in `public/brand/`, component in `components/site/Logo.tsx`
 - Facebook: https://www.facebook.com/ofbuilder/
 - Google Play: https://play.google.com/store/apps/dev?id=8090522541816028633
 ```

@@ -1,15 +1,14 @@
-<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#f7e08a"/>
-      <stop offset="45%" stop-color="#e8b923"/>
-      <stop offset="100%" stop-color="#b8860b"/>
-    </linearGradient>
-  </defs>
-  <rect width="64" height="64" rx="14" fill="#07070b"/>
-  <path d="M18 21 L18 15 L24 19 L32 11 L40 19 L46 15 L46 21 Z" fill="url(#g)"/>
-  <circle cx="32" cy="9" r="2.4" fill="url(#g)"/>
-  <circle cx="18" cy="13" r="2" fill="url(#g)"/>
-  <circle cx="46" cy="13" r="2" fill="url(#g)"/>
-  <path d="M22 24 h13 a9 9 0 0 1 0 18 h-1 a9.5 9.5 0 0 1 1 19 H22 Z M30 31 v6 h4 a3 3 0 0 0 0-6 Z M30 44 v10 h5 a5 5 0 0 0 0-10 Z" fill="url(#g)"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs><linearGradient id="ofb-g" x1="0" y1="0" x2="256" y2="256" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF5A6E"/><stop offset=".35" stop-color="#FF8A3D"/>
+      <stop offset=".7" stop-color="#7C5CFF"/><stop offset="1" stop-color="#3B82F6"/></linearGradient>
+    <radialGradient id="ofb-h" cx="64" cy="24" r="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>
+  <rect width="256" height="256" rx="64" fill="url(#ofb-g)"/>
+    <rect width="256" height="256" rx="64" fill="url(#ofb-h)"/>
+    <g fill="#fff" fill-rule="evenodd">
+      <path d="M78 56h70a32 32 0 0 1 0 64H78a14 14 0 0 1-14-14V70a14 14 0 0 1 14-14zM102 79v18h44a9 9 0 0 0 0-18z"/>
+      <path d="M78 128h78a36 36 0 0 1 0 72H78a14 14 0 0 1-14-14v-44a14 14 0 0 1 14-14zM102 150v28h52a14 14 0 0 0 0-28z"/>
+    </g>
+    <path fill="#fff" d="M206 30c2.4 12.5 6.5 16.6 19 19-12.5 2.4-16.6 6.5-19 19-2.4-12.5-6.5-16.6-19-19 12.5-2.4 16.6-6.5 19-19z"/>
 </svg>

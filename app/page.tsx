@@ -1,261 +1,224 @@
-import Navbar from "@/components/Navbar";
-import ProjectCard from "@/components/ProjectCard";
-import SiteFooter from "@/components/SiteFooter";
-import {
-  projects,
-  playDeveloperUrl,
-  facebookUrl,
-  instagramUrl,
-  linkedinUrl,
-  youtubeUrl,
-  tiktokUrl,
-  pinterestUrl,
-  twitterUrl,
-  contactEmail,
-} from "@/lib/projects";
+/* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
+import Nav from "@/components/site/Nav";
+import Footer from "@/components/site/Footer";
+import Hero from "@/components/home/Hero";
+import SuiteStack from "@/components/home/SuiteStack";
+import Blobs from "@/components/ui/Blobs";
+import Reveal from "@/components/ui/Reveal";
+import CountUp from "@/components/ui/CountUp";
+import Tilt from "@/components/ui/Tilt";
+import Icon from "@/components/ui/Icon";
+import AppIcon from "@/components/ui/AppIcon";
+import { apps, appsInSuite, contactEmail, getApp, labApps, playDeveloperUrl, suites, type App } from "@/lib/apps";
 
-const liveCount = projects.filter((p) => p.status === "live").length;
+const HERO_ORDER = ["dreamnest", "security-plus", "life-in-the-uk", "arrowgo", "sleepwise", "driving-theory", "brightkids", "network-plus", "mental-math", "us-citizenship", "ilmai", "renu"];
 
-const stats = [
-  { value: `${liveCount}`, label: "Live on Google Play" },
-  { value: "176+", label: "Countries reached" },
-  { value: "180+", label: "Total installs" },
-  { value: "100%", label: "Flutter + AI stack" },
+const VALUES = [
+  { icon: "Lock", title: "Privacy-first", body: "No bank linking, minimal data and clear policies for every app.", color: "#8b5cf6" },
+  { icon: "WifiOff", title: "Works offline", body: "Study on the train or read stories on a plane. No signal needed.", color: "#4cc9f0" },
+  { icon: "Sparkles", title: "AI where it helps", body: "Personal stories, sleep plans and sourced answers, never AI for show.", color: "#ff6b6b" },
+  { icon: "HeartHandshake", title: "No dark patterns", body: "Fair pricing, one-time unlocks where we can and no tricks.", color: "#10b981" },
+  { icon: "Rocket", title: "Shipped fast, polished often", body: "Small studio, quick updates, and we listen to every review.", color: "#f59e0b" },
 ];
 
-const principles = [
-  {
-    title: "Useful over flashy",
-    body: "Every app solves a real, specific problem for a real person — not a feature list chasing a trend.",
-    icon: "🎯",
-  },
-  {
-    title: "AI where it earns its place",
-    body: "We use AI to make products genuinely smarter — tutoring, personalization, answers — never as a gimmick.",
-    icon: "✨",
-  },
-  {
-    title: "Ship, learn, iterate",
-    body: "Small bets, real users, fast feedback. We validate ideas in the market instead of guessing in a doc.",
-    icon: "🚀",
-  },
-  {
-    title: "Crafted, not cobbled",
-    body: "Clean architecture, polished UI, and a consistent quality bar across every product we put our name on.",
-    icon: "💎",
-  },
-];
-
-const techStack = [
-  { label: "Flutter", desc: "Cross-platform" },
-  { label: "Supabase", desc: "Backend" },
-  { label: "Claude AI", desc: "Intelligence" },
-  { label: "RevenueCat", desc: "Monetization" },
-  { label: "Firebase", desc: "Analytics" },
-];
+function BentoCard({ app, className = "", big = false }: { app: App; className?: string; big?: boolean }) {
+  const dark = app.theme.dark;
+  return (
+    <Tilt className={className} max={6}>
+      <Link
+        href={`/${app.slug}/`}
+        className="group relative flex h-full flex-col justify-between overflow-hidden rounded-[2rem] p-7 ring-1 ring-black/5 transition-shadow hover:shadow-2xl"
+        style={{
+          background: dark ? `radial-gradient(120% 120% at 0% 0%, ${app.theme.primary}, #0b0b1a 70%)` : app.theme.soft,
+          color: dark ? "#fff" : "#0f0f1a",
+        }}
+      >
+        <div aria-hidden className="blob -bottom-16 -right-16 h-56 w-56" style={{ background: app.theme.secondary, opacity: 0.45 }} />
+        <div className="relative flex items-start justify-between">
+          <AppIcon src={app.icon} name={app.shortName} size={big ? 84 : 64} className="transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-110" />
+          {app.rating && (
+            <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-bold text-[#0f0f1a]">★ {app.rating.toFixed(1)}</span>
+          )}
+        </div>
+        <div className="relative mt-10">
+          <h3 className={`font-display font-extrabold ${big ? "text-4xl sm:text-5xl" : "text-2xl"}`}>{app.shortName}</h3>
+          <p className={`mt-2 ${big ? "max-w-sm text-lg" : "text-sm"} ${dark ? "text-white/75" : "text-[#3d3d52]"}`}>{app.tagline}</p>
+          <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold" style={{ color: dark ? app.theme.secondary : app.theme.primary }}>
+            Visit app site <span className="transition-transform group-hover:translate-x-1">→</span>
+          </span>
+        </div>
+      </Link>
+    </Tilt>
+  );
+}
 
 export default function Home() {
+  const heroIcons = HERO_ORDER.map((s) => getApp(s)!).map((a) => ({ slug: a.slug, name: a.shortName, icon: a.icon }));
+  const suiteCards = suites.map((s) => ({
+    ...s,
+    apps: appsInSuite(s.id).map((a) => ({ slug: a.slug, shortName: a.shortName, icon: a.icon })),
+  }));
+  const half = Math.ceil(apps.length / 2);
+  const rows = [apps.slice(0, half), apps.slice(half)];
+
   return (
-    <div id="top" className="relative">
-      <Navbar />
+    <div className="relative">
+      <Nav />
 
-      {/* ===== Hero ===== */}
-      <section className="relative overflow-hidden bg-aurora pt-16">
-        <div aria-hidden className="absolute inset-0 grid-mask" />
-        <div className="relative mx-auto max-w-6xl px-5 pb-24 pt-20 sm:pt-28">
-          <div className="reveal mx-auto max-w-3xl text-center">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-xs font-medium text-[var(--text-dim)]">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-              Indie app studio · Sylhet, Bangladesh
-            </span>
+      <div className="relative">
+        <Blobs />
+        <div aria-hidden className="dot-grid absolute inset-0 [mask-image:radial-gradient(70%_60%_at_50%_40%,#000,transparent)]" />
+        <Hero icons={heroIcons} playUrl={playDeveloperUrl} />
+      </div>
 
-            <h1 className="mt-6 text-4xl font-semibold leading-[1.05] tracking-tight sm:text-6xl">
-              AI-powered apps
-              <br />
-              <span className="text-gradient">for a smarter life.</span>
-            </h1>
-
-            <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-[var(--text-dim)] sm:text-lg">
-              OfBuilder builds AI-powered mobile apps for Health, Finance,
-              Education, and Islamic lifestyle — all with Flutter, Supabase,
-              and Claude AI. Available on Google Play in 176+ countries.
-            </p>
-
-            <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <a
-                href="/#products"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-b from-[#f5d76e] to-[#e8b923] px-6 py-3 text-sm font-semibold text-black shadow-[0_8px_30px_rgba(232,185,35,0.25)] transition-transform hover:scale-[1.02] sm:w-auto"
-              >
-                Explore our apps
-              </a>
-              <a
-                href={playDeveloperUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold transition-colors hover:bg-white/10 sm:w-auto"
-              >
-                View on Google Play
-              </a>
-            </div>
-          </div>
-
-          {/* stats */}
-          <div className="reveal mx-auto mt-20 grid max-w-3xl grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/5 sm:grid-cols-4">
-            {stats.map((s) => (
-              <div
-                key={s.label}
-                className="bg-[var(--bg)] px-5 py-6 text-center"
-              >
-                <div className="text-3xl font-semibold tracking-tight">
-                  {s.value}
-                </div>
-                <div className="mt-1 text-xs text-[var(--text-faint)]">
-                  {s.label}
-                </div>
-              </div>
+      {/* Marquee */}
+      <section aria-label="All apps" className="marquee-wrap relative -rotate-1 space-y-4 overflow-hidden border-y border-black/5 bg-white py-6">
+        {rows.map((row, r) => (
+          <div key={r} className={`marquee ${r ? "marquee-reverse" : ""}`}>
+            {[...row, ...row].map((a, i) => (
+              <Link key={i} href={`/${a.slug}/`} className="mx-2 flex shrink-0 items-center gap-3 rounded-full bg-[#fffbf5] py-2 pl-2 pr-5 ring-1 ring-black/5 transition-colors hover:bg-black/5">
+                <img src={a.icon} alt="" width={36} height={36} className="h-9 w-9 rounded-xl" loading="lazy" />
+                <span className="whitespace-nowrap text-sm font-semibold">{a.shortName}</span>
+              </Link>
             ))}
           </div>
+        ))}
+      </section>
+
+      {/* Stats */}
+      <section className="mx-auto max-w-6xl px-5 py-24">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            { v: "24", l: "apps live on Google Play", c: "#ff6b6b" },
+            { v: "5", l: "focused product suites", c: "#f59e0b" },
+            { v: "176", l: "countries reached", c: "#4cc9f0" },
+            { v: "7", l: "citizenship tests covered", c: "#8b5cf6" },
+          ].map((s, i) => (
+            <Reveal key={s.l} delay={i * 0.08}>
+              <div className="rounded-[2rem] bg-white p-8 ring-1 ring-black/5 transition-transform hover:-translate-y-1">
+                <div className="font-display text-6xl font-extrabold" style={{ color: s.c }}>
+                  <CountUp value={s.v} />
+                </div>
+                <p className="mt-2 font-medium text-[#3d3d52]">{s.l}</p>
+              </div>
+            </Reveal>
+          ))}
         </div>
       </section>
 
-      {/* ===== Products ===== */}
-      <section id="products" className="relative mx-auto max-w-6xl px-5 py-24">
-        <div className="max-w-2xl">
-          <p className="text-sm font-medium text-[var(--brand)]">Our apps</p>
-          <h2 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
-            {liveCount} live apps. More in the pipeline.
+      {/* Suites */}
+      <section id="suites" className="mx-auto max-w-6xl px-5">
+        <Reveal className="mb-14 max-w-2xl">
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#8b5cf6]">Five suites</p>
+          <h2 className="font-display mt-3 text-5xl font-extrabold sm:text-6xl">
+            One studio. <span className="text-rainbow">Five families</span> of apps.
           </h2>
-          <p className="mt-3 text-[var(--text-dim)]">
-            Each product is a standalone bet — built, shipped, and refined for a
-            specific audience across Health, Finance, Education, and Islamic lifestyle.
-          </p>
-        </div>
+          <p className="mt-4 text-lg text-[#3d3d52]">Related apps share one polished system, so switching from one to the next feels familiar.</p>
+        </Reveal>
+        <SuiteStack suites={suiteCards} />
+      </section>
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {[...projects]
-            .sort((a, b) =>
-              a.status === b.status ? 0 : a.status === "live" ? -1 : 1
-            )
-            .map((p) => (
-              <ProjectCard key={p.slug} project={p} />
-            ))}
+      {/* Bento */}
+      <section className="mx-auto max-w-6xl px-5 py-24">
+        <Reveal className="mb-12 flex flex-wrap items-end justify-between gap-6">
+          <div className="max-w-xl">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#ff6b6b]">Featured</p>
+            <h2 className="font-display mt-3 text-5xl font-extrabold">Every app has its own home.</h2>
+            <p className="mt-4 text-lg text-[#3d3d52]">Tap any app to open its own mini-website, ready to share with friends, students or customers.</p>
+          </div>
+          <Link href="/apps/" className="rounded-full bg-[#0f0f1a] px-6 py-3 font-semibold text-white transition-transform hover:-translate-y-1">
+            See all 24 apps →
+          </Link>
+        </Reveal>
+        <div className="grid auto-rows-[minmax(260px,auto)] gap-4 md:grid-cols-4">
+          <BentoCard app={getApp("dreamnest")!} big className="md:col-span-2 md:row-span-2" />
+          <BentoCard app={getApp("driving-theory")!} className="md:col-span-2" />
+          <BentoCard app={getApp("sleepwise")!} />
+          <BentoCard app={getApp("arrowgo")!} />
+          <BentoCard app={getApp("mental-math")!} />
+          <BentoCard app={getApp("security-plus")!} />
+          <BentoCard app={getApp("renu")!} className="md:col-span-2" />
         </div>
       </section>
 
-      {/* ===== About / Principles ===== */}
-      <section
-        id="about"
-        className="relative border-y border-white/10 bg-[var(--bg-soft)]"
-      >
-        <div className="mx-auto max-w-6xl px-5 py-24">
-          <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-16">
-            <div>
-              <p className="text-sm font-medium text-[var(--brand)]">
-                About the studio
-              </p>
-              <h2 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
-                One studio. Global apps.
-              </h2>
-              <p className="mt-4 leading-relaxed text-[var(--text-dim)]">
-                OfBuilder is an indie app studio building AI-powered mobile apps
-                for global audiences. We focus on Health, Finance, Education,
-                and Islamic lifestyle — all built with Flutter, Supabase, and
-                Claude AI.
-              </p>
-              <p className="mt-4 leading-relaxed text-[var(--text-dim)]">
-                Our apps are available on Google Play and used in 176+
-                countries. Founded in 2025, based in Sylhet, Bangladesh.
-              </p>
-
-              {/* Tech stack pills */}
-              <div className="mt-6 flex flex-wrap gap-2">
-                {techStack.map((t) => (
-                  <span
-                    key={t.label}
-                    className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs"
-                  >
-                    <span className="font-medium text-white">{t.label}</span>
-                    <span className="text-[var(--text-faint)]">· {t.desc}</span>
+      {/* Values */}
+      <section className="relative overflow-hidden bg-[#0f0f1a] py-28 text-white">
+        <Blobs colors={["#8b5cf6", "#ff6b6b", "#4cc9f0", "#10b981"]} opacity={0.25} />
+        <div className="relative mx-auto max-w-6xl px-5">
+          <Reveal className="max-w-2xl">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#8ee55e]">Why OfBuilder</p>
+            <h2 className="font-display mt-3 text-5xl font-extrabold sm:text-6xl">Small studio. Big care.</h2>
+          </Reveal>
+          <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+            {VALUES.map((v, i) => (
+              <Reveal key={v.title} delay={i * 0.08}>
+                <div className="group h-full rounded-[1.75rem] bg-white/[0.06] p-6 ring-1 ring-white/10 backdrop-blur transition-all hover:-translate-y-2 hover:bg-white/10">
+                  <span className="grid h-12 w-12 place-items-center rounded-2xl transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110" style={{ background: v.color }}>
+                    <Icon name={v.icon} size={22} color="#fff" />
                   </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="grid gap-4 sm:grid-cols-2">
-              {principles.map((p) => (
-                <div
-                  key={p.title}
-                  className="rounded-2xl border border-white/10 bg-[var(--panel)] p-6"
-                >
-                  <div className="text-2xl">{p.icon}</div>
-                  <h3 className="mt-3 font-semibold">{p.title}</h3>
-                  <p className="mt-1.5 text-sm leading-relaxed text-[var(--text-dim)]">
-                    {p.body}
-                  </p>
+                  <h3 className="mt-5 text-lg font-bold">{v.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-white/65">{v.body}</p>
                 </div>
-              ))}
-            </div>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ===== Contact / CTA ===== */}
-      <section id="contact" className="relative mx-auto max-w-6xl px-5 py-24">
-        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#12101f] to-[#0a0a12] px-6 py-16 text-center sm:px-12">
-          <div
-            aria-hidden
-            className="pointer-events-none absolute -top-24 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full bg-[#e8b923] opacity-20 blur-3xl"
-          />
-          <div className="relative mx-auto max-w-xl">
-            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-              Have an idea, or want to collaborate?
-            </h2>
-            <p className="mt-3 text-[var(--text-dim)]">
-              Whether it&apos;s feedback on an app, a partnership, or a project
-              you want built — the inbox is open.
-            </p>
-            <div className="mt-8 flex items-center justify-center">
-              <a
-                href={`mailto:${contactEmail}`}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-b from-[#f5d76e] to-[#e8b923] px-8 py-3 text-sm font-semibold text-black transition-transform hover:scale-[1.02]"
-              >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-.44.177-.861.494-1.171L12 13.09 23.506 4.286c.317.31.494.73.494 1.171z"/>
-                </svg>
-                Send us an email
+      {/* Studio */}
+      <section id="studio" className="mx-auto grid max-w-6xl gap-12 px-5 py-28 lg:grid-cols-2 lg:items-center">
+        <Reveal>
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#f59e0b]">The studio</p>
+          <h2 className="font-display mt-3 text-5xl font-extrabold">Built by a tiny team that ships.</h2>
+          <div className="mt-6 space-y-4 text-lg leading-relaxed text-[#3d3d52]">
+            <p>OfBuilder started with a simple idea: everyday apps should be beautiful, honest and genuinely helpful. No bloat, no tricks and no mandatory subscriptions.</p>
+            <p>Today we run 24 apps across five suites, used in 176 countries, from people passing their citizenship test to parents settling their kids at bedtime.</p>
+          </div>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link href="/blog/" className="rounded-full bg-white px-6 py-3 font-semibold ring-1 ring-black/10 transition-transform hover:-translate-y-1">Read the blog</Link>
+            <Link href="/contact/" className="rounded-full bg-[#0f0f1a] px-6 py-3 font-semibold text-white transition-transform hover:-translate-y-1">Work with us</Link>
+          </div>
+        </Reveal>
+        <Reveal delay={0.15}>
+          <div className="relative rounded-[2.5rem] bg-white p-8 ring-1 ring-black/5">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#6b6b80]">In the lab 🧪</p>
+            <ul className="mt-6 space-y-3">
+              {labApps.map((l, i) => (
+                <li key={l.name} className="flex items-center gap-4 rounded-2xl bg-[#fffbf5] p-4 ring-1 ring-black/5 transition-transform hover:translate-x-2" style={{ transitionDelay: `${i * 20}ms` }}>
+                  <span className="text-3xl">{l.emoji}</span>
+                  <span>
+                    <span className="block font-bold">{l.name}</span>
+                    <span className="block text-sm text-[#6b6b80]">{l.note}</span>
+                  </span>
+                  <span className="ml-auto rounded-full bg-[#8b5cf6]/10 px-3 py-1 text-xs font-semibold text-[#8b5cf6]">Coming soon</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Reveal>
+      </section>
+
+      {/* CTA */}
+      <section className="mx-auto max-w-6xl px-5">
+        <Reveal>
+          <div className="bg-rainbow relative overflow-hidden rounded-[3rem] px-8 py-20 text-center text-white shadow-2xl">
+            <div aria-hidden className="dot-grid absolute inset-0 opacity-30" />
+            <h2 className="font-display relative text-5xl font-extrabold sm:text-7xl">Find your next favourite app.</h2>
+            <p className="relative mx-auto mt-5 max-w-lg text-lg text-white/90">All 24 OfBuilder apps are waiting for you on Google Play.</p>
+            <div className="relative mt-10 flex flex-wrap justify-center gap-3">
+              <a href={playDeveloperUrl} target="_blank" rel="noopener noreferrer" className="rounded-full bg-white px-8 py-4 font-bold text-[#0f0f1a] shadow-xl transition-transform hover:-translate-y-1 hover:scale-105">
+                ▶ Open Google Play
+              </a>
+              <a href={`mailto:${contactEmail}`} className="rounded-full bg-[#0f0f1a]/80 px-8 py-4 font-bold text-white backdrop-blur transition-transform hover:-translate-y-1">
+                Say hello
               </a>
             </div>
-
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-              {[
-                { href: facebookUrl, label: "Facebook", d: "M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.69.24 2.69.24v2.97h-1.52c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07Z" },
-                { href: instagramUrl, label: "Instagram", d: "M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" },
-                { href: twitterUrl, label: "X (Twitter)", d: "M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" },
-                { href: linkedinUrl, label: "LinkedIn", d: "M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" },
-                { href: youtubeUrl, label: "YouTube", d: "M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" },
-                { href: tiktokUrl, label: "TikTok", d: "M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z" },
-                { href: pinterestUrl, label: "Pinterest", d: "M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z" },
-              ].map((s) => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={s.label}
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-[var(--text-dim)] transition-colors hover:border-white/30 hover:text-white"
-                >
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <path d={s.d} />
-                  </svg>
-                </a>
-              ))}
-            </div>
           </div>
-        </div>
+        </Reveal>
       </section>
 
-      {/* ===== Footer ===== */}
-      <SiteFooter />
+      <Footer />
     </div>
   );
 }
