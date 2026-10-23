@@ -4,7 +4,7 @@ import { useId } from "react";
 export default function Logo({ size = 36, withText = true, light = false }: { size?: number; withText?: boolean; light?: boolean }) {
   const id = useId().replace(/:/g, "");
   return (
-    <span className="flex items-center gap-2.5">
+    <span className={`flex items-center ${size >= 40 ? "gap-3" : "gap-2.5"}`}>
       <svg width={size} height={size} viewBox="0 0 256 256" aria-label="OfBuilder logo" role="img">
         <defs>
           <linearGradient id={`${id}g`} x1="0" y1="0" x2="256" y2="256" gradientUnits="userSpaceOnUse">
@@ -21,7 +21,7 @@ export default function Logo({ size = 36, withText = true, light = false }: { si
         </g>
         <path fill="#fff" d="M206 30c2.4 12.5 6.5 16.6 19 19-12.5 2.4-16.6 6.5-19 19-2.4-12.5-6.5-16.6-19-19 12.5-2.4 16.6-6.5 19-19z" />
       </svg>
-      {withText && <span className={`font-display text-xl font-extrabold ${light ? "text-white" : "text-[#0f0f1a]"}`}>OfBuilder</span>}
+      {withText && <span className={`font-display font-extrabold ${size >= 40 ? "text-[1.7rem]" : "text-xl"} ${light ? "text-white" : "text-[#0f0f1a]"}`}>OfBuilder</span>}
     </span>
   );
 }
