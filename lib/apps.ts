@@ -324,6 +324,7 @@ type CertInput = {
   tagline: string;
   primary: string;
   secondary: string;
+  playId: string;
   stats: Stat[];
 };
 
@@ -341,7 +342,7 @@ function cert(c: CertInput): App {
     icon: `/icons/${c.slug}.png`,
     theme: { primary: c.primary, secondary: c.secondary, soft: "#f2edff", dark: true },
     motif: "circuit",
-    playUrl: playDeveloperUrl,
+    playUrl: play(c.playId),
     stats: c.stats,
     features: [
       { icon: "Target", title: "Mapped to exam objectives", body: `Every question is tagged to a ${c.exam} domain and objective.` },
@@ -467,30 +468,35 @@ export const apps: App[] = [
   cert({
     slug: "a-plus-core-1", name: "A+ Core 1 220-1201 Exam Prep", shortName: "A+ Core 1",
     exam: "A+ Core 1 (220-1201)", focus: "mobile devices, networking, hardware, virtualization and troubleshooting",
+    playId: "com.ofbuilder.apluscore1",
     tagline: "Start your IT career with A+ Core 1.", primary: "#f97316", secondary: "#facc15",
     stats: [{ value: "90", label: "max questions" }, { value: "90 min", label: "exam length" }, { value: "675", label: "passing score (of 900)" }],
   }),
   cert({
     slug: "a-plus-core-2", name: "A+ Core 2 220-1202 Exam Prep", shortName: "A+ Core 2",
     exam: "A+ Core 2 (220-1202)", focus: "operating systems, security, software troubleshooting and operational procedures",
+    playId: "com.ofbuilder.apluscore2",
     tagline: "Finish your A+ with Core 2.", primary: "#ef4444", secondary: "#f97316",
     stats: [{ value: "90", label: "max questions" }, { value: "90 min", label: "exam length" }, { value: "700", label: "passing score (of 900)" }],
   }),
   cert({
     slug: "network-plus", name: "Network+ N10-009 Exam Prep", shortName: "Network+",
     exam: "Network+ (N10-009)", focus: "networking concepts, implementation, operations, security and troubleshooting",
+    playId: "com.ofbuilder.networkplus",
     tagline: "Master networking for Network+.", primary: "#22c55e", secondary: "#22d3ee",
     stats: [{ value: "90", label: "max questions" }, { value: "90 min", label: "exam length" }, { value: "720", label: "passing score (of 900)" }],
   }),
   cert({
     slug: "security-plus", name: "Security+ SY0-701 Exam Prep", shortName: "Security+",
     exam: "Security+ (SY0-701)", focus: "general security concepts, threats and vulnerabilities, security architecture, operations, and program management",
+    playId: "com.ofbuilder.securityplus",
     tagline: "Lock in your Security+ pass.", primary: "#3b82f6", secondary: "#22d3ee",
     stats: [{ value: "90", label: "max questions" }, { value: "90 min", label: "exam length" }, { value: "750", label: "passing score (of 900)" }],
   }),
   cert({
     slug: "cysa-plus", name: "CySA+ CS0-004 Exam Prep", shortName: "CySA+",
     exam: "CySA+ (CS0-004)", focus: "security operations, vulnerability management, incident response and reporting",
+    playId: "com.ofbuilder.cysaplus",
     tagline: "Think like a security analyst.", primary: "#a855f7", secondary: "#ec4899",
     stats: [{ value: "4", label: "core exam domains" }, { value: "PBQ", label: "scenario drills" }, { value: "Timed", label: "full exams" }],
   }),
