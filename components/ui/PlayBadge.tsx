@@ -12,7 +12,7 @@ export default function PlayBadge({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`group inline-flex items-center gap-3 rounded-2xl px-5 py-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl active:scale-95 ${
+      className={`group inline-flex h-16 items-center gap-3 rounded-2xl px-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl active:scale-95 ${
         dark ? "bg-[#0f0f1a] text-white shadow-lg shadow-black/20" : "bg-white text-[#0f0f1a] shadow-lg shadow-black/10 ring-1 ring-black/5"
       }`}
     >
