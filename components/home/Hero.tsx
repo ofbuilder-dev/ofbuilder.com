@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { BookOpen, Brain, Car, Earth, GraduationCap, Moon, Puzzle, ShieldCheck, Wallet, type LucideIcon } from "lucide-react";
+import { BookOpen, Car, Earth, GraduationCap, Moon, Puzzle, ShieldCheck, Wallet, type LucideIcon } from "lucide-react";
 import { AnimatePresence, motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -20,7 +20,6 @@ const FLOATERS: (Tile | Shape)[] = [
   { kind: "tile", x: 6, y: 20, s: 49, r: -10, Icon: GraduationCap, from: "#ff6b6b", to: "#ffb347" },
   { kind: "tile", x: 15, y: 52, s: 39, r: 8, Icon: Car, from: "#3b82f6", to: "#4cc9f0" },
   { kind: "tile", x: 5, y: 76, s: 43, r: -6, Icon: Earth, from: "#f97316", to: "#facc15" },
-  { kind: "tile", x: 21, y: 12, s: 34, r: 6, Icon: Brain, from: "#14b8a6", to: "#8ee55e" },
   { kind: "tile", x: 86, y: 16, s: 46, r: 10, Icon: Moon, from: "#6366f1", to: "#c084fc" },
   { kind: "tile", x: 80, y: 46, s: 37, r: -8, Icon: ShieldCheck, from: "#8b5cf6", to: "#22d3ee" },
   { kind: "tile", x: 89, y: 72, s: 45, r: 6, Icon: Wallet, from: "#10b981", to: "#4cc9f0" },
@@ -103,24 +102,12 @@ export default function Hero({ playUrl }: { playUrl: string }) {
       </div>
 
       <div className="relative z-10 mx-auto max-w-4xl text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mx-auto inline-flex items-center gap-2 rounded-full bg-white/80 px-4 py-2 text-sm font-medium text-[#3d3d52] shadow-sm ring-1 ring-black/5 backdrop-blur"
-        >
-          <span className="relative flex h-2.5 w-2.5">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-            <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
-          </span>
-          24 apps live on Google Play
-        </motion.div>
 
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="font-display mt-7 text-[clamp(2.8rem,9vw,7.2rem)] font-extrabold leading-[0.92]"
+          className="font-display text-[clamp(2.8rem,9vw,7.2rem)] font-extrabold leading-[0.92]"
         >
           Apps that help
           <br />
