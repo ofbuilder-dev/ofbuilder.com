@@ -6,9 +6,13 @@ const SPOTS = [
   "right-[15%] bottom-[-10%] h-[28vmax] w-[28vmax]",
 ];
 
-export default function Blobs({ colors = DEFAULT, opacity }: { colors?: string[]; opacity?: number }) {
+// `fade` softly fades the blobs out towards the bottom so a section never ends in a hard colour edge.
+export default function Blobs({ colors = DEFAULT, opacity, fade = false }: { colors?: string[]; opacity?: number; fade?: boolean }) {
   return (
-    <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+    <div
+      aria-hidden
+      className={`pointer-events-none absolute inset-0 overflow-hidden ${fade ? "[mask-image:linear-gradient(to_bottom,#000_45%,transparent_100%)]" : ""}`}
+    >
       {colors.slice(0, 4).map((c, i) => (
         <div key={i} className={`blob ${SPOTS[i]}`} style={{ background: c, opacity }} />
       ))}

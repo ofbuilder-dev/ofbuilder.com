@@ -33,7 +33,7 @@ export default async function SuitePage({ params }: { params: Promise<{ id: stri
       <Nav />
 
       <section className="relative overflow-hidden px-5 pb-20 pt-40" style={{ background: suite.soft }}>
-        <Blobs colors={[suite.color, "#ffffff", suite.color, "#ffb347"]} opacity={0.35} />
+        <Blobs colors={[suite.color, "#ffffff", suite.color, "#ffb347"]} opacity={0.35} fade />
         <div className="relative mx-auto max-w-6xl">
           <Reveal>
             <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-bold shadow-sm" style={{ color: suite.color }}>

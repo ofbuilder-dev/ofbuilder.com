@@ -21,14 +21,14 @@ export default function Directory({ items, suites }: { items: Item[]; suites: Su
 
   return (
     <div>
-      <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-        <div className="flex flex-wrap gap-2">
+      <div className="sticky top-28 z-30 flex flex-col gap-2 rounded-[1.75rem] bg-white/85 p-2 shadow-[0_16px_40px_-20px_rgba(15,15,26,0.35)] ring-1 ring-black/5 backdrop-blur-xl lg:flex-row lg:items-center">
+        <div className="no-scrollbar -mx-1 flex min-w-0 flex-1 gap-1 overflow-x-auto px-1">
           {chips.map((c) => {
             const active = suite === c.id;
             return (
-              <button key={c.id} onClick={() => setSuite(c.id)} className="relative rounded-full px-4 py-2.5 text-sm font-semibold transition-colors" style={{ color: active ? "#fff" : "#3d3d52" }}>
+              <button key={c.id} onClick={() => setSuite(c.id)} className="relative shrink-0 whitespace-nowrap rounded-full px-3.5 py-2.5 text-sm font-semibold transition-colors" style={{ color: active ? "#fff" : "#3d3d52" }}>
                 {active && <motion.span layoutId="chip" className="absolute inset-0 rounded-full" style={{ background: c.color }} transition={{ type: "spring", stiffness: 400, damping: 30 }} />}
-                {!active && <span className="absolute inset-0 rounded-full bg-white ring-1 ring-black/10" />}
+                {!active && <span className="absolute inset-0 rounded-full transition-colors hover:bg-black/5" />}
                 <span className="relative">
                   {c.emoji} {c.short}
                 </span>
@@ -36,19 +36,23 @@ export default function Directory({ items, suites }: { items: Item[]; suites: Su
             );
           })}
         </div>
-        <label className="relative block lg:w-72">
+        <label className="relative block shrink-0 lg:w-52">
           <span className="sr-only">Search apps</span>
           <input
             value={q}
             onChange={(e) => setQ(e.target.value)}
             placeholder="Search apps…"
-            className="w-full rounded-full bg-white px-5 py-3 pl-11 text-sm outline-none ring-1 ring-black/10 transition-shadow focus:ring-2 focus:ring-[#8b5cf6]"
+            className="h-11 w-full rounded-full bg-[#f6f3ee] px-5 pl-11 text-sm outline-none ring-1 ring-transparent transition-shadow focus:bg-white focus:ring-2 focus:ring-[#8b5cf6]"
           />
           <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#6b6b80]">⌕</span>
         </label>
       </div>
 
-      <motion.div layout className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <p className="mt-8 px-1 text-sm font-medium text-[#6b6b80]">
+        Showing {shown.length} {shown.length === 1 ? "app" : "apps"}
+        {suite !== "all" && <> in {chips.find((c) => c.id === suite)?.short}</>}
+      </p>
+      <motion.div layout className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <AnimatePresence mode="popLayout">
           {shown.map((a) => (
             <motion.div key={a.slug} layout initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} transition={{ type: "spring", stiffness: 300, damping: 28 }}>
