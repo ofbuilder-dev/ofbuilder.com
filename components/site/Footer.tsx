@@ -1,11 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { Facebook, Instagram, Linkedin, Mail, Youtube } from "lucide-react";
-import { appsInSuite, contactEmail, getApp, playDeveloperUrl, socials, suites } from "@/lib/apps";
+import { appsInSuite, contactEmail, playDeveloperUrl, socials, suites } from "@/lib/apps";
 import PlayBadge from "@/components/ui/PlayBadge";
 import Logo from "./Logo";
-
-const POPULAR = ["dreamnest", "driving-theory", "life-in-the-uk", "security-plus", "sleepwise", "mental-math"];
 
 function XLogo({ size = 16 }: { size?: number }) {
   return (
@@ -37,8 +34,6 @@ function Heading({ children }: { children: React.ReactNode }) {
 }
 
 export default function Footer() {
-  const popular = POPULAR.map((s) => getApp(s)!).filter(Boolean);
-
   return (
     <footer className="relative mt-24 overflow-hidden bg-[#0b0b14] text-white">
       {/* soft colour glow */}
@@ -69,7 +64,7 @@ export default function Footer() {
         </div>
 
         {/* Columns */}
-        <div className="grid grid-cols-2 gap-x-6 gap-y-12 py-14 lg:grid-cols-[1.5fr_1fr_1.1fr_0.8fr] lg:gap-10">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-12 py-14 lg:grid-cols-[1.6fr_1.2fr_0.8fr] lg:gap-16">
           <div className="col-span-2 lg:col-span-1">
             <Logo light size={40} />
             <p className="mt-5 max-w-xs leading-relaxed text-white/60">
@@ -106,21 +101,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
-            <Heading>Popular apps</Heading>
-            <ul className="mt-5 space-y-3">
-              {popular.map((a) => (
-                <li key={a.slug}>
-                  <Link href={`/${a.slug}/`} className="group flex items-center gap-3 text-white/75 transition-colors hover:text-white">
-                    <img src={a.icon} alt="" width={28} height={28} className="h-7 w-7 shrink-0 rounded-lg transition-transform group-hover:-rotate-6 group-hover:scale-110" loading="lazy" />
-                    <span className="truncate">{a.shortName}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
+          <div className="col-span-2 sm:col-span-1">
             <Heading>Studio</Heading>
             <ul className="mt-5 space-y-3 text-white/75">
               {[
