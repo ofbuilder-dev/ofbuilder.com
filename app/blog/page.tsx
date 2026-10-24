@@ -17,7 +17,7 @@ export default function BlogPage() {
     <div className="relative">
       <Nav />
       <section className="relative overflow-hidden px-5 pb-12 pt-40">
-        <Blobs opacity={0.3} />
+        <Blobs opacity={0.3} fade />
         <Reveal className="relative mx-auto max-w-6xl">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#10b981]">Blog</p>
           <h1 className="font-display mt-3 text-6xl font-extrabold sm:text-8xl">Notes from the studio.</h1>
