@@ -14,6 +14,7 @@ type SuiteCard = {
   soft: string;
   emoji: string;
   apps: { slug: string; shortName: string; icon: string }[];
+  upcoming?: { name: string; emoji: string; note: string }[];
 };
 
 // Cards stick to the top and shrink slightly as the next one slides over them.
@@ -31,7 +32,8 @@ function Card({ s, index, total }: { s: SuiteCard; index: number; total: number 
         <div aria-hidden className="blob -right-20 -top-20 h-80 w-80" style={{ background: s.color, opacity: 0.35 }} />
         <div className="relative z-10 flex-1">
           <span className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-xs font-semibold shadow-sm" style={{ color: s.color }}>
-            {s.emoji} Suite {String(index + 1).padStart(2, "0")} · {s.apps.length} apps
+            {s.emoji} Suite {String(index + 1).padStart(2, "0")} · {s.apps.length} {s.apps.length === 1 ? "app" : "apps"}
+            {s.upcoming?.length ? ` · ${s.upcoming.length} coming soon` : ""}
           </span>
           <h3 className="font-display mt-5 text-4xl font-extrabold sm:text-6xl">{s.name}</h3>
           <p className="mt-4 max-w-md text-lg font-medium" style={{ color: s.color }}>
@@ -63,6 +65,17 @@ function Card({ s, index, total }: { s: SuiteCard; index: number; total: number 
               />
               <span className="text-xs font-semibold text-[#3d3d52] sm:text-sm">{a.shortName}</span>
             </Link>
+          ))}
+          {(s.upcoming ?? []).slice(0, Math.max(0, 6 - s.apps.length)).map((u) => (
+            <div key={u.name} className="flex flex-col items-center gap-2 text-center">
+              <div className="grid aspect-square w-full max-w-24 place-items-center rounded-[24%] border-2 border-dashed bg-white/60 text-3xl" style={{ borderColor: s.color + "66" }}>
+                {u.emoji}
+              </div>
+              <span className="text-xs font-semibold text-[#6b6b80] sm:text-sm">{u.name}</span>
+              <span className="-mt-1 rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide" style={{ background: s.color + "1a", color: s.color }}>
+                Soon
+              </span>
+            </div>
           ))}
         </div>
       </motion.div>

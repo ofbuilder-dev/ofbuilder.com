@@ -62,7 +62,7 @@ export default async function AppPage({ params }: { params: Promise<{ slug: stri
           <div>
             <Reveal y={20}>
               <Link href={`/suites/${suite.id}/`} className={`inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-xs font-bold backdrop-blur ${dark ? "bg-white/10 text-white ring-1 ring-white/20" : "bg-white/80 ring-1 ring-black/5"}`}>
-                {suite.emoji} Part of the {suite.name}
+                {suite.emoji} Part of the {suite.short} suite
               </Link>
             </Reveal>
             <Reveal delay={0.05}>
@@ -320,7 +320,7 @@ export default async function AppPage({ params }: { params: Promise<{ slug: stri
       {siblings.length > 0 && (
         <section className="mx-auto max-w-6xl px-5 pb-24">
           <Reveal className="flex flex-wrap items-end justify-between gap-4">
-            <h2 className="font-display text-3xl font-extrabold">More from the {suite.name}</h2>
+            <h2 className="font-display text-3xl font-extrabold">More from the {suite.short} suite</h2>
             <Link href={`/suites/${suite.id}/`} className="font-semibold" style={{ color: suite.color }}>
               View suite →
             </Link>
