@@ -40,7 +40,7 @@ export default function Footer() {
   const popular = POPULAR.map((s) => getApp(s)!).filter(Boolean);
 
   return (
-    <footer className="relative mt-24 overflow-hidden rounded-t-[2.5rem] bg-[#0b0b14] text-white sm:rounded-t-[3.5rem]">
+    <footer className="relative mt-24 overflow-hidden bg-[#0b0b14] text-white">
       {/* soft colour glow */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
         <div className="absolute -left-40 -top-40 h-96 w-96 rounded-full bg-[#ff6b6b] opacity-[0.12] blur-[120px]" />
