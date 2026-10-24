@@ -21,7 +21,7 @@ export default function Footer() {
               ))}
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-5">
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-6">
             {suites.map((s) => (
               <div key={s.id}>
                 <Link href={`/suites/${s.id}/`} className="text-sm font-semibold hover:underline">

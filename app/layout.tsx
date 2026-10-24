@@ -19,12 +19,12 @@ export const metadata: Metadata = {
     template: "%s · OfBuilder",
   },
   description:
-    "OfBuilder is an indie app studio with 24 Android apps across citizenship and driving theory tests, CompTIA exam prep, AI sleep and wellness, learning games and private money tools.",
+    "OfBuilder is an indie app studio with 24 Android apps across citizenship and driving theory tests, CompTIA exam prep, kids learning and bedtime stories, Islamic apps, AI sleep, brain games and private money tools.",
   keywords: ["OfBuilder", "app studio", "citizenship test app", "driving theory test app", "CompTIA exam prep", "AI apps"],
   authors: [{ name: "OfBuilder" }],
   openGraph: {
     title: "OfBuilder: apps that help you learn, pass, sleep & grow",
-    description: "24 thoughtfully built Android apps across 5 suites.",
+    description: "24 thoughtfully built Android apps across 6 suites.",
     url: siteUrl,
     siteName: "OfBuilder",
     type: "website",

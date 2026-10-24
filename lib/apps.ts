@@ -64,7 +64,7 @@ export type App = {
   disclaimer?: string;
 };
 
-export type SuiteId = "citizenship" | "driving" | "comptia" | "wellness" | "everyday";
+export type SuiteId = "citizenship" | "driving" | "comptia" | "kids" | "noor" | "everyday";
 
 export type Suite = {
   id: SuiteId;
@@ -76,6 +76,7 @@ export type Suite = {
   soft: string;
   emoji: string;
   why: Feature[];
+  upcoming?: { name: string; emoji: string; note: string }[];
 };
 
 export const playDeveloperUrl =
@@ -144,28 +145,53 @@ export const suites: Suite[] = [
     ],
   },
   {
-    id: "wellness",
-    name: "AI Wellness & Faith Suite",
-    short: "Wellness & Faith",
-    tagline: "Calmer nights, better sleep and knowledge you can trust.",
+    id: "kids",
+    name: "Little Sparks",
+    short: "Little Sparks",
+    tagline: "Bright apps for curious little minds.",
     description:
-      "Gentle AI companions for the moments that matter: falling asleep, settling the kids at bedtime and finding sourced answers to questions of faith.",
-    color: "#6366f1",
-    soft: "#eef0ff",
+      "Playful learning by day and calming bedtime stories by night. Little Sparks apps are made for small hands and big imaginations, and are built to be safe for kids and stress-free for parents.",
+    color: "#ec4899",
+    soft: "#fff0f6",
+    emoji: "✨",
+    why: [
+      { icon: "Baby", title: "Made for little ones", body: "Big buttons, gentle sounds and simple screens that young children can use on their own." },
+      { icon: "ShieldCheck", title: "Safe by design", body: "Child-friendly content, no dark patterns, and privacy taken seriously for every family." },
+      { icon: "Heart", title: "Parents love it too", body: "Learning that builds real skills, and bedtimes that end calmly instead of in a battle." },
+    ],
+    upcoming: [
+      { name: "ShishuAI", emoji: "👶", note: "AI baby care companion for new parents" },
+      { name: "More on the way", emoji: "🎈", note: "New learning and bedtime apps for kids" },
+    ],
+  },
+  {
+    id: "noor",
+    name: "Noor",
+    short: "Noor",
+    tagline: "Faith-first apps for everyday Muslim life.",
+    description:
+      "Noor means light. These apps bring trusted Islamic knowledge, calm reflection and healthy habits into daily life, with respect, clear sources and zero ads where it matters.",
+    color: "#0f766e",
+    soft: "#ecfaf6",
     emoji: "🌙",
     why: [
-      { icon: "Sparkles", title: "AI that adapts to you", body: "Plans, stories and answers shaped around you, not one-size-fits-all content." },
-      { icon: "ShieldCheck", title: "Respectful by design", body: "Calm interfaces, no dark patterns and clear sources where it matters." },
-      { icon: "Earth", title: "Built for the world", body: "Multilingual support and availability across 170+ countries." },
+      { icon: "BookMarked", title: "Grounded in authentic sources", body: "Answers and content cite the Quran and Hadith, so you can always check the source yourself." },
+      { icon: "Languages", title: "For the global Ummah", body: "Multilingual from day one, including Bangla, English, Indonesian and Arabic." },
+      { icon: "ShieldCheck", title: "Respectful by design", body: "Calm interfaces, privacy-first, and no distracting ads in the moments that matter." },
+    ],
+    upcoming: [
+      { name: "Muslim Wise", emoji: "🕌", note: "Complete Islamic life companion" },
+      { name: "MindfulMuslim", emoji: "🤲", note: "Islamic meditation, dhikr and calm" },
+      { name: "Sakinah Fit", emoji: "🌸", note: "Fitness designed for Muslim women" },
     ],
   },
   {
     id: "everyday",
-    name: "Learn, Play & Money Suite",
-    short: "Learn, Play & Money",
-    tagline: "Small daily apps that make you sharper and better organised.",
+    name: "Everyday Essentials",
+    short: "Everyday",
+    tagline: "Small daily apps for a sharper mind, better sleep and calmer money.",
     description:
-      "Learning games for little ones, brain training and puzzles for grown-ups, and private money tools that never ask for your bank login.",
+      "Brain training and puzzles, an AI sleep coach, and private money tools that never ask for your bank login. Quick to open and genuinely useful every day.",
     color: "#10b981",
     soft: "#e8fbf3",
     emoji: "🎯",
@@ -514,7 +540,7 @@ export const apps: App[] = [
       "SleepWise is an AI sleep coach built on Cognitive Behavioral Therapy for Insomnia (CBT-I), the approach sleep specialists recommend. It helps you fall asleep faster, stay asleep longer and wake up refreshed.",
       "Log your nights in a quick sleep diary. The AI turns your patterns into a personal plan with a wind-down routine, a sleep window and relaxation sessions that change as you improve.",
     ],
-    suiteId: "wellness",
+    suiteId: "everyday",
     icon: "/icons/sleepwise.png",
     theme: { primary: "#6366f1", secondary: "#c084fc", soft: "#eef0ff", dark: true },
     motif: "breath",
@@ -562,7 +588,7 @@ export const apps: App[] = [
       "DreamNest AI writes a new bedtime story every night with your child's name, favourite characters and interests woven in. Every story is unique, calming and made to help little ones drift off peacefully.",
       "Each story carries a gentle lesson, like kindness, courage or patience, and ends on a soothing note. Turn on narration and a calm voice reads it aloud while you cuddle up.",
     ],
-    suiteId: "wellness",
+    suiteId: "kids",
     icon: "/icons/dreamnest.png",
     theme: { primary: "#8b5cf6", secondary: "#fbbf24", soft: "#f3efff", dark: true },
     motif: "stars",
@@ -612,7 +638,7 @@ export const apps: App[] = [
       "IlmAI is an AI companion for Islamic knowledge. Ask your questions in Bangla, English or Indonesian and get respectful, clear answers that cite authentic Quran and Hadith sources.",
       "Answers take the schools of Islamic jurisprudence (madhab) into account, and every citation can be checked in the built-in Quran and Hadith explorer.",
     ],
-    suiteId: "wellness",
+    suiteId: "noor",
     icon: "/icons/ilmai.png",
     theme: { primary: "#0f766e", secondary: "#d4a72c", soft: "#ecfaf6", dark: true },
     motif: "geometric",
@@ -663,7 +689,7 @@ export const apps: App[] = [
       "BrightKids turns the ABCs, numbers, shapes and colours into bright, bouncy mini-games. Tap, trace and match your way through bite-sized lessons with a friendly fox guide.",
       "It's made for small hands and short attention spans, with big buttons, cheerful sounds and lots of praise, so learning feels like play.",
     ],
-    suiteId: "everyday",
+    suiteId: "kids",
     icon: "/icons/brightkids.png",
     theme: { primary: "#f97316", secondary: "#22c55e", soft: "#fff7e6" },
     motif: "shapes",
@@ -897,11 +923,11 @@ export const apps: App[] = [
 
 // Apps in development, shown in the "In the lab" strip on the home page.
 export const labApps = [
-  { name: "Muslim Wise", emoji: "🕌", note: "Islamic life companion for the Gulf" },
+  { name: "Muslim Wise", emoji: "🕌", note: "Islamic life companion · Noor" },
+  { name: "MindfulMuslim", emoji: "🤲", note: "Islamic mindfulness · Noor" },
+  { name: "Sakinah Fit", emoji: "🌸", note: "Fitness for Muslim women · Noor" },
+  { name: "ShishuAI", emoji: "👶", note: "AI baby care · Little Sparks" },
   { name: "LifeWise", emoji: "🌟", note: "AI life coach" },
-  { name: "ShishuAI", emoji: "👶", note: "AI baby care" },
-  { name: "Sakinah Fit", emoji: "🌸", note: "Fitness for Muslim women" },
-  { name: "MindfulMuslim", emoji: "🤲", note: "Islamic mindfulness" },
 ];
 
 export function getApp(slug: string) {
