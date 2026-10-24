@@ -17,7 +17,7 @@ type SuiteCard = {
   upcoming?: { name: string; emoji: string; note: string }[];
 };
 
-const PHONE_SHOWN = 3; // one row of four with the "+N more" tile
+const PHONE_SHOWN = 7; // two rows of four with the "+N more" tile
 const DESKTOP_SHOWN = 5; // two rows of three with the "+N more" tile
 
 // Cards stick to the top and shrink slightly as the next one slides over them.
@@ -38,13 +38,9 @@ function Card({ s, index, total }: { s: SuiteCard; index: number; total: number 
     <div ref={ref} className="sticky top-[6.5rem] lg:top-24 lg:h-[min(78vh,640px)]" style={{ paddingTop: index * 14 }}>
       <motion.div
         style={{ scale, background: s.soft }}
-        className="relative flex min-h-[min(calc(100svh-11rem),620px)] flex-col overflow-hidden rounded-[2rem] p-6 shadow-[0_30px_80px_-30px_rgba(15,15,26,0.35)] ring-1 ring-black/5 sm:rounded-[2.5rem] sm:p-12 lg:h-full lg:min-h-0 lg:flex-row lg:items-center lg:gap-12"
+        className="relative flex flex-col overflow-hidden rounded-[2rem] p-6 shadow-[0_30px_80px_-30px_rgba(15,15,26,0.35)] ring-1 ring-black/5 sm:rounded-[2.5rem] sm:p-12 lg:h-full lg:flex-row lg:items-center lg:gap-12"
       >
         <div aria-hidden className="blob -right-20 -top-20 h-80 w-80" style={{ background: s.color, opacity: 0.35 }} />
-        {/* phone-only watermark filling the lower part of the tall card */}
-        <span aria-hidden className="pointer-events-none absolute -bottom-6 -right-4 select-none text-[9rem] leading-none opacity-15 sm:hidden">
-          {s.emoji}
-        </span>
         <div className="relative z-10 sm:flex-1">
           <span className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-xs font-semibold shadow-sm" style={{ color: s.color }}>
             {s.emoji} Suite {String(index + 1).padStart(2, "0")} · {s.apps.length} {s.apps.length === 1 ? "app" : "apps"}
@@ -64,8 +60,10 @@ function Card({ s, index, total }: { s: SuiteCard; index: number; total: number 
           </Link>
         </div>
         <div className="relative z-10 mt-6 grid grid-cols-4 gap-x-2 gap-y-3 sm:mt-8 sm:flex-1 sm:grid-cols-3 sm:gap-5 lg:mt-0">
-          {tiles.slice(0, DESKTOP_SHOWN).map((t, i) => {
-            const hideOnPhone = i >= PHONE_SHOWN ? "hidden sm:flex" : "flex";
+          {tiles.slice(0, Math.max(PHONE_SHOWN, DESKTOP_SHOWN)).map((t, i) => {
+            const onPhone = i < PHONE_SHOWN;
+            const onDesktop = i < DESKTOP_SHOWN;
+            const hideOnPhone = onPhone && onDesktop ? "flex" : onPhone ? "flex sm:hidden" : "hidden sm:flex";
             return t.kind === "app" ? (
               <Link key={t.slug} href={`/${t.slug}/`} className={`group ${hideOnPhone} min-w-0 flex-col items-center gap-1.5 text-center sm:gap-2`}>
                 <motion.img
