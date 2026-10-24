@@ -2,7 +2,7 @@
 
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 type SuiteCard = {
@@ -26,6 +26,8 @@ function Card({ s, index, total }: { s: SuiteCard; index: number; total: number 
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1 - (total - index) * 0.03]);
+  // Watch the whole card: per-icon viewport detection is unreliable inside sticky, scaled cards.
+  const inView = useInView(ref, { once: true, amount: 0.15 });
   // Apps first, then "coming soon" placeholders. Extra items collapse into a "+N more" tile.
   const tiles = [
     ...s.apps.map((a) => ({ kind: "app" as const, ...a })),
@@ -36,10 +38,14 @@ function Card({ s, index, total }: { s: SuiteCard; index: number; total: number 
     <div ref={ref} className="sticky top-[6.5rem] lg:top-24 lg:h-[min(78vh,640px)]" style={{ paddingTop: index * 14 }}>
       <motion.div
         style={{ scale, background: s.soft }}
-        className="relative flex flex-col overflow-hidden rounded-[2rem] p-5 shadow-[0_30px_80px_-30px_rgba(15,15,26,0.35)] ring-1 ring-black/5 sm:rounded-[2.5rem] sm:p-12 lg:h-full lg:flex-row lg:items-center lg:gap-12"
+        className="relative flex min-h-[min(calc(100svh-11rem),620px)] flex-col overflow-hidden rounded-[2rem] p-6 shadow-[0_30px_80px_-30px_rgba(15,15,26,0.35)] ring-1 ring-black/5 sm:rounded-[2.5rem] sm:p-12 lg:h-full lg:min-h-0 lg:flex-row lg:items-center lg:gap-12"
       >
         <div aria-hidden className="blob -right-20 -top-20 h-80 w-80" style={{ background: s.color, opacity: 0.35 }} />
-        <div className="relative z-10 flex-1">
+        {/* phone-only watermark filling the lower part of the tall card */}
+        <span aria-hidden className="pointer-events-none absolute -bottom-6 -right-4 select-none text-[9rem] leading-none opacity-15 sm:hidden">
+          {s.emoji}
+        </span>
+        <div className="relative z-10 sm:flex-1">
           <span className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-xs font-semibold shadow-sm" style={{ color: s.color }}>
             {s.emoji} Suite {String(index + 1).padStart(2, "0")} · {s.apps.length} {s.apps.length === 1 ? "app" : "apps"}
             {s.upcoming?.length ? ` · ${s.upcoming.length} coming soon` : ""}
@@ -48,7 +54,7 @@ function Card({ s, index, total }: { s: SuiteCard; index: number; total: number 
           <p className="mt-2 max-w-md text-base font-medium sm:mt-4 sm:text-lg" style={{ color: s.color }}>
             {s.tagline}
           </p>
-          <p className="mt-3 hidden max-w-md text-[#3d3d52] sm:block">{s.description}</p>
+          <p className="mt-3 line-clamp-3 max-w-md text-[15px] leading-relaxed text-[#3d3d52] sm:line-clamp-none sm:text-base">{s.description}</p>
           <Link
             href={`/suites/${s.id}/`}
             className="group mt-4 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition-transform hover:-translate-y-1 sm:mt-8 sm:px-6 sm:py-3.5 sm:text-base"
@@ -57,7 +63,7 @@ function Card({ s, index, total }: { s: SuiteCard; index: number; total: number 
             Explore the suite <span className="transition-transform group-hover:translate-x-1">→</span>
           </Link>
         </div>
-        <div className="relative z-10 mt-5 grid flex-1 grid-cols-4 gap-x-2 gap-y-3 sm:mt-8 sm:grid-cols-3 sm:gap-5 lg:mt-0">
+        <div className="relative z-10 mt-6 grid grid-cols-4 gap-x-2 gap-y-3 sm:mt-8 sm:flex-1 sm:grid-cols-3 sm:gap-5 lg:mt-0">
           {tiles.slice(0, DESKTOP_SHOWN).map((t, i) => {
             const hideOnPhone = i >= PHONE_SHOWN ? "hidden sm:flex" : "flex";
             return t.kind === "app" ? (
@@ -68,8 +74,7 @@ function Card({ s, index, total }: { s: SuiteCard; index: number; total: number 
                   width={96}
                   height={96}
                   initial={{ opacity: 0, y: 30, rotate: i % 2 ? 8 : -8 }}
-                  whileInView={{ opacity: 1, y: 0, rotate: 0 }}
-                  viewport={{ once: true }}
+                  animate={inView ? { opacity: 1, y: 0, rotate: 0 } : undefined}
                   transition={{ delay: i * 0.07, type: "spring", stiffness: 140, damping: 14 }}
                   whileHover={{ y: -8, rotate: i % 2 ? 5 : -5, scale: 1.06 }}
                   className="aspect-square w-full max-w-16 rounded-[24%] shadow-xl sm:max-w-24"
