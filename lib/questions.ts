@@ -62,6 +62,23 @@ export const PRACTICE: Record<string, { exam: ExamFormat; examName: string }> = 
   "german-citizenship": { examName: "Einbürgerungstest", exam: { questions: 33, minutes: 60, passMark: 17, official: true } },
   "danish-citizenship": { examName: "Indfødsretsprøven", exam: { questions: 25, minutes: 30, passMark: 20, official: false } },
   "knm-inburgering": { examName: "KNM exam", exam: { questions: 25, minutes: 30, passMark: 18, official: false } },
+  // UK theory tests (DVSA)
+  "driving-theory": { examName: "UK Car Theory Test", exam: { questions: 50, minutes: 57, passMark: 43, official: true, note: "The real test also has a hazard perception part (pass mark 44 out of 75)." } },
+  "motorcycle-theory": { examName: "UK Motorcycle Theory Test", exam: { questions: 50, minutes: 57, passMark: 43, official: true, note: "The real test also has a hazard perception part (pass mark 44 out of 75)." } },
+  "lgv-hgv-theory": {
+    examName: "UK LGV Theory Test",
+    exam: { questions: 50, minutes: 57, passMark: 43, official: false, note: "This is a half-length practice mock. The real multiple-choice part has 100 questions in 1 hour 55 minutes, with a pass mark of 85." },
+  },
+  "pcv-bus-theory": {
+    examName: "UK PCV Theory Test",
+    exam: { questions: 50, minutes: 57, passMark: 43, official: false, note: "This is a half-length practice mock. The real multiple-choice part has 100 questions in 1 hour 55 minutes, with a pass mark of 85." },
+  },
+  // CompTIA: real exams are scored 100-900, so the free web mock is a shorter mini mock with an 80% target.
+  "a-plus-core-1": { examName: "CompTIA A+ Core 1 (220-1201)", exam: { questions: 30, minutes: 30, passMark: 24, official: false, note: "Free mini mock. The real exam has up to 90 questions in 90 minutes and a passing score of 675 on a 100 to 900 scale." } },
+  "a-plus-core-2": { examName: "CompTIA A+ Core 2 (220-1202)", exam: { questions: 30, minutes: 30, passMark: 24, official: false, note: "Free mini mock. The real exam has up to 90 questions in 90 minutes and a passing score of 700 on a 100 to 900 scale." } },
+  "network-plus": { examName: "CompTIA Network+ (N10-009)", exam: { questions: 30, minutes: 30, passMark: 24, official: false, note: "Free mini mock. The real exam has up to 90 questions in 90 minutes and a passing score of 720 on a 100 to 900 scale." } },
+  "security-plus": { examName: "CompTIA Security+ (SY0-701)", exam: { questions: 30, minutes: 30, passMark: 24, official: false, note: "Free mini mock. The real exam has up to 90 questions in 90 minutes and a passing score of 750 on a 100 to 900 scale." } },
+  "cysa-plus": { examName: "CompTIA CySA+ (CS0-004)", exam: { questions: 30, minutes: 30, passMark: 24, official: false, note: "Free mini mock. Check CompTIA's exam page for the current question count, time limit and passing score." } },
 };
 
 /** Free questions shown per topic in topic practice. */
@@ -78,7 +95,7 @@ function file(slug: string) {
 }
 
 function labelFor(q: RawQuestion) {
-  if (q.source_chapter) return q.source_chapter.replace(/^Chapter\s+\d+\s*[:.-]\s*/i, "");
+  if (q.source_chapter) return q.source_chapter.replace(/^(Chapter|Topic|Domain)\s+\d+(\.\d+)?\s*[:.-]\s*/i, "");
   return q.topic_slug.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
@@ -123,6 +140,11 @@ export function loadPractice(slug: string) {
     // Placeholder banks (refs starting "SAMPLE") stay out of search engines until real data is added.
     isSample: raw.some((q) => q.ref?.startsWith("SAMPLE")),
   };
+}
+
+/** A capped slice of free questions for the Question of the Day, so pages stay light. */
+export function dailyPool(slug: string, max = 60) {
+  return loadPractice(slug).mockPool.slice(0, max);
 }
 
 /** Play Store link tagged so installs from the website show up in Play Console's acquisition reports. */

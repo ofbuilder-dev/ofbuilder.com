@@ -62,6 +62,9 @@ export default async function MockTestPage({ params }: { params: Promise<{ slug:
         playUrl={playUrl}
         premiumCount={d.premiumCount}
         storageKey={`ofb-mock-${slug}`}
+        slug={slug}
+        examName={d.examName}
+        sharePath={`/${slug}/mock-test/`}
       />
     </PracticeShell>
   );

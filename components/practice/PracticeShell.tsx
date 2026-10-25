@@ -1,16 +1,19 @@
 import Link from "next/link";
 import AppNav from "@/components/app/AppNav";
+import InstallBar from "@/components/app/InstallBar";
 import JsonLd from "@/components/site/JsonLd";
 import Logo from "@/components/site/Logo";
 import AppIcon from "@/components/ui/AppIcon";
 import Blobs from "@/components/ui/Blobs";
 import PlayBadge from "@/components/ui/PlayBadge";
 import type { App } from "@/lib/apps";
+import { guides } from "@/lib/guides";
 import { breadcrumbLd } from "@/lib/seo";
 
 // Mock test first: it's the most popular way to check readiness.
 const TABS = [
   ["mock-test", "Mock test", "⏱️"],
+  ["readiness", "Am I ready?", "📊"],
   ["practice", "Practice", "🎯"],
   ["questions", "Questions", "📖"],
 ] as const;
@@ -39,6 +42,7 @@ export default function PracticeShell({
 }) {
   const { primary, soft } = app.theme;
   const base = `/${app.slug}/`;
+  const hasGuide = app.slug in guides;
   const tabLabel = TABS.find(([k]) => k === active)![1];
 
   return (
@@ -65,7 +69,7 @@ export default function PracticeShell({
               Preview: these are sample questions. Real questions are coming soon.
             </p>
           )}
-          <nav className="mt-8 grid max-w-xl grid-cols-3 gap-1 rounded-2xl bg-white/80 p-1.5 shadow-[0_12px_30px_-16px_rgba(15,15,26,0.35)] ring-1 ring-black/5 backdrop-blur" aria-label="Practice sections">
+          <nav className="mt-8 grid max-w-2xl grid-cols-4 gap-1 rounded-2xl bg-white/80 p-1.5 shadow-[0_12px_30px_-16px_rgba(15,15,26,0.35)] ring-1 ring-black/5 backdrop-blur" aria-label="Practice sections">
             {TABS.map(([k, l, icon]) => {
               const on = k === active;
               return (
@@ -73,7 +77,7 @@ export default function PracticeShell({
                   key={k}
                   href={`${base}${k}/`}
                   aria-current={on ? "page" : undefined}
-                  className={`relative flex flex-col items-center justify-center gap-0.5 rounded-xl px-2 py-2.5 text-center text-xs font-bold transition-all sm:flex-row sm:gap-2 sm:text-sm ${on ? "text-white shadow-md" : "text-[#3d3d52] hover:bg-black/5"}`}
+                  className={`relative flex flex-col items-center justify-center gap-0.5 rounded-xl px-1 py-2.5 text-center text-[11px] font-bold leading-tight transition-all sm:flex-row sm:gap-2 sm:text-sm ${on ? "text-white shadow-md" : "text-[#3d3d52] hover:bg-black/5"}`}
                   style={on ? { background: primary } : undefined}
                 >
                   <span className="text-base leading-none sm:text-lg">{icon}</span>
@@ -115,8 +119,13 @@ export default function PracticeShell({
             <Link href={base} className="hover:text-[#0f0f1a]">
               About {app.shortName}
             </Link>
-            <Link href="/apps/" className="hover:text-[#0f0f1a]">
-              All apps
+            {hasGuide && (
+              <Link href={`${base}guide/`} className="hover:text-[#0f0f1a]">
+                Exam guide
+              </Link>
+            )}
+            <Link href="/free-tests/" className="hover:text-[#0f0f1a]">
+              Free tests
             </Link>
             <a href={app.privacyUrl} className="hover:text-[#0f0f1a]">
               Privacy
@@ -124,6 +133,7 @@ export default function PracticeShell({
           </div>
         </div>
       </footer>
+      <InstallBar name={app.shortName} icon={app.icon} color={primary} playUrl={playUrl} />
     </div>
   );
 }

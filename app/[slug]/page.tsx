@@ -18,7 +18,12 @@ import { apps, appsInSuite, contactEmail, getApp, getSuite } from "@/lib/apps";
 import JsonLd from "@/components/site/JsonLd";
 import { appLd, breadcrumbLd, faqLd, ogImage } from "@/lib/seo";
 import { appSeo } from "@/lib/appSeo";
-import { hasPractice, loadPractice } from "@/lib/questions";
+import { dailyPool, hasPractice, loadPractice } from "@/lib/questions";
+import DailyQuestion from "@/components/practice/DailyQuestion";
+import InstallBar from "@/components/app/InstallBar";
+import { guides } from "@/lib/guides";
+import { localesFor } from "@/lib/i18n";
+import { reviewsFor, screensFor } from "@/lib/media";
 
 export const dynamicParams = false;
 
@@ -34,12 +39,25 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: { absolute: seo.title },
     description: seo.description,
     keywords: seo.keywords,
-    alternates: { canonical: `/${app.slug}/` },
+    alternates: {
+      canonical: `/${app.slug}/`,
+      ...(localesFor(app.slug).length
+        ? { languages: { en: `/${app.slug}/`, ...Object.fromEntries(localesFor(app.slug).map((l) => [l, `/${app.slug}/${l}/`])), "x-default": `/${app.slug}/` } }
+        : {}),
+    },
     openGraph: { title: seo.title, description: seo.description, url: `/${app.slug}/`, type: "website", images: ogImage(app.slug, app.name) },
     twitter: { card: "summary_large_image", title: seo.title, description: seo.description, images: [`/og/${app.slug}.png`] },
     icons: { icon: app.icon, apple: app.icon },
   };
 }
+
+// Free web extras for non-exam apps.
+const EXTRAS: Record<string, { emoji: string; title: string; body: string; href: string; cta: string }> = {
+  brightkids: { emoji: "🦁", title: "Play Letter Safari, free", body: "A quick ABC game for little ones, right in your browser. Hear a letter, tap the picture, collect stars.", href: "/brightkids/play/", cta: "Play now" },
+  ilmai: { emoji: "🌙", title: "Ayah of the Day", body: "A short verse to reflect on every day, with its English meaning. Easy to share with family.", href: "/ilmai/ayah/", cta: "Read today's ayah" },
+};
+
+const LANG_LABEL: Record<string, string> = { de: "🇩🇪 Auf Deutsch", da: "🇩🇰 På dansk", nl: "🇳🇱 In het Nederlands" };
 
 function Eyebrow({ children, color }: { children: React.ReactNode; color: string }) {
   return (
@@ -57,6 +75,9 @@ export default async function AppPage({ params }: { params: Promise<{ slug: stri
   // Search-question FAQs come first: they target what people type into Google.
   const faq = [...seo.faq, ...app.faq];
   const practice = hasPractice(app.slug) ? loadPractice(app.slug) : null;
+  const screens = screensFor(app);
+  const reviews = reviewsFor(app);
+  const guide = guides[app.slug];
   const { primary, secondary, soft, dark } = app.theme;
   const siblings = appsInSuite(app.suiteId).filter((a) => a.slug !== app.slug);
   const screenTheme = { primary, secondary, soft, dark };
@@ -87,6 +108,11 @@ export default async function AppPage({ params }: { params: Promise<{ slug: stri
               <Link href={`/suites/${suite.id}/`} className={`inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-xs font-bold backdrop-blur ${dark ? "bg-white/10 text-white ring-1 ring-white/20" : "bg-white/80 ring-1 ring-black/5"}`}>
                 {suite.emoji} Part of the {suite.short} suite
               </Link>
+              {localesFor(app.slug).map((l) => (
+                <Link key={l} href={`/${app.slug}/${l}/`} hrefLang={l} className={`ml-2 inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs font-bold backdrop-blur ${dark ? "bg-white/10 text-white ring-1 ring-white/20" : "bg-white/80 ring-1 ring-black/5"}`}>
+                  {LANG_LABEL[l] ?? l}
+                </Link>
+              ))}
             </Reveal>
             <Reveal delay={0.05}>
               <div className="mt-7 flex items-center gap-5">
@@ -124,7 +150,7 @@ export default async function AppPage({ params }: { params: Promise<{ slug: stri
               </Reveal>
             )}
           </div>
-          <PhoneShowcase screens={app.screens} theme={screenTheme} name={app.shortName} icon={app.icon} />
+          <PhoneShowcase screens={screens} theme={screenTheme} name={app.shortName} icon={app.icon} />
         </div>
       </section>
 
@@ -142,9 +168,10 @@ export default async function AppPage({ params }: { params: Promise<{ slug: stri
                     {Math.min(practice.exam.questions, practice.mockPool.length)}-question mock test in your browser.
                   </p>
                 </div>
-                <div className="grid gap-3 sm:grid-cols-3 lg:w-[34rem]">
+                <div className="grid grid-cols-2 gap-3 lg:w-[34rem]">
                   {[
                     ["⏱️", "Free mock test", `/${app.slug}/mock-test/`],
+                    ["📊", "Am I ready?", `/${app.slug}/readiness/`],
                     ["🎯", "Practice by topic", `/${app.slug}/practice/`],
                     ["📖", "Sample questions", `/${app.slug}/questions/`],
                   ].map(([e, l, h]) => (
@@ -158,7 +185,40 @@ export default async function AppPage({ params }: { params: Promise<{ slug: stri
                   ))}
                 </div>
               </div>
+              <div className="mt-8">
+                <DailyQuestion sources={[{ slug: app.slug, label: app.shortName, color: primary, pool: dailyPool(app.slug) }]} compact />
+              </div>
+              {guide && (
+                <Link href={`/${app.slug}/guide/`} className="mt-4 flex items-center justify-between gap-4 rounded-2xl p-5 font-bold transition-colors hover:bg-black/[0.03]" style={{ background: soft }}>
+                  <span>
+                    📘 The complete {guide.examName} guide
+                    <span className="block text-sm font-medium text-[#6b6b80]">Format, booking, what to bring and a free 7, 14 or 30-day study plan</span>
+                  </span>
+                  <span style={{ color: primary }}>→</span>
+                </Link>
+              )}
+              {practice.isSample && <p className="mt-3 text-center text-xs font-semibold text-amber-700">Preview: sample questions. Real questions are coming soon.</p>}
             </div>
+          </Reveal>
+        </section>
+      )}
+
+      {EXTRAS[app.slug] && (
+        <section className="px-5 pt-16">
+          <Reveal>
+            <Link href={EXTRAS[app.slug].href} className="group mx-auto flex max-w-6xl flex-col items-start gap-6 rounded-[2.5rem] bg-white p-8 ring-1 ring-black/5 transition-shadow hover:shadow-xl sm:flex-row sm:items-center sm:p-10">
+              <span className="grid h-20 w-20 shrink-0 place-items-center rounded-3xl text-5xl transition-transform group-hover:rotate-6 group-hover:scale-110" style={{ background: soft }}>
+                {EXTRAS[app.slug].emoji}
+              </span>
+              <div className="flex-1">
+                <Eyebrow color={primary}>Try it free, no download</Eyebrow>
+                <h2 className="font-display mt-2 text-3xl font-extrabold">{EXTRAS[app.slug].title}</h2>
+                <p className="mt-2 text-[#3d3d52]">{EXTRAS[app.slug].body}</p>
+              </div>
+              <span className="rounded-full px-6 py-3.5 font-bold text-white shadow-lg" style={{ background: primary }}>
+                {EXTRAS[app.slug].cta} →
+              </span>
+            </Link>
           </Reveal>
         </section>
       )}
@@ -226,7 +286,7 @@ export default async function AppPage({ params }: { params: Promise<{ slug: stri
             <p className={`text-sm ${dark ? "text-white/60" : "text-[#6b6b80]"}`}>← Drag to explore →</p>
           </Reveal>
         </div>
-        <Gallery screens={app.screens} theme={screenTheme} name={app.shortName} icon={app.icon} />
+        <Gallery screens={screens} theme={screenTheme} name={app.shortName} icon={app.icon} />
       </section>
 
       {/* ── How it works ── */}
@@ -294,16 +354,16 @@ export default async function AppPage({ params }: { params: Promise<{ slug: stri
       </section>
 
       {/* ── Reviews / rating ── */}
-      {(app.reviews.length > 0 || app.rating) && (
+      {(reviews.length > 0 || app.rating) && (
         <section className="mx-auto max-w-6xl px-5 py-24">
-          {app.reviews.length > 0 ? (
+          {reviews.length > 0 ? (
             <>
               <Reveal className="text-center">
                 <Eyebrow color={primary}>Reviews</Eyebrow>
                 <h2 className="font-display mt-3 text-4xl font-extrabold">Loved by our users</h2>
               </Reveal>
               <div className="mt-12 grid gap-5 md:grid-cols-3">
-                {app.reviews.map((r, i) => (
+                {reviews.map((r, i) => (
                   <Reveal key={i} delay={i * 0.1}>
                     <blockquote className="h-full rounded-[2rem] bg-white p-7 ring-1 ring-black/5">
                       <div className="text-amber-400">{"★".repeat(r.rating)}</div>
@@ -426,6 +486,7 @@ export default async function AppPage({ params }: { params: Promise<{ slug: stri
           </div>
         </div>
       </footer>
+      <InstallBar name={app.shortName} icon={app.icon} color={primary} playUrl={app.playUrl} />
     </div>
   );
 }

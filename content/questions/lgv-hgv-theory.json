@@ -1,0 +1,2690 @@
+[
+  {
+    "id": 1,
+    "ref": "SAMPLE-LGV001",
+    "topic_id": 1,
+    "topic_slug": "vehicle_weights_and_dimensions",
+    "question": "[Sample] Question 1 about Vehicle weights and dimensions?",
+    "variants": [
+      "[Sample] Question 1 about Vehicle weights and dimensions?",
+      "[Sample] Variant wording for question 1 on Vehicle weights and dimensions?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 1: Vehicle weights and dimensions",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 2,
+    "ref": "SAMPLE-LGV002",
+    "topic_id": 1,
+    "topic_slug": "vehicle_weights_and_dimensions",
+    "question": "[Sample] Question 2 about Vehicle weights and dimensions?",
+    "variants": [
+      "[Sample] Question 2 about Vehicle weights and dimensions?",
+      "[Sample] Variant wording for question 2 on Vehicle weights and dimensions?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 1: Vehicle weights and dimensions",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 3,
+    "ref": "SAMPLE-LGV003",
+    "topic_id": 1,
+    "topic_slug": "vehicle_weights_and_dimensions",
+    "question": "[Sample] Question 3 about Vehicle weights and dimensions?",
+    "variants": [
+      "[Sample] Question 3 about Vehicle weights and dimensions?",
+      "[Sample] Variant wording for question 3 on Vehicle weights and dimensions?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 1: Vehicle weights and dimensions",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 4,
+    "ref": "SAMPLE-LGV004",
+    "topic_id": 1,
+    "topic_slug": "vehicle_weights_and_dimensions",
+    "question": "[Sample] Question 4 about Vehicle weights and dimensions?",
+    "variants": [
+      "[Sample] Question 4 about Vehicle weights and dimensions?",
+      "[Sample] Variant wording for question 4 on Vehicle weights and dimensions?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 1: Vehicle weights and dimensions",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 5,
+    "ref": "SAMPLE-LGV005",
+    "topic_id": 1,
+    "topic_slug": "vehicle_weights_and_dimensions",
+    "question": "[Sample] Question 5 about Vehicle weights and dimensions?",
+    "variants": [
+      "[Sample] Question 5 about Vehicle weights and dimensions?",
+      "[Sample] Variant wording for question 5 on Vehicle weights and dimensions?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 1: Vehicle weights and dimensions",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 6,
+    "ref": "SAMPLE-LGV006",
+    "topic_id": 1,
+    "topic_slug": "vehicle_weights_and_dimensions",
+    "question": "[Sample] Question 6 about Vehicle weights and dimensions?",
+    "variants": [
+      "[Sample] Question 6 about Vehicle weights and dimensions?",
+      "[Sample] Variant wording for question 6 on Vehicle weights and dimensions?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 1: Vehicle weights and dimensions",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 7,
+    "ref": "SAMPLE-LGV007",
+    "topic_id": 1,
+    "topic_slug": "vehicle_weights_and_dimensions",
+    "question": "[Sample] Question 7 about Vehicle weights and dimensions?",
+    "variants": [
+      "[Sample] Question 7 about Vehicle weights and dimensions?",
+      "[Sample] Variant wording for question 7 on Vehicle weights and dimensions?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 1: Vehicle weights and dimensions",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 8,
+    "ref": "SAMPLE-LGV008",
+    "topic_id": 1,
+    "topic_slug": "vehicle_weights_and_dimensions",
+    "question": "[Sample] Question 8 about Vehicle weights and dimensions?",
+    "variants": [
+      "[Sample] Question 8 about Vehicle weights and dimensions?",
+      "[Sample] Variant wording for question 8 on Vehicle weights and dimensions?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 1: Vehicle weights and dimensions",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 9,
+    "ref": "SAMPLE-LGV009",
+    "topic_id": 2,
+    "topic_slug": "drivers_hours_and_rest_periods",
+    "question": "[Sample] Question 1 about Drivers' hours and rest periods?",
+    "variants": [
+      "[Sample] Question 1 about Drivers' hours and rest periods?",
+      "[Sample] Variant wording for question 1 on Drivers' hours and rest periods?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 2: Drivers' hours and rest periods",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 10,
+    "ref": "SAMPLE-LGV010",
+    "topic_id": 2,
+    "topic_slug": "drivers_hours_and_rest_periods",
+    "question": "[Sample] Question 2 about Drivers' hours and rest periods?",
+    "variants": [
+      "[Sample] Question 2 about Drivers' hours and rest periods?",
+      "[Sample] Variant wording for question 2 on Drivers' hours and rest periods?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 2: Drivers' hours and rest periods",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 11,
+    "ref": "SAMPLE-LGV011",
+    "topic_id": 2,
+    "topic_slug": "drivers_hours_and_rest_periods",
+    "question": "[Sample] Question 3 about Drivers' hours and rest periods?",
+    "variants": [
+      "[Sample] Question 3 about Drivers' hours and rest periods?",
+      "[Sample] Variant wording for question 3 on Drivers' hours and rest periods?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 2: Drivers' hours and rest periods",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 12,
+    "ref": "SAMPLE-LGV012",
+    "topic_id": 2,
+    "topic_slug": "drivers_hours_and_rest_periods",
+    "question": "[Sample] Question 4 about Drivers' hours and rest periods?",
+    "variants": [
+      "[Sample] Question 4 about Drivers' hours and rest periods?",
+      "[Sample] Variant wording for question 4 on Drivers' hours and rest periods?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 2: Drivers' hours and rest periods",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 13,
+    "ref": "SAMPLE-LGV013",
+    "topic_id": 2,
+    "topic_slug": "drivers_hours_and_rest_periods",
+    "question": "[Sample] Question 5 about Drivers' hours and rest periods?",
+    "variants": [
+      "[Sample] Question 5 about Drivers' hours and rest periods?",
+      "[Sample] Variant wording for question 5 on Drivers' hours and rest periods?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 2: Drivers' hours and rest periods",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 14,
+    "ref": "SAMPLE-LGV014",
+    "topic_id": 2,
+    "topic_slug": "drivers_hours_and_rest_periods",
+    "question": "[Sample] Question 6 about Drivers' hours and rest periods?",
+    "variants": [
+      "[Sample] Question 6 about Drivers' hours and rest periods?",
+      "[Sample] Variant wording for question 6 on Drivers' hours and rest periods?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 2: Drivers' hours and rest periods",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 15,
+    "ref": "SAMPLE-LGV015",
+    "topic_id": 2,
+    "topic_slug": "drivers_hours_and_rest_periods",
+    "question": "[Sample] Question 7 about Drivers' hours and rest periods?",
+    "variants": [
+      "[Sample] Question 7 about Drivers' hours and rest periods?",
+      "[Sample] Variant wording for question 7 on Drivers' hours and rest periods?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 2: Drivers' hours and rest periods",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 16,
+    "ref": "SAMPLE-LGV016",
+    "topic_id": 2,
+    "topic_slug": "drivers_hours_and_rest_periods",
+    "question": "[Sample] Question 8 about Drivers' hours and rest periods?",
+    "variants": [
+      "[Sample] Question 8 about Drivers' hours and rest periods?",
+      "[Sample] Variant wording for question 8 on Drivers' hours and rest periods?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 2: Drivers' hours and rest periods",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 17,
+    "ref": "SAMPLE-LGV017",
+    "topic_id": 3,
+    "topic_slug": "braking_systems",
+    "question": "[Sample] Question 1 about Braking systems?",
+    "variants": [
+      "[Sample] Question 1 about Braking systems?",
+      "[Sample] Variant wording for question 1 on Braking systems?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 3: Braking systems",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 18,
+    "ref": "SAMPLE-LGV018",
+    "topic_id": 3,
+    "topic_slug": "braking_systems",
+    "question": "[Sample] Question 2 about Braking systems?",
+    "variants": [
+      "[Sample] Question 2 about Braking systems?",
+      "[Sample] Variant wording for question 2 on Braking systems?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 3: Braking systems",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 19,
+    "ref": "SAMPLE-LGV019",
+    "topic_id": 3,
+    "topic_slug": "braking_systems",
+    "question": "[Sample] Question 3 about Braking systems?",
+    "variants": [
+      "[Sample] Question 3 about Braking systems?",
+      "[Sample] Variant wording for question 3 on Braking systems?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 3: Braking systems",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 20,
+    "ref": "SAMPLE-LGV020",
+    "topic_id": 3,
+    "topic_slug": "braking_systems",
+    "question": "[Sample] Question 4 about Braking systems?",
+    "variants": [
+      "[Sample] Question 4 about Braking systems?",
+      "[Sample] Variant wording for question 4 on Braking systems?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 3: Braking systems",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 21,
+    "ref": "SAMPLE-LGV021",
+    "topic_id": 3,
+    "topic_slug": "braking_systems",
+    "question": "[Sample] Question 5 about Braking systems?",
+    "variants": [
+      "[Sample] Question 5 about Braking systems?",
+      "[Sample] Variant wording for question 5 on Braking systems?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 3: Braking systems",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 22,
+    "ref": "SAMPLE-LGV022",
+    "topic_id": 3,
+    "topic_slug": "braking_systems",
+    "question": "[Sample] Question 6 about Braking systems?",
+    "variants": [
+      "[Sample] Question 6 about Braking systems?",
+      "[Sample] Variant wording for question 6 on Braking systems?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 3: Braking systems",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 23,
+    "ref": "SAMPLE-LGV023",
+    "topic_id": 3,
+    "topic_slug": "braking_systems",
+    "question": "[Sample] Question 7 about Braking systems?",
+    "variants": [
+      "[Sample] Question 7 about Braking systems?",
+      "[Sample] Variant wording for question 7 on Braking systems?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 3: Braking systems",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 24,
+    "ref": "SAMPLE-LGV024",
+    "topic_id": 3,
+    "topic_slug": "braking_systems",
+    "question": "[Sample] Question 8 about Braking systems?",
+    "variants": [
+      "[Sample] Question 8 about Braking systems?",
+      "[Sample] Variant wording for question 8 on Braking systems?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 3: Braking systems",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 25,
+    "ref": "SAMPLE-LGV025",
+    "topic_id": 4,
+    "topic_slug": "the_driver",
+    "question": "[Sample] Question 1 about The driver?",
+    "variants": [
+      "[Sample] Question 1 about The driver?",
+      "[Sample] Variant wording for question 1 on The driver?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 4: The driver",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 26,
+    "ref": "SAMPLE-LGV026",
+    "topic_id": 4,
+    "topic_slug": "the_driver",
+    "question": "[Sample] Question 2 about The driver?",
+    "variants": [
+      "[Sample] Question 2 about The driver?",
+      "[Sample] Variant wording for question 2 on The driver?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 4: The driver",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 27,
+    "ref": "SAMPLE-LGV027",
+    "topic_id": 4,
+    "topic_slug": "the_driver",
+    "question": "[Sample] Question 3 about The driver?",
+    "variants": [
+      "[Sample] Question 3 about The driver?",
+      "[Sample] Variant wording for question 3 on The driver?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 4: The driver",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 28,
+    "ref": "SAMPLE-LGV028",
+    "topic_id": 4,
+    "topic_slug": "the_driver",
+    "question": "[Sample] Question 4 about The driver?",
+    "variants": [
+      "[Sample] Question 4 about The driver?",
+      "[Sample] Variant wording for question 4 on The driver?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 4: The driver",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 29,
+    "ref": "SAMPLE-LGV029",
+    "topic_id": 4,
+    "topic_slug": "the_driver",
+    "question": "[Sample] Question 5 about The driver?",
+    "variants": [
+      "[Sample] Question 5 about The driver?",
+      "[Sample] Variant wording for question 5 on The driver?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 4: The driver",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 30,
+    "ref": "SAMPLE-LGV030",
+    "topic_id": 4,
+    "topic_slug": "the_driver",
+    "question": "[Sample] Question 6 about The driver?",
+    "variants": [
+      "[Sample] Question 6 about The driver?",
+      "[Sample] Variant wording for question 6 on The driver?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 4: The driver",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 31,
+    "ref": "SAMPLE-LGV031",
+    "topic_id": 4,
+    "topic_slug": "the_driver",
+    "question": "[Sample] Question 7 about The driver?",
+    "variants": [
+      "[Sample] Question 7 about The driver?",
+      "[Sample] Variant wording for question 7 on The driver?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 4: The driver",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 32,
+    "ref": "SAMPLE-LGV032",
+    "topic_id": 4,
+    "topic_slug": "the_driver",
+    "question": "[Sample] Question 8 about The driver?",
+    "variants": [
+      "[Sample] Question 8 about The driver?",
+      "[Sample] Variant wording for question 8 on The driver?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 4: The driver",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 33,
+    "ref": "SAMPLE-LGV033",
+    "topic_id": 5,
+    "topic_slug": "carrying_loads",
+    "question": "[Sample] Question 1 about Carrying loads?",
+    "variants": [
+      "[Sample] Question 1 about Carrying loads?",
+      "[Sample] Variant wording for question 1 on Carrying loads?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 5: Carrying loads",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 34,
+    "ref": "SAMPLE-LGV034",
+    "topic_id": 5,
+    "topic_slug": "carrying_loads",
+    "question": "[Sample] Question 2 about Carrying loads?",
+    "variants": [
+      "[Sample] Question 2 about Carrying loads?",
+      "[Sample] Variant wording for question 2 on Carrying loads?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 5: Carrying loads",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 35,
+    "ref": "SAMPLE-LGV035",
+    "topic_id": 5,
+    "topic_slug": "carrying_loads",
+    "question": "[Sample] Question 3 about Carrying loads?",
+    "variants": [
+      "[Sample] Question 3 about Carrying loads?",
+      "[Sample] Variant wording for question 3 on Carrying loads?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 5: Carrying loads",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 36,
+    "ref": "SAMPLE-LGV036",
+    "topic_id": 5,
+    "topic_slug": "carrying_loads",
+    "question": "[Sample] Question 4 about Carrying loads?",
+    "variants": [
+      "[Sample] Question 4 about Carrying loads?",
+      "[Sample] Variant wording for question 4 on Carrying loads?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 5: Carrying loads",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 37,
+    "ref": "SAMPLE-LGV037",
+    "topic_id": 5,
+    "topic_slug": "carrying_loads",
+    "question": "[Sample] Question 5 about Carrying loads?",
+    "variants": [
+      "[Sample] Question 5 about Carrying loads?",
+      "[Sample] Variant wording for question 5 on Carrying loads?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 5: Carrying loads",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 38,
+    "ref": "SAMPLE-LGV038",
+    "topic_id": 5,
+    "topic_slug": "carrying_loads",
+    "question": "[Sample] Question 6 about Carrying loads?",
+    "variants": [
+      "[Sample] Question 6 about Carrying loads?",
+      "[Sample] Variant wording for question 6 on Carrying loads?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 5: Carrying loads",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 39,
+    "ref": "SAMPLE-LGV039",
+    "topic_id": 5,
+    "topic_slug": "carrying_loads",
+    "question": "[Sample] Question 7 about Carrying loads?",
+    "variants": [
+      "[Sample] Question 7 about Carrying loads?",
+      "[Sample] Variant wording for question 7 on Carrying loads?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 5: Carrying loads",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 40,
+    "ref": "SAMPLE-LGV040",
+    "topic_id": 5,
+    "topic_slug": "carrying_loads",
+    "question": "[Sample] Question 8 about Carrying loads?",
+    "variants": [
+      "[Sample] Question 8 about Carrying loads?",
+      "[Sample] Variant wording for question 8 on Carrying loads?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 5: Carrying loads",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 41,
+    "ref": "SAMPLE-LGV041",
+    "topic_id": 6,
+    "topic_slug": "restricted_view",
+    "question": "[Sample] Question 1 about Restricted view?",
+    "variants": [
+      "[Sample] Question 1 about Restricted view?",
+      "[Sample] Variant wording for question 1 on Restricted view?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 6: Restricted view",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 42,
+    "ref": "SAMPLE-LGV042",
+    "topic_id": 6,
+    "topic_slug": "restricted_view",
+    "question": "[Sample] Question 2 about Restricted view?",
+    "variants": [
+      "[Sample] Question 2 about Restricted view?",
+      "[Sample] Variant wording for question 2 on Restricted view?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 6: Restricted view",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 43,
+    "ref": "SAMPLE-LGV043",
+    "topic_id": 6,
+    "topic_slug": "restricted_view",
+    "question": "[Sample] Question 3 about Restricted view?",
+    "variants": [
+      "[Sample] Question 3 about Restricted view?",
+      "[Sample] Variant wording for question 3 on Restricted view?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 6: Restricted view",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 44,
+    "ref": "SAMPLE-LGV044",
+    "topic_id": 6,
+    "topic_slug": "restricted_view",
+    "question": "[Sample] Question 4 about Restricted view?",
+    "variants": [
+      "[Sample] Question 4 about Restricted view?",
+      "[Sample] Variant wording for question 4 on Restricted view?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 6: Restricted view",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 45,
+    "ref": "SAMPLE-LGV045",
+    "topic_id": 6,
+    "topic_slug": "restricted_view",
+    "question": "[Sample] Question 5 about Restricted view?",
+    "variants": [
+      "[Sample] Question 5 about Restricted view?",
+      "[Sample] Variant wording for question 5 on Restricted view?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 6: Restricted view",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 46,
+    "ref": "SAMPLE-LGV046",
+    "topic_id": 6,
+    "topic_slug": "restricted_view",
+    "question": "[Sample] Question 6 about Restricted view?",
+    "variants": [
+      "[Sample] Question 6 about Restricted view?",
+      "[Sample] Variant wording for question 6 on Restricted view?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 6: Restricted view",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 47,
+    "ref": "SAMPLE-LGV047",
+    "topic_id": 6,
+    "topic_slug": "restricted_view",
+    "question": "[Sample] Question 7 about Restricted view?",
+    "variants": [
+      "[Sample] Question 7 about Restricted view?",
+      "[Sample] Variant wording for question 7 on Restricted view?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 6: Restricted view",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 48,
+    "ref": "SAMPLE-LGV048",
+    "topic_id": 6,
+    "topic_slug": "restricted_view",
+    "question": "[Sample] Question 8 about Restricted view?",
+    "variants": [
+      "[Sample] Question 8 about Restricted view?",
+      "[Sample] Variant wording for question 8 on Restricted view?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 6: Restricted view",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 49,
+    "ref": "SAMPLE-LGV049",
+    "topic_id": 7,
+    "topic_slug": "leaving_the_vehicle",
+    "question": "[Sample] Question 1 about Leaving the vehicle?",
+    "variants": [
+      "[Sample] Question 1 about Leaving the vehicle?",
+      "[Sample] Variant wording for question 1 on Leaving the vehicle?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 7: Leaving the vehicle",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 50,
+    "ref": "SAMPLE-LGV050",
+    "topic_id": 7,
+    "topic_slug": "leaving_the_vehicle",
+    "question": "[Sample] Question 2 about Leaving the vehicle?",
+    "variants": [
+      "[Sample] Question 2 about Leaving the vehicle?",
+      "[Sample] Variant wording for question 2 on Leaving the vehicle?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 7: Leaving the vehicle",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 51,
+    "ref": "SAMPLE-LGV051",
+    "topic_id": 7,
+    "topic_slug": "leaving_the_vehicle",
+    "question": "[Sample] Question 3 about Leaving the vehicle?",
+    "variants": [
+      "[Sample] Question 3 about Leaving the vehicle?",
+      "[Sample] Variant wording for question 3 on Leaving the vehicle?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 7: Leaving the vehicle",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 52,
+    "ref": "SAMPLE-LGV052",
+    "topic_id": 7,
+    "topic_slug": "leaving_the_vehicle",
+    "question": "[Sample] Question 4 about Leaving the vehicle?",
+    "variants": [
+      "[Sample] Question 4 about Leaving the vehicle?",
+      "[Sample] Variant wording for question 4 on Leaving the vehicle?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 7: Leaving the vehicle",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 53,
+    "ref": "SAMPLE-LGV053",
+    "topic_id": 7,
+    "topic_slug": "leaving_the_vehicle",
+    "question": "[Sample] Question 5 about Leaving the vehicle?",
+    "variants": [
+      "[Sample] Question 5 about Leaving the vehicle?",
+      "[Sample] Variant wording for question 5 on Leaving the vehicle?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 7: Leaving the vehicle",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 54,
+    "ref": "SAMPLE-LGV054",
+    "topic_id": 7,
+    "topic_slug": "leaving_the_vehicle",
+    "question": "[Sample] Question 6 about Leaving the vehicle?",
+    "variants": [
+      "[Sample] Question 6 about Leaving the vehicle?",
+      "[Sample] Variant wording for question 6 on Leaving the vehicle?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 7: Leaving the vehicle",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 55,
+    "ref": "SAMPLE-LGV055",
+    "topic_id": 7,
+    "topic_slug": "leaving_the_vehicle",
+    "question": "[Sample] Question 7 about Leaving the vehicle?",
+    "variants": [
+      "[Sample] Question 7 about Leaving the vehicle?",
+      "[Sample] Variant wording for question 7 on Leaving the vehicle?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 7: Leaving the vehicle",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 56,
+    "ref": "SAMPLE-LGV056",
+    "topic_id": 7,
+    "topic_slug": "leaving_the_vehicle",
+    "question": "[Sample] Question 8 about Leaving the vehicle?",
+    "variants": [
+      "[Sample] Question 8 about Leaving the vehicle?",
+      "[Sample] Variant wording for question 8 on Leaving the vehicle?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 7: Leaving the vehicle",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 57,
+    "ref": "SAMPLE-LGV057",
+    "topic_id": 8,
+    "topic_slug": "vehicle_condition",
+    "question": "[Sample] Question 1 about Vehicle condition?",
+    "variants": [
+      "[Sample] Question 1 about Vehicle condition?",
+      "[Sample] Variant wording for question 1 on Vehicle condition?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 8: Vehicle condition",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 58,
+    "ref": "SAMPLE-LGV058",
+    "topic_id": 8,
+    "topic_slug": "vehicle_condition",
+    "question": "[Sample] Question 2 about Vehicle condition?",
+    "variants": [
+      "[Sample] Question 2 about Vehicle condition?",
+      "[Sample] Variant wording for question 2 on Vehicle condition?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 8: Vehicle condition",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 59,
+    "ref": "SAMPLE-LGV059",
+    "topic_id": 8,
+    "topic_slug": "vehicle_condition",
+    "question": "[Sample] Question 3 about Vehicle condition?",
+    "variants": [
+      "[Sample] Question 3 about Vehicle condition?",
+      "[Sample] Variant wording for question 3 on Vehicle condition?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 8: Vehicle condition",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 60,
+    "ref": "SAMPLE-LGV060",
+    "topic_id": 8,
+    "topic_slug": "vehicle_condition",
+    "question": "[Sample] Question 4 about Vehicle condition?",
+    "variants": [
+      "[Sample] Question 4 about Vehicle condition?",
+      "[Sample] Variant wording for question 4 on Vehicle condition?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 8: Vehicle condition",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 61,
+    "ref": "SAMPLE-LGV061",
+    "topic_id": 8,
+    "topic_slug": "vehicle_condition",
+    "question": "[Sample] Question 5 about Vehicle condition?",
+    "variants": [
+      "[Sample] Question 5 about Vehicle condition?",
+      "[Sample] Variant wording for question 5 on Vehicle condition?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 8: Vehicle condition",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 62,
+    "ref": "SAMPLE-LGV062",
+    "topic_id": 8,
+    "topic_slug": "vehicle_condition",
+    "question": "[Sample] Question 6 about Vehicle condition?",
+    "variants": [
+      "[Sample] Question 6 about Vehicle condition?",
+      "[Sample] Variant wording for question 6 on Vehicle condition?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 8: Vehicle condition",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 63,
+    "ref": "SAMPLE-LGV063",
+    "topic_id": 8,
+    "topic_slug": "vehicle_condition",
+    "question": "[Sample] Question 7 about Vehicle condition?",
+    "variants": [
+      "[Sample] Question 7 about Vehicle condition?",
+      "[Sample] Variant wording for question 7 on Vehicle condition?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 8: Vehicle condition",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 64,
+    "ref": "SAMPLE-LGV064",
+    "topic_id": 8,
+    "topic_slug": "vehicle_condition",
+    "question": "[Sample] Question 8 about Vehicle condition?",
+    "variants": [
+      "[Sample] Question 8 about Vehicle condition?",
+      "[Sample] Variant wording for question 8 on Vehicle condition?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 8: Vehicle condition",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 65,
+    "ref": "SAMPLE-LGV065",
+    "topic_id": 9,
+    "topic_slug": "accidents",
+    "question": "[Sample] Question 1 about Accidents?",
+    "variants": [
+      "[Sample] Question 1 about Accidents?",
+      "[Sample] Variant wording for question 1 on Accidents?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 9: Accidents",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 66,
+    "ref": "SAMPLE-LGV066",
+    "topic_id": 9,
+    "topic_slug": "accidents",
+    "question": "[Sample] Question 2 about Accidents?",
+    "variants": [
+      "[Sample] Question 2 about Accidents?",
+      "[Sample] Variant wording for question 2 on Accidents?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 9: Accidents",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 67,
+    "ref": "SAMPLE-LGV067",
+    "topic_id": 9,
+    "topic_slug": "accidents",
+    "question": "[Sample] Question 3 about Accidents?",
+    "variants": [
+      "[Sample] Question 3 about Accidents?",
+      "[Sample] Variant wording for question 3 on Accidents?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 9: Accidents",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 68,
+    "ref": "SAMPLE-LGV068",
+    "topic_id": 9,
+    "topic_slug": "accidents",
+    "question": "[Sample] Question 4 about Accidents?",
+    "variants": [
+      "[Sample] Question 4 about Accidents?",
+      "[Sample] Variant wording for question 4 on Accidents?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 9: Accidents",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 69,
+    "ref": "SAMPLE-LGV069",
+    "topic_id": 9,
+    "topic_slug": "accidents",
+    "question": "[Sample] Question 5 about Accidents?",
+    "variants": [
+      "[Sample] Question 5 about Accidents?",
+      "[Sample] Variant wording for question 5 on Accidents?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 9: Accidents",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 70,
+    "ref": "SAMPLE-LGV070",
+    "topic_id": 9,
+    "topic_slug": "accidents",
+    "question": "[Sample] Question 6 about Accidents?",
+    "variants": [
+      "[Sample] Question 6 about Accidents?",
+      "[Sample] Variant wording for question 6 on Accidents?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 9: Accidents",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 71,
+    "ref": "SAMPLE-LGV071",
+    "topic_id": 9,
+    "topic_slug": "accidents",
+    "question": "[Sample] Question 7 about Accidents?",
+    "variants": [
+      "[Sample] Question 7 about Accidents?",
+      "[Sample] Variant wording for question 7 on Accidents?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 9: Accidents",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 72,
+    "ref": "SAMPLE-LGV072",
+    "topic_id": 9,
+    "topic_slug": "accidents",
+    "question": "[Sample] Question 8 about Accidents?",
+    "variants": [
+      "[Sample] Question 8 about Accidents?",
+      "[Sample] Variant wording for question 8 on Accidents?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 9: Accidents",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 73,
+    "ref": "SAMPLE-LGV073",
+    "topic_id": 10,
+    "topic_slug": "essential_documents",
+    "question": "[Sample] Question 1 about Essential documents?",
+    "variants": [
+      "[Sample] Question 1 about Essential documents?",
+      "[Sample] Variant wording for question 1 on Essential documents?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 10: Essential documents",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 74,
+    "ref": "SAMPLE-LGV074",
+    "topic_id": 10,
+    "topic_slug": "essential_documents",
+    "question": "[Sample] Question 2 about Essential documents?",
+    "variants": [
+      "[Sample] Question 2 about Essential documents?",
+      "[Sample] Variant wording for question 2 on Essential documents?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 10: Essential documents",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 75,
+    "ref": "SAMPLE-LGV075",
+    "topic_id": 10,
+    "topic_slug": "essential_documents",
+    "question": "[Sample] Question 3 about Essential documents?",
+    "variants": [
+      "[Sample] Question 3 about Essential documents?",
+      "[Sample] Variant wording for question 3 on Essential documents?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 10: Essential documents",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 76,
+    "ref": "SAMPLE-LGV076",
+    "topic_id": 10,
+    "topic_slug": "essential_documents",
+    "question": "[Sample] Question 4 about Essential documents?",
+    "variants": [
+      "[Sample] Question 4 about Essential documents?",
+      "[Sample] Variant wording for question 4 on Essential documents?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 10: Essential documents",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 77,
+    "ref": "SAMPLE-LGV077",
+    "topic_id": 10,
+    "topic_slug": "essential_documents",
+    "question": "[Sample] Question 5 about Essential documents?",
+    "variants": [
+      "[Sample] Question 5 about Essential documents?",
+      "[Sample] Variant wording for question 5 on Essential documents?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 10: Essential documents",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 78,
+    "ref": "SAMPLE-LGV078",
+    "topic_id": 10,
+    "topic_slug": "essential_documents",
+    "question": "[Sample] Question 6 about Essential documents?",
+    "variants": [
+      "[Sample] Question 6 about Essential documents?",
+      "[Sample] Variant wording for question 6 on Essential documents?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 10: Essential documents",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 79,
+    "ref": "SAMPLE-LGV079",
+    "topic_id": 10,
+    "topic_slug": "essential_documents",
+    "question": "[Sample] Question 7 about Essential documents?",
+    "variants": [
+      "[Sample] Question 7 about Essential documents?",
+      "[Sample] Variant wording for question 7 on Essential documents?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 10: Essential documents",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 80,
+    "ref": "SAMPLE-LGV080",
+    "topic_id": 10,
+    "topic_slug": "essential_documents",
+    "question": "[Sample] Question 8 about Essential documents?",
+    "variants": [
+      "[Sample] Question 8 about Essential documents?",
+      "[Sample] Variant wording for question 8 on Essential documents?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 10: Essential documents",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 81,
+    "ref": "SAMPLE-LGV081",
+    "topic_id": 11,
+    "topic_slug": "environmental_issues",
+    "question": "[Sample] Question 1 about Environmental issues?",
+    "variants": [
+      "[Sample] Question 1 about Environmental issues?",
+      "[Sample] Variant wording for question 1 on Environmental issues?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 11: Environmental issues",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 82,
+    "ref": "SAMPLE-LGV082",
+    "topic_id": 11,
+    "topic_slug": "environmental_issues",
+    "question": "[Sample] Question 2 about Environmental issues?",
+    "variants": [
+      "[Sample] Question 2 about Environmental issues?",
+      "[Sample] Variant wording for question 2 on Environmental issues?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 11: Environmental issues",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 83,
+    "ref": "SAMPLE-LGV083",
+    "topic_id": 11,
+    "topic_slug": "environmental_issues",
+    "question": "[Sample] Question 3 about Environmental issues?",
+    "variants": [
+      "[Sample] Question 3 about Environmental issues?",
+      "[Sample] Variant wording for question 3 on Environmental issues?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 11: Environmental issues",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 84,
+    "ref": "SAMPLE-LGV084",
+    "topic_id": 11,
+    "topic_slug": "environmental_issues",
+    "question": "[Sample] Question 4 about Environmental issues?",
+    "variants": [
+      "[Sample] Question 4 about Environmental issues?",
+      "[Sample] Variant wording for question 4 on Environmental issues?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 11: Environmental issues",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 85,
+    "ref": "SAMPLE-LGV085",
+    "topic_id": 11,
+    "topic_slug": "environmental_issues",
+    "question": "[Sample] Question 5 about Environmental issues?",
+    "variants": [
+      "[Sample] Question 5 about Environmental issues?",
+      "[Sample] Variant wording for question 5 on Environmental issues?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 11: Environmental issues",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 86,
+    "ref": "SAMPLE-LGV086",
+    "topic_id": 11,
+    "topic_slug": "environmental_issues",
+    "question": "[Sample] Question 6 about Environmental issues?",
+    "variants": [
+      "[Sample] Question 6 about Environmental issues?",
+      "[Sample] Variant wording for question 6 on Environmental issues?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 11: Environmental issues",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 87,
+    "ref": "SAMPLE-LGV087",
+    "topic_id": 11,
+    "topic_slug": "environmental_issues",
+    "question": "[Sample] Question 7 about Environmental issues?",
+    "variants": [
+      "[Sample] Question 7 about Environmental issues?",
+      "[Sample] Variant wording for question 7 on Environmental issues?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 11: Environmental issues",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 88,
+    "ref": "SAMPLE-LGV088",
+    "topic_id": 11,
+    "topic_slug": "environmental_issues",
+    "question": "[Sample] Question 8 about Environmental issues?",
+    "variants": [
+      "[Sample] Question 8 about Environmental issues?",
+      "[Sample] Variant wording for question 8 on Environmental issues?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 11: Environmental issues",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 89,
+    "ref": "SAMPLE-LGV089",
+    "topic_id": 12,
+    "topic_slug": "other_road_users",
+    "question": "[Sample] Question 1 about Other road users?",
+    "variants": [
+      "[Sample] Question 1 about Other road users?",
+      "[Sample] Variant wording for question 1 on Other road users?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 12: Other road users",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 90,
+    "ref": "SAMPLE-LGV090",
+    "topic_id": 12,
+    "topic_slug": "other_road_users",
+    "question": "[Sample] Question 2 about Other road users?",
+    "variants": [
+      "[Sample] Question 2 about Other road users?",
+      "[Sample] Variant wording for question 2 on Other road users?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 12: Other road users",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 91,
+    "ref": "SAMPLE-LGV091",
+    "topic_id": 12,
+    "topic_slug": "other_road_users",
+    "question": "[Sample] Question 3 about Other road users?",
+    "variants": [
+      "[Sample] Question 3 about Other road users?",
+      "[Sample] Variant wording for question 3 on Other road users?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 12: Other road users",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 92,
+    "ref": "SAMPLE-LGV092",
+    "topic_id": 12,
+    "topic_slug": "other_road_users",
+    "question": "[Sample] Question 4 about Other road users?",
+    "variants": [
+      "[Sample] Question 4 about Other road users?",
+      "[Sample] Variant wording for question 4 on Other road users?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 12: Other road users",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 93,
+    "ref": "SAMPLE-LGV093",
+    "topic_id": 12,
+    "topic_slug": "other_road_users",
+    "question": "[Sample] Question 5 about Other road users?",
+    "variants": [
+      "[Sample] Question 5 about Other road users?",
+      "[Sample] Variant wording for question 5 on Other road users?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 12: Other road users",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 94,
+    "ref": "SAMPLE-LGV094",
+    "topic_id": 12,
+    "topic_slug": "other_road_users",
+    "question": "[Sample] Question 6 about Other road users?",
+    "variants": [
+      "[Sample] Question 6 about Other road users?",
+      "[Sample] Variant wording for question 6 on Other road users?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 12: Other road users",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 95,
+    "ref": "SAMPLE-LGV095",
+    "topic_id": 12,
+    "topic_slug": "other_road_users",
+    "question": "[Sample] Question 7 about Other road users?",
+    "variants": [
+      "[Sample] Question 7 about Other road users?",
+      "[Sample] Variant wording for question 7 on Other road users?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 12: Other road users",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 96,
+    "ref": "SAMPLE-LGV096",
+    "topic_id": 12,
+    "topic_slug": "other_road_users",
+    "question": "[Sample] Question 8 about Other road users?",
+    "variants": [
+      "[Sample] Question 8 about Other road users?",
+      "[Sample] Variant wording for question 8 on Other road users?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 12: Other road users",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 97,
+    "ref": "SAMPLE-LGV097",
+    "topic_id": 13,
+    "topic_slug": "road_and_traffic_signs",
+    "question": "[Sample] Question 1 about Road and traffic signs?",
+    "variants": [
+      "[Sample] Question 1 about Road and traffic signs?",
+      "[Sample] Variant wording for question 1 on Road and traffic signs?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 13: Road and traffic signs",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 98,
+    "ref": "SAMPLE-LGV098",
+    "topic_id": 13,
+    "topic_slug": "road_and_traffic_signs",
+    "question": "[Sample] Question 2 about Road and traffic signs?",
+    "variants": [
+      "[Sample] Question 2 about Road and traffic signs?",
+      "[Sample] Variant wording for question 2 on Road and traffic signs?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 13: Road and traffic signs",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 99,
+    "ref": "SAMPLE-LGV099",
+    "topic_id": 13,
+    "topic_slug": "road_and_traffic_signs",
+    "question": "[Sample] Question 3 about Road and traffic signs?",
+    "variants": [
+      "[Sample] Question 3 about Road and traffic signs?",
+      "[Sample] Variant wording for question 3 on Road and traffic signs?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 13: Road and traffic signs",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 100,
+    "ref": "SAMPLE-LGV100",
+    "topic_id": 13,
+    "topic_slug": "road_and_traffic_signs",
+    "question": "[Sample] Question 4 about Road and traffic signs?",
+    "variants": [
+      "[Sample] Question 4 about Road and traffic signs?",
+      "[Sample] Variant wording for question 4 on Road and traffic signs?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 13: Road and traffic signs",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 101,
+    "ref": "SAMPLE-LGV101",
+    "topic_id": 13,
+    "topic_slug": "road_and_traffic_signs",
+    "question": "[Sample] Question 5 about Road and traffic signs?",
+    "variants": [
+      "[Sample] Question 5 about Road and traffic signs?",
+      "[Sample] Variant wording for question 5 on Road and traffic signs?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 13: Road and traffic signs",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 102,
+    "ref": "SAMPLE-LGV102",
+    "topic_id": 13,
+    "topic_slug": "road_and_traffic_signs",
+    "question": "[Sample] Question 6 about Road and traffic signs?",
+    "variants": [
+      "[Sample] Question 6 about Road and traffic signs?",
+      "[Sample] Variant wording for question 6 on Road and traffic signs?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 13: Road and traffic signs",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 103,
+    "ref": "SAMPLE-LGV103",
+    "topic_id": 13,
+    "topic_slug": "road_and_traffic_signs",
+    "question": "[Sample] Question 7 about Road and traffic signs?",
+    "variants": [
+      "[Sample] Question 7 about Road and traffic signs?",
+      "[Sample] Variant wording for question 7 on Road and traffic signs?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 13: Road and traffic signs",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 104,
+    "ref": "SAMPLE-LGV104",
+    "topic_id": 13,
+    "topic_slug": "road_and_traffic_signs",
+    "question": "[Sample] Question 8 about Road and traffic signs?",
+    "variants": [
+      "[Sample] Question 8 about Road and traffic signs?",
+      "[Sample] Variant wording for question 8 on Road and traffic signs?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 13: Road and traffic signs",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 105,
+    "ref": "SAMPLE-LGV105",
+    "topic_id": 14,
+    "topic_slug": "motorway_driving",
+    "question": "[Sample] Question 1 about Motorway driving?",
+    "variants": [
+      "[Sample] Question 1 about Motorway driving?",
+      "[Sample] Variant wording for question 1 on Motorway driving?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 14: Motorway driving",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 106,
+    "ref": "SAMPLE-LGV106",
+    "topic_id": 14,
+    "topic_slug": "motorway_driving",
+    "question": "[Sample] Question 2 about Motorway driving?",
+    "variants": [
+      "[Sample] Question 2 about Motorway driving?",
+      "[Sample] Variant wording for question 2 on Motorway driving?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 14: Motorway driving",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 107,
+    "ref": "SAMPLE-LGV107",
+    "topic_id": 14,
+    "topic_slug": "motorway_driving",
+    "question": "[Sample] Question 3 about Motorway driving?",
+    "variants": [
+      "[Sample] Question 3 about Motorway driving?",
+      "[Sample] Variant wording for question 3 on Motorway driving?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 14: Motorway driving",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 108,
+    "ref": "SAMPLE-LGV108",
+    "topic_id": 14,
+    "topic_slug": "motorway_driving",
+    "question": "[Sample] Question 4 about Motorway driving?",
+    "variants": [
+      "[Sample] Question 4 about Motorway driving?",
+      "[Sample] Variant wording for question 4 on Motorway driving?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 14: Motorway driving",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 109,
+    "ref": "SAMPLE-LGV109",
+    "topic_id": 14,
+    "topic_slug": "motorway_driving",
+    "question": "[Sample] Question 5 about Motorway driving?",
+    "variants": [
+      "[Sample] Question 5 about Motorway driving?",
+      "[Sample] Variant wording for question 5 on Motorway driving?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 14: Motorway driving",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 110,
+    "ref": "SAMPLE-LGV110",
+    "topic_id": 14,
+    "topic_slug": "motorway_driving",
+    "question": "[Sample] Question 6 about Motorway driving?",
+    "variants": [
+      "[Sample] Question 6 about Motorway driving?",
+      "[Sample] Variant wording for question 6 on Motorway driving?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 14: Motorway driving",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 111,
+    "ref": "SAMPLE-LGV111",
+    "topic_id": 14,
+    "topic_slug": "motorway_driving",
+    "question": "[Sample] Question 7 about Motorway driving?",
+    "variants": [
+      "[Sample] Question 7 about Motorway driving?",
+      "[Sample] Variant wording for question 7 on Motorway driving?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 14: Motorway driving",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 112,
+    "ref": "SAMPLE-LGV112",
+    "topic_id": 14,
+    "topic_slug": "motorway_driving",
+    "question": "[Sample] Question 8 about Motorway driving?",
+    "variants": [
+      "[Sample] Question 8 about Motorway driving?",
+      "[Sample] Variant wording for question 8 on Motorway driving?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 14: Motorway driving",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  }
+]

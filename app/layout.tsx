@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Inter } from "next/font/google";
 import "./globals.css";
+import Analytics from "@/components/site/Analytics";
 import JsonLd from "@/components/site/JsonLd";
 import { ogImage, organizationLd, websiteLd } from "@/lib/seo";
 
@@ -43,6 +44,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <JsonLd data={[organizationLd(), websiteLd()]} />
         {children}
+        <Analytics />
       </body>
     </html>
   );

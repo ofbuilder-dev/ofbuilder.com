@@ -19,8 +19,9 @@ jobs:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: |
           WEEK=$(date -u +%V | sed 's/^0*//')
-          INDEX=$(( (WEEK - 1) % 14 ))
+          INDEX=$(( (WEEK - 1) % 20 ))
 
+          APP_SLUG=""
           case $INDEX in
             0)  TOPIC="Mental Math Master: from Kotlin to Flutter rebuild"
                 APP="Mental Math Master"
@@ -92,9 +93,46 @@ jobs:
                 PLAY_LINK="https://ofbuilder.com"
                 KEYWORD="indie app developer story"
                 SECONDARY="indie hacker apps, flutter app portfolio, solo developer" ;;
+            # Exam-intent topics: answer what people search, then point to the free web tests.
+            14) TOPIC="What happens if you fail the Life in the UK test (and how to pass next time)"
+                APP="Life in the UK Test 2026"
+                APP_SLUG="life-in-the-uk"
+                PLAY_LINK="https://play.google.com/store/apps/details?id=com.ofbuilder.lifeuk"
+                KEYWORD="failed life in the uk test"
+                SECONDARY="life in the uk test retake, life in the uk pass mark, life in the uk mock test" ;;
+            15) TOPIC="The most common UK driving theory test mistakes"
+                APP="Driving Theory Test UK DVSA"
+                APP_SLUG="driving-theory"
+                PLAY_LINK="https://play.google.com/store/apps/details?id=com.drivingtheorytest.uk"
+                KEYWORD="driving theory test tips"
+                SECONDARY="theory test mock, hazard perception tips, DVSA theory test questions" ;;
+            16) TOPIC="How long to study for CompTIA Security+"
+                APP="Security+ SY0-701 Exam Prep"
+                APP_SLUG="security-plus"
+                PLAY_LINK="https://play.google.com/store/apps/details?id=com.ofbuilder.securityplus"
+                KEYWORD="how long to study for security+"
+                SECONDARY="security+ study plan, SY0-701 practice test, security+ pass" ;;
+            17) TOPIC="Canadian citizenship test: the topics people find hardest"
+                APP="Canadian Citizenship Test 2026"
+                APP_SLUG="canadian-citizenship"
+                PLAY_LINK="https://play.google.com/store/apps/details?id=com.ofbuilder.cacitizenship"
+                KEYWORD="canadian citizenship test practice"
+                SECONDARY="discover canada study guide, citizenship test questions, canada citizenship mock test" ;;
+            18) TOPIC="Australian citizenship test: why the values questions matter"
+                APP="Australian Citizenship Test"
+                APP_SLUG="australian-citizenship"
+                PLAY_LINK="https://play.google.com/store/apps/details?id=com.ofbuilder.auscitizenship"
+                KEYWORD="australian citizenship test practice"
+                SECONDARY="our common bond, australian values questions, citizenship test mock" ;;
+            19) TOPIC="A+ Core 1 vs Core 2: what's the difference and which to take first"
+                APP="A+ Core 1 220-1201 Exam Prep"
+                APP_SLUG="a-plus-core-1"
+                PLAY_LINK="https://play.google.com/store/apps/details?id=com.ofbuilder.apluscore1"
+                KEYWORD="comptia a+ core 1 vs core 2"
+                SECONDARY="220-1201 practice test, 220-1202, comptia a+ study plan" ;;
           esac
 
-          export TOPIC APP PLAY_LINK KEYWORD SECONDARY
+          export TOPIC APP APP_SLUG PLAY_LINK KEYWORD SECONDARY
           export POST_DATE=$(date -u +%Y-%m-%d)
           export POST_DATETIME=$(date -u +%Y-%m-%dT%H:%M:%S+06:00)
 
