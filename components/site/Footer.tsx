@@ -145,7 +145,7 @@ export default function Footer() {
 
       {/* giant wordmark */}
       <div aria-hidden className="pointer-events-none relative -mb-[0.22em] select-none overflow-hidden text-center">
-        <span className="font-display block bg-gradient-to-b from-white/[0.09] to-transparent bg-clip-text text-[clamp(4.5rem,21vw,19rem)] font-extrabold leading-none text-transparent">
+        <span className="font-display block bg-gradient-to-b from-white/[0.09] to-transparent bg-clip-text text-[clamp(3.5rem,15vw,13rem)] font-extrabold leading-none text-transparent">
           OfBuilder
         </span>
       </div>
