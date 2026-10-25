@@ -3,7 +3,7 @@ import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import Reveal from "@/components/ui/Reveal";
 
-export const metadata: Metadata = { title: "Privacy policies", description: "Privacy policies for every OfBuilder app." };
+export const metadata: Metadata = { title: "Privacy policies", description: "Privacy policies for every OfBuilder app.", alternates: { canonical: "/privacy/" } };
 
 const policies = [
   { name: "DreamNest AI", slug: "dreamnest-ai", emoji: "🌙" },
@@ -18,7 +18,6 @@ const policies = [
   { name: "BrightKids", slug: "brightkids", emoji: "🦊" },
   { name: "Renu", slug: "renu", emoji: "🔄" },
   { name: "BudgetWise", slug: "budgetwise", emoji: "💰" },
-  { name: "ShishuAI", slug: "shishuai", emoji: "👶" },
 ];
 
 export default function PrivacyPage() {

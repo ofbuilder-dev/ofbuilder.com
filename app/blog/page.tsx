@@ -6,7 +6,7 @@ import Blobs from "@/components/ui/Blobs";
 import Reveal from "@/components/ui/Reveal";
 import { getAllPosts } from "@/lib/blog";
 
-export const metadata: Metadata = { title: "Blog", description: "App updates, AI news and dev notes from the OfBuilder studio." };
+export const metadata: Metadata = { title: "Blog", description: "App updates, AI news and dev notes from the OfBuilder studio.", alternates: { canonical: "/blog/" } };
 
 const TINTS = ["#ff6b6b", "#f59e0b", "#10b981", "#4cc9f0", "#8b5cf6"];
 

@@ -8,6 +8,7 @@ import { contactEmail, playDeveloperUrl, socials } from "@/lib/apps";
 
 export const metadata: Metadata = {
   title: "Contact",
+  alternates: { canonical: "/contact/" },
   description: "Get in touch with OfBuilder for app support, partnerships or press.",
 };
 

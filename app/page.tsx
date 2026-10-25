@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import type { Metadata } from "next";
 import Link from "next/link";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
@@ -11,6 +12,8 @@ import Tilt from "@/components/ui/Tilt";
 import Icon from "@/components/ui/Icon";
 import AppIcon from "@/components/ui/AppIcon";
 import { apps, appsInSuite, contactEmail, getApp, labApps, playDeveloperUrl, suites, type App } from "@/lib/apps";
+
+export const metadata: Metadata = { alternates: { canonical: "/" } };
 
 const VALUES = [
   { icon: "Lock", title: "Privacy-first", body: "No bank linking, minimal data and clear policies for every app.", color: "#8b5cf6" },

@@ -15,6 +15,7 @@ const REDIRECTS: Record<string, string> = {
 };
 
 export const dynamicParams = false;
+export const metadata = { robots: { index: false, follow: true } };
 
 export function generateStaticParams() {
   return Object.keys(REDIRECTS).map((slug) => ({ slug }));

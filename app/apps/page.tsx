@@ -8,6 +8,7 @@ import { apps, suites } from "@/lib/apps";
 
 export const metadata: Metadata = {
   title: "All apps",
+  alternates: { canonical: "/apps/" },
   description: "Browse all 24 OfBuilder apps: citizenship tests, UK driving theory, CompTIA exam prep, kids apps, Islamic apps, AI sleep, brain games and money tools.",
 };
 

@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import { getAllPosts, getPost } from "@/lib/blog";
+import { ogImage } from "@/lib/seo";
 
 export async function generateStaticParams() {
   return getAllPosts().map((p) => ({ slug: p.slug }));
@@ -11,7 +12,13 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const post = getPost((await params).slug);
-  return post ? { title: post.title, description: post.description ?? post.excerpt } : {};
+  if (!post) return {};
+  return {
+    title: post.title,
+    description: post.description ?? post.excerpt,
+    alternates: { canonical: `/blog/${post.slug}/` },
+    openGraph: { type: "article", title: post.title, description: post.description ?? post.excerpt, publishedTime: post.date, images: ogImage("home", post.title) },
+  };
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
