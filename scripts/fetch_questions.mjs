@@ -55,7 +55,12 @@ for (const [file, [slug, mockSize]] of Object.entries(BANKS)) {
     const res = await fetch(`${BASE}/${file}`);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
-    const raw = Array.isArray(data) ? data : data.questions;
+    // CompTIA banks group questions by exam domain instead of topic.
+    const raw = (Array.isArray(data) ? data : data.questions)?.map((q) => ({
+      ...q,
+      topic_slug: q.topic_slug ?? q.domain_slug,
+      topic_id: q.topic_id ?? q.domain_id ?? 0,
+    }));
     if (!Array.isArray(raw) || !raw.length) throw new Error("no questions array");
     const free = pickFree(raw, mockSize);
     if (free.length < mockSize) throw new Error(`only ${free.length} usable free questions (need ${mockSize}); first question keys: ${Object.keys(raw[0] ?? {}).join(", ")}`);
