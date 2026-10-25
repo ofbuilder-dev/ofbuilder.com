@@ -17,6 +17,7 @@ import Terminal from "@/components/app/Terminal";
 import { apps, appsInSuite, contactEmail, getApp, getSuite } from "@/lib/apps";
 import JsonLd from "@/components/site/JsonLd";
 import { appLd, breadcrumbLd, faqLd, ogImage } from "@/lib/seo";
+import { appSeo } from "@/lib/appSeo";
 
 export const dynamicParams = false;
 
@@ -27,12 +28,14 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const app = getApp((await params).slug);
   if (!app) return {};
+  const seo = appSeo[app.slug];
   return {
-    title: { absolute: `${app.name}: ${app.tagline}` },
-    description: app.description[0],
+    title: { absolute: seo.title },
+    description: seo.description,
+    keywords: seo.keywords,
     alternates: { canonical: `/${app.slug}/` },
-    openGraph: { title: app.name, description: app.tagline, url: `/${app.slug}/`, type: "website", images: ogImage(app.slug, app.name) },
-    twitter: { card: "summary_large_image", title: app.name, description: app.tagline, images: [`/og/${app.slug}.png`] },
+    openGraph: { title: seo.title, description: seo.description, url: `/${app.slug}/`, type: "website", images: ogImage(app.slug, app.name) },
+    twitter: { card: "summary_large_image", title: seo.title, description: seo.description, images: [`/og/${app.slug}.png`] },
     icons: { icon: app.icon, apple: app.icon },
   };
 }
@@ -49,6 +52,9 @@ export default async function AppPage({ params }: { params: Promise<{ slug: stri
   const app = getApp((await params).slug);
   if (!app) notFound();
   const suite = getSuite(app.suiteId)!;
+  const seo = appSeo[app.slug];
+  // Search-question FAQs come first: they target what people type into Google.
+  const faq = [...seo.faq, ...app.faq];
   const { primary, secondary, soft, dark } = app.theme;
   const siblings = appsInSuite(app.suiteId).filter((a) => a.slug !== app.slug);
   const screenTheme = { primary, secondary, soft, dark };
@@ -59,8 +65,8 @@ export default async function AppPage({ params }: { params: Promise<{ slug: stri
     <div id="top" className="relative" style={{ ["--app" as string]: primary }}>
       <JsonLd
         data={[
-          appLd(app),
-          faqLd(app.faq),
+          appLd(app, seo.keywords),
+          faqLd(faq),
           breadcrumbLd([
             { name: "Home", path: "/" },
             { name: suite.name, path: `/suites/${suite.id}/` },
@@ -125,7 +131,8 @@ export default async function AppPage({ params }: { params: Promise<{ slug: stri
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1fr_1.2fr] lg:items-center">
           <Reveal>
             <Eyebrow color={primary}>Overview</Eyebrow>
-            <h2 className="font-display mt-3 text-4xl font-extrabold sm:text-5xl">Why people choose {app.shortName}</h2>
+            <h2 className="font-display mt-3 text-4xl font-extrabold sm:text-5xl">{seo.heading}</h2>
+            <p className="mt-4 text-lg leading-relaxed text-[#3d3d52]">{seo.intro}</p>
             {app.description.slice(1).map((p, i) => (
               <p key={i} className="mt-4 text-lg leading-relaxed text-[#3d3d52]">
                 {p}
@@ -299,7 +306,7 @@ export default async function AppPage({ params }: { params: Promise<{ slug: stri
             </a>
           </p>
         </Reveal>
-        <Faq items={app.faq} color={primary} />
+        <Faq items={faq} color={primary} />
       </section>
 
       {/* ── Support & legal ── */}
