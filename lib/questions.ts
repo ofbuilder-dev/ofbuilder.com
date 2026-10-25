@@ -112,6 +112,14 @@ function toQuiz(q: RawQuestion): QuizQuestion {
   };
 }
 
+function bankSize(slug: string, fallback: number) {
+  try {
+    return (JSON.parse(fs.readFileSync(file(slug).replace(/\.json$/, ".meta.json"), "utf-8")) as { total: number }).total || fallback;
+  } catch {
+    return fallback;
+  }
+}
+
 export function loadPractice(slug: string) {
   const raw = JSON.parse(fs.readFileSync(file(slug), "utf-8")) as RawQuestion[];
   const sorted = [...raw].sort((a, b) => a.topic_id - b.topic_id || a.id - b.id);
@@ -135,8 +143,9 @@ export function loadPractice(slug: string) {
     topics,
     byTopic,
     mockPool: free.map(toQuiz),
-    totalCount: raw.length,
-    premiumCount: raw.length - free.length,
+    totalCount: bankSize(slug, raw.length),
+    // The website only ships a free slice; the meta file records how big the full in-app bank is.
+    premiumCount: Math.max(0, bankSize(slug, raw.length) - free.length),
     // Placeholder banks (refs starting "SAMPLE") stay out of search engines until real data is added.
     isSample: raw.some((q) => q.ref?.startsWith("SAMPLE")),
   };
