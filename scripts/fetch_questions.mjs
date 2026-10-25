@@ -5,18 +5,22 @@
 import fs from "fs";
 import path from "path";
 
-const BASE = process.env.QUESTIONS_BASE ?? "https://ezprrwlxbvqsffedjrbt.supabase.co/storage/v1/object/public/Citizenship/seed_data";
+const BASE = process.env.QUESTIONS_BASE ?? "https://ezprrwlxbvqsffedjrbt.supabase.co/storage/v1/object/public";
 const OUT = path.join(process.cwd(), "content", "questions");
 
-// folder → app slug, and the mock test length so the free pool can always fill one mock.
+// bucket path → app slug, and the mock test length so the free pool can always fill one mock.
 const BANKS = {
-  uk: ["life-in-the-uk", 24],
-  us: ["us-citizenship", 20],
-  ca: ["canadian-citizenship", 20],
-  au: ["australian-citizenship", 20],
-  de: ["german-citizenship", 33],
-  dk: ["danish-citizenship", 25],
-  nl: ["knm-inburgering", 25],
+  "Citizenship/seed_data/uk": ["life-in-the-uk", 24],
+  "Citizenship/seed_data/us": ["us-citizenship", 20],
+  "Citizenship/seed_data/ca": ["canadian-citizenship", 20],
+  "Citizenship/seed_data/au": ["australian-citizenship", 20],
+  "Citizenship/seed_data/de": ["german-citizenship", 33],
+  "Citizenship/seed_data/dk": ["danish-citizenship", 25],
+  "Citizenship/seed_data/nl": ["knm-inburgering", 25],
+  "passly/seed/car": ["driving-theory", 50],
+  "passly/seed/motorcycle": ["motorcycle-theory", 50],
+  "passly/seed/lgv": ["lgv-hgv-theory", 50],
+  "passly/seed/pcv": ["pcv-bus-theory", 50],
 };
 const PER_TOPIC = 6; // matches FREE_PER_TOPIC in lib/questions.ts
 const EXTRA = 16; // free questions beyond one mock, so repeat mocks vary a little
@@ -26,7 +30,9 @@ const valid = (q) =>
   Number.isInteger(q.correct_index) && q.correct_index >= 0 && q.correct_index < q.options.length && q.topic_slug;
 
 function pickFree(raw, mockSize) {
-  const free = raw.filter((q) => valid(q) && q.is_premium === false);
+  // Banks without an is_premium flag: every valid question is eligible, but only a small slice is published.
+  const flagged = raw.some((q) => typeof q?.is_premium === "boolean");
+  const free = raw.filter((q) => valid(q) && (flagged ? q.is_premium === false : true)).map((q) => ({ ...q, is_premium: false }));
   const byTopic = new Map();
   for (const q of free) byTopic.set(q.topic_slug, [...(byTopic.get(q.topic_slug) ?? []), q]);
   const chosen = [];
@@ -47,11 +53,11 @@ for (const [folder, [slug, mockSize]] of Object.entries(BANKS)) {
     const raw = Array.isArray(data) ? data : data.questions;
     if (!Array.isArray(raw) || !raw.length) throw new Error("no questions array");
     const free = pickFree(raw, mockSize);
-    if (free.length < mockSize) throw new Error(`only ${free.length} usable free questions (need ${mockSize})`);
+    if (free.length < mockSize) throw new Error(`only ${free.length} usable free questions (need ${mockSize}); first question keys: ${Object.keys(raw[0] ?? {}).join(", ")}`);
     fs.writeFileSync(path.join(OUT, `${slug}.json`), JSON.stringify(free, null, 1) + "\n");
     fs.writeFileSync(path.join(OUT, `${slug}.meta.json`), JSON.stringify({ total: raw.length, source: `${folder}/questions.json` }) + "\n");
     const topics = new Set(free.map((q) => q.topic_slug)).size;
-    console.log(`✓ ${slug}: ${raw.length} in bank, ${raw.filter((q) => q.is_premium === false).length} free, ${free.length} published across ${topics} topics`);
+    console.log(`✓ ${slug}: ${raw.length} in bank, ${raw.filter((q) => q.is_premium === false).length} flagged free, ${free.length} published across ${topics} topics`);
   } catch (e) {
     failed++;
     console.warn(`! ${slug}: kept existing file (${e.message})`);
