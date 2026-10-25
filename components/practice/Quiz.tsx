@@ -125,16 +125,16 @@ export default function Quiz(p: QuizProps) {
   // ── Intro (mock) ─────────────────────────────────────────
   if (phase === "intro") {
     return (
-      <div className="rounded-[2rem] bg-white p-8 text-center ring-1 ring-black/5 sm:p-12">
+      <div className="rounded-[2rem] bg-white p-6 text-center ring-1 ring-black/5 sm:p-12">
         <h2 className="font-display text-3xl font-extrabold sm:text-4xl">{p.title ?? "Free mock test"}</h2>
-        <div className="mx-auto mt-8 grid max-w-lg grid-cols-3 gap-3">
+        <div className="mx-auto mt-8 grid max-w-lg grid-cols-3 gap-2 sm:gap-3">
           {[
             [String(items.length), "questions"],
             [p.minutes ? `${p.minutes} min` : "No limit", "time"],
             [`${p.passMark}/${items.length}`, "to pass"],
           ].map(([v, l]) => (
-            <div key={l} className="rounded-2xl p-4" style={{ background: p.color + "12" }}>
-              <div className="font-display text-2xl font-extrabold" style={{ color: p.color }}>
+            <div key={l} className="rounded-2xl px-2 py-4 sm:p-4" style={{ background: p.color + "12" }}>
+              <div className="font-display whitespace-nowrap text-xl font-extrabold sm:text-2xl" style={{ color: p.color }}>
                 {v}
               </div>
               <div className="mt-1 text-xs font-semibold uppercase tracking-wider text-[#6b6b80]">{l}</div>
