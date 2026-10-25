@@ -3,12 +3,15 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { QuizQuestion } from "@/lib/questions";
+import AppUpsell from "./AppUpsell";
 
 export type QuizProps = {
   mode: "practice" | "mock";
   questions: QuizQuestion[];
   color: string;
   appName: string;
+  appIcon: string;
+  rating?: number;
   playUrl: string;
   premiumCount: number;
   storageKey: string;
@@ -165,17 +168,40 @@ export default function Quiz(p: QuizProps) {
             {p.mode === "mock" && elapsed ? ` · ${fmt(elapsed)}` : ""}
           </p>
           {best !== null && <p className="mt-1 text-sm text-white/75">Best score: {best}%</p>}
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <a href={p.playUrl} target="_blank" rel="noopener noreferrer" className="inline-flex h-14 items-center rounded-full bg-white px-7 font-bold text-[#0f0f1a] shadow-lg transition-transform hover:-translate-y-0.5">
-              ▶ Get {p.premiumCount > 0 ? `${p.premiumCount}+ more questions` : "the full app"} free on Google Play
-            </a>
-            <button onClick={p.mode === "mock" ? start : p.onExit ?? start} className="inline-flex h-14 items-center rounded-full px-7 font-bold text-white ring-1 ring-white/40 transition-colors hover:bg-white/10">
-              {p.mode === "mock" ? "Try again" : "Choose another topic"}
+          <div className="mt-7 flex flex-wrap justify-center gap-2">
+            <button onClick={p.mode === "mock" ? start : p.onExit ?? start} className="inline-flex h-11 items-center rounded-full bg-white/15 px-5 text-sm font-bold text-white ring-1 ring-white/30 backdrop-blur transition-colors hover:bg-white/25">
+              {p.mode === "mock" ? "↻ Try again" : "← Another topic"}
             </button>
+            <a href="#review" className="inline-flex h-11 items-center rounded-full px-5 text-sm font-bold text-white/90 ring-1 ring-white/30 transition-colors hover:bg-white/10">
+              Review answers ↓
+            </a>
           </div>
         </div>
 
-        <div className="rounded-[2rem] bg-white p-6 ring-1 ring-black/5 sm:p-8">
+        <AppUpsell
+          appName={p.appName}
+          icon={p.appIcon}
+          color={p.color}
+          playUrl={p.playUrl}
+          premiumCount={p.premiumCount}
+          rating={p.rating}
+          headline={
+            p.mode === "mock"
+              ? pass
+                ? "Great score! Make sure you pass on the day."
+                : `You're ${Math.max(1, (p.passMark ?? 0) - score)} correct ${Math.max(1, (p.passMark ?? 0) - score) === 1 ? "answer" : "answers"} away from passing.`
+              : "Keep the momentum going."
+          }
+          sub={
+            p.mode === "mock"
+              ? pass
+                ? "Keep practising with fresh questions and unlimited mock tests until you pass every time."
+                : "The full app helps you close the gap: it brings back your weak questions and tracks when you're ready."
+              : "Practise every topic, sit unlimited mock tests and fix your mistakes in the full app."
+          }
+        />
+
+        <div id="review" className="scroll-mt-28 rounded-[2rem] bg-white p-6 ring-1 ring-black/5 sm:p-8">
           <h3 className="font-display text-2xl font-extrabold">Review your answers</h3>
           <ol className="mt-6 space-y-4">
             {items.map((it, i) => {
