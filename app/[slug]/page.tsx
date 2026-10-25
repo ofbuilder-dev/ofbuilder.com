@@ -104,31 +104,22 @@ export default async function AppPage({ params }: { params: Promise<{ slug: stri
         <Motif app={app} />
         <div className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-14 lg:grid-cols-[1.25fr_1fr]">
           <div>
-            <Reveal y={20}>
-              <Link href={`/suites/${suite.id}/`} className={`inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-xs font-bold backdrop-blur ${dark ? "bg-white/10 text-white ring-1 ring-white/20" : "bg-white/80 ring-1 ring-black/5"}`}>
-                {suite.emoji} Part of the {suite.short} suite
-              </Link>
-              {localesFor(app.slug).map((l) => (
-                <Link key={l} href={`/${app.slug}/${l}/`} hrefLang={l} className={`ml-2 inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs font-bold backdrop-blur ${dark ? "bg-white/10 text-white ring-1 ring-white/20" : "bg-white/80 ring-1 ring-black/5"}`}>
-                  {LANG_LABEL[l] ?? l}
-                </Link>
-              ))}
-            </Reveal>
-            <Reveal delay={0.05}>
-              <div className="mt-7 flex items-center gap-5">
-                <div className="animate-bob" style={{ ["--r" as string]: "-4deg" }}>
-                  <AppIcon src={app.icon} name={app.shortName} size={96} />
-                </div>
+            {(localesFor(app.slug).length > 0 || app.rating) && (
+              <Reveal y={20} className="mb-6 flex flex-wrap items-center gap-3">
                 {app.rating && (
-                  <div className={heroText}>
-                    <div className="text-xl tracking-widest text-amber-400">★★★★★</div>
-                    <div className="text-sm font-semibold">{app.rating.toFixed(1)} on Google Play</div>
-                  </div>
+                  <span className={`text-sm font-semibold ${heroText}`}>
+                    <span className="tracking-widest text-amber-400">★★★★★</span> {app.rating.toFixed(1)} on Google Play
+                  </span>
                 )}
-              </div>
-            </Reveal>
+                {localesFor(app.slug).map((l) => (
+                  <Link key={l} href={`/${app.slug}/${l}/`} hrefLang={l} className={`inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs font-bold backdrop-blur ${dark ? "bg-white/10 text-white ring-1 ring-white/20" : "bg-white/80 ring-1 ring-black/5"}`}>
+                    {LANG_LABEL[l] ?? l}
+                  </Link>
+                ))}
+              </Reveal>
+            )}
             <Reveal delay={0.1}>
-              <h1 className={`font-display mt-6 text-[clamp(2.6rem,7vw,5.6rem)] font-extrabold leading-[0.95] ${heroText}`}>{app.shortName}</h1>
+              <h1 className={`font-display text-[clamp(2.6rem,7vw,5.6rem)] font-extrabold leading-[0.95] ${heroText}`}>{app.shortName}</h1>
             </Reveal>
             <Reveal delay={0.18}>
               <p className="font-display mt-4 text-2xl font-bold sm:text-3xl" style={{ color: dark ? secondary : primary }}>
