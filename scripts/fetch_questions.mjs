@@ -8,19 +8,24 @@ import path from "path";
 const BASE = process.env.QUESTIONS_BASE ?? "https://ezprrwlxbvqsffedjrbt.supabase.co/storage/v1/object/public";
 const OUT = path.join(process.cwd(), "content", "questions");
 
-// bucket path → app slug, and the mock test length so the free pool can always fill one mock.
+// bucket file path → app slug, and the mock test length so the free pool can always fill one mock.
 const BANKS = {
-  "Citizenship/seed_data/uk": ["life-in-the-uk", 24],
-  "Citizenship/seed_data/us": ["us-citizenship", 20],
-  "Citizenship/seed_data/ca": ["canadian-citizenship", 20],
-  "Citizenship/seed_data/au": ["australian-citizenship", 20],
-  "Citizenship/seed_data/de": ["german-citizenship", 33],
-  "Citizenship/seed_data/dk": ["danish-citizenship", 25],
-  "Citizenship/seed_data/nl": ["knm-inburgering", 25],
-  "passly/seed/car": ["driving-theory", 50],
-  "passly/seed/motorcycle": ["motorcycle-theory", 50],
-  "passly/seed/lgv": ["lgv-hgv-theory", 50],
-  "passly/seed/pcv": ["pcv-bus-theory", 50],
+  "Citizenship/seed_data/uk/questions.json": ["life-in-the-uk", 24],
+  "Citizenship/seed_data/us/questions.json": ["us-citizenship", 20],
+  "Citizenship/seed_data/ca/questions.json": ["canadian-citizenship", 20],
+  "Citizenship/seed_data/au/questions.json": ["australian-citizenship", 20],
+  "Citizenship/seed_data/de/questions.json": ["german-citizenship", 33],
+  "Citizenship/seed_data/dk/questions.json": ["danish-citizenship", 25],
+  "Citizenship/seed_data/nl/questions.json": ["knm-inburgering", 25],
+  "passly/seed/car/questions.json": ["driving-theory", 50],
+  "passly/seed/motorcycle/questions.json": ["motorcycle-theory", 50],
+  "passly/seed/lgv/questions.json": ["lgv-hgv-theory", 50],
+  "passly/seed/pcv/questions.json": ["pcv-bus-theory", 50],
+  "CompTIA/questions/a_plus_core1.json": ["a-plus-core-1", 30],
+  "CompTIA/questions/a_plus_core2.json": ["a-plus-core-2", 30],
+  "CompTIA/questions/network_plus.json": ["network-plus", 30],
+  "CompTIA/questions/security_plus.json": ["security-plus", 30],
+  "CompTIA/questions/cysa_plus.json": ["cysa-plus", 30],
 };
 const PER_TOPIC = 6; // matches FREE_PER_TOPIC in lib/questions.ts
 const EXTRA = 16; // free questions beyond one mock, so repeat mocks vary a little
@@ -45,9 +50,9 @@ function pickFree(raw, mockSize) {
 }
 
 let failed = 0;
-for (const [folder, [slug, mockSize]] of Object.entries(BANKS)) {
+for (const [file, [slug, mockSize]] of Object.entries(BANKS)) {
   try {
-    const res = await fetch(`${BASE}/${folder}/questions.json`);
+    const res = await fetch(`${BASE}/${file}`);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
     const raw = Array.isArray(data) ? data : data.questions;
@@ -55,7 +60,7 @@ for (const [folder, [slug, mockSize]] of Object.entries(BANKS)) {
     const free = pickFree(raw, mockSize);
     if (free.length < mockSize) throw new Error(`only ${free.length} usable free questions (need ${mockSize}); first question keys: ${Object.keys(raw[0] ?? {}).join(", ")}`);
     fs.writeFileSync(path.join(OUT, `${slug}.json`), JSON.stringify(free, null, 1) + "\n");
-    fs.writeFileSync(path.join(OUT, `${slug}.meta.json`), JSON.stringify({ total: raw.length, source: `${folder}/questions.json` }) + "\n");
+    fs.writeFileSync(path.join(OUT, `${slug}.meta.json`), JSON.stringify({ total: raw.length, source: file }) + "\n");
     const topics = new Set(free.map((q) => q.topic_slug)).size;
     console.log(`✓ ${slug}: ${raw.length} in bank, ${raw.filter((q) => q.is_premium === false).length} flagged free, ${free.length} published across ${topics} topics`);
   } catch (e) {
