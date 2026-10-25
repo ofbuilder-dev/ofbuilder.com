@@ -45,7 +45,7 @@ export default async function PracticePage({ params }: { params: Promise<{ slug:
       premiumCount={d.premiumCount}
       isSample={d.isSample}
     >
-      <TopicPractice topics={d.topics} byTopic={d.byTopic} color={app.theme.primary} appName={app.shortName} playUrl={playUrl} premiumCount={d.premiumCount} slug={slug} />
+      <TopicPractice topics={d.topics} byTopic={d.byTopic} color={app.theme.primary} appName={app.shortName} appIcon={app.icon} rating={app.rating} playUrl={playUrl} premiumCount={d.premiumCount} slug={slug} />
     </PracticeShell>
   );
 }

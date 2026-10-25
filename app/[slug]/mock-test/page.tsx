@@ -57,6 +57,8 @@ export default async function MockTestPage({ params }: { params: Promise<{ slug:
         title={`${d.examName} mock test`}
         color={app.theme.primary}
         appName={app.shortName}
+        appIcon={app.icon}
+        rating={app.rating}
         playUrl={playUrl}
         premiumCount={d.premiumCount}
         storageKey={`ofb-mock-${slug}`}

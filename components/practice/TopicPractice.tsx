@@ -10,6 +10,8 @@ export default function TopicPractice({
   byTopic,
   color,
   appName,
+  appIcon,
+  rating,
   playUrl,
   premiumCount,
   slug,
@@ -18,6 +20,8 @@ export default function TopicPractice({
   byTopic: Record<string, QuizQuestion[]>;
   color: string;
   appName: string;
+  appIcon: string;
+  rating?: number;
   playUrl: string;
   premiumCount: number;
   slug: string;
@@ -32,6 +36,8 @@ export default function TopicPractice({
         questions={byTopic[topic] ?? []}
         color={color}
         appName={appName}
+        appIcon={appIcon}
+        rating={rating}
         playUrl={playUrl}
         premiumCount={premiumCount}
         storageKey={`ofb-practice-${slug}-${topic}`}
