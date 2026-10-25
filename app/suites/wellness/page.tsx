@@ -1,3 +1,5 @@
+export const metadata = { robots: { index: false, follow: true } };
+
 // The old "AI Wellness & Faith" suite was split into Little Sparks (kids) and Noor (Islamic).
 export default function WellnessRedirect() {
   return (

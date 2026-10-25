@@ -1,0 +1,40 @@
+import fs from "fs";
+import path from "path";
+import type { MetadataRoute } from "next";
+import { apps, suites } from "@/lib/apps";
+import { getAllPosts } from "@/lib/blog";
+import { abs } from "@/lib/seo";
+
+export const dynamic = "force-static";
+
+// Static legal pages shipped from public/ (privacy/<app>/, terms/<app>/, delete-account/<app>/).
+function publicPages(dir: string) {
+  const root = path.join(process.cwd(), "public", dir);
+  if (!fs.existsSync(root)) return [];
+  return fs
+    .readdirSync(root)
+    .filter((d) => fs.existsSync(path.join(root, d, "index.html")))
+    .map((d) => `/${dir}/${d}/`);
+}
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const now = new Date();
+  const entry = (p: string, priority: number, changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"], lastModified: Date = now) => ({
+    url: abs(p),
+    lastModified,
+    changeFrequency,
+    priority,
+  });
+
+  return [
+    entry("/", 1, "weekly"),
+    entry("/apps/", 0.9, "weekly"),
+    ...apps.map((a) => entry(`/${a.slug}/`, 0.9, "monthly")),
+    ...suites.map((s) => entry(`/suites/${s.id}/`, 0.8, "monthly")),
+    entry("/blog/", 0.7, "daily"),
+    ...getAllPosts().map((p) => entry(`/blog/${p.slug}/`, 0.6, "yearly", new Date(p.date))),
+    entry("/contact/", 0.5, "yearly"),
+    entry("/privacy/", 0.3, "yearly"),
+    ...[...publicPages("privacy"), ...publicPages("terms"), ...publicPages("delete-account")].map((p) => entry(p, 0.2, "yearly")),
+  ];
+}

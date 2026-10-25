@@ -9,6 +9,8 @@ import Icon from "@/components/ui/Icon";
 import Reveal from "@/components/ui/Reveal";
 import Tilt from "@/components/ui/Tilt";
 import { appsInSuite, getSuite, playDeveloperUrl, suites } from "@/lib/apps";
+import JsonLd from "@/components/site/JsonLd";
+import { breadcrumbLd, ogImage, suiteLd } from "@/lib/seo";
 
 export const dynamicParams = false;
 
@@ -19,7 +21,10 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const suite = getSuite((await params).id);
   if (!suite) return {};
-  return { title: suite.name, description: `${suite.tagline} ${suite.description}` };
+  return { title: suite.name, description: `${suite.tagline} ${suite.description}`, alternates: { canonical: `/suites/${suite.id}/` },
+    openGraph: { title: suite.name, description: suite.tagline, url: `/suites/${suite.id}/`, images: ogImage(`suite-${suite.id}`, suite.name) },
+    twitter: { card: "summary_large_image", title: suite.name, description: suite.tagline, images: [`/og/suite-${suite.id}.png`] },
+  };
 }
 
 export default async function SuitePage({ params }: { params: Promise<{ id: string }> }) {
@@ -30,6 +35,15 @@ export default async function SuitePage({ params }: { params: Promise<{ id: stri
 
   return (
     <div className="relative">
+      <JsonLd
+        data={[
+          suiteLd(suite, list),
+          breadcrumbLd([
+            { name: "Home", path: "/" },
+            { name: suite.name, path: `/suites/${suite.id}/` },
+          ]),
+        ]}
+      />
       <Nav />
 
       <section className="relative overflow-hidden px-5 pb-20 pt-40" style={{ background: suite.soft }}>

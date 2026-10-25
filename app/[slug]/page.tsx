@@ -15,6 +15,8 @@ import Tilt from "@/components/ui/Tilt";
 import Logo from "@/components/site/Logo";
 import Terminal from "@/components/app/Terminal";
 import { apps, appsInSuite, contactEmail, getApp, getSuite } from "@/lib/apps";
+import JsonLd from "@/components/site/JsonLd";
+import { appLd, breadcrumbLd, faqLd, ogImage } from "@/lib/seo";
 
 export const dynamicParams = false;
 
@@ -28,7 +30,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: { absolute: `${app.name}: ${app.tagline}` },
     description: app.description[0],
-    openGraph: { title: app.name, description: app.tagline, url: `https://ofbuilder.com/${app.slug}/`, images: [app.icon] },
+    alternates: { canonical: `/${app.slug}/` },
+    openGraph: { title: app.name, description: app.tagline, url: `/${app.slug}/`, type: "website", images: ogImage(app.slug, app.name) },
+    twitter: { card: "summary_large_image", title: app.name, description: app.tagline, images: [`/og/${app.slug}.png`] },
     icons: { icon: app.icon, apple: app.icon },
   };
 }
@@ -53,6 +57,17 @@ export default async function AppPage({ params }: { params: Promise<{ slug: stri
 
   return (
     <div id="top" className="relative" style={{ ["--app" as string]: primary }}>
+      <JsonLd
+        data={[
+          appLd(app),
+          faqLd(app.faq),
+          breadcrumbLd([
+            { name: "Home", path: "/" },
+            { name: suite.name, path: `/suites/${suite.id}/` },
+            { name: app.shortName, path: `/${app.slug}/` },
+          ]),
+        ]}
+      />
       <AppNav name={app.shortName} icon={app.icon} color={primary} playUrl={app.playUrl} darkHero={dark} />
 
       {/* ── Hero ── */}
