@@ -76,7 +76,7 @@ export default async function AppPage({ params }: { params: Promise<{ slug: stri
           ]),
         ]}
       />
-      <AppNav name={app.shortName} icon={app.icon} color={primary} playUrl={app.playUrl} darkHero={dark} practiceHref={practice ? `/${app.slug}/practice/` : undefined} />
+      <AppNav name={app.shortName} icon={app.icon} color={primary} playUrl={app.playUrl} darkHero={dark} practiceHref={practice ? `/${app.slug}/mock-test/` : undefined} />
 
       {/* ── Hero ── */}
       <section className="relative isolate flex min-h-[100svh] items-center overflow-hidden px-5 pb-20 pt-32">
@@ -144,8 +144,8 @@ export default async function AppPage({ params }: { params: Promise<{ slug: stri
                 </div>
                 <div className="grid gap-3 sm:grid-cols-3 lg:w-[34rem]">
                   {[
-                    ["🎯", "Practice by topic", `/${app.slug}/practice/`],
                     ["⏱️", "Free mock test", `/${app.slug}/mock-test/`],
+                    ["🎯", "Practice by topic", `/${app.slug}/practice/`],
                     ["📖", "Sample questions", `/${app.slug}/questions/`],
                   ].map(([e, l, h]) => (
                     <Link key={h} href={h} className="group flex flex-col gap-2 rounded-2xl p-5 font-bold transition-all hover:-translate-y-1 hover:shadow-lg" style={{ background: soft }}>

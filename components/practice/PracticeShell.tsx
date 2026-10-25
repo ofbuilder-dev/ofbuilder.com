@@ -8,10 +8,11 @@ import PlayBadge from "@/components/ui/PlayBadge";
 import type { App } from "@/lib/apps";
 import { breadcrumbLd } from "@/lib/seo";
 
+// Mock test first: it's the most popular way to check readiness.
 const TABS = [
-  ["practice", "Practice by topic"],
-  ["mock-test", "Free mock test"],
-  ["questions", "Sample questions"],
+  ["mock-test", "Mock test", "⏱️"],
+  ["practice", "Practice", "🎯"],
+  ["questions", "Questions", "📖"],
 ] as const;
 
 // Shared frame for an app's free practice pages: app nav, title, tab switcher, content and an app CTA.
@@ -49,7 +50,7 @@ export default function PracticeShell({
           { name: tabLabel, path: `${base}${active}/` },
         ])}
       />
-      <AppNav name={app.shortName} icon={app.icon} color={primary} playUrl={playUrl} base={base} practiceHref={`${base}practice/`} />
+      <AppNav name={app.shortName} icon={app.icon} color={primary} playUrl={playUrl} base={base} practiceHref={`${base}mock-test/`} />
 
       <section className="relative overflow-hidden px-5 pb-10 pt-36" style={{ background: soft }}>
         <Blobs colors={[primary, app.theme.secondary, primary, "#ffffff"]} opacity={0.25} fade />
@@ -64,18 +65,24 @@ export default function PracticeShell({
               Preview: these are sample questions. Real questions are coming soon.
             </p>
           )}
-          <nav className="no-scrollbar mt-8 flex gap-2 overflow-x-auto" aria-label="Practice sections">
-            {TABS.map(([k, l]) => {
+          <nav className="mt-8 grid max-w-xl grid-cols-3 gap-1 rounded-2xl bg-white/80 p-1.5 shadow-[0_12px_30px_-16px_rgba(15,15,26,0.35)] ring-1 ring-black/5 backdrop-blur" aria-label="Practice sections">
+            {TABS.map(([k, l, icon]) => {
               const on = k === active;
               return (
                 <Link
                   key={k}
                   href={`${base}${k}/`}
                   aria-current={on ? "page" : undefined}
-                  className={`shrink-0 whitespace-nowrap rounded-full px-5 py-2.5 text-sm font-bold transition-colors ${on ? "text-white shadow-lg" : "bg-white text-[#3d3d52] ring-1 ring-black/10 hover:bg-black/5"}`}
+                  className={`relative flex flex-col items-center justify-center gap-0.5 rounded-xl px-2 py-2.5 text-center text-xs font-bold transition-all sm:flex-row sm:gap-2 sm:text-sm ${on ? "text-white shadow-md" : "text-[#3d3d52] hover:bg-black/5"}`}
                   style={on ? { background: primary } : undefined}
                 >
+                  <span className="text-base leading-none sm:text-lg">{icon}</span>
                   {l}
+                  {k === "mock-test" && !on && (
+                    <span className="absolute -right-1 -top-2 rounded-full px-1.5 py-0.5 text-[9px] font-extrabold uppercase tracking-wide text-white shadow" style={{ background: primary }}>
+                      Popular
+                    </span>
+                  )}
                 </Link>
               );
             })}
