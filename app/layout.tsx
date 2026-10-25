@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, Inter } from "next/font/google";
 import "./globals.css";
 import Analytics from "@/components/site/Analytics";
@@ -14,6 +14,8 @@ const display = Bricolage_Grotesque({
 });
 
 const siteUrl = "https://ofbuilder.com";
+
+export const viewport: Viewport = { themeColor: "#fffbf5" };
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
