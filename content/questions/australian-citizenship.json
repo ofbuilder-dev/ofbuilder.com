@@ -1,0 +1,1046 @@
+[
+  {
+    "id": 1,
+    "ref": "SAMPLE-AUSTRALIA001",
+    "topic_id": 1,
+    "topic_slug": "australia_and_its_people",
+    "subcategory": "australia_and_its_people_general",
+    "question": "[Sample] Question 1 about Australia and its people?",
+    "variants": [
+      "[Sample] Question 1 about Australia and its people?",
+      "[Sample] Variant wording for question 1 on Australia and its people?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Australia and its people",
+    "handbook_ref": "1.1",
+    "handbook_page": 15,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": false
+  },
+  {
+    "id": 2,
+    "ref": "SAMPLE-AUSTRALIA002",
+    "topic_id": 1,
+    "topic_slug": "australia_and_its_people",
+    "subcategory": "australia_and_its_people_general",
+    "question": "[Sample] Question 2 about Australia and its people?",
+    "variants": [
+      "[Sample] Question 2 about Australia and its people?",
+      "[Sample] Variant wording for question 2 on Australia and its people?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Australia and its people",
+    "handbook_ref": "1.2",
+    "handbook_page": 16,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": false
+  },
+  {
+    "id": 3,
+    "ref": "SAMPLE-AUSTRALIA003",
+    "topic_id": 1,
+    "topic_slug": "australia_and_its_people",
+    "subcategory": "australia_and_its_people_general",
+    "question": "[Sample] Question 3 about Australia and its people?",
+    "variants": [
+      "[Sample] Question 3 about Australia and its people?",
+      "[Sample] Variant wording for question 3 on Australia and its people?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Australia and its people",
+    "handbook_ref": "1.3",
+    "handbook_page": 17,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": false
+  },
+  {
+    "id": 4,
+    "ref": "SAMPLE-AUSTRALIA004",
+    "topic_id": 1,
+    "topic_slug": "australia_and_its_people",
+    "subcategory": "australia_and_its_people_general",
+    "question": "[Sample] Question 4 about Australia and its people?",
+    "variants": [
+      "[Sample] Question 4 about Australia and its people?",
+      "[Sample] Variant wording for question 4 on Australia and its people?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Australia and its people",
+    "handbook_ref": "1.4",
+    "handbook_page": 18,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": false
+  },
+  {
+    "id": 5,
+    "ref": "SAMPLE-AUSTRALIA005",
+    "topic_id": 1,
+    "topic_slug": "australia_and_its_people",
+    "subcategory": "australia_and_its_people_general",
+    "question": "[Sample] Question 5 about Australia and its people?",
+    "variants": [
+      "[Sample] Question 5 about Australia and its people?",
+      "[Sample] Variant wording for question 5 on Australia and its people?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Australia and its people",
+    "handbook_ref": "1.5",
+    "handbook_page": 19,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": false
+  },
+  {
+    "id": 6,
+    "ref": "SAMPLE-AUSTRALIA006",
+    "topic_id": 1,
+    "topic_slug": "australia_and_its_people",
+    "subcategory": "australia_and_its_people_general",
+    "question": "[Sample] Question 6 about Australia and its people?",
+    "variants": [
+      "[Sample] Question 6 about Australia and its people?",
+      "[Sample] Variant wording for question 6 on Australia and its people?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Australia and its people",
+    "handbook_ref": "1.6",
+    "handbook_page": 20,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": false
+  },
+  {
+    "id": 7,
+    "ref": "SAMPLE-AUSTRALIA007",
+    "topic_id": 1,
+    "topic_slug": "australia_and_its_people",
+    "subcategory": "australia_and_its_people_general",
+    "question": "[Sample] Question 7 about Australia and its people?",
+    "variants": [
+      "[Sample] Question 7 about Australia and its people?",
+      "[Sample] Variant wording for question 7 on Australia and its people?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Australia and its people",
+    "handbook_ref": "1.7",
+    "handbook_page": 21,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": false
+  },
+  {
+    "id": 8,
+    "ref": "SAMPLE-AUSTRALIA008",
+    "topic_id": 1,
+    "topic_slug": "australia_and_its_people",
+    "subcategory": "australia_and_its_people_general",
+    "question": "[Sample] Question 8 about Australia and its people?",
+    "variants": [
+      "[Sample] Question 8 about Australia and its people?",
+      "[Sample] Variant wording for question 8 on Australia and its people?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Australia and its people",
+    "handbook_ref": "1.8",
+    "handbook_page": 22,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": true
+  },
+  {
+    "id": 9,
+    "ref": "SAMPLE-AUSTRALIA009",
+    "topic_id": 1,
+    "topic_slug": "australia_and_its_people",
+    "subcategory": "australia_and_its_people_general",
+    "question": "[Sample] Question 9 about Australia and its people?",
+    "variants": [
+      "[Sample] Question 9 about Australia and its people?",
+      "[Sample] Variant wording for question 9 on Australia and its people?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Australia and its people",
+    "handbook_ref": "1.9",
+    "handbook_page": 23,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": true
+  },
+  {
+    "id": 10,
+    "ref": "SAMPLE-AUSTRALIA010",
+    "topic_id": 2,
+    "topic_slug": "democratic_beliefs",
+    "subcategory": "democratic_beliefs_general",
+    "question": "[Sample] Question 1 about Australia's democratic beliefs, rights and liberties?",
+    "variants": [
+      "[Sample] Question 1 about Australia's democratic beliefs, rights and liberties?",
+      "[Sample] Variant wording for question 1 on Australia's democratic beliefs, rights and liberties?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Australia's democratic beliefs, rights and liberties",
+    "handbook_ref": "2.1",
+    "handbook_page": 25,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": false
+  },
+  {
+    "id": 11,
+    "ref": "SAMPLE-AUSTRALIA011",
+    "topic_id": 2,
+    "topic_slug": "democratic_beliefs",
+    "subcategory": "democratic_beliefs_general",
+    "question": "[Sample] Question 2 about Australia's democratic beliefs, rights and liberties?",
+    "variants": [
+      "[Sample] Question 2 about Australia's democratic beliefs, rights and liberties?",
+      "[Sample] Variant wording for question 2 on Australia's democratic beliefs, rights and liberties?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Australia's democratic beliefs, rights and liberties",
+    "handbook_ref": "2.2",
+    "handbook_page": 26,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": false
+  },
+  {
+    "id": 12,
+    "ref": "SAMPLE-AUSTRALIA012",
+    "topic_id": 2,
+    "topic_slug": "democratic_beliefs",
+    "subcategory": "democratic_beliefs_general",
+    "question": "[Sample] Question 3 about Australia's democratic beliefs, rights and liberties?",
+    "variants": [
+      "[Sample] Question 3 about Australia's democratic beliefs, rights and liberties?",
+      "[Sample] Variant wording for question 3 on Australia's democratic beliefs, rights and liberties?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Australia's democratic beliefs, rights and liberties",
+    "handbook_ref": "2.3",
+    "handbook_page": 27,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": false
+  },
+  {
+    "id": 13,
+    "ref": "SAMPLE-AUSTRALIA013",
+    "topic_id": 2,
+    "topic_slug": "democratic_beliefs",
+    "subcategory": "democratic_beliefs_general",
+    "question": "[Sample] Question 4 about Australia's democratic beliefs, rights and liberties?",
+    "variants": [
+      "[Sample] Question 4 about Australia's democratic beliefs, rights and liberties?",
+      "[Sample] Variant wording for question 4 on Australia's democratic beliefs, rights and liberties?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Australia's democratic beliefs, rights and liberties",
+    "handbook_ref": "2.4",
+    "handbook_page": 28,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": false
+  },
+  {
+    "id": 14,
+    "ref": "SAMPLE-AUSTRALIA014",
+    "topic_id": 2,
+    "topic_slug": "democratic_beliefs",
+    "subcategory": "democratic_beliefs_general",
+    "question": "[Sample] Question 5 about Australia's democratic beliefs, rights and liberties?",
+    "variants": [
+      "[Sample] Question 5 about Australia's democratic beliefs, rights and liberties?",
+      "[Sample] Variant wording for question 5 on Australia's democratic beliefs, rights and liberties?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Australia's democratic beliefs, rights and liberties",
+    "handbook_ref": "2.5",
+    "handbook_page": 29,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": false
+  },
+  {
+    "id": 15,
+    "ref": "SAMPLE-AUSTRALIA015",
+    "topic_id": 2,
+    "topic_slug": "democratic_beliefs",
+    "subcategory": "democratic_beliefs_general",
+    "question": "[Sample] Question 6 about Australia's democratic beliefs, rights and liberties?",
+    "variants": [
+      "[Sample] Question 6 about Australia's democratic beliefs, rights and liberties?",
+      "[Sample] Variant wording for question 6 on Australia's democratic beliefs, rights and liberties?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Australia's democratic beliefs, rights and liberties",
+    "handbook_ref": "2.6",
+    "handbook_page": 30,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": false
+  },
+  {
+    "id": 16,
+    "ref": "SAMPLE-AUSTRALIA016",
+    "topic_id": 2,
+    "topic_slug": "democratic_beliefs",
+    "subcategory": "democratic_beliefs_general",
+    "question": "[Sample] Question 7 about Australia's democratic beliefs, rights and liberties?",
+    "variants": [
+      "[Sample] Question 7 about Australia's democratic beliefs, rights and liberties?",
+      "[Sample] Variant wording for question 7 on Australia's democratic beliefs, rights and liberties?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Australia's democratic beliefs, rights and liberties",
+    "handbook_ref": "2.7",
+    "handbook_page": 31,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": false
+  },
+  {
+    "id": 17,
+    "ref": "SAMPLE-AUSTRALIA017",
+    "topic_id": 2,
+    "topic_slug": "democratic_beliefs",
+    "subcategory": "democratic_beliefs_general",
+    "question": "[Sample] Question 8 about Australia's democratic beliefs, rights and liberties?",
+    "variants": [
+      "[Sample] Question 8 about Australia's democratic beliefs, rights and liberties?",
+      "[Sample] Variant wording for question 8 on Australia's democratic beliefs, rights and liberties?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Australia's democratic beliefs, rights and liberties",
+    "handbook_ref": "2.8",
+    "handbook_page": 32,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": true
+  },
+  {
+    "id": 18,
+    "ref": "SAMPLE-AUSTRALIA018",
+    "topic_id": 2,
+    "topic_slug": "democratic_beliefs",
+    "subcategory": "democratic_beliefs_general",
+    "question": "[Sample] Question 9 about Australia's democratic beliefs, rights and liberties?",
+    "variants": [
+      "[Sample] Question 9 about Australia's democratic beliefs, rights and liberties?",
+      "[Sample] Variant wording for question 9 on Australia's democratic beliefs, rights and liberties?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Australia's democratic beliefs, rights and liberties",
+    "handbook_ref": "2.9",
+    "handbook_page": 33,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": true
+  },
+  {
+    "id": 19,
+    "ref": "SAMPLE-AUSTRALIA019",
+    "topic_id": 3,
+    "topic_slug": "government_and_law",
+    "subcategory": "government_and_law_general",
+    "question": "[Sample] Question 1 about Government and the law in Australia?",
+    "variants": [
+      "[Sample] Question 1 about Government and the law in Australia?",
+      "[Sample] Variant wording for question 1 on Government and the law in Australia?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Government and the law in Australia",
+    "handbook_ref": "3.1",
+    "handbook_page": 35,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": false
+  },
+  {
+    "id": 20,
+    "ref": "SAMPLE-AUSTRALIA020",
+    "topic_id": 3,
+    "topic_slug": "government_and_law",
+    "subcategory": "government_and_law_general",
+    "question": "[Sample] Question 2 about Government and the law in Australia?",
+    "variants": [
+      "[Sample] Question 2 about Government and the law in Australia?",
+      "[Sample] Variant wording for question 2 on Government and the law in Australia?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Government and the law in Australia",
+    "handbook_ref": "3.2",
+    "handbook_page": 36,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": false
+  },
+  {
+    "id": 21,
+    "ref": "SAMPLE-AUSTRALIA021",
+    "topic_id": 3,
+    "topic_slug": "government_and_law",
+    "subcategory": "government_and_law_general",
+    "question": "[Sample] Question 3 about Government and the law in Australia?",
+    "variants": [
+      "[Sample] Question 3 about Government and the law in Australia?",
+      "[Sample] Variant wording for question 3 on Government and the law in Australia?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Government and the law in Australia",
+    "handbook_ref": "3.3",
+    "handbook_page": 37,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": false
+  },
+  {
+    "id": 22,
+    "ref": "SAMPLE-AUSTRALIA022",
+    "topic_id": 3,
+    "topic_slug": "government_and_law",
+    "subcategory": "government_and_law_general",
+    "question": "[Sample] Question 4 about Government and the law in Australia?",
+    "variants": [
+      "[Sample] Question 4 about Government and the law in Australia?",
+      "[Sample] Variant wording for question 4 on Government and the law in Australia?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Government and the law in Australia",
+    "handbook_ref": "3.4",
+    "handbook_page": 38,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": false
+  },
+  {
+    "id": 23,
+    "ref": "SAMPLE-AUSTRALIA023",
+    "topic_id": 3,
+    "topic_slug": "government_and_law",
+    "subcategory": "government_and_law_general",
+    "question": "[Sample] Question 5 about Government and the law in Australia?",
+    "variants": [
+      "[Sample] Question 5 about Government and the law in Australia?",
+      "[Sample] Variant wording for question 5 on Government and the law in Australia?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Government and the law in Australia",
+    "handbook_ref": "3.5",
+    "handbook_page": 39,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": false
+  },
+  {
+    "id": 24,
+    "ref": "SAMPLE-AUSTRALIA024",
+    "topic_id": 3,
+    "topic_slug": "government_and_law",
+    "subcategory": "government_and_law_general",
+    "question": "[Sample] Question 6 about Government and the law in Australia?",
+    "variants": [
+      "[Sample] Question 6 about Government and the law in Australia?",
+      "[Sample] Variant wording for question 6 on Government and the law in Australia?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Government and the law in Australia",
+    "handbook_ref": "3.6",
+    "handbook_page": 40,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": false
+  },
+  {
+    "id": 25,
+    "ref": "SAMPLE-AUSTRALIA025",
+    "topic_id": 3,
+    "topic_slug": "government_and_law",
+    "subcategory": "government_and_law_general",
+    "question": "[Sample] Question 7 about Government and the law in Australia?",
+    "variants": [
+      "[Sample] Question 7 about Government and the law in Australia?",
+      "[Sample] Variant wording for question 7 on Government and the law in Australia?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Government and the law in Australia",
+    "handbook_ref": "3.7",
+    "handbook_page": 41,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": false
+  },
+  {
+    "id": 26,
+    "ref": "SAMPLE-AUSTRALIA026",
+    "topic_id": 3,
+    "topic_slug": "government_and_law",
+    "subcategory": "government_and_law_general",
+    "question": "[Sample] Question 8 about Government and the law in Australia?",
+    "variants": [
+      "[Sample] Question 8 about Government and the law in Australia?",
+      "[Sample] Variant wording for question 8 on Government and the law in Australia?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Government and the law in Australia",
+    "handbook_ref": "3.8",
+    "handbook_page": 42,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": true
+  },
+  {
+    "id": 27,
+    "ref": "SAMPLE-AUSTRALIA027",
+    "topic_id": 3,
+    "topic_slug": "government_and_law",
+    "subcategory": "government_and_law_general",
+    "question": "[Sample] Question 9 about Government and the law in Australia?",
+    "variants": [
+      "[Sample] Question 9 about Government and the law in Australia?",
+      "[Sample] Variant wording for question 9 on Government and the law in Australia?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Government and the law in Australia",
+    "handbook_ref": "3.9",
+    "handbook_page": 43,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": true
+  },
+  {
+    "id": 28,
+    "ref": "SAMPLE-AUSTRALIA028",
+    "topic_id": 4,
+    "topic_slug": "australian_values",
+    "subcategory": "australian_values_general",
+    "question": "[Sample] Question 1 about Australian values?",
+    "variants": [
+      "[Sample] Question 1 about Australian values?",
+      "[Sample] Variant wording for question 1 on Australian values?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Australian values",
+    "handbook_ref": "4.1",
+    "handbook_page": 45,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": false
+  },
+  {
+    "id": 29,
+    "ref": "SAMPLE-AUSTRALIA029",
+    "topic_id": 4,
+    "topic_slug": "australian_values",
+    "subcategory": "australian_values_general",
+    "question": "[Sample] Question 2 about Australian values?",
+    "variants": [
+      "[Sample] Question 2 about Australian values?",
+      "[Sample] Variant wording for question 2 on Australian values?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Australian values",
+    "handbook_ref": "4.2",
+    "handbook_page": 46,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": false
+  },
+  {
+    "id": 30,
+    "ref": "SAMPLE-AUSTRALIA030",
+    "topic_id": 4,
+    "topic_slug": "australian_values",
+    "subcategory": "australian_values_general",
+    "question": "[Sample] Question 3 about Australian values?",
+    "variants": [
+      "[Sample] Question 3 about Australian values?",
+      "[Sample] Variant wording for question 3 on Australian values?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Australian values",
+    "handbook_ref": "4.3",
+    "handbook_page": 47,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": false
+  },
+  {
+    "id": 31,
+    "ref": "SAMPLE-AUSTRALIA031",
+    "topic_id": 4,
+    "topic_slug": "australian_values",
+    "subcategory": "australian_values_general",
+    "question": "[Sample] Question 4 about Australian values?",
+    "variants": [
+      "[Sample] Question 4 about Australian values?",
+      "[Sample] Variant wording for question 4 on Australian values?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Australian values",
+    "handbook_ref": "4.4",
+    "handbook_page": 48,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": false
+  },
+  {
+    "id": 32,
+    "ref": "SAMPLE-AUSTRALIA032",
+    "topic_id": 4,
+    "topic_slug": "australian_values",
+    "subcategory": "australian_values_general",
+    "question": "[Sample] Question 5 about Australian values?",
+    "variants": [
+      "[Sample] Question 5 about Australian values?",
+      "[Sample] Variant wording for question 5 on Australian values?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Australian values",
+    "handbook_ref": "4.5",
+    "handbook_page": 49,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": false
+  },
+  {
+    "id": 33,
+    "ref": "SAMPLE-AUSTRALIA033",
+    "topic_id": 4,
+    "topic_slug": "australian_values",
+    "subcategory": "australian_values_general",
+    "question": "[Sample] Question 6 about Australian values?",
+    "variants": [
+      "[Sample] Question 6 about Australian values?",
+      "[Sample] Variant wording for question 6 on Australian values?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Australian values",
+    "handbook_ref": "4.6",
+    "handbook_page": 50,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": false
+  },
+  {
+    "id": 34,
+    "ref": "SAMPLE-AUSTRALIA034",
+    "topic_id": 4,
+    "topic_slug": "australian_values",
+    "subcategory": "australian_values_general",
+    "question": "[Sample] Question 7 about Australian values?",
+    "variants": [
+      "[Sample] Question 7 about Australian values?",
+      "[Sample] Variant wording for question 7 on Australian values?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Australian values",
+    "handbook_ref": "4.7",
+    "handbook_page": 51,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": false
+  },
+  {
+    "id": 35,
+    "ref": "SAMPLE-AUSTRALIA035",
+    "topic_id": 4,
+    "topic_slug": "australian_values",
+    "subcategory": "australian_values_general",
+    "question": "[Sample] Question 8 about Australian values?",
+    "variants": [
+      "[Sample] Question 8 about Australian values?",
+      "[Sample] Variant wording for question 8 on Australian values?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Australian values",
+    "handbook_ref": "4.8",
+    "handbook_page": 52,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": true
+  },
+  {
+    "id": 36,
+    "ref": "SAMPLE-AUSTRALIA036",
+    "topic_id": 4,
+    "topic_slug": "australian_values",
+    "subcategory": "australian_values_general",
+    "question": "[Sample] Question 9 about Australian values?",
+    "variants": [
+      "[Sample] Question 9 about Australian values?",
+      "[Sample] Variant wording for question 9 on Australian values?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Australian values",
+    "handbook_ref": "4.9",
+    "handbook_page": 53,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "australia",
+    "is_premium": true
+  }
+]

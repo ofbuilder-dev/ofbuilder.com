@@ -1,0 +1,1163 @@
+[
+  {
+    "id": 1,
+    "ref": "SAMPLE-UK001",
+    "topic_id": 1,
+    "topic_slug": "values_and_principles",
+    "subcategory": "values_and_principles_general",
+    "question": "Which of the following is a fundamental principle of British life?",
+    "variants": [
+      "Which of the following is a fundamental principle of British life?",
+      "British fundamental principles include which of the following?",
+      "Which value is one of the fundamental principles of the UK?"
+    ],
+    "options": [
+      "The rule of law",
+      "Compulsory church attendance",
+      "A one-party state",
+      "State control of the press"
+    ],
+    "correct_index": 0,
+    "correct_option": "D",
+    "explanation": "The fundamental principles of British life include democracy, the rule of law, individual liberty, and tolerance of those with different faiths and beliefs.",
+    "source_chapter": "Chapter 1: The values and principles of the UK",
+    "handbook_ref": "1.1",
+    "handbook_page": 15,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": false
+  },
+  {
+    "id": 2,
+    "ref": "SAMPLE-UK002",
+    "topic_id": 1,
+    "topic_slug": "values_and_principles",
+    "subcategory": "values_and_principles_general",
+    "question": "[Sample] Question 2 about The values and principles of the UK?",
+    "variants": [
+      "[Sample] Question 2 about The values and principles of the UK?",
+      "[Sample] Variant wording for question 2 on The values and principles of the UK?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 1: The values and principles of the UK",
+    "handbook_ref": "1.2",
+    "handbook_page": 16,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": false
+  },
+  {
+    "id": 3,
+    "ref": "SAMPLE-UK003",
+    "topic_id": 1,
+    "topic_slug": "values_and_principles",
+    "subcategory": "values_and_principles_general",
+    "question": "[Sample] Question 3 about The values and principles of the UK?",
+    "variants": [
+      "[Sample] Question 3 about The values and principles of the UK?",
+      "[Sample] Variant wording for question 3 on The values and principles of the UK?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 1: The values and principles of the UK",
+    "handbook_ref": "1.3",
+    "handbook_page": 17,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": false
+  },
+  {
+    "id": 4,
+    "ref": "SAMPLE-UK004",
+    "topic_id": 1,
+    "topic_slug": "values_and_principles",
+    "subcategory": "values_and_principles_general",
+    "question": "[Sample] Question 4 about The values and principles of the UK?",
+    "variants": [
+      "[Sample] Question 4 about The values and principles of the UK?",
+      "[Sample] Variant wording for question 4 on The values and principles of the UK?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 1: The values and principles of the UK",
+    "handbook_ref": "1.4",
+    "handbook_page": 18,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": false
+  },
+  {
+    "id": 5,
+    "ref": "SAMPLE-UK005",
+    "topic_id": 1,
+    "topic_slug": "values_and_principles",
+    "subcategory": "values_and_principles_general",
+    "question": "[Sample] Question 5 about The values and principles of the UK?",
+    "variants": [
+      "[Sample] Question 5 about The values and principles of the UK?",
+      "[Sample] Variant wording for question 5 on The values and principles of the UK?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 1: The values and principles of the UK",
+    "handbook_ref": "1.5",
+    "handbook_page": 19,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": false
+  },
+  {
+    "id": 6,
+    "ref": "SAMPLE-UK006",
+    "topic_id": 1,
+    "topic_slug": "values_and_principles",
+    "subcategory": "values_and_principles_general",
+    "question": "[Sample] Question 6 about The values and principles of the UK?",
+    "variants": [
+      "[Sample] Question 6 about The values and principles of the UK?",
+      "[Sample] Variant wording for question 6 on The values and principles of the UK?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 1: The values and principles of the UK",
+    "handbook_ref": "1.6",
+    "handbook_page": 20,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": false
+  },
+  {
+    "id": 7,
+    "ref": "SAMPLE-UK007",
+    "topic_id": 1,
+    "topic_slug": "values_and_principles",
+    "subcategory": "values_and_principles_general",
+    "question": "[Sample] Question 7 about The values and principles of the UK?",
+    "variants": [
+      "[Sample] Question 7 about The values and principles of the UK?",
+      "[Sample] Variant wording for question 7 on The values and principles of the UK?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 1: The values and principles of the UK",
+    "handbook_ref": "1.7",
+    "handbook_page": 21,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": true
+  },
+  {
+    "id": 8,
+    "ref": "SAMPLE-UK008",
+    "topic_id": 1,
+    "topic_slug": "values_and_principles",
+    "subcategory": "values_and_principles_general",
+    "question": "[Sample] Question 8 about The values and principles of the UK?",
+    "variants": [
+      "[Sample] Question 8 about The values and principles of the UK?",
+      "[Sample] Variant wording for question 8 on The values and principles of the UK?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 1: The values and principles of the UK",
+    "handbook_ref": "1.8",
+    "handbook_page": 22,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": true
+  },
+  {
+    "id": 9,
+    "ref": "SAMPLE-UK009",
+    "topic_id": 2,
+    "topic_slug": "what_is_the_uk",
+    "subcategory": "what_is_the_uk_general",
+    "question": "[Sample] Question 1 about What is the UK??",
+    "variants": [
+      "[Sample] Question 1 about What is the UK??",
+      "[Sample] Variant wording for question 1 on What is the UK??"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 2: What is the UK?",
+    "handbook_ref": "2.1",
+    "handbook_page": 25,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": false
+  },
+  {
+    "id": 10,
+    "ref": "SAMPLE-UK010",
+    "topic_id": 2,
+    "topic_slug": "what_is_the_uk",
+    "subcategory": "what_is_the_uk_general",
+    "question": "[Sample] Question 2 about What is the UK??",
+    "variants": [
+      "[Sample] Question 2 about What is the UK??",
+      "[Sample] Variant wording for question 2 on What is the UK??"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 2: What is the UK?",
+    "handbook_ref": "2.2",
+    "handbook_page": 26,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": false
+  },
+  {
+    "id": 11,
+    "ref": "SAMPLE-UK011",
+    "topic_id": 2,
+    "topic_slug": "what_is_the_uk",
+    "subcategory": "what_is_the_uk_general",
+    "question": "[Sample] Question 3 about What is the UK??",
+    "variants": [
+      "[Sample] Question 3 about What is the UK??",
+      "[Sample] Variant wording for question 3 on What is the UK??"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 2: What is the UK?",
+    "handbook_ref": "2.3",
+    "handbook_page": 27,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": false
+  },
+  {
+    "id": 12,
+    "ref": "SAMPLE-UK012",
+    "topic_id": 2,
+    "topic_slug": "what_is_the_uk",
+    "subcategory": "what_is_the_uk_general",
+    "question": "[Sample] Question 4 about What is the UK??",
+    "variants": [
+      "[Sample] Question 4 about What is the UK??",
+      "[Sample] Variant wording for question 4 on What is the UK??"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 2: What is the UK?",
+    "handbook_ref": "2.4",
+    "handbook_page": 28,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": false
+  },
+  {
+    "id": 13,
+    "ref": "SAMPLE-UK013",
+    "topic_id": 2,
+    "topic_slug": "what_is_the_uk",
+    "subcategory": "what_is_the_uk_general",
+    "question": "[Sample] Question 5 about What is the UK??",
+    "variants": [
+      "[Sample] Question 5 about What is the UK??",
+      "[Sample] Variant wording for question 5 on What is the UK??"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 2: What is the UK?",
+    "handbook_ref": "2.5",
+    "handbook_page": 29,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": false
+  },
+  {
+    "id": 14,
+    "ref": "SAMPLE-UK014",
+    "topic_id": 2,
+    "topic_slug": "what_is_the_uk",
+    "subcategory": "what_is_the_uk_general",
+    "question": "[Sample] Question 6 about What is the UK??",
+    "variants": [
+      "[Sample] Question 6 about What is the UK??",
+      "[Sample] Variant wording for question 6 on What is the UK??"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 2: What is the UK?",
+    "handbook_ref": "2.6",
+    "handbook_page": 30,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": false
+  },
+  {
+    "id": 15,
+    "ref": "SAMPLE-UK015",
+    "topic_id": 2,
+    "topic_slug": "what_is_the_uk",
+    "subcategory": "what_is_the_uk_general",
+    "question": "[Sample] Question 7 about What is the UK??",
+    "variants": [
+      "[Sample] Question 7 about What is the UK??",
+      "[Sample] Variant wording for question 7 on What is the UK??"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 2: What is the UK?",
+    "handbook_ref": "2.7",
+    "handbook_page": 31,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": true
+  },
+  {
+    "id": 16,
+    "ref": "SAMPLE-UK016",
+    "topic_id": 2,
+    "topic_slug": "what_is_the_uk",
+    "subcategory": "what_is_the_uk_general",
+    "question": "[Sample] Question 8 about What is the UK??",
+    "variants": [
+      "[Sample] Question 8 about What is the UK??",
+      "[Sample] Variant wording for question 8 on What is the UK??"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 2: What is the UK?",
+    "handbook_ref": "2.8",
+    "handbook_page": 32,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": true
+  },
+  {
+    "id": 17,
+    "ref": "SAMPLE-UK017",
+    "topic_id": 3,
+    "topic_slug": "history",
+    "subcategory": "history_general",
+    "question": "[Sample] Question 1 about A long and illustrious history?",
+    "variants": [
+      "[Sample] Question 1 about A long and illustrious history?",
+      "[Sample] Variant wording for question 1 on A long and illustrious history?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 3: A long and illustrious history",
+    "handbook_ref": "3.1",
+    "handbook_page": 35,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": false
+  },
+  {
+    "id": 18,
+    "ref": "SAMPLE-UK018",
+    "topic_id": 3,
+    "topic_slug": "history",
+    "subcategory": "history_general",
+    "question": "[Sample] Question 2 about A long and illustrious history?",
+    "variants": [
+      "[Sample] Question 2 about A long and illustrious history?",
+      "[Sample] Variant wording for question 2 on A long and illustrious history?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 3: A long and illustrious history",
+    "handbook_ref": "3.2",
+    "handbook_page": 36,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": false
+  },
+  {
+    "id": 19,
+    "ref": "SAMPLE-UK019",
+    "topic_id": 3,
+    "topic_slug": "history",
+    "subcategory": "history_general",
+    "question": "[Sample] Question 3 about A long and illustrious history?",
+    "variants": [
+      "[Sample] Question 3 about A long and illustrious history?",
+      "[Sample] Variant wording for question 3 on A long and illustrious history?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 3: A long and illustrious history",
+    "handbook_ref": "3.3",
+    "handbook_page": 37,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": false
+  },
+  {
+    "id": 20,
+    "ref": "SAMPLE-UK020",
+    "topic_id": 3,
+    "topic_slug": "history",
+    "subcategory": "history_general",
+    "question": "[Sample] Question 4 about A long and illustrious history?",
+    "variants": [
+      "[Sample] Question 4 about A long and illustrious history?",
+      "[Sample] Variant wording for question 4 on A long and illustrious history?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 3: A long and illustrious history",
+    "handbook_ref": "3.4",
+    "handbook_page": 38,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": false
+  },
+  {
+    "id": 21,
+    "ref": "SAMPLE-UK021",
+    "topic_id": 3,
+    "topic_slug": "history",
+    "subcategory": "history_general",
+    "question": "[Sample] Question 5 about A long and illustrious history?",
+    "variants": [
+      "[Sample] Question 5 about A long and illustrious history?",
+      "[Sample] Variant wording for question 5 on A long and illustrious history?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 3: A long and illustrious history",
+    "handbook_ref": "3.5",
+    "handbook_page": 39,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": false
+  },
+  {
+    "id": 22,
+    "ref": "SAMPLE-UK022",
+    "topic_id": 3,
+    "topic_slug": "history",
+    "subcategory": "history_general",
+    "question": "[Sample] Question 6 about A long and illustrious history?",
+    "variants": [
+      "[Sample] Question 6 about A long and illustrious history?",
+      "[Sample] Variant wording for question 6 on A long and illustrious history?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 3: A long and illustrious history",
+    "handbook_ref": "3.6",
+    "handbook_page": 40,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": false
+  },
+  {
+    "id": 23,
+    "ref": "SAMPLE-UK023",
+    "topic_id": 3,
+    "topic_slug": "history",
+    "subcategory": "history_general",
+    "question": "[Sample] Question 7 about A long and illustrious history?",
+    "variants": [
+      "[Sample] Question 7 about A long and illustrious history?",
+      "[Sample] Variant wording for question 7 on A long and illustrious history?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 3: A long and illustrious history",
+    "handbook_ref": "3.7",
+    "handbook_page": 41,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": true
+  },
+  {
+    "id": 24,
+    "ref": "SAMPLE-UK024",
+    "topic_id": 3,
+    "topic_slug": "history",
+    "subcategory": "history_general",
+    "question": "[Sample] Question 8 about A long and illustrious history?",
+    "variants": [
+      "[Sample] Question 8 about A long and illustrious history?",
+      "[Sample] Variant wording for question 8 on A long and illustrious history?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 3: A long and illustrious history",
+    "handbook_ref": "3.8",
+    "handbook_page": 42,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": true
+  },
+  {
+    "id": 25,
+    "ref": "SAMPLE-UK025",
+    "topic_id": 4,
+    "topic_slug": "modern_society",
+    "subcategory": "modern_society_general",
+    "question": "[Sample] Question 1 about A modern, thriving society?",
+    "variants": [
+      "[Sample] Question 1 about A modern, thriving society?",
+      "[Sample] Variant wording for question 1 on A modern, thriving society?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 4: A modern, thriving society",
+    "handbook_ref": "4.1",
+    "handbook_page": 45,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": false
+  },
+  {
+    "id": 26,
+    "ref": "SAMPLE-UK026",
+    "topic_id": 4,
+    "topic_slug": "modern_society",
+    "subcategory": "modern_society_general",
+    "question": "[Sample] Question 2 about A modern, thriving society?",
+    "variants": [
+      "[Sample] Question 2 about A modern, thriving society?",
+      "[Sample] Variant wording for question 2 on A modern, thriving society?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 4: A modern, thriving society",
+    "handbook_ref": "4.2",
+    "handbook_page": 46,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": false
+  },
+  {
+    "id": 27,
+    "ref": "SAMPLE-UK027",
+    "topic_id": 4,
+    "topic_slug": "modern_society",
+    "subcategory": "modern_society_general",
+    "question": "[Sample] Question 3 about A modern, thriving society?",
+    "variants": [
+      "[Sample] Question 3 about A modern, thriving society?",
+      "[Sample] Variant wording for question 3 on A modern, thriving society?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 4: A modern, thriving society",
+    "handbook_ref": "4.3",
+    "handbook_page": 47,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": false
+  },
+  {
+    "id": 28,
+    "ref": "SAMPLE-UK028",
+    "topic_id": 4,
+    "topic_slug": "modern_society",
+    "subcategory": "modern_society_general",
+    "question": "[Sample] Question 4 about A modern, thriving society?",
+    "variants": [
+      "[Sample] Question 4 about A modern, thriving society?",
+      "[Sample] Variant wording for question 4 on A modern, thriving society?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 4: A modern, thriving society",
+    "handbook_ref": "4.4",
+    "handbook_page": 48,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": false
+  },
+  {
+    "id": 29,
+    "ref": "SAMPLE-UK029",
+    "topic_id": 4,
+    "topic_slug": "modern_society",
+    "subcategory": "modern_society_general",
+    "question": "[Sample] Question 5 about A modern, thriving society?",
+    "variants": [
+      "[Sample] Question 5 about A modern, thriving society?",
+      "[Sample] Variant wording for question 5 on A modern, thriving society?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 4: A modern, thriving society",
+    "handbook_ref": "4.5",
+    "handbook_page": 49,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": false
+  },
+  {
+    "id": 30,
+    "ref": "SAMPLE-UK030",
+    "topic_id": 4,
+    "topic_slug": "modern_society",
+    "subcategory": "modern_society_general",
+    "question": "[Sample] Question 6 about A modern, thriving society?",
+    "variants": [
+      "[Sample] Question 6 about A modern, thriving society?",
+      "[Sample] Variant wording for question 6 on A modern, thriving society?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 4: A modern, thriving society",
+    "handbook_ref": "4.6",
+    "handbook_page": 50,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": false
+  },
+  {
+    "id": 31,
+    "ref": "SAMPLE-UK031",
+    "topic_id": 4,
+    "topic_slug": "modern_society",
+    "subcategory": "modern_society_general",
+    "question": "[Sample] Question 7 about A modern, thriving society?",
+    "variants": [
+      "[Sample] Question 7 about A modern, thriving society?",
+      "[Sample] Variant wording for question 7 on A modern, thriving society?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 4: A modern, thriving society",
+    "handbook_ref": "4.7",
+    "handbook_page": 51,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": true
+  },
+  {
+    "id": 32,
+    "ref": "SAMPLE-UK032",
+    "topic_id": 4,
+    "topic_slug": "modern_society",
+    "subcategory": "modern_society_general",
+    "question": "[Sample] Question 8 about A modern, thriving society?",
+    "variants": [
+      "[Sample] Question 8 about A modern, thriving society?",
+      "[Sample] Variant wording for question 8 on A modern, thriving society?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 4: A modern, thriving society",
+    "handbook_ref": "4.8",
+    "handbook_page": 52,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": true
+  },
+  {
+    "id": 33,
+    "ref": "SAMPLE-UK033",
+    "topic_id": 5,
+    "topic_slug": "government_law",
+    "subcategory": "government_law_general",
+    "question": "[Sample] Question 1 about The UK government, the law and your role?",
+    "variants": [
+      "[Sample] Question 1 about The UK government, the law and your role?",
+      "[Sample] Variant wording for question 1 on The UK government, the law and your role?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 5: The UK government, the law and your role",
+    "handbook_ref": "5.1",
+    "handbook_page": 55,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": false
+  },
+  {
+    "id": 34,
+    "ref": "SAMPLE-UK034",
+    "topic_id": 5,
+    "topic_slug": "government_law",
+    "subcategory": "government_law_general",
+    "question": "[Sample] Question 2 about The UK government, the law and your role?",
+    "variants": [
+      "[Sample] Question 2 about The UK government, the law and your role?",
+      "[Sample] Variant wording for question 2 on The UK government, the law and your role?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 5: The UK government, the law and your role",
+    "handbook_ref": "5.2",
+    "handbook_page": 56,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": false
+  },
+  {
+    "id": 35,
+    "ref": "SAMPLE-UK035",
+    "topic_id": 5,
+    "topic_slug": "government_law",
+    "subcategory": "government_law_general",
+    "question": "[Sample] Question 3 about The UK government, the law and your role?",
+    "variants": [
+      "[Sample] Question 3 about The UK government, the law and your role?",
+      "[Sample] Variant wording for question 3 on The UK government, the law and your role?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 5: The UK government, the law and your role",
+    "handbook_ref": "5.3",
+    "handbook_page": 57,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": false
+  },
+  {
+    "id": 36,
+    "ref": "SAMPLE-UK036",
+    "topic_id": 5,
+    "topic_slug": "government_law",
+    "subcategory": "government_law_general",
+    "question": "[Sample] Question 4 about The UK government, the law and your role?",
+    "variants": [
+      "[Sample] Question 4 about The UK government, the law and your role?",
+      "[Sample] Variant wording for question 4 on The UK government, the law and your role?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 5: The UK government, the law and your role",
+    "handbook_ref": "5.4",
+    "handbook_page": 58,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": false
+  },
+  {
+    "id": 37,
+    "ref": "SAMPLE-UK037",
+    "topic_id": 5,
+    "topic_slug": "government_law",
+    "subcategory": "government_law_general",
+    "question": "[Sample] Question 5 about The UK government, the law and your role?",
+    "variants": [
+      "[Sample] Question 5 about The UK government, the law and your role?",
+      "[Sample] Variant wording for question 5 on The UK government, the law and your role?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 5: The UK government, the law and your role",
+    "handbook_ref": "5.5",
+    "handbook_page": 59,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": false
+  },
+  {
+    "id": 38,
+    "ref": "SAMPLE-UK038",
+    "topic_id": 5,
+    "topic_slug": "government_law",
+    "subcategory": "government_law_general",
+    "question": "[Sample] Question 6 about The UK government, the law and your role?",
+    "variants": [
+      "[Sample] Question 6 about The UK government, the law and your role?",
+      "[Sample] Variant wording for question 6 on The UK government, the law and your role?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 5: The UK government, the law and your role",
+    "handbook_ref": "5.6",
+    "handbook_page": 60,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": false
+  },
+  {
+    "id": 39,
+    "ref": "SAMPLE-UK039",
+    "topic_id": 5,
+    "topic_slug": "government_law",
+    "subcategory": "government_law_general",
+    "question": "[Sample] Question 7 about The UK government, the law and your role?",
+    "variants": [
+      "[Sample] Question 7 about The UK government, the law and your role?",
+      "[Sample] Variant wording for question 7 on The UK government, the law and your role?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 5: The UK government, the law and your role",
+    "handbook_ref": "5.7",
+    "handbook_page": 61,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": true
+  },
+  {
+    "id": 40,
+    "ref": "SAMPLE-UK040",
+    "topic_id": 5,
+    "topic_slug": "government_law",
+    "subcategory": "government_law_general",
+    "question": "[Sample] Question 8 about The UK government, the law and your role?",
+    "variants": [
+      "[Sample] Question 8 about The UK government, the law and your role?",
+      "[Sample] Variant wording for question 8 on The UK government, the law and your role?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Chapter 5: The UK government, the law and your role",
+    "handbook_ref": "5.8",
+    "handbook_page": 62,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "uk",
+    "is_premium": true
+  }
+]

@@ -18,6 +18,7 @@ import { apps, appsInSuite, contactEmail, getApp, getSuite } from "@/lib/apps";
 import JsonLd from "@/components/site/JsonLd";
 import { appLd, breadcrumbLd, faqLd, ogImage } from "@/lib/seo";
 import { appSeo } from "@/lib/appSeo";
+import { hasPractice, loadPractice } from "@/lib/questions";
 
 export const dynamicParams = false;
 
@@ -55,6 +56,7 @@ export default async function AppPage({ params }: { params: Promise<{ slug: stri
   const seo = appSeo[app.slug];
   // Search-question FAQs come first: they target what people type into Google.
   const faq = [...seo.faq, ...app.faq];
+  const practice = hasPractice(app.slug) ? loadPractice(app.slug) : null;
   const { primary, secondary, soft, dark } = app.theme;
   const siblings = appsInSuite(app.suiteId).filter((a) => a.slug !== app.slug);
   const screenTheme = { primary, secondary, soft, dark };
@@ -74,7 +76,7 @@ export default async function AppPage({ params }: { params: Promise<{ slug: stri
           ]),
         ]}
       />
-      <AppNav name={app.shortName} icon={app.icon} color={primary} playUrl={app.playUrl} darkHero={dark} />
+      <AppNav name={app.shortName} icon={app.icon} color={primary} playUrl={app.playUrl} darkHero={dark} practiceHref={practice ? `/${app.slug}/practice/` : undefined} />
 
       {/* ── Hero ── */}
       <section className="relative isolate flex min-h-[100svh] items-center overflow-hidden px-5 pb-20 pt-32">
@@ -125,6 +127,41 @@ export default async function AppPage({ params }: { params: Promise<{ slug: stri
           <PhoneShowcase screens={app.screens} theme={screenTheme} name={app.shortName} icon={app.icon} />
         </div>
       </section>
+
+      {/* ── Free web practice (exam apps with a question bank) ── */}
+      {practice && (
+        <section className="px-5 pt-16">
+          <Reveal>
+            <div className="mx-auto max-w-6xl rounded-[2.5rem] bg-white p-8 ring-1 ring-black/5 sm:p-10">
+              <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+                <div className="max-w-xl">
+                  <Eyebrow color={primary}>Try it free, no download</Eyebrow>
+                  <h2 className="font-display mt-3 text-3xl font-extrabold sm:text-4xl">Test yourself right now</h2>
+                  <p className="mt-3 text-[#3d3d52]">
+                    Practise {practice.examName} questions by topic, or take a free{" "}
+                    {Math.min(practice.exam.questions, practice.mockPool.length)}-question mock test in your browser.
+                  </p>
+                </div>
+                <div className="grid gap-3 sm:grid-cols-3 lg:w-[34rem]">
+                  {[
+                    ["🎯", "Practice by topic", `/${app.slug}/practice/`],
+                    ["⏱️", "Free mock test", `/${app.slug}/mock-test/`],
+                    ["📖", "Sample questions", `/${app.slug}/questions/`],
+                  ].map(([e, l, h]) => (
+                    <Link key={h} href={h} className="group flex flex-col gap-2 rounded-2xl p-5 font-bold transition-all hover:-translate-y-1 hover:shadow-lg" style={{ background: soft }}>
+                      <span className="text-2xl">{e}</span>
+                      {l}
+                      <span className="text-sm font-semibold transition-transform group-hover:translate-x-1" style={{ color: primary }}>
+                        Start →
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </section>
+      )}
 
       {/* ── Stats / overview ── */}
       <section className="relative px-5 py-24" style={{ background: soft }}>
