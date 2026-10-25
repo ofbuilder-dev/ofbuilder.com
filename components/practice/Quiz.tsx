@@ -148,8 +148,12 @@ export default function Quiz(p: QuizProps) {
   // ── Intro (mock) ─────────────────────────────────────────
   if (phase === "intro") {
     return (
-      <div className="rounded-[2rem] bg-white p-6 text-center ring-1 ring-black/5 sm:p-12">
-        <h2 className="font-display text-3xl font-extrabold sm:text-4xl">{p.title ?? "Free mock test"}</h2>
+      <div className="relative overflow-hidden rounded-[2rem] bg-white p-6 text-center shadow-[0_30px_60px_-35px_rgba(15,15,26,0.35)] ring-1 ring-black/5 sm:p-12">
+        <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-1.5" style={{ background: p.color }} />
+        <span className="mx-auto grid h-16 w-16 place-items-center rounded-2xl text-3xl" style={{ background: p.color + "14" }}>
+          {p.mode === "ready" ? "📊" : "⏱️"}
+        </span>
+        <h2 className="font-display mt-5 text-3xl font-extrabold sm:text-4xl">{p.title ?? "Free mock test"}</h2>
         <div className="mx-auto mt-8 grid max-w-lg grid-cols-3 gap-2 sm:gap-3">
           {(p.mode === "ready"
             ? [
@@ -171,10 +175,14 @@ export default function Quiz(p: QuizProps) {
             </div>
           ))}
         </div>
-        {best !== null && <p className="mt-6 text-sm font-semibold text-[#6b6b80]">Your best score: {best}%</p>}
-        <button onClick={start} className="mt-8 inline-flex h-14 items-center rounded-full px-8 text-base font-bold text-white shadow-lg transition-transform hover:-translate-y-0.5 active:scale-95" style={{ background: p.color }}>
+        {best !== null && (
+          <p className="mt-6 inline-flex rounded-full bg-black/[0.04] px-4 py-1.5 text-sm font-semibold text-[#3d3d52]">🏅 Your best score: {best}%</p>
+        )}
+<div className="mt-8">
+        <button onClick={start} className="inline-flex h-14 items-center rounded-full px-8 text-base font-bold text-white shadow-lg transition-transform hover:-translate-y-0.5 active:scale-95" style={{ background: p.color }}>
           {p.mode === "ready" ? "Check my readiness →" : "Start mock test →"}
         </button>
+        </div>
         <p className="mt-4 text-xs text-[#6b6b80]">Free, no sign-up. Questions are shuffled every time.</p>
       </div>
     );
