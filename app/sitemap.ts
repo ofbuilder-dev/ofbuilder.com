@@ -4,6 +4,8 @@ import type { MetadataRoute } from "next";
 import { apps, suites } from "@/lib/apps";
 import { getAllPosts } from "@/lib/blog";
 import { abs } from "@/lib/seo";
+import { guideSlugs } from "@/lib/guides";
+import { localParams } from "@/lib/i18n";
 import { loadPractice, practiceSlugs } from "@/lib/questions";
 
 export const dynamic = "force-static";
@@ -35,7 +37,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Free practice pages, once a real (non-sample) question bank is in place.
     ...practiceSlugs()
       .filter((slug) => !loadPractice(slug).isSample)
-      .flatMap((slug) => ["practice", "mock-test", "questions"].map((p) => entry(`/${slug}/${p}/`, 0.85, "weekly"))),
+      .flatMap((slug) => ["mock-test", "readiness", "practice", "questions"].map((p) => entry(`/${slug}/${p}/`, 0.85, "weekly"))),
+    entry("/free-tests/", 0.9, "weekly"),
+    ...guideSlugs().map((slug) => entry(`/${slug}/guide/`, 0.85, "monthly")),
+    ...localParams().map(({ slug, lang }) => entry(`/${slug}/${lang}/`, 0.8, "monthly")),
+    entry("/brightkids/play/", 0.7, "monthly"),
+    entry("/ilmai/ayah/", 0.7, "daily"),
+    entry("/stories/", 0.5, "weekly"),
     entry("/blog/", 0.7, "daily"),
     ...getAllPosts().map((p) => entry(`/blog/${p.slug}/`, 0.6, "yearly", new Date(p.date))),
     entry("/contact/", 0.5, "yearly"),

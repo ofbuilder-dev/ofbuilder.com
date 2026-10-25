@@ -3,10 +3,12 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { QuizQuestion } from "@/lib/questions";
+import { track } from "@/lib/analytics";
 import AppUpsell from "./AppUpsell";
+import ShareResult from "./ShareResult";
 
 export type QuizProps = {
-  mode: "practice" | "mock";
+  mode: "practice" | "mock" | "ready"; // ready = short readiness check with a per-topic breakdown
   questions: QuizQuestion[];
   color: string;
   appName: string;
@@ -21,6 +23,11 @@ export type QuizProps = {
   passMark?: number;
   title?: string;
   onExit?: () => void;
+  // sharing and readiness
+  slug?: string;
+  examName?: string;
+  sharePath?: string;
+  topicLabels?: Record<string, string>;
 };
 
 type Shown = QuizQuestion & { text: string };
@@ -34,8 +41,18 @@ function shuffle<T>(a: T[]) {
   return b;
 }
 
+// Readiness check: deal questions round-robin across topics so every topic is covered.
+function spread(qs: QuizQuestion[], count: number) {
+  const byTopic = new Map<string, QuizQuestion[]>();
+  for (const q of shuffle(qs)) byTopic.set(q.topic, [...(byTopic.get(q.topic) ?? []), q]);
+  const queues = shuffle([...byTopic.values()]);
+  const out: QuizQuestion[] = [];
+  while (out.length < count && queues.some((q) => q.length)) for (const q of queues) if (q.length && out.length < count) out.push(q.shift()!);
+  return out;
+}
+
 function prepare(qs: QuizQuestion[], mode: QuizProps["mode"], count?: number): Shown[] {
-  const list = mode === "mock" ? shuffle(qs).slice(0, count ?? qs.length) : qs;
+  const list = mode === "mock" ? shuffle(qs).slice(0, count ?? qs.length) : mode === "ready" ? spread(qs, count ?? 10) : qs;
   // Pick one of the question's wording variants so repeat attempts feel fresh.
   return list.map((q) => ({ ...q, text: q.variants[Math.floor(Math.random() * q.variants.length)] ?? q.question }));
 }
@@ -96,6 +113,7 @@ export default function Quiz(p: QuizProps) {
   }, [left, phase]);
 
   const score = useMemo(() => items.filter((q) => answers[q.id] === q.correct).length, [items, answers]);
+  const exam = p.mode !== "practice"; // mock and readiness: answers revealed only at the end
   const pass = p.mode === "mock" ? score >= (p.passMark ?? Math.ceil(items.length * 0.75)) : score >= Math.ceil(items.length * 0.75);
 
   useEffect(() => {
@@ -103,6 +121,7 @@ export default function Quiz(p: QuizProps) {
       const pct = Math.round((score / items.length) * 100);
       saveBest(p.storageKey, pct);
       setBest(readBest(p.storageKey));
+      track(`${p.mode}_finish`, p.slug);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase]);
@@ -114,6 +133,7 @@ export default function Quiz(p: QuizProps) {
     setLeft((p.minutes ?? 0) * 60);
     started.current = Date.now();
     setPhase("run");
+    track(`${p.mode}_start`, p.slug);
   };
 
   useEffect(() => {
@@ -122,7 +142,7 @@ export default function Quiz(p: QuizProps) {
 
   const q = items[idx];
   const chosen = q ? answers[q.id] : undefined;
-  const revealed = p.mode === "practice" && chosen !== undefined;
+  const revealed = !exam && chosen !== undefined;
   const answeredCount = Object.keys(answers).length;
 
   // ── Intro (mock) ─────────────────────────────────────────
@@ -131,11 +151,18 @@ export default function Quiz(p: QuizProps) {
       <div className="rounded-[2rem] bg-white p-6 text-center ring-1 ring-black/5 sm:p-12">
         <h2 className="font-display text-3xl font-extrabold sm:text-4xl">{p.title ?? "Free mock test"}</h2>
         <div className="mx-auto mt-8 grid max-w-lg grid-cols-3 gap-2 sm:gap-3">
-          {[
-            [String(items.length), "questions"],
-            [p.minutes ? `${p.minutes} min` : "No limit", "time"],
-            [`${p.passMark}/${items.length}`, "to pass"],
-          ].map(([v, l]) => (
+          {(p.mode === "ready"
+            ? [
+                [String(items.length), "questions"],
+                ["~3 min", "time"],
+                ["Every", "topic covered"],
+              ]
+            : [
+                [String(items.length), "questions"],
+                [p.minutes ? `${p.minutes} min` : "No limit", "time"],
+                [`${p.passMark}/${items.length}`, "to pass"],
+              ]
+          ).map(([v, l]) => (
             <div key={l} className="rounded-2xl px-2 py-4 sm:p-4" style={{ background: p.color + "12" }}>
               <div className="font-display whitespace-nowrap text-xl font-extrabold sm:text-2xl" style={{ color: p.color }}>
                 {v}
@@ -146,7 +173,7 @@ export default function Quiz(p: QuizProps) {
         </div>
         {best !== null && <p className="mt-6 text-sm font-semibold text-[#6b6b80]">Your best score: {best}%</p>}
         <button onClick={start} className="mt-8 inline-flex h-14 items-center rounded-full px-8 text-base font-bold text-white shadow-lg transition-transform hover:-translate-y-0.5 active:scale-95" style={{ background: p.color }}>
-          Start mock test →
+          {p.mode === "ready" ? "Check my readiness →" : "Start mock test →"}
         </button>
         <p className="mt-4 text-xs text-[#6b6b80]">Free, no sign-up. Questions are shuffled every time.</p>
       </div>
@@ -156,27 +183,104 @@ export default function Quiz(p: QuizProps) {
   // ── Results ──────────────────────────────────────────────
   if (phase === "done") {
     const pct = items.length ? Math.round((score / items.length) * 100) : 0;
+    // Per-topic results for the readiness breakdown, weakest first.
+    const topicRows = Object.entries(
+      items.reduce<Record<string, { right: number; total: number }>>((acc, it) => {
+        const t = (acc[it.topic] ??= { right: 0, total: 0 });
+        t.total += 1;
+        if (answers[it.id] === it.correct) t.right += 1;
+        return acc;
+      }, {}),
+    )
+      .map(([topic, r]) => ({ topic, label: p.topicLabels?.[topic] ?? topic, ...r, pct: Math.round((r.right / r.total) * 100) }))
+      .sort((a, b) => a.pct - b.pct);
+    const weak = topicRows.filter((t) => t.pct < 75).slice(0, 2);
+    const exam_ = p.examName ?? p.appName;
+    const card = {
+      headline:
+        p.mode === "ready"
+          ? `I'm ${pct}% ready for the ${exam_}!`
+          : pass
+            ? `I passed the ${exam_} mock test! 🎉`
+            : `I scored ${pct}% on the ${exam_} mock test`,
+      big: p.mode === "ready" ? `${pct}%` : `${score}/${items.length}`,
+      sub: p.mode === "ready" ? `${score} of ${items.length} correct · readiness check` : `${pct}%${p.passMark ? ` · pass mark ${p.passMark}/${items.length}` : ""}`,
+      color: p.color,
+      icon: p.appIcon,
+      appName: p.appName,
+    };
     return (
       <div className="space-y-6">
         <div className="relative overflow-hidden rounded-[2rem] p-8 text-center text-white sm:p-12" style={{ background: pass ? `linear-gradient(135deg, ${p.color}, #10b981)` : `linear-gradient(135deg, ${p.color}, #0f0f1a)` }}>
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-white/80">{p.mode === "mock" ? (pass ? "Passed 🎉" : "Not quite yet") : "Practice complete"}</p>
-          <div className="font-display mt-3 text-7xl font-extrabold">
-            {score}/{items.length}
-          </div>
-          <p className="mt-2 text-lg font-semibold text-white/90">
-            {pct}%{p.mode === "mock" && p.passMark ? ` · pass mark ${p.passMark}/${items.length}` : ""}
-            {p.mode === "mock" && elapsed ? ` · ${fmt(elapsed)}` : ""}
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-white/80">
+            {p.mode === "mock" ? (pass ? "Passed 🎉" : "Not quite yet") : p.mode === "ready" ? "Your readiness" : "Practice complete"}
           </p>
+          <div className="font-display mt-3 text-7xl font-extrabold">{p.mode === "ready" ? `${pct}%` : `${score}/${items.length}`}</div>
+          {p.mode === "ready" && (
+            <p className="mt-2 text-lg font-semibold text-white/90">
+              {pct >= 85 ? "You look ready. Try the full mock test to be sure." : pct >= 60 ? "Nearly there. A little more practice on your weak topics." : "A good start. Focus on your weakest topics first."}
+            </p>
+          )}
+          {p.mode !== "ready" && (
+            <p className="mt-2 text-lg font-semibold text-white/90">
+              {pct}%{p.mode === "mock" && p.passMark ? ` · pass mark ${p.passMark}/${items.length}` : ""}
+              {p.mode === "mock" && elapsed ? ` · ${fmt(elapsed)}` : ""}
+            </p>
+          )}
           {best !== null && <p className="mt-1 text-sm text-white/75">Best score: {best}%</p>}
           <div className="mt-7 flex flex-wrap justify-center gap-2">
-            <button onClick={p.mode === "mock" ? start : p.onExit ?? start} className="inline-flex h-11 items-center rounded-full bg-white/15 px-5 text-sm font-bold text-white ring-1 ring-white/30 backdrop-blur transition-colors hover:bg-white/25">
-              {p.mode === "mock" ? "↻ Try again" : "← Another topic"}
+            {exam && p.slug && (pass || pct >= 50) && <ShareResult card={card} path={p.sharePath ?? `/${p.slug}/`} slug={p.slug} />}
+            <button onClick={exam ? start : p.onExit ?? start} className="inline-flex h-11 items-center rounded-full bg-white/15 px-5 text-sm font-bold text-white ring-1 ring-white/30 backdrop-blur transition-colors hover:bg-white/25">
+              {exam ? "↻ Try again" : "← Another topic"}
             </button>
             <a href="#review" className="inline-flex h-11 items-center rounded-full px-5 text-sm font-bold text-white/90 ring-1 ring-white/30 transition-colors hover:bg-white/10">
               Review answers ↓
             </a>
           </div>
         </div>
+
+        {p.mode === "ready" && (
+          <div className="rounded-[2rem] bg-white p-6 ring-1 ring-black/5 sm:p-8">
+            <h3 className="font-display text-2xl font-extrabold">Your topics</h3>
+            {weak.length > 0 && (
+              <p className="mt-1 text-[#3d3d52]">
+                Practise{" "}
+                {weak.map((w, i) => (
+                  <span key={w.topic}>
+                    {i > 0 && " and "}
+                    <b>{w.label}</b>
+                  </span>
+                ))}{" "}
+                next.
+              </p>
+            )}
+            <ul className="mt-6 space-y-4">
+              {topicRows.map((t) => (
+                <li key={t.topic}>
+                  <div className="flex justify-between gap-4 text-sm font-semibold">
+                    <span>{t.label}</span>
+                    <span className="tabular-nums text-[#6b6b80]">
+                      {t.right}/{t.total}
+                    </span>
+                  </div>
+                  <div className="mt-1.5 h-2.5 overflow-hidden rounded-full bg-black/5">
+                    <div className="h-full rounded-full" style={{ width: `${Math.max(4, t.pct)}%`, background: t.pct >= 75 ? "#10b981" : t.pct >= 50 ? "#f59e0b" : "#f43f5e" }} />
+                  </div>
+                </li>
+              ))}
+            </ul>
+            {p.slug && (
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a href={`/${p.slug}/practice/`} className="inline-flex h-12 items-center rounded-full px-6 font-bold text-white" style={{ background: p.color }}>
+                  Practise weak topics →
+                </a>
+                <a href={`/${p.slug}/mock-test/`} className="inline-flex h-12 items-center rounded-full px-6 font-bold ring-1 ring-black/10">
+                  Take the full mock test
+                </a>
+              </div>
+            )}
+          </div>
+        )}
 
         <AppUpsell
           appName={p.appName}
@@ -186,20 +290,35 @@ export default function Quiz(p: QuizProps) {
           premiumCount={p.premiumCount}
           rating={p.rating}
           headline={
-            p.mode === "mock"
+            p.mode === "ready"
+              ? pct >= 85
+                ? "You're nearly ready. Lock it in."
+                : "Close the gap faster with the full app."
+              : p.mode === "mock"
               ? pass
                 ? "Great score! Make sure you pass on the day."
                 : `You're ${Math.max(1, (p.passMark ?? 0) - score)} correct ${Math.max(1, (p.passMark ?? 0) - score) === 1 ? "answer" : "answers"} away from passing.`
               : "Keep the momentum going."
           }
           sub={
-            p.mode === "mock"
+            p.mode === "ready"
+              ? "The app tracks every topic, brings back the questions you miss and tells you when you're ready to book."
+              : p.mode === "mock"
               ? pass
                 ? "Keep practising with fresh questions and unlimited mock tests until you pass every time."
                 : "The full app helps you close the gap: it brings back your weak questions and tracks when you're ready."
               : "Practise every topic, sit unlimited mock tests and fix your mistakes in the full app."
           }
         />
+
+        {p.mode === "mock" && pass && (
+          <p className="text-center text-sm text-[#6b6b80]">
+            Passed the real thing?{" "}
+            <a href="/stories/" className="font-bold underline" style={{ color: p.color }}>
+              Share your success story
+            </a>
+          </p>
+        )}
 
         <div id="review" className="scroll-mt-28 rounded-[2rem] bg-white p-6 ring-1 ring-black/5 sm:p-8">
           <h3 className="font-display text-2xl font-extrabold">Review your answers</h3>
@@ -238,7 +357,7 @@ export default function Quiz(p: QuizProps) {
         {p.mode === "mock" && p.minutes ? (
           <span className={`rounded-full px-3 py-1 tabular-nums ${left < 60 ? "bg-rose-100 text-rose-700" : "bg-black/5"}`}>⏱ {fmt(left)}</span>
         ) : (
-          <span>{p.mode === "mock" ? `${answeredCount}/${items.length} answered` : `Score ${score}`}</span>
+          <span>{exam ? `${answeredCount}/${items.length} answered` : `Score ${score}`}</span>
         )}
       </div>
       <div className="mt-3 h-2 overflow-hidden rounded-full bg-black/5">
@@ -288,7 +407,7 @@ export default function Quiz(p: QuizProps) {
       </AnimatePresence>
 
       <div className="mt-8 flex flex-wrap items-center justify-between gap-3">
-        {p.mode === "mock" ? (
+        {exam ? (
           <button onClick={() => setIdx((i) => Math.max(0, i - 1))} disabled={idx === 0} className="h-12 rounded-full px-5 font-semibold text-[#3d3d52] ring-1 ring-black/10 disabled:opacity-40">
             ← Previous
           </button>
@@ -298,7 +417,7 @@ export default function Quiz(p: QuizProps) {
           </button>
         )}
         <div className="flex gap-3">
-          {p.mode === "mock" && idx < items.length - 1 && (
+          {exam && idx < items.length - 1 && (
             <button onClick={finish} className="h-12 rounded-full px-5 font-semibold text-[#3d3d52] ring-1 ring-black/10">
               Finish test
             </button>

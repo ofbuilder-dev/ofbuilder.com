@@ -106,6 +106,8 @@ export default function Footer() {
             <ul className="mt-5 space-y-3 text-white/75">
               {[
                 ["All apps", "/apps/"],
+                ["Free tests", "/free-tests/"],
+                ["Success stories", "/stories/"],
                 ["Blog", "/blog/"],
                 ["About", "/#studio"],
                 ["Contact", "/contact/"],

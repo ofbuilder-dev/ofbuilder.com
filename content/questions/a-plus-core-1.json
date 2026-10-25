@@ -1,0 +1,1682 @@
+[
+  {
+    "id": 1,
+    "ref": "SAMPLE-A1001",
+    "topic_id": 1,
+    "topic_slug": "mobile_devices",
+    "question": "[Sample] Question 1 about Mobile devices?",
+    "variants": [
+      "[Sample] Question 1 about Mobile devices?",
+      "[Sample] Variant wording for question 1 on Mobile devices?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 1: Mobile devices",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 2,
+    "ref": "SAMPLE-A1002",
+    "topic_id": 1,
+    "topic_slug": "mobile_devices",
+    "question": "[Sample] Question 2 about Mobile devices?",
+    "variants": [
+      "[Sample] Question 2 about Mobile devices?",
+      "[Sample] Variant wording for question 2 on Mobile devices?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 1: Mobile devices",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 3,
+    "ref": "SAMPLE-A1003",
+    "topic_id": 1,
+    "topic_slug": "mobile_devices",
+    "question": "[Sample] Question 3 about Mobile devices?",
+    "variants": [
+      "[Sample] Question 3 about Mobile devices?",
+      "[Sample] Variant wording for question 3 on Mobile devices?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 1: Mobile devices",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 4,
+    "ref": "SAMPLE-A1004",
+    "topic_id": 1,
+    "topic_slug": "mobile_devices",
+    "question": "[Sample] Question 4 about Mobile devices?",
+    "variants": [
+      "[Sample] Question 4 about Mobile devices?",
+      "[Sample] Variant wording for question 4 on Mobile devices?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 1: Mobile devices",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 5,
+    "ref": "SAMPLE-A1005",
+    "topic_id": 1,
+    "topic_slug": "mobile_devices",
+    "question": "[Sample] Question 5 about Mobile devices?",
+    "variants": [
+      "[Sample] Question 5 about Mobile devices?",
+      "[Sample] Variant wording for question 5 on Mobile devices?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 1: Mobile devices",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 6,
+    "ref": "SAMPLE-A1006",
+    "topic_id": 1,
+    "topic_slug": "mobile_devices",
+    "question": "[Sample] Question 6 about Mobile devices?",
+    "variants": [
+      "[Sample] Question 6 about Mobile devices?",
+      "[Sample] Variant wording for question 6 on Mobile devices?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 1: Mobile devices",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 7,
+    "ref": "SAMPLE-A1007",
+    "topic_id": 1,
+    "topic_slug": "mobile_devices",
+    "question": "[Sample] Question 7 about Mobile devices?",
+    "variants": [
+      "[Sample] Question 7 about Mobile devices?",
+      "[Sample] Variant wording for question 7 on Mobile devices?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 1: Mobile devices",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 8,
+    "ref": "SAMPLE-A1008",
+    "topic_id": 1,
+    "topic_slug": "mobile_devices",
+    "question": "[Sample] Question 8 about Mobile devices?",
+    "variants": [
+      "[Sample] Question 8 about Mobile devices?",
+      "[Sample] Variant wording for question 8 on Mobile devices?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 1: Mobile devices",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 9,
+    "ref": "SAMPLE-A1009",
+    "topic_id": 1,
+    "topic_slug": "mobile_devices",
+    "question": "[Sample] Question 9 about Mobile devices?",
+    "variants": [
+      "[Sample] Question 9 about Mobile devices?",
+      "[Sample] Variant wording for question 9 on Mobile devices?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 1: Mobile devices",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 10,
+    "ref": "SAMPLE-A1010",
+    "topic_id": 1,
+    "topic_slug": "mobile_devices",
+    "question": "[Sample] Question 10 about Mobile devices?",
+    "variants": [
+      "[Sample] Question 10 about Mobile devices?",
+      "[Sample] Variant wording for question 10 on Mobile devices?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 1: Mobile devices",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 11,
+    "ref": "SAMPLE-A1011",
+    "topic_id": 1,
+    "topic_slug": "mobile_devices",
+    "question": "[Sample] Question 11 about Mobile devices?",
+    "variants": [
+      "[Sample] Question 11 about Mobile devices?",
+      "[Sample] Variant wording for question 11 on Mobile devices?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 1: Mobile devices",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 12,
+    "ref": "SAMPLE-A1012",
+    "topic_id": 1,
+    "topic_slug": "mobile_devices",
+    "question": "[Sample] Question 12 about Mobile devices?",
+    "variants": [
+      "[Sample] Question 12 about Mobile devices?",
+      "[Sample] Variant wording for question 12 on Mobile devices?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 1: Mobile devices",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 13,
+    "ref": "SAMPLE-A1013",
+    "topic_id": 1,
+    "topic_slug": "mobile_devices",
+    "question": "[Sample] Question 13 about Mobile devices?",
+    "variants": [
+      "[Sample] Question 13 about Mobile devices?",
+      "[Sample] Variant wording for question 13 on Mobile devices?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 1: Mobile devices",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 14,
+    "ref": "SAMPLE-A1014",
+    "topic_id": 1,
+    "topic_slug": "mobile_devices",
+    "question": "[Sample] Question 14 about Mobile devices?",
+    "variants": [
+      "[Sample] Question 14 about Mobile devices?",
+      "[Sample] Variant wording for question 14 on Mobile devices?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 1: Mobile devices",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 15,
+    "ref": "SAMPLE-A1015",
+    "topic_id": 2,
+    "topic_slug": "networking",
+    "question": "[Sample] Question 1 about Networking?",
+    "variants": [
+      "[Sample] Question 1 about Networking?",
+      "[Sample] Variant wording for question 1 on Networking?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 2: Networking",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 16,
+    "ref": "SAMPLE-A1016",
+    "topic_id": 2,
+    "topic_slug": "networking",
+    "question": "[Sample] Question 2 about Networking?",
+    "variants": [
+      "[Sample] Question 2 about Networking?",
+      "[Sample] Variant wording for question 2 on Networking?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 2: Networking",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 17,
+    "ref": "SAMPLE-A1017",
+    "topic_id": 2,
+    "topic_slug": "networking",
+    "question": "[Sample] Question 3 about Networking?",
+    "variants": [
+      "[Sample] Question 3 about Networking?",
+      "[Sample] Variant wording for question 3 on Networking?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 2: Networking",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 18,
+    "ref": "SAMPLE-A1018",
+    "topic_id": 2,
+    "topic_slug": "networking",
+    "question": "[Sample] Question 4 about Networking?",
+    "variants": [
+      "[Sample] Question 4 about Networking?",
+      "[Sample] Variant wording for question 4 on Networking?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 2: Networking",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 19,
+    "ref": "SAMPLE-A1019",
+    "topic_id": 2,
+    "topic_slug": "networking",
+    "question": "[Sample] Question 5 about Networking?",
+    "variants": [
+      "[Sample] Question 5 about Networking?",
+      "[Sample] Variant wording for question 5 on Networking?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 2: Networking",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 20,
+    "ref": "SAMPLE-A1020",
+    "topic_id": 2,
+    "topic_slug": "networking",
+    "question": "[Sample] Question 6 about Networking?",
+    "variants": [
+      "[Sample] Question 6 about Networking?",
+      "[Sample] Variant wording for question 6 on Networking?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 2: Networking",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 21,
+    "ref": "SAMPLE-A1021",
+    "topic_id": 2,
+    "topic_slug": "networking",
+    "question": "[Sample] Question 7 about Networking?",
+    "variants": [
+      "[Sample] Question 7 about Networking?",
+      "[Sample] Variant wording for question 7 on Networking?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 2: Networking",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 22,
+    "ref": "SAMPLE-A1022",
+    "topic_id": 2,
+    "topic_slug": "networking",
+    "question": "[Sample] Question 8 about Networking?",
+    "variants": [
+      "[Sample] Question 8 about Networking?",
+      "[Sample] Variant wording for question 8 on Networking?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 2: Networking",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 23,
+    "ref": "SAMPLE-A1023",
+    "topic_id": 2,
+    "topic_slug": "networking",
+    "question": "[Sample] Question 9 about Networking?",
+    "variants": [
+      "[Sample] Question 9 about Networking?",
+      "[Sample] Variant wording for question 9 on Networking?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 2: Networking",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 24,
+    "ref": "SAMPLE-A1024",
+    "topic_id": 2,
+    "topic_slug": "networking",
+    "question": "[Sample] Question 10 about Networking?",
+    "variants": [
+      "[Sample] Question 10 about Networking?",
+      "[Sample] Variant wording for question 10 on Networking?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 2: Networking",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 25,
+    "ref": "SAMPLE-A1025",
+    "topic_id": 2,
+    "topic_slug": "networking",
+    "question": "[Sample] Question 11 about Networking?",
+    "variants": [
+      "[Sample] Question 11 about Networking?",
+      "[Sample] Variant wording for question 11 on Networking?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 2: Networking",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 26,
+    "ref": "SAMPLE-A1026",
+    "topic_id": 2,
+    "topic_slug": "networking",
+    "question": "[Sample] Question 12 about Networking?",
+    "variants": [
+      "[Sample] Question 12 about Networking?",
+      "[Sample] Variant wording for question 12 on Networking?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 2: Networking",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 27,
+    "ref": "SAMPLE-A1027",
+    "topic_id": 2,
+    "topic_slug": "networking",
+    "question": "[Sample] Question 13 about Networking?",
+    "variants": [
+      "[Sample] Question 13 about Networking?",
+      "[Sample] Variant wording for question 13 on Networking?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 2: Networking",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 28,
+    "ref": "SAMPLE-A1028",
+    "topic_id": 2,
+    "topic_slug": "networking",
+    "question": "[Sample] Question 14 about Networking?",
+    "variants": [
+      "[Sample] Question 14 about Networking?",
+      "[Sample] Variant wording for question 14 on Networking?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 2: Networking",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 29,
+    "ref": "SAMPLE-A1029",
+    "topic_id": 3,
+    "topic_slug": "hardware",
+    "question": "[Sample] Question 1 about Hardware?",
+    "variants": [
+      "[Sample] Question 1 about Hardware?",
+      "[Sample] Variant wording for question 1 on Hardware?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 3: Hardware",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 30,
+    "ref": "SAMPLE-A1030",
+    "topic_id": 3,
+    "topic_slug": "hardware",
+    "question": "[Sample] Question 2 about Hardware?",
+    "variants": [
+      "[Sample] Question 2 about Hardware?",
+      "[Sample] Variant wording for question 2 on Hardware?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 3: Hardware",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 31,
+    "ref": "SAMPLE-A1031",
+    "topic_id": 3,
+    "topic_slug": "hardware",
+    "question": "[Sample] Question 3 about Hardware?",
+    "variants": [
+      "[Sample] Question 3 about Hardware?",
+      "[Sample] Variant wording for question 3 on Hardware?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 3: Hardware",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 32,
+    "ref": "SAMPLE-A1032",
+    "topic_id": 3,
+    "topic_slug": "hardware",
+    "question": "[Sample] Question 4 about Hardware?",
+    "variants": [
+      "[Sample] Question 4 about Hardware?",
+      "[Sample] Variant wording for question 4 on Hardware?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 3: Hardware",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 33,
+    "ref": "SAMPLE-A1033",
+    "topic_id": 3,
+    "topic_slug": "hardware",
+    "question": "[Sample] Question 5 about Hardware?",
+    "variants": [
+      "[Sample] Question 5 about Hardware?",
+      "[Sample] Variant wording for question 5 on Hardware?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 3: Hardware",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 34,
+    "ref": "SAMPLE-A1034",
+    "topic_id": 3,
+    "topic_slug": "hardware",
+    "question": "[Sample] Question 6 about Hardware?",
+    "variants": [
+      "[Sample] Question 6 about Hardware?",
+      "[Sample] Variant wording for question 6 on Hardware?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 3: Hardware",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 35,
+    "ref": "SAMPLE-A1035",
+    "topic_id": 3,
+    "topic_slug": "hardware",
+    "question": "[Sample] Question 7 about Hardware?",
+    "variants": [
+      "[Sample] Question 7 about Hardware?",
+      "[Sample] Variant wording for question 7 on Hardware?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 3: Hardware",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 36,
+    "ref": "SAMPLE-A1036",
+    "topic_id": 3,
+    "topic_slug": "hardware",
+    "question": "[Sample] Question 8 about Hardware?",
+    "variants": [
+      "[Sample] Question 8 about Hardware?",
+      "[Sample] Variant wording for question 8 on Hardware?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 3: Hardware",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 37,
+    "ref": "SAMPLE-A1037",
+    "topic_id": 3,
+    "topic_slug": "hardware",
+    "question": "[Sample] Question 9 about Hardware?",
+    "variants": [
+      "[Sample] Question 9 about Hardware?",
+      "[Sample] Variant wording for question 9 on Hardware?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 3: Hardware",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 38,
+    "ref": "SAMPLE-A1038",
+    "topic_id": 3,
+    "topic_slug": "hardware",
+    "question": "[Sample] Question 10 about Hardware?",
+    "variants": [
+      "[Sample] Question 10 about Hardware?",
+      "[Sample] Variant wording for question 10 on Hardware?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 3: Hardware",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 39,
+    "ref": "SAMPLE-A1039",
+    "topic_id": 3,
+    "topic_slug": "hardware",
+    "question": "[Sample] Question 11 about Hardware?",
+    "variants": [
+      "[Sample] Question 11 about Hardware?",
+      "[Sample] Variant wording for question 11 on Hardware?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 3: Hardware",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 40,
+    "ref": "SAMPLE-A1040",
+    "topic_id": 3,
+    "topic_slug": "hardware",
+    "question": "[Sample] Question 12 about Hardware?",
+    "variants": [
+      "[Sample] Question 12 about Hardware?",
+      "[Sample] Variant wording for question 12 on Hardware?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 3: Hardware",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 41,
+    "ref": "SAMPLE-A1041",
+    "topic_id": 3,
+    "topic_slug": "hardware",
+    "question": "[Sample] Question 13 about Hardware?",
+    "variants": [
+      "[Sample] Question 13 about Hardware?",
+      "[Sample] Variant wording for question 13 on Hardware?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 3: Hardware",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 42,
+    "ref": "SAMPLE-A1042",
+    "topic_id": 3,
+    "topic_slug": "hardware",
+    "question": "[Sample] Question 14 about Hardware?",
+    "variants": [
+      "[Sample] Question 14 about Hardware?",
+      "[Sample] Variant wording for question 14 on Hardware?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 3: Hardware",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 43,
+    "ref": "SAMPLE-A1043",
+    "topic_id": 4,
+    "topic_slug": "virtualization_and_cloud_computing",
+    "question": "[Sample] Question 1 about Virtualization and cloud computing?",
+    "variants": [
+      "[Sample] Question 1 about Virtualization and cloud computing?",
+      "[Sample] Variant wording for question 1 on Virtualization and cloud computing?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 4: Virtualization and cloud computing",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 44,
+    "ref": "SAMPLE-A1044",
+    "topic_id": 4,
+    "topic_slug": "virtualization_and_cloud_computing",
+    "question": "[Sample] Question 2 about Virtualization and cloud computing?",
+    "variants": [
+      "[Sample] Question 2 about Virtualization and cloud computing?",
+      "[Sample] Variant wording for question 2 on Virtualization and cloud computing?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 4: Virtualization and cloud computing",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 45,
+    "ref": "SAMPLE-A1045",
+    "topic_id": 4,
+    "topic_slug": "virtualization_and_cloud_computing",
+    "question": "[Sample] Question 3 about Virtualization and cloud computing?",
+    "variants": [
+      "[Sample] Question 3 about Virtualization and cloud computing?",
+      "[Sample] Variant wording for question 3 on Virtualization and cloud computing?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 4: Virtualization and cloud computing",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 46,
+    "ref": "SAMPLE-A1046",
+    "topic_id": 4,
+    "topic_slug": "virtualization_and_cloud_computing",
+    "question": "[Sample] Question 4 about Virtualization and cloud computing?",
+    "variants": [
+      "[Sample] Question 4 about Virtualization and cloud computing?",
+      "[Sample] Variant wording for question 4 on Virtualization and cloud computing?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 4: Virtualization and cloud computing",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 47,
+    "ref": "SAMPLE-A1047",
+    "topic_id": 4,
+    "topic_slug": "virtualization_and_cloud_computing",
+    "question": "[Sample] Question 5 about Virtualization and cloud computing?",
+    "variants": [
+      "[Sample] Question 5 about Virtualization and cloud computing?",
+      "[Sample] Variant wording for question 5 on Virtualization and cloud computing?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 4: Virtualization and cloud computing",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 48,
+    "ref": "SAMPLE-A1048",
+    "topic_id": 4,
+    "topic_slug": "virtualization_and_cloud_computing",
+    "question": "[Sample] Question 6 about Virtualization and cloud computing?",
+    "variants": [
+      "[Sample] Question 6 about Virtualization and cloud computing?",
+      "[Sample] Variant wording for question 6 on Virtualization and cloud computing?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 4: Virtualization and cloud computing",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 49,
+    "ref": "SAMPLE-A1049",
+    "topic_id": 4,
+    "topic_slug": "virtualization_and_cloud_computing",
+    "question": "[Sample] Question 7 about Virtualization and cloud computing?",
+    "variants": [
+      "[Sample] Question 7 about Virtualization and cloud computing?",
+      "[Sample] Variant wording for question 7 on Virtualization and cloud computing?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 4: Virtualization and cloud computing",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 50,
+    "ref": "SAMPLE-A1050",
+    "topic_id": 4,
+    "topic_slug": "virtualization_and_cloud_computing",
+    "question": "[Sample] Question 8 about Virtualization and cloud computing?",
+    "variants": [
+      "[Sample] Question 8 about Virtualization and cloud computing?",
+      "[Sample] Variant wording for question 8 on Virtualization and cloud computing?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 4: Virtualization and cloud computing",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 51,
+    "ref": "SAMPLE-A1051",
+    "topic_id": 4,
+    "topic_slug": "virtualization_and_cloud_computing",
+    "question": "[Sample] Question 9 about Virtualization and cloud computing?",
+    "variants": [
+      "[Sample] Question 9 about Virtualization and cloud computing?",
+      "[Sample] Variant wording for question 9 on Virtualization and cloud computing?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 4: Virtualization and cloud computing",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 52,
+    "ref": "SAMPLE-A1052",
+    "topic_id": 4,
+    "topic_slug": "virtualization_and_cloud_computing",
+    "question": "[Sample] Question 10 about Virtualization and cloud computing?",
+    "variants": [
+      "[Sample] Question 10 about Virtualization and cloud computing?",
+      "[Sample] Variant wording for question 10 on Virtualization and cloud computing?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 4: Virtualization and cloud computing",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 53,
+    "ref": "SAMPLE-A1053",
+    "topic_id": 4,
+    "topic_slug": "virtualization_and_cloud_computing",
+    "question": "[Sample] Question 11 about Virtualization and cloud computing?",
+    "variants": [
+      "[Sample] Question 11 about Virtualization and cloud computing?",
+      "[Sample] Variant wording for question 11 on Virtualization and cloud computing?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 4: Virtualization and cloud computing",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 54,
+    "ref": "SAMPLE-A1054",
+    "topic_id": 4,
+    "topic_slug": "virtualization_and_cloud_computing",
+    "question": "[Sample] Question 12 about Virtualization and cloud computing?",
+    "variants": [
+      "[Sample] Question 12 about Virtualization and cloud computing?",
+      "[Sample] Variant wording for question 12 on Virtualization and cloud computing?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 4: Virtualization and cloud computing",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 55,
+    "ref": "SAMPLE-A1055",
+    "topic_id": 4,
+    "topic_slug": "virtualization_and_cloud_computing",
+    "question": "[Sample] Question 13 about Virtualization and cloud computing?",
+    "variants": [
+      "[Sample] Question 13 about Virtualization and cloud computing?",
+      "[Sample] Variant wording for question 13 on Virtualization and cloud computing?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 4: Virtualization and cloud computing",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 56,
+    "ref": "SAMPLE-A1056",
+    "topic_id": 4,
+    "topic_slug": "virtualization_and_cloud_computing",
+    "question": "[Sample] Question 14 about Virtualization and cloud computing?",
+    "variants": [
+      "[Sample] Question 14 about Virtualization and cloud computing?",
+      "[Sample] Variant wording for question 14 on Virtualization and cloud computing?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 4: Virtualization and cloud computing",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 57,
+    "ref": "SAMPLE-A1057",
+    "topic_id": 5,
+    "topic_slug": "hardware_and_network_troubleshooting",
+    "question": "[Sample] Question 1 about Hardware and network troubleshooting?",
+    "variants": [
+      "[Sample] Question 1 about Hardware and network troubleshooting?",
+      "[Sample] Variant wording for question 1 on Hardware and network troubleshooting?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 5: Hardware and network troubleshooting",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 58,
+    "ref": "SAMPLE-A1058",
+    "topic_id": 5,
+    "topic_slug": "hardware_and_network_troubleshooting",
+    "question": "[Sample] Question 2 about Hardware and network troubleshooting?",
+    "variants": [
+      "[Sample] Question 2 about Hardware and network troubleshooting?",
+      "[Sample] Variant wording for question 2 on Hardware and network troubleshooting?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 5: Hardware and network troubleshooting",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 59,
+    "ref": "SAMPLE-A1059",
+    "topic_id": 5,
+    "topic_slug": "hardware_and_network_troubleshooting",
+    "question": "[Sample] Question 3 about Hardware and network troubleshooting?",
+    "variants": [
+      "[Sample] Question 3 about Hardware and network troubleshooting?",
+      "[Sample] Variant wording for question 3 on Hardware and network troubleshooting?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 5: Hardware and network troubleshooting",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 60,
+    "ref": "SAMPLE-A1060",
+    "topic_id": 5,
+    "topic_slug": "hardware_and_network_troubleshooting",
+    "question": "[Sample] Question 4 about Hardware and network troubleshooting?",
+    "variants": [
+      "[Sample] Question 4 about Hardware and network troubleshooting?",
+      "[Sample] Variant wording for question 4 on Hardware and network troubleshooting?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 5: Hardware and network troubleshooting",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 61,
+    "ref": "SAMPLE-A1061",
+    "topic_id": 5,
+    "topic_slug": "hardware_and_network_troubleshooting",
+    "question": "[Sample] Question 5 about Hardware and network troubleshooting?",
+    "variants": [
+      "[Sample] Question 5 about Hardware and network troubleshooting?",
+      "[Sample] Variant wording for question 5 on Hardware and network troubleshooting?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 5: Hardware and network troubleshooting",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 62,
+    "ref": "SAMPLE-A1062",
+    "topic_id": 5,
+    "topic_slug": "hardware_and_network_troubleshooting",
+    "question": "[Sample] Question 6 about Hardware and network troubleshooting?",
+    "variants": [
+      "[Sample] Question 6 about Hardware and network troubleshooting?",
+      "[Sample] Variant wording for question 6 on Hardware and network troubleshooting?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 5: Hardware and network troubleshooting",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 63,
+    "ref": "SAMPLE-A1063",
+    "topic_id": 5,
+    "topic_slug": "hardware_and_network_troubleshooting",
+    "question": "[Sample] Question 7 about Hardware and network troubleshooting?",
+    "variants": [
+      "[Sample] Question 7 about Hardware and network troubleshooting?",
+      "[Sample] Variant wording for question 7 on Hardware and network troubleshooting?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 5: Hardware and network troubleshooting",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 64,
+    "ref": "SAMPLE-A1064",
+    "topic_id": 5,
+    "topic_slug": "hardware_and_network_troubleshooting",
+    "question": "[Sample] Question 8 about Hardware and network troubleshooting?",
+    "variants": [
+      "[Sample] Question 8 about Hardware and network troubleshooting?",
+      "[Sample] Variant wording for question 8 on Hardware and network troubleshooting?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 5: Hardware and network troubleshooting",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": false
+  },
+  {
+    "id": 65,
+    "ref": "SAMPLE-A1065",
+    "topic_id": 5,
+    "topic_slug": "hardware_and_network_troubleshooting",
+    "question": "[Sample] Question 9 about Hardware and network troubleshooting?",
+    "variants": [
+      "[Sample] Question 9 about Hardware and network troubleshooting?",
+      "[Sample] Variant wording for question 9 on Hardware and network troubleshooting?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 5: Hardware and network troubleshooting",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 66,
+    "ref": "SAMPLE-A1066",
+    "topic_id": 5,
+    "topic_slug": "hardware_and_network_troubleshooting",
+    "question": "[Sample] Question 10 about Hardware and network troubleshooting?",
+    "variants": [
+      "[Sample] Question 10 about Hardware and network troubleshooting?",
+      "[Sample] Variant wording for question 10 on Hardware and network troubleshooting?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 5: Hardware and network troubleshooting",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 67,
+    "ref": "SAMPLE-A1067",
+    "topic_id": 5,
+    "topic_slug": "hardware_and_network_troubleshooting",
+    "question": "[Sample] Question 11 about Hardware and network troubleshooting?",
+    "variants": [
+      "[Sample] Question 11 about Hardware and network troubleshooting?",
+      "[Sample] Variant wording for question 11 on Hardware and network troubleshooting?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 5: Hardware and network troubleshooting",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 68,
+    "ref": "SAMPLE-A1068",
+    "topic_id": 5,
+    "topic_slug": "hardware_and_network_troubleshooting",
+    "question": "[Sample] Question 12 about Hardware and network troubleshooting?",
+    "variants": [
+      "[Sample] Question 12 about Hardware and network troubleshooting?",
+      "[Sample] Variant wording for question 12 on Hardware and network troubleshooting?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 5: Hardware and network troubleshooting",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 69,
+    "ref": "SAMPLE-A1069",
+    "topic_id": 5,
+    "topic_slug": "hardware_and_network_troubleshooting",
+    "question": "[Sample] Question 13 about Hardware and network troubleshooting?",
+    "variants": [
+      "[Sample] Question 13 about Hardware and network troubleshooting?",
+      "[Sample] Variant wording for question 13 on Hardware and network troubleshooting?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 5: Hardware and network troubleshooting",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  },
+  {
+    "id": 70,
+    "ref": "SAMPLE-A1070",
+    "topic_id": 5,
+    "topic_slug": "hardware_and_network_troubleshooting",
+    "question": "[Sample] Question 14 about Hardware and network troubleshooting?",
+    "variants": [
+      "[Sample] Question 14 about Hardware and network troubleshooting?",
+      "[Sample] Variant wording for question 14 on Hardware and network troubleshooting?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Topic 5: Hardware and network troubleshooting",
+    "difficulty": "medium",
+    "updated_year": 2026,
+    "is_premium": true
+  }
+]

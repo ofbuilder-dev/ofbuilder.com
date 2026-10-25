@@ -10,6 +10,7 @@ export type BlogPost = {
   tags?: string[];
   date: string;
   body: string;
+  app?: string; // app slug for the call-to-action card at the end of the post
 };
 
 const BLOG_DIR = path.join(process.cwd(), "content/blog");

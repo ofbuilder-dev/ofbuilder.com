@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AppIcon from "@/components/ui/AppIcon";
+import { getApp } from "@/lib/apps";
+import { guides } from "@/lib/guides";
+import { hasPractice } from "@/lib/questions";
 import { notFound } from "next/navigation";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
@@ -27,6 +31,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   if (!post) notFound();
 
   const paragraphs = post.body.split("\n\n");
+  const app = post.app ? getApp(post.app) : undefined;
 
   return (
     <div className="relative">
@@ -43,10 +48,48 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </p>
         </div>
         <div className="mt-10 space-y-5 text-lg leading-relaxed text-[#3d3d52]">
-          {paragraphs.map((para, i) => (
-            <p key={i}>{para.replace(/\*\*(.*?)\*\*/g, "$1")}</p>
-          ))}
+          {paragraphs.map((para, i) =>
+            /^# /.test(para) ? null : /^#{2,3} /.test(para) ? (
+              <h2 key={i} className="font-display pt-4 text-3xl font-extrabold text-[#0f0f1a]">
+                {para.replace(/^#+ /, "")}
+              </h2>
+            ) : para.startsWith("- ") ? (
+              <ul key={i} className="list-disc space-y-1.5 pl-6">
+                {para.split("\n").map((li, j) => (
+                  <li key={j}>{li.replace(/^- /, "").replace(/\*\*(.*?)\*\*/g, "$1")}</li>
+                ))}
+              </ul>
+            ) : (
+              <p key={i}>{para.replace(/\*\*(.*?)\*\*/g, "$1")}</p>
+            ),
+          )}
         </div>
+        {app && (
+          <div className="mt-12 rounded-[2rem] p-8 text-white" style={{ background: `linear-gradient(135deg, ${app.theme.primary}, #0f0f1a)` }}>
+            <div className="flex items-center gap-4">
+              <AppIcon src={app.icon} name={app.shortName} size={64} />
+              <div>
+                <p className="font-display text-2xl font-extrabold">{hasPractice(app.slug) ? "Test yourself for free" : `Try ${app.shortName}`}</p>
+                <p className="text-white/75">{app.tagline}</p>
+              </div>
+            </div>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {hasPractice(app.slug) && (
+                <Link href={`/${app.slug}/mock-test/`} className="rounded-full bg-white px-6 py-3 font-bold text-[#0f0f1a]">
+                  Free mock test →
+                </Link>
+              )}
+              {guides[app.slug] && (
+                <Link href={`/${app.slug}/guide/`} className="rounded-full px-6 py-3 font-bold ring-1 ring-white/30">
+                  Exam guide
+                </Link>
+              )}
+              <Link href={`/${app.slug}/`} className="rounded-full px-6 py-3 font-bold ring-1 ring-white/30">
+                About the app
+              </Link>
+            </div>
+          </div>
+        )}
       </article>
       <Footer />
     </div>

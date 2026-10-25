@@ -11,6 +11,8 @@ import CountUp from "@/components/ui/CountUp";
 import Tilt from "@/components/ui/Tilt";
 import Icon from "@/components/ui/Icon";
 import AppIcon from "@/components/ui/AppIcon";
+import DailyQuestion from "@/components/practice/DailyQuestion";
+import { dailyPool, loadPractice, practiceSlugs } from "@/lib/questions";
 import { apps, appsInSuite, contactEmail, getApp, labApps, playDeveloperUrl, suites, type App } from "@/lib/apps";
 
 export const metadata: Metadata = { alternates: { canonical: "/" } };
@@ -59,6 +61,14 @@ export default function Home() {
     ...s,
     apps: appsInSuite(s.id).map((a) => ({ slug: a.slug, shortName: a.shortName, icon: a.icon })),
   }));
+  const tests = practiceSlugs();
+  // The home page only shows a daily question from real (non-sample) question banks.
+  const daily = tests
+    .filter((slug) => !loadPractice(slug).isSample)
+    .map((slug) => {
+      const a = getApp(slug)!;
+      return { slug, label: a.shortName, color: a.theme.primary, pool: dailyPool(slug, 30) };
+    });
   const half = Math.ceil(apps.length / 2);
   const rows = [apps.slice(0, half), apps.slice(half)];
 
@@ -105,6 +115,52 @@ export default function Home() {
             </Reveal>
           ))}
         </div>
+      </section>
+
+      {/* Free tests */}
+      <section className="mx-auto max-w-6xl px-5 pb-24">
+        <Reveal>
+          <div className="relative overflow-hidden rounded-[2.5rem] bg-[#0f0f1a] p-8 text-white sm:p-12">
+            <Blobs colors={["#10b981", "#4cc9f0", "#8b5cf6", "#ff6b6b"]} opacity={0.22} />
+            <div className="relative grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center">
+              <div>
+                <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#8ee55e]">Free in your browser</p>
+                <h2 className="font-display mt-3 text-4xl font-extrabold sm:text-5xl">Take a free mock test. Right now.</h2>
+                <p className="mt-4 max-w-md text-lg text-white/70">
+                  {tests.length} exams with free mock tests, readiness checks and practice questions. No download, no sign-up.
+                </p>
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <Link href="/free-tests/" className="rounded-full bg-white px-7 py-4 font-bold text-[#0f0f1a] transition-transform hover:-translate-y-1">
+                    Browse free tests →
+                  </Link>
+                  <Link href="/stories/" className="rounded-full px-7 py-4 font-bold ring-1 ring-white/25 transition-colors hover:bg-white/10">
+                    Success stories
+                  </Link>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  ["🇬🇧", "Life in the UK", "/life-in-the-uk/mock-test/"],
+                  ["🚗", "Car theory", "/driving-theory/mock-test/"],
+                  ["🛡️", "Security+", "/security-plus/mock-test/"],
+                  ["🇺🇸", "US citizenship", "/us-citizenship/mock-test/"],
+                  ["🦁", "Kids ABC game", "/brightkids/play/"],
+                  ["🌙", "Ayah of the day", "/ilmai/ayah/"],
+                ].map(([e, l, h]) => (
+                  <Link key={h} href={h} className="flex items-center gap-3 rounded-2xl bg-white/[0.07] p-4 font-semibold ring-1 ring-white/10 transition-all hover:-translate-y-0.5 hover:bg-white/[0.12]">
+                    <span className="text-2xl">{e}</span>
+                    {l}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Reveal>
+        {daily.length > 0 && (
+          <Reveal className="mt-6">
+            <DailyQuestion sources={daily} />
+          </Reveal>
+        )}
       </section>
 
       {/* Suites */}

@@ -60,6 +60,7 @@ export default function NavClient({ suites, playUrl }: { suites: SuiteLink[]; pl
             </AnimatePresence>
           </div>
           <Link href="/apps/" className="rounded-full px-5 py-2.5 transition-colors hover:bg-black/5">All apps</Link>
+          <Link href="/free-tests/" className="rounded-full px-5 py-2.5 text-[#10b981] transition-colors hover:bg-black/5">Free tests</Link>
           <Link href="/blog/" className="rounded-full px-5 py-2.5 transition-colors hover:bg-black/5">Blog</Link>
           <Link href="/#studio" className="rounded-full px-5 py-2.5 transition-colors hover:bg-black/5">Studio</Link>
           <Link href="/contact/" className="rounded-full px-5 py-2.5 transition-colors hover:bg-black/5">Contact</Link>
@@ -103,6 +104,8 @@ export default function NavClient({ suites, playUrl }: { suites: SuiteLink[]; pl
               <div className="my-2 h-px bg-black/5" />
               {[
                 ["All apps", "/apps/"],
+                ["Free tests ✨", "/free-tests/"],
+                ["Success stories", "/stories/"],
                 ["Blog", "/blog/"],
                 ["Studio", "/#studio"],
                 ["Contact", "/contact/"],

@@ -12,6 +12,13 @@ secondary = os.environ['SECONDARY']
 date = os.environ['POST_DATE']
 datetime_str = os.environ['POST_DATETIME']
 api_key = os.environ['OPENROUTER_API_KEY']
+app_slug = os.environ.get('APP_SLUG', '')
+# Exam topics also link the free web mock test, so readers can try it straight away.
+extra = (
+    f"\n5. This is a search-question post: answer the question in the first paragraph, use facts only from official sources, "
+    f"and link the free mock test at https://ofbuilder.com/{app_slug}/mock-test/ and the guide at https://ofbuilder.com/{app_slug}/guide/."
+    if app_slug else ""
+)
 
 prompt = f"""You are a blog writer for OfBuilder — an indie app studio based in Sylhet, Bangladesh that builds AI-powered Flutter apps.
 
@@ -30,7 +37,7 @@ STRICT RULES:
 1. HUMAN TONE — avoid: "In today's fast-paced world", "We are excited to announce", "Discover the amazing features", "Transforming your experience". Use short sentences and real thoughts. Start with a specific story or problem. Include one honest struggle. Mention real numbers.
 2. Word count: 600-900 words exactly.
 3. Do NOT use: journey, game-changer, revolutionary, seamless, robust, leverage.
-4. Include the Play Store link and https://ofbuilder.com as backlinks naturally in the text.
+4. Include the Play Store link and https://ofbuilder.com as backlinks naturally in the text.{extra}
 
 STRUCTURE:
 - Hook (2-3 sentences): specific problem, story, or surprising fact — not generic
@@ -89,6 +96,8 @@ post = json.loads(content)
 post["date"] = datetime_str
 post.setdefault("description", post.get("excerpt", ""))
 post.setdefault("tags", [])
+if app_slug:
+    post["app"] = app_slug
 
 filename = "content/blog/" + post["slug"] + ".json"
 with open(filename, "w", encoding="utf-8") as f:
