@@ -1,0 +1,1162 @@
+[
+  {
+    "id": 1,
+    "ref": "SAMPLE-DENMARK001",
+    "topic_id": 1,
+    "topic_slug": "danish_history",
+    "subcategory": "danish_history_general",
+    "question": "[Sample] Question 1 about Danish history?",
+    "variants": [
+      "[Sample] Question 1 about Danish history?",
+      "[Sample] Variant wording for question 1 on Danish history?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Danish history",
+    "handbook_ref": "1.1",
+    "handbook_page": 15,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": false
+  },
+  {
+    "id": 2,
+    "ref": "SAMPLE-DENMARK002",
+    "topic_id": 1,
+    "topic_slug": "danish_history",
+    "subcategory": "danish_history_general",
+    "question": "[Sample] Question 2 about Danish history?",
+    "variants": [
+      "[Sample] Question 2 about Danish history?",
+      "[Sample] Variant wording for question 2 on Danish history?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Danish history",
+    "handbook_ref": "1.2",
+    "handbook_page": 16,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": false
+  },
+  {
+    "id": 3,
+    "ref": "SAMPLE-DENMARK003",
+    "topic_id": 1,
+    "topic_slug": "danish_history",
+    "subcategory": "danish_history_general",
+    "question": "[Sample] Question 3 about Danish history?",
+    "variants": [
+      "[Sample] Question 3 about Danish history?",
+      "[Sample] Variant wording for question 3 on Danish history?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Danish history",
+    "handbook_ref": "1.3",
+    "handbook_page": 17,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": false
+  },
+  {
+    "id": 4,
+    "ref": "SAMPLE-DENMARK004",
+    "topic_id": 1,
+    "topic_slug": "danish_history",
+    "subcategory": "danish_history_general",
+    "question": "[Sample] Question 4 about Danish history?",
+    "variants": [
+      "[Sample] Question 4 about Danish history?",
+      "[Sample] Variant wording for question 4 on Danish history?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Danish history",
+    "handbook_ref": "1.4",
+    "handbook_page": 18,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": false
+  },
+  {
+    "id": 5,
+    "ref": "SAMPLE-DENMARK005",
+    "topic_id": 1,
+    "topic_slug": "danish_history",
+    "subcategory": "danish_history_general",
+    "question": "[Sample] Question 5 about Danish history?",
+    "variants": [
+      "[Sample] Question 5 about Danish history?",
+      "[Sample] Variant wording for question 5 on Danish history?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Danish history",
+    "handbook_ref": "1.5",
+    "handbook_page": 19,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": false
+  },
+  {
+    "id": 6,
+    "ref": "SAMPLE-DENMARK006",
+    "topic_id": 1,
+    "topic_slug": "danish_history",
+    "subcategory": "danish_history_general",
+    "question": "[Sample] Question 6 about Danish history?",
+    "variants": [
+      "[Sample] Question 6 about Danish history?",
+      "[Sample] Variant wording for question 6 on Danish history?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Danish history",
+    "handbook_ref": "1.6",
+    "handbook_page": 20,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": false
+  },
+  {
+    "id": 7,
+    "ref": "SAMPLE-DENMARK007",
+    "topic_id": 1,
+    "topic_slug": "danish_history",
+    "subcategory": "danish_history_general",
+    "question": "[Sample] Question 7 about Danish history?",
+    "variants": [
+      "[Sample] Question 7 about Danish history?",
+      "[Sample] Variant wording for question 7 on Danish history?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Danish history",
+    "handbook_ref": "1.7",
+    "handbook_page": 21,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": true
+  },
+  {
+    "id": 8,
+    "ref": "SAMPLE-DENMARK008",
+    "topic_id": 1,
+    "topic_slug": "danish_history",
+    "subcategory": "danish_history_general",
+    "question": "[Sample] Question 8 about Danish history?",
+    "variants": [
+      "[Sample] Question 8 about Danish history?",
+      "[Sample] Variant wording for question 8 on Danish history?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Danish history",
+    "handbook_ref": "1.8",
+    "handbook_page": 22,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": true
+  },
+  {
+    "id": 9,
+    "ref": "SAMPLE-DENMARK009",
+    "topic_id": 2,
+    "topic_slug": "democracy",
+    "subcategory": "democracy_general",
+    "question": "[Sample] Question 1 about Danish democracy?",
+    "variants": [
+      "[Sample] Question 1 about Danish democracy?",
+      "[Sample] Variant wording for question 1 on Danish democracy?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Danish democracy",
+    "handbook_ref": "2.1",
+    "handbook_page": 25,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": false
+  },
+  {
+    "id": 10,
+    "ref": "SAMPLE-DENMARK010",
+    "topic_id": 2,
+    "topic_slug": "democracy",
+    "subcategory": "democracy_general",
+    "question": "[Sample] Question 2 about Danish democracy?",
+    "variants": [
+      "[Sample] Question 2 about Danish democracy?",
+      "[Sample] Variant wording for question 2 on Danish democracy?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Danish democracy",
+    "handbook_ref": "2.2",
+    "handbook_page": 26,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": false
+  },
+  {
+    "id": 11,
+    "ref": "SAMPLE-DENMARK011",
+    "topic_id": 2,
+    "topic_slug": "democracy",
+    "subcategory": "democracy_general",
+    "question": "[Sample] Question 3 about Danish democracy?",
+    "variants": [
+      "[Sample] Question 3 about Danish democracy?",
+      "[Sample] Variant wording for question 3 on Danish democracy?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Danish democracy",
+    "handbook_ref": "2.3",
+    "handbook_page": 27,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": false
+  },
+  {
+    "id": 12,
+    "ref": "SAMPLE-DENMARK012",
+    "topic_id": 2,
+    "topic_slug": "democracy",
+    "subcategory": "democracy_general",
+    "question": "[Sample] Question 4 about Danish democracy?",
+    "variants": [
+      "[Sample] Question 4 about Danish democracy?",
+      "[Sample] Variant wording for question 4 on Danish democracy?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Danish democracy",
+    "handbook_ref": "2.4",
+    "handbook_page": 28,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": false
+  },
+  {
+    "id": 13,
+    "ref": "SAMPLE-DENMARK013",
+    "topic_id": 2,
+    "topic_slug": "democracy",
+    "subcategory": "democracy_general",
+    "question": "[Sample] Question 5 about Danish democracy?",
+    "variants": [
+      "[Sample] Question 5 about Danish democracy?",
+      "[Sample] Variant wording for question 5 on Danish democracy?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Danish democracy",
+    "handbook_ref": "2.5",
+    "handbook_page": 29,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": false
+  },
+  {
+    "id": 14,
+    "ref": "SAMPLE-DENMARK014",
+    "topic_id": 2,
+    "topic_slug": "democracy",
+    "subcategory": "democracy_general",
+    "question": "[Sample] Question 6 about Danish democracy?",
+    "variants": [
+      "[Sample] Question 6 about Danish democracy?",
+      "[Sample] Variant wording for question 6 on Danish democracy?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Danish democracy",
+    "handbook_ref": "2.6",
+    "handbook_page": 30,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": false
+  },
+  {
+    "id": 15,
+    "ref": "SAMPLE-DENMARK015",
+    "topic_id": 2,
+    "topic_slug": "democracy",
+    "subcategory": "democracy_general",
+    "question": "[Sample] Question 7 about Danish democracy?",
+    "variants": [
+      "[Sample] Question 7 about Danish democracy?",
+      "[Sample] Variant wording for question 7 on Danish democracy?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Danish democracy",
+    "handbook_ref": "2.7",
+    "handbook_page": 31,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": true
+  },
+  {
+    "id": 16,
+    "ref": "SAMPLE-DENMARK016",
+    "topic_id": 2,
+    "topic_slug": "democracy",
+    "subcategory": "democracy_general",
+    "question": "[Sample] Question 8 about Danish democracy?",
+    "variants": [
+      "[Sample] Question 8 about Danish democracy?",
+      "[Sample] Variant wording for question 8 on Danish democracy?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Danish democracy",
+    "handbook_ref": "2.8",
+    "handbook_page": 32,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": true
+  },
+  {
+    "id": 17,
+    "ref": "SAMPLE-DENMARK017",
+    "topic_id": 3,
+    "topic_slug": "society_welfare",
+    "subcategory": "society_welfare_general",
+    "question": "[Sample] Question 1 about Society and the welfare state?",
+    "variants": [
+      "[Sample] Question 1 about Society and the welfare state?",
+      "[Sample] Variant wording for question 1 on Society and the welfare state?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Society and the welfare state",
+    "handbook_ref": "3.1",
+    "handbook_page": 35,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": false
+  },
+  {
+    "id": 18,
+    "ref": "SAMPLE-DENMARK018",
+    "topic_id": 3,
+    "topic_slug": "society_welfare",
+    "subcategory": "society_welfare_general",
+    "question": "[Sample] Question 2 about Society and the welfare state?",
+    "variants": [
+      "[Sample] Question 2 about Society and the welfare state?",
+      "[Sample] Variant wording for question 2 on Society and the welfare state?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Society and the welfare state",
+    "handbook_ref": "3.2",
+    "handbook_page": 36,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": false
+  },
+  {
+    "id": 19,
+    "ref": "SAMPLE-DENMARK019",
+    "topic_id": 3,
+    "topic_slug": "society_welfare",
+    "subcategory": "society_welfare_general",
+    "question": "[Sample] Question 3 about Society and the welfare state?",
+    "variants": [
+      "[Sample] Question 3 about Society and the welfare state?",
+      "[Sample] Variant wording for question 3 on Society and the welfare state?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Society and the welfare state",
+    "handbook_ref": "3.3",
+    "handbook_page": 37,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": false
+  },
+  {
+    "id": 20,
+    "ref": "SAMPLE-DENMARK020",
+    "topic_id": 3,
+    "topic_slug": "society_welfare",
+    "subcategory": "society_welfare_general",
+    "question": "[Sample] Question 4 about Society and the welfare state?",
+    "variants": [
+      "[Sample] Question 4 about Society and the welfare state?",
+      "[Sample] Variant wording for question 4 on Society and the welfare state?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Society and the welfare state",
+    "handbook_ref": "3.4",
+    "handbook_page": 38,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": false
+  },
+  {
+    "id": 21,
+    "ref": "SAMPLE-DENMARK021",
+    "topic_id": 3,
+    "topic_slug": "society_welfare",
+    "subcategory": "society_welfare_general",
+    "question": "[Sample] Question 5 about Society and the welfare state?",
+    "variants": [
+      "[Sample] Question 5 about Society and the welfare state?",
+      "[Sample] Variant wording for question 5 on Society and the welfare state?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Society and the welfare state",
+    "handbook_ref": "3.5",
+    "handbook_page": 39,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": false
+  },
+  {
+    "id": 22,
+    "ref": "SAMPLE-DENMARK022",
+    "topic_id": 3,
+    "topic_slug": "society_welfare",
+    "subcategory": "society_welfare_general",
+    "question": "[Sample] Question 6 about Society and the welfare state?",
+    "variants": [
+      "[Sample] Question 6 about Society and the welfare state?",
+      "[Sample] Variant wording for question 6 on Society and the welfare state?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Society and the welfare state",
+    "handbook_ref": "3.6",
+    "handbook_page": 40,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": false
+  },
+  {
+    "id": 23,
+    "ref": "SAMPLE-DENMARK023",
+    "topic_id": 3,
+    "topic_slug": "society_welfare",
+    "subcategory": "society_welfare_general",
+    "question": "[Sample] Question 7 about Society and the welfare state?",
+    "variants": [
+      "[Sample] Question 7 about Society and the welfare state?",
+      "[Sample] Variant wording for question 7 on Society and the welfare state?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Society and the welfare state",
+    "handbook_ref": "3.7",
+    "handbook_page": 41,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": true
+  },
+  {
+    "id": 24,
+    "ref": "SAMPLE-DENMARK024",
+    "topic_id": 3,
+    "topic_slug": "society_welfare",
+    "subcategory": "society_welfare_general",
+    "question": "[Sample] Question 8 about Society and the welfare state?",
+    "variants": [
+      "[Sample] Question 8 about Society and the welfare state?",
+      "[Sample] Variant wording for question 8 on Society and the welfare state?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Society and the welfare state",
+    "handbook_ref": "3.8",
+    "handbook_page": 42,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": true
+  },
+  {
+    "id": 25,
+    "ref": "SAMPLE-DENMARK025",
+    "topic_id": 4,
+    "topic_slug": "culture",
+    "subcategory": "culture_general",
+    "question": "[Sample] Question 1 about Danish culture and traditions?",
+    "variants": [
+      "[Sample] Question 1 about Danish culture and traditions?",
+      "[Sample] Variant wording for question 1 on Danish culture and traditions?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Danish culture and traditions",
+    "handbook_ref": "4.1",
+    "handbook_page": 45,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": false
+  },
+  {
+    "id": 26,
+    "ref": "SAMPLE-DENMARK026",
+    "topic_id": 4,
+    "topic_slug": "culture",
+    "subcategory": "culture_general",
+    "question": "[Sample] Question 2 about Danish culture and traditions?",
+    "variants": [
+      "[Sample] Question 2 about Danish culture and traditions?",
+      "[Sample] Variant wording for question 2 on Danish culture and traditions?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Danish culture and traditions",
+    "handbook_ref": "4.2",
+    "handbook_page": 46,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": false
+  },
+  {
+    "id": 27,
+    "ref": "SAMPLE-DENMARK027",
+    "topic_id": 4,
+    "topic_slug": "culture",
+    "subcategory": "culture_general",
+    "question": "[Sample] Question 3 about Danish culture and traditions?",
+    "variants": [
+      "[Sample] Question 3 about Danish culture and traditions?",
+      "[Sample] Variant wording for question 3 on Danish culture and traditions?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Danish culture and traditions",
+    "handbook_ref": "4.3",
+    "handbook_page": 47,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": false
+  },
+  {
+    "id": 28,
+    "ref": "SAMPLE-DENMARK028",
+    "topic_id": 4,
+    "topic_slug": "culture",
+    "subcategory": "culture_general",
+    "question": "[Sample] Question 4 about Danish culture and traditions?",
+    "variants": [
+      "[Sample] Question 4 about Danish culture and traditions?",
+      "[Sample] Variant wording for question 4 on Danish culture and traditions?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Danish culture and traditions",
+    "handbook_ref": "4.4",
+    "handbook_page": 48,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": false
+  },
+  {
+    "id": 29,
+    "ref": "SAMPLE-DENMARK029",
+    "topic_id": 4,
+    "topic_slug": "culture",
+    "subcategory": "culture_general",
+    "question": "[Sample] Question 5 about Danish culture and traditions?",
+    "variants": [
+      "[Sample] Question 5 about Danish culture and traditions?",
+      "[Sample] Variant wording for question 5 on Danish culture and traditions?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Danish culture and traditions",
+    "handbook_ref": "4.5",
+    "handbook_page": 49,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": false
+  },
+  {
+    "id": 30,
+    "ref": "SAMPLE-DENMARK030",
+    "topic_id": 4,
+    "topic_slug": "culture",
+    "subcategory": "culture_general",
+    "question": "[Sample] Question 6 about Danish culture and traditions?",
+    "variants": [
+      "[Sample] Question 6 about Danish culture and traditions?",
+      "[Sample] Variant wording for question 6 on Danish culture and traditions?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Danish culture and traditions",
+    "handbook_ref": "4.6",
+    "handbook_page": 50,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": false
+  },
+  {
+    "id": 31,
+    "ref": "SAMPLE-DENMARK031",
+    "topic_id": 4,
+    "topic_slug": "culture",
+    "subcategory": "culture_general",
+    "question": "[Sample] Question 7 about Danish culture and traditions?",
+    "variants": [
+      "[Sample] Question 7 about Danish culture and traditions?",
+      "[Sample] Variant wording for question 7 on Danish culture and traditions?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Danish culture and traditions",
+    "handbook_ref": "4.7",
+    "handbook_page": 51,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": true
+  },
+  {
+    "id": 32,
+    "ref": "SAMPLE-DENMARK032",
+    "topic_id": 4,
+    "topic_slug": "culture",
+    "subcategory": "culture_general",
+    "question": "[Sample] Question 8 about Danish culture and traditions?",
+    "variants": [
+      "[Sample] Question 8 about Danish culture and traditions?",
+      "[Sample] Variant wording for question 8 on Danish culture and traditions?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Danish culture and traditions",
+    "handbook_ref": "4.8",
+    "handbook_page": 52,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": true
+  },
+  {
+    "id": 33,
+    "ref": "SAMPLE-DENMARK033",
+    "topic_id": 5,
+    "topic_slug": "values",
+    "subcategory": "values_general",
+    "question": "[Sample] Question 1 about Danish values?",
+    "variants": [
+      "[Sample] Question 1 about Danish values?",
+      "[Sample] Variant wording for question 1 on Danish values?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Danish values",
+    "handbook_ref": "5.1",
+    "handbook_page": 55,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": false
+  },
+  {
+    "id": 34,
+    "ref": "SAMPLE-DENMARK034",
+    "topic_id": 5,
+    "topic_slug": "values",
+    "subcategory": "values_general",
+    "question": "[Sample] Question 2 about Danish values?",
+    "variants": [
+      "[Sample] Question 2 about Danish values?",
+      "[Sample] Variant wording for question 2 on Danish values?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Danish values",
+    "handbook_ref": "5.2",
+    "handbook_page": 56,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": false
+  },
+  {
+    "id": 35,
+    "ref": "SAMPLE-DENMARK035",
+    "topic_id": 5,
+    "topic_slug": "values",
+    "subcategory": "values_general",
+    "question": "[Sample] Question 3 about Danish values?",
+    "variants": [
+      "[Sample] Question 3 about Danish values?",
+      "[Sample] Variant wording for question 3 on Danish values?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Danish values",
+    "handbook_ref": "5.3",
+    "handbook_page": 57,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": false
+  },
+  {
+    "id": 36,
+    "ref": "SAMPLE-DENMARK036",
+    "topic_id": 5,
+    "topic_slug": "values",
+    "subcategory": "values_general",
+    "question": "[Sample] Question 4 about Danish values?",
+    "variants": [
+      "[Sample] Question 4 about Danish values?",
+      "[Sample] Variant wording for question 4 on Danish values?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Danish values",
+    "handbook_ref": "5.4",
+    "handbook_page": 58,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": false
+  },
+  {
+    "id": 37,
+    "ref": "SAMPLE-DENMARK037",
+    "topic_id": 5,
+    "topic_slug": "values",
+    "subcategory": "values_general",
+    "question": "[Sample] Question 5 about Danish values?",
+    "variants": [
+      "[Sample] Question 5 about Danish values?",
+      "[Sample] Variant wording for question 5 on Danish values?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Danish values",
+    "handbook_ref": "5.5",
+    "handbook_page": 59,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": false
+  },
+  {
+    "id": 38,
+    "ref": "SAMPLE-DENMARK038",
+    "topic_id": 5,
+    "topic_slug": "values",
+    "subcategory": "values_general",
+    "question": "[Sample] Question 6 about Danish values?",
+    "variants": [
+      "[Sample] Question 6 about Danish values?",
+      "[Sample] Variant wording for question 6 on Danish values?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Danish values",
+    "handbook_ref": "5.6",
+    "handbook_page": 60,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": false
+  },
+  {
+    "id": 39,
+    "ref": "SAMPLE-DENMARK039",
+    "topic_id": 5,
+    "topic_slug": "values",
+    "subcategory": "values_general",
+    "question": "[Sample] Question 7 about Danish values?",
+    "variants": [
+      "[Sample] Question 7 about Danish values?",
+      "[Sample] Variant wording for question 7 on Danish values?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Danish values",
+    "handbook_ref": "5.7",
+    "handbook_page": 61,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": true
+  },
+  {
+    "id": 40,
+    "ref": "SAMPLE-DENMARK040",
+    "topic_id": 5,
+    "topic_slug": "values",
+    "subcategory": "values_general",
+    "question": "[Sample] Question 8 about Danish values?",
+    "variants": [
+      "[Sample] Question 8 about Danish values?",
+      "[Sample] Variant wording for question 8 on Danish values?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Danish values",
+    "handbook_ref": "5.8",
+    "handbook_page": 62,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "denmark",
+    "is_premium": true
+  }
+]

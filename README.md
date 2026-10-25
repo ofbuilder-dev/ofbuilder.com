@@ -53,6 +53,23 @@ helpers; the rest are full objects. Each app has:
   mock screen with a real screenshot
 - `reviews[]` — real reviews only; the section hides when empty
 
+## Free web practice (exam apps)
+
+Exam apps can offer free topic practice, a free mock test and a sample-questions page on the website
+(`/<slug>/practice/`, `/<slug>/mock-test/`, `/<slug>/questions/`).
+
+- Question banks live in `content/questions/<app-slug>.json`, in the same format the apps use
+  (`id`, `ref`, `topic_id`, `topic_slug`, `question`, `variants`, `options`, `correct_index`,
+  `explanation`, `source_chapter`, `is_premium`, …).
+- Only questions with `"is_premium": false` are sent to the browser. Premium questions only count
+  towards the "N+ more in the app" message.
+- Topic practice shows up to 6 free questions per topic (`FREE_PER_TOPIC` in `lib/questions.ts`); the
+  mock test draws from all free questions using the exam format in `PRACTICE` (`lib/questions.ts`).
+- While a bank contains placeholder questions (any `ref` starting with `SAMPLE`), its practice pages are
+  `noindex`, left out of the sitemap and show a "Preview" notice. Replace the file with the real bank
+  and they go live in search automatically.
+- To add another exam app, add its slug to `PRACTICE` and drop its JSON file into `content/questions/`.
+
 ## Brand
 
 - Palette: cream (`#fffbf5`) + ink (`#0f0f1a`) with a rainbow accent (coral → amber → lime → sky → violet)

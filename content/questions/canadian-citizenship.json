@@ -1,0 +1,1162 @@
+[
+  {
+    "id": 1,
+    "ref": "SAMPLE-CANADA001",
+    "topic_id": 1,
+    "topic_slug": "rights_responsibilities",
+    "subcategory": "rights_responsibilities_general",
+    "question": "[Sample] Question 1 about Rights and responsibilities of citizenship?",
+    "variants": [
+      "[Sample] Question 1 about Rights and responsibilities of citizenship?",
+      "[Sample] Variant wording for question 1 on Rights and responsibilities of citizenship?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Rights and responsibilities of citizenship",
+    "handbook_ref": "1.1",
+    "handbook_page": 15,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": false
+  },
+  {
+    "id": 2,
+    "ref": "SAMPLE-CANADA002",
+    "topic_id": 1,
+    "topic_slug": "rights_responsibilities",
+    "subcategory": "rights_responsibilities_general",
+    "question": "[Sample] Question 2 about Rights and responsibilities of citizenship?",
+    "variants": [
+      "[Sample] Question 2 about Rights and responsibilities of citizenship?",
+      "[Sample] Variant wording for question 2 on Rights and responsibilities of citizenship?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Rights and responsibilities of citizenship",
+    "handbook_ref": "1.2",
+    "handbook_page": 16,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": false
+  },
+  {
+    "id": 3,
+    "ref": "SAMPLE-CANADA003",
+    "topic_id": 1,
+    "topic_slug": "rights_responsibilities",
+    "subcategory": "rights_responsibilities_general",
+    "question": "[Sample] Question 3 about Rights and responsibilities of citizenship?",
+    "variants": [
+      "[Sample] Question 3 about Rights and responsibilities of citizenship?",
+      "[Sample] Variant wording for question 3 on Rights and responsibilities of citizenship?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Rights and responsibilities of citizenship",
+    "handbook_ref": "1.3",
+    "handbook_page": 17,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": false
+  },
+  {
+    "id": 4,
+    "ref": "SAMPLE-CANADA004",
+    "topic_id": 1,
+    "topic_slug": "rights_responsibilities",
+    "subcategory": "rights_responsibilities_general",
+    "question": "[Sample] Question 4 about Rights and responsibilities of citizenship?",
+    "variants": [
+      "[Sample] Question 4 about Rights and responsibilities of citizenship?",
+      "[Sample] Variant wording for question 4 on Rights and responsibilities of citizenship?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Rights and responsibilities of citizenship",
+    "handbook_ref": "1.4",
+    "handbook_page": 18,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": true
+  },
+  {
+    "id": 5,
+    "ref": "SAMPLE-CANADA005",
+    "topic_id": 2,
+    "topic_slug": "who_we_are",
+    "subcategory": "who_we_are_general",
+    "question": "[Sample] Question 1 about Who we are?",
+    "variants": [
+      "[Sample] Question 1 about Who we are?",
+      "[Sample] Variant wording for question 1 on Who we are?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Who we are",
+    "handbook_ref": "2.1",
+    "handbook_page": 25,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": false
+  },
+  {
+    "id": 6,
+    "ref": "SAMPLE-CANADA006",
+    "topic_id": 2,
+    "topic_slug": "who_we_are",
+    "subcategory": "who_we_are_general",
+    "question": "[Sample] Question 2 about Who we are?",
+    "variants": [
+      "[Sample] Question 2 about Who we are?",
+      "[Sample] Variant wording for question 2 on Who we are?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Who we are",
+    "handbook_ref": "2.2",
+    "handbook_page": 26,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": false
+  },
+  {
+    "id": 7,
+    "ref": "SAMPLE-CANADA007",
+    "topic_id": 2,
+    "topic_slug": "who_we_are",
+    "subcategory": "who_we_are_general",
+    "question": "[Sample] Question 3 about Who we are?",
+    "variants": [
+      "[Sample] Question 3 about Who we are?",
+      "[Sample] Variant wording for question 3 on Who we are?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Who we are",
+    "handbook_ref": "2.3",
+    "handbook_page": 27,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": false
+  },
+  {
+    "id": 8,
+    "ref": "SAMPLE-CANADA008",
+    "topic_id": 2,
+    "topic_slug": "who_we_are",
+    "subcategory": "who_we_are_general",
+    "question": "[Sample] Question 4 about Who we are?",
+    "variants": [
+      "[Sample] Question 4 about Who we are?",
+      "[Sample] Variant wording for question 4 on Who we are?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Who we are",
+    "handbook_ref": "2.4",
+    "handbook_page": 28,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": true
+  },
+  {
+    "id": 9,
+    "ref": "SAMPLE-CANADA009",
+    "topic_id": 3,
+    "topic_slug": "history",
+    "subcategory": "history_general",
+    "question": "[Sample] Question 1 about Canada's history?",
+    "variants": [
+      "[Sample] Question 1 about Canada's history?",
+      "[Sample] Variant wording for question 1 on Canada's history?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Canada's history",
+    "handbook_ref": "3.1",
+    "handbook_page": 35,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": false
+  },
+  {
+    "id": 10,
+    "ref": "SAMPLE-CANADA010",
+    "topic_id": 3,
+    "topic_slug": "history",
+    "subcategory": "history_general",
+    "question": "[Sample] Question 2 about Canada's history?",
+    "variants": [
+      "[Sample] Question 2 about Canada's history?",
+      "[Sample] Variant wording for question 2 on Canada's history?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Canada's history",
+    "handbook_ref": "3.2",
+    "handbook_page": 36,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": false
+  },
+  {
+    "id": 11,
+    "ref": "SAMPLE-CANADA011",
+    "topic_id": 3,
+    "topic_slug": "history",
+    "subcategory": "history_general",
+    "question": "[Sample] Question 3 about Canada's history?",
+    "variants": [
+      "[Sample] Question 3 about Canada's history?",
+      "[Sample] Variant wording for question 3 on Canada's history?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Canada's history",
+    "handbook_ref": "3.3",
+    "handbook_page": 37,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": false
+  },
+  {
+    "id": 12,
+    "ref": "SAMPLE-CANADA012",
+    "topic_id": 3,
+    "topic_slug": "history",
+    "subcategory": "history_general",
+    "question": "[Sample] Question 4 about Canada's history?",
+    "variants": [
+      "[Sample] Question 4 about Canada's history?",
+      "[Sample] Variant wording for question 4 on Canada's history?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Canada's history",
+    "handbook_ref": "3.4",
+    "handbook_page": 38,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": true
+  },
+  {
+    "id": 13,
+    "ref": "SAMPLE-CANADA013",
+    "topic_id": 4,
+    "topic_slug": "modern_canada",
+    "subcategory": "modern_canada_general",
+    "question": "[Sample] Question 1 about Modern Canada?",
+    "variants": [
+      "[Sample] Question 1 about Modern Canada?",
+      "[Sample] Variant wording for question 1 on Modern Canada?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Modern Canada",
+    "handbook_ref": "4.1",
+    "handbook_page": 45,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": false
+  },
+  {
+    "id": 14,
+    "ref": "SAMPLE-CANADA014",
+    "topic_id": 4,
+    "topic_slug": "modern_canada",
+    "subcategory": "modern_canada_general",
+    "question": "[Sample] Question 2 about Modern Canada?",
+    "variants": [
+      "[Sample] Question 2 about Modern Canada?",
+      "[Sample] Variant wording for question 2 on Modern Canada?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Modern Canada",
+    "handbook_ref": "4.2",
+    "handbook_page": 46,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": false
+  },
+  {
+    "id": 15,
+    "ref": "SAMPLE-CANADA015",
+    "topic_id": 4,
+    "topic_slug": "modern_canada",
+    "subcategory": "modern_canada_general",
+    "question": "[Sample] Question 3 about Modern Canada?",
+    "variants": [
+      "[Sample] Question 3 about Modern Canada?",
+      "[Sample] Variant wording for question 3 on Modern Canada?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Modern Canada",
+    "handbook_ref": "4.3",
+    "handbook_page": 47,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": false
+  },
+  {
+    "id": 16,
+    "ref": "SAMPLE-CANADA016",
+    "topic_id": 4,
+    "topic_slug": "modern_canada",
+    "subcategory": "modern_canada_general",
+    "question": "[Sample] Question 4 about Modern Canada?",
+    "variants": [
+      "[Sample] Question 4 about Modern Canada?",
+      "[Sample] Variant wording for question 4 on Modern Canada?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Modern Canada",
+    "handbook_ref": "4.4",
+    "handbook_page": 48,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": true
+  },
+  {
+    "id": 17,
+    "ref": "SAMPLE-CANADA017",
+    "topic_id": 5,
+    "topic_slug": "government",
+    "subcategory": "government_general",
+    "question": "[Sample] Question 1 about How Canadians govern themselves?",
+    "variants": [
+      "[Sample] Question 1 about How Canadians govern themselves?",
+      "[Sample] Variant wording for question 1 on How Canadians govern themselves?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "How Canadians govern themselves",
+    "handbook_ref": "5.1",
+    "handbook_page": 55,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": false
+  },
+  {
+    "id": 18,
+    "ref": "SAMPLE-CANADA018",
+    "topic_id": 5,
+    "topic_slug": "government",
+    "subcategory": "government_general",
+    "question": "[Sample] Question 2 about How Canadians govern themselves?",
+    "variants": [
+      "[Sample] Question 2 about How Canadians govern themselves?",
+      "[Sample] Variant wording for question 2 on How Canadians govern themselves?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "How Canadians govern themselves",
+    "handbook_ref": "5.2",
+    "handbook_page": 56,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": false
+  },
+  {
+    "id": 19,
+    "ref": "SAMPLE-CANADA019",
+    "topic_id": 5,
+    "topic_slug": "government",
+    "subcategory": "government_general",
+    "question": "[Sample] Question 3 about How Canadians govern themselves?",
+    "variants": [
+      "[Sample] Question 3 about How Canadians govern themselves?",
+      "[Sample] Variant wording for question 3 on How Canadians govern themselves?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "How Canadians govern themselves",
+    "handbook_ref": "5.3",
+    "handbook_page": 57,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": false
+  },
+  {
+    "id": 20,
+    "ref": "SAMPLE-CANADA020",
+    "topic_id": 5,
+    "topic_slug": "government",
+    "subcategory": "government_general",
+    "question": "[Sample] Question 4 about How Canadians govern themselves?",
+    "variants": [
+      "[Sample] Question 4 about How Canadians govern themselves?",
+      "[Sample] Variant wording for question 4 on How Canadians govern themselves?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "How Canadians govern themselves",
+    "handbook_ref": "5.4",
+    "handbook_page": 58,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": true
+  },
+  {
+    "id": 21,
+    "ref": "SAMPLE-CANADA021",
+    "topic_id": 6,
+    "topic_slug": "elections",
+    "subcategory": "elections_general",
+    "question": "[Sample] Question 1 about Federal elections?",
+    "variants": [
+      "[Sample] Question 1 about Federal elections?",
+      "[Sample] Variant wording for question 1 on Federal elections?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Federal elections",
+    "handbook_ref": "6.1",
+    "handbook_page": 65,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": false
+  },
+  {
+    "id": 22,
+    "ref": "SAMPLE-CANADA022",
+    "topic_id": 6,
+    "topic_slug": "elections",
+    "subcategory": "elections_general",
+    "question": "[Sample] Question 2 about Federal elections?",
+    "variants": [
+      "[Sample] Question 2 about Federal elections?",
+      "[Sample] Variant wording for question 2 on Federal elections?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Federal elections",
+    "handbook_ref": "6.2",
+    "handbook_page": 66,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": false
+  },
+  {
+    "id": 23,
+    "ref": "SAMPLE-CANADA023",
+    "topic_id": 6,
+    "topic_slug": "elections",
+    "subcategory": "elections_general",
+    "question": "[Sample] Question 3 about Federal elections?",
+    "variants": [
+      "[Sample] Question 3 about Federal elections?",
+      "[Sample] Variant wording for question 3 on Federal elections?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Federal elections",
+    "handbook_ref": "6.3",
+    "handbook_page": 67,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": false
+  },
+  {
+    "id": 24,
+    "ref": "SAMPLE-CANADA024",
+    "topic_id": 6,
+    "topic_slug": "elections",
+    "subcategory": "elections_general",
+    "question": "[Sample] Question 4 about Federal elections?",
+    "variants": [
+      "[Sample] Question 4 about Federal elections?",
+      "[Sample] Variant wording for question 4 on Federal elections?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Federal elections",
+    "handbook_ref": "6.4",
+    "handbook_page": 68,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": true
+  },
+  {
+    "id": 25,
+    "ref": "SAMPLE-CANADA025",
+    "topic_id": 7,
+    "topic_slug": "justice",
+    "subcategory": "justice_general",
+    "question": "[Sample] Question 1 about The justice system?",
+    "variants": [
+      "[Sample] Question 1 about The justice system?",
+      "[Sample] Variant wording for question 1 on The justice system?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "The justice system",
+    "handbook_ref": "7.1",
+    "handbook_page": 75,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": false
+  },
+  {
+    "id": 26,
+    "ref": "SAMPLE-CANADA026",
+    "topic_id": 7,
+    "topic_slug": "justice",
+    "subcategory": "justice_general",
+    "question": "[Sample] Question 2 about The justice system?",
+    "variants": [
+      "[Sample] Question 2 about The justice system?",
+      "[Sample] Variant wording for question 2 on The justice system?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "The justice system",
+    "handbook_ref": "7.2",
+    "handbook_page": 76,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": false
+  },
+  {
+    "id": 27,
+    "ref": "SAMPLE-CANADA027",
+    "topic_id": 7,
+    "topic_slug": "justice",
+    "subcategory": "justice_general",
+    "question": "[Sample] Question 3 about The justice system?",
+    "variants": [
+      "[Sample] Question 3 about The justice system?",
+      "[Sample] Variant wording for question 3 on The justice system?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "The justice system",
+    "handbook_ref": "7.3",
+    "handbook_page": 77,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": false
+  },
+  {
+    "id": 28,
+    "ref": "SAMPLE-CANADA028",
+    "topic_id": 7,
+    "topic_slug": "justice",
+    "subcategory": "justice_general",
+    "question": "[Sample] Question 4 about The justice system?",
+    "variants": [
+      "[Sample] Question 4 about The justice system?",
+      "[Sample] Variant wording for question 4 on The justice system?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "The justice system",
+    "handbook_ref": "7.4",
+    "handbook_page": 78,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": true
+  },
+  {
+    "id": 29,
+    "ref": "SAMPLE-CANADA029",
+    "topic_id": 8,
+    "topic_slug": "symbols",
+    "subcategory": "symbols_general",
+    "question": "[Sample] Question 1 about Canadian symbols?",
+    "variants": [
+      "[Sample] Question 1 about Canadian symbols?",
+      "[Sample] Variant wording for question 1 on Canadian symbols?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Canadian symbols",
+    "handbook_ref": "8.1",
+    "handbook_page": 85,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": false
+  },
+  {
+    "id": 30,
+    "ref": "SAMPLE-CANADA030",
+    "topic_id": 8,
+    "topic_slug": "symbols",
+    "subcategory": "symbols_general",
+    "question": "[Sample] Question 2 about Canadian symbols?",
+    "variants": [
+      "[Sample] Question 2 about Canadian symbols?",
+      "[Sample] Variant wording for question 2 on Canadian symbols?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Canadian symbols",
+    "handbook_ref": "8.2",
+    "handbook_page": 86,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": false
+  },
+  {
+    "id": 31,
+    "ref": "SAMPLE-CANADA031",
+    "topic_id": 8,
+    "topic_slug": "symbols",
+    "subcategory": "symbols_general",
+    "question": "[Sample] Question 3 about Canadian symbols?",
+    "variants": [
+      "[Sample] Question 3 about Canadian symbols?",
+      "[Sample] Variant wording for question 3 on Canadian symbols?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Canadian symbols",
+    "handbook_ref": "8.3",
+    "handbook_page": 87,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": false
+  },
+  {
+    "id": 32,
+    "ref": "SAMPLE-CANADA032",
+    "topic_id": 8,
+    "topic_slug": "symbols",
+    "subcategory": "symbols_general",
+    "question": "[Sample] Question 4 about Canadian symbols?",
+    "variants": [
+      "[Sample] Question 4 about Canadian symbols?",
+      "[Sample] Variant wording for question 4 on Canadian symbols?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Canadian symbols",
+    "handbook_ref": "8.4",
+    "handbook_page": 88,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": true
+  },
+  {
+    "id": 33,
+    "ref": "SAMPLE-CANADA033",
+    "topic_id": 9,
+    "topic_slug": "economy",
+    "subcategory": "economy_general",
+    "question": "[Sample] Question 1 about Canada's economy?",
+    "variants": [
+      "[Sample] Question 1 about Canada's economy?",
+      "[Sample] Variant wording for question 1 on Canada's economy?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Canada's economy",
+    "handbook_ref": "9.1",
+    "handbook_page": 95,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": false
+  },
+  {
+    "id": 34,
+    "ref": "SAMPLE-CANADA034",
+    "topic_id": 9,
+    "topic_slug": "economy",
+    "subcategory": "economy_general",
+    "question": "[Sample] Question 2 about Canada's economy?",
+    "variants": [
+      "[Sample] Question 2 about Canada's economy?",
+      "[Sample] Variant wording for question 2 on Canada's economy?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Canada's economy",
+    "handbook_ref": "9.2",
+    "handbook_page": 96,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": false
+  },
+  {
+    "id": 35,
+    "ref": "SAMPLE-CANADA035",
+    "topic_id": 9,
+    "topic_slug": "economy",
+    "subcategory": "economy_general",
+    "question": "[Sample] Question 3 about Canada's economy?",
+    "variants": [
+      "[Sample] Question 3 about Canada's economy?",
+      "[Sample] Variant wording for question 3 on Canada's economy?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Canada's economy",
+    "handbook_ref": "9.3",
+    "handbook_page": 97,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": false
+  },
+  {
+    "id": 36,
+    "ref": "SAMPLE-CANADA036",
+    "topic_id": 9,
+    "topic_slug": "economy",
+    "subcategory": "economy_general",
+    "question": "[Sample] Question 4 about Canada's economy?",
+    "variants": [
+      "[Sample] Question 4 about Canada's economy?",
+      "[Sample] Variant wording for question 4 on Canada's economy?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Canada's economy",
+    "handbook_ref": "9.4",
+    "handbook_page": 98,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": true
+  },
+  {
+    "id": 37,
+    "ref": "SAMPLE-CANADA037",
+    "topic_id": 10,
+    "topic_slug": "regions",
+    "subcategory": "regions_general",
+    "question": "[Sample] Question 1 about Canada's regions?",
+    "variants": [
+      "[Sample] Question 1 about Canada's regions?",
+      "[Sample] Variant wording for question 1 on Canada's regions?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 3,
+    "correct_option": "D",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Canada's regions",
+    "handbook_ref": "10.1",
+    "handbook_page": 105,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": false
+  },
+  {
+    "id": 38,
+    "ref": "SAMPLE-CANADA038",
+    "topic_id": 10,
+    "topic_slug": "regions",
+    "subcategory": "regions_general",
+    "question": "[Sample] Question 2 about Canada's regions?",
+    "variants": [
+      "[Sample] Question 2 about Canada's regions?",
+      "[Sample] Variant wording for question 2 on Canada's regions?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 2,
+    "correct_option": "C",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Canada's regions",
+    "handbook_ref": "10.2",
+    "handbook_page": 106,
+    "difficulty": "medium",
+    "frequency": "high",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": false
+  },
+  {
+    "id": 39,
+    "ref": "SAMPLE-CANADA039",
+    "topic_id": 10,
+    "topic_slug": "regions",
+    "subcategory": "regions_general",
+    "question": "[Sample] Question 3 about Canada's regions?",
+    "variants": [
+      "[Sample] Question 3 about Canada's regions?",
+      "[Sample] Variant wording for question 3 on Canada's regions?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 1,
+    "correct_option": "B",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Canada's regions",
+    "handbook_ref": "10.3",
+    "handbook_page": 107,
+    "difficulty": "hard",
+    "frequency": "medium",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": false
+  },
+  {
+    "id": 40,
+    "ref": "SAMPLE-CANADA040",
+    "topic_id": 10,
+    "topic_slug": "regions",
+    "subcategory": "regions_general",
+    "question": "[Sample] Question 4 about Canada's regions?",
+    "variants": [
+      "[Sample] Question 4 about Canada's regions?",
+      "[Sample] Variant wording for question 4 on Canada's regions?"
+    ],
+    "options": [
+      "Sample answer A",
+      "Sample answer B",
+      "Sample answer C",
+      "Sample answer D"
+    ],
+    "correct_index": 0,
+    "correct_option": "A",
+    "explanation": "Placeholder explanation. Replace this file with the real question bank from the app.",
+    "source_chapter": "Canada's regions",
+    "handbook_ref": "10.4",
+    "handbook_page": 108,
+    "difficulty": "easy",
+    "frequency": "very_high",
+    "updated_year": 2026,
+    "category": "canada",
+    "is_premium": true
+  }
+]
