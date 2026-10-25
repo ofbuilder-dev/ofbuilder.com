@@ -41,6 +41,8 @@ export default function DailyQuestion({ sources, compact = false }: { sources: D
 
   useEffect(() => {
     setMounted(true);
+    // Start on a random exam each visit so the home page feels fresh.
+    if (sources.length > 1) setActive(Math.floor(Math.random() * sources.length));
     const s = read();
     const today = dayKey();
     const y = new Date();
