@@ -58,18 +58,18 @@ export default function PracticeShell({
 
       <section className="relative overflow-hidden px-5 pb-10 pt-36" style={{ background: soft }}>
         <Blobs colors={[primary, app.theme.secondary, primary, "#ffffff"]} opacity={0.25} fade />
-        <div className="relative mx-auto max-w-4xl">
+        <div className="relative mx-auto flex max-w-3xl flex-col items-center text-center">
           <p className="text-sm font-bold uppercase tracking-[0.2em]" style={{ color: primary }}>
             {eyebrow}
           </p>
-          <h1 className="font-display mt-3 text-4xl font-extrabold leading-tight sm:text-6xl">{title}</h1>
+          <h1 className="font-display mt-3 text-4xl font-extrabold leading-[1.05] sm:text-6xl">{title}</h1>
           <p className="mt-4 max-w-2xl text-lg text-[#3d3d52]">{intro}</p>
           {isSample && (
             <p className="mt-4 inline-block rounded-xl bg-amber-100 px-4 py-2 text-sm font-semibold text-amber-800">
               Preview: these are sample questions. Real questions are coming soon.
             </p>
           )}
-          <nav className="mt-8 grid max-w-2xl grid-cols-4 gap-1 rounded-2xl bg-white/80 p-1.5 shadow-[0_12px_30px_-16px_rgba(15,15,26,0.35)] ring-1 ring-black/5 backdrop-blur" aria-label="Practice sections">
+          <nav className="mt-8 grid w-full grid-cols-4 gap-1 rounded-2xl bg-white/80 p-1.5 shadow-[0_12px_30px_-16px_rgba(15,15,26,0.35)] ring-1 ring-black/5 backdrop-blur" aria-label="Practice sections">
             {TABS.map(([k, l, icon]) => {
               const on = k === active;
               return (
@@ -94,10 +94,12 @@ export default function PracticeShell({
         </div>
       </section>
 
-      <main className="mx-auto max-w-4xl px-5 py-12">{children}</main>
+      <main className="px-5 py-12">
+        <div className="mx-auto max-w-3xl">{children}</div>
+      </main>
 
       <section className="px-5 pb-16">
-        <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 rounded-[2rem] p-8 text-center text-white sm:flex-row sm:text-left" style={{ background: `linear-gradient(135deg, ${primary}, ${app.theme.secondary})` }}>
+        <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 rounded-[2rem] p-8 text-center text-white sm:flex-row sm:text-left" style={{ background: `linear-gradient(135deg, ${primary}, ${app.theme.secondary})` }}>
           <AppIcon src={app.icon} name={app.shortName} size={80} />
           <div className="flex-1">
             <h2 className="font-display text-2xl font-extrabold sm:text-3xl">Want the full question bank?</h2>
@@ -107,7 +109,7 @@ export default function PracticeShell({
           </div>
           <PlayBadge href={playUrl} dark={false} />
         </div>
-        <p className="mx-auto mt-6 max-w-4xl text-center text-xs text-[#6b6b80]">{app.disclaimer}</p>
+        <p className="mx-auto mt-6 max-w-3xl text-center text-xs text-[#6b6b80]">{app.disclaimer}</p>
       </section>
 
       <footer className="border-t px-5 py-8">

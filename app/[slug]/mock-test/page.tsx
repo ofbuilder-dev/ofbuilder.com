@@ -42,7 +42,7 @@ export default async function MockTestPage({ params }: { params: Promise<{ slug:
       app={app}
       active="mock-test"
       eyebrow="Free mock test"
-      title={`${d.examName} mock test`}
+      title={d.examName.charAt(0).toUpperCase() + d.examName.slice(1)}
       intro={`${n} questions${d.exam.minutes ? ` in ${d.exam.minutes} minutes` : ""} with a pass mark of ${d.exam.passMark}, using ${format}. You get your score and every explanation at the end.${d.exam.note ? ` ${d.exam.note}` : ""}`}
       playUrl={playUrl}
       premiumCount={d.premiumCount}
@@ -54,7 +54,7 @@ export default async function MockTestPage({ params }: { params: Promise<{ slug:
         count={n}
         minutes={d.exam.minutes}
         passMark={d.exam.passMark}
-        title={`${d.examName} mock test`}
+        title="Ready for your mock test?"
         color={app.theme.primary}
         appName={app.shortName}
         appIcon={app.icon}
