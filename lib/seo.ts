@@ -62,7 +62,7 @@ export function breadcrumbLd(items: { name: string; path: string }[]) {
   };
 }
 
-export function appLd(app: App) {
+export function appLd(app: App, keywords: string[] = []) {
   return {
     "@context": "https://schema.org",
     "@type": "MobileApplication",
@@ -72,6 +72,7 @@ export function appLd(app: App) {
     image: `${siteUrl}${app.icon}`,
     operatingSystem: "ANDROID",
     applicationCategory: appCategory(app),
+    ...(keywords.length ? { keywords: keywords.join(", ") } : {}),
     installUrl: app.playUrl,
     downloadUrl: app.playUrl,
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
