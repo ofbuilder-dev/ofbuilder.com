@@ -78,3 +78,9 @@ Exam apps can offer free topic practice, a free mock test and a sample-questions
 - Facebook: https://www.facebook.com/ofbuilder/
 - Google Play: https://play.google.com/store/apps/dev?id=8090522541816028633
 ```
+
+## Real citizenship questions
+
+On every deploy, `scripts/fetch_questions.mjs` downloads `seed_data/<country>/questions.json` from the
+Supabase `Citizenship` bucket and publishes only a small free slice (6 per topic, topped up to fill one mock
+test). Premium questions are never published. If a download fails, the existing file is kept.

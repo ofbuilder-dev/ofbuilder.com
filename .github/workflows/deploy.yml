@@ -30,6 +30,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
       - run: npm ci
+      - name: Fetch free citizenship questions
+        run: node scripts/fetch_questions.mjs
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
