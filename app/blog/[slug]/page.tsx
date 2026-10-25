@@ -18,7 +18,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = getPost((await params).slug);
   if (!post) return {};
   return {
-    title: post.title,
+    // Long titles skip the "· OfBuilder" suffix so they fit in search results.
+    title: post.title.length > 48 ? { absolute: post.title } : post.title,
     description: post.description ?? post.excerpt,
     alternates: { canonical: `/blog/${post.slug}/` },
     openGraph: { type: "article", title: post.title, description: post.description ?? post.excerpt, publishedTime: post.date, images: ogImage("home", post.title) },
@@ -36,7 +37,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   return (
     <div className="relative">
       <Nav />
-      <article className="mx-auto max-w-3xl px-5 pb-12 pt-36">
+      <article className="mx-auto max-w-3xl px-5 pb-12 pt-36 [overflow-wrap:anywhere]">
         <Link href="/blog/" className="text-sm font-semibold text-[#6b6b80] transition-colors hover:text-[#0f0f1a]">
           ← Back to blog
         </Link>

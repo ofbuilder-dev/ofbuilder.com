@@ -18,13 +18,15 @@ export default function StoryForm({ apps }: { apps: { slug: string; name: string
     `Name (as shown): ${name}\nApp: ${appName} (${app})\nCountry: ${country}\n\nMy story:\n${text}\n\nI agree that OfBuilder may publish this story with my first name on ofbuilder.com.`,
   )}`;
 
-  const field = "mt-1.5 w-full rounded-2xl bg-white px-4 py-3 ring-1 ring-black/10 outline-none focus:ring-2 focus:ring-[#8b5cf6]";
+  // Inputs sit inside light labels on a dark card, so they set their own text colours.
+  const field =
+    "mt-1.5 w-full rounded-2xl bg-white/[0.06] px-4 py-3 text-base font-normal text-white ring-1 ring-white/15 outline-none transition-shadow placeholder:text-white/35 focus:bg-white/[0.09] focus:ring-2 focus:ring-[#8b5cf6] [&>option]:bg-[#0f0f1a] [&>option]:text-white";
 
   return (
     <div className="rounded-[2rem] bg-[#0f0f1a] p-6 text-white sm:p-10">
       <h2 className="font-display text-3xl font-extrabold">Share your story</h2>
       <p className="mt-1 text-white/65">It takes a minute. We read every story before it goes on the wall.</p>
-      <div className="mt-8 grid gap-4 text-[#0f0f1a] sm:grid-cols-3">
+      <div className="mt-8 grid gap-4 sm:grid-cols-3">
         <label className="text-sm font-semibold text-white/80">
           First name
           <input value={name} onChange={(e) => setName(e.target.value)} className={field} placeholder="Sara" />
@@ -49,7 +51,7 @@ export default function StoryForm({ apps }: { apps: { slug: string; name: string
         </label>
       </div>
       <label className="mt-4 flex items-start gap-3 text-sm text-white/75">
-        <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} className="mt-1 h-4 w-4" />I agree that OfBuilder may publish my story with my first name.
+        <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} className="mt-0.5 h-4 w-4 accent-[#8b5cf6]" />I agree that OfBuilder may publish my story with my first name.
       </label>
       <a
         href={ready ? href : undefined}

@@ -52,10 +52,10 @@ export default function Directory({ items, suites }: { items: Item[]; suites: Su
         Showing {shown.length} {shown.length === 1 ? "app" : "apps"}
         {suite !== "all" && <> in {chips.find((c) => c.id === suite)?.short}</>}
       </p>
-      <motion.div layout className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <motion.div layout className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <AnimatePresence mode="popLayout">
           {shown.map((a) => (
-            <motion.div key={a.slug} layout initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} transition={{ type: "spring", stiffness: 300, damping: 28 }}>
+            <motion.div key={a.slug} layout className="min-w-0" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} transition={{ type: "spring", stiffness: 300, damping: 28 }}>
               <Link href={`/${a.slug}/`} className="group flex h-full items-center gap-4 rounded-[1.75rem] bg-white p-5 ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:shadow-xl">
                 <img src={a.icon} alt="" width={68} height={68} className="h-[68px] w-[68px] shrink-0 rounded-[1.1rem] shadow-md transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-110" loading="lazy" />
                 <div className="min-w-0 flex-1">

@@ -97,8 +97,8 @@ export default function Home() {
       </section>
 
       {/* Stats */}
-      <section className="mx-auto max-w-6xl px-5 py-24">
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <section className="mx-auto max-w-6xl px-5 py-16 sm:py-24">
+        <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
           {[
             { v: "24", l: "apps live on Google Play", c: "#ff6b6b" },
             { v: "6", l: "focused product suites", c: "#f59e0b" },
@@ -106,11 +106,11 @@ export default function Home() {
             { v: "7", l: "citizenship tests covered", c: "#8b5cf6" },
           ].map((s, i) => (
             <Reveal key={s.l} delay={i * 0.08}>
-              <div className="rounded-[2rem] bg-white p-8 ring-1 ring-black/5 transition-transform hover:-translate-y-1">
-                <div className="font-display text-6xl font-extrabold" style={{ color: s.c }}>
+              <div className="h-full rounded-[1.5rem] bg-white p-5 ring-1 ring-black/5 transition-transform hover:-translate-y-1 sm:rounded-[2rem] sm:p-8">
+                <div className="font-display text-4xl font-extrabold sm:text-6xl" style={{ color: s.c }}>
                   <CountUp value={s.v} />
                 </div>
-                <p className="mt-2 font-medium text-[#3d3d52]">{s.l}</p>
+                <p className="mt-1.5 text-sm font-medium leading-snug text-[#3d3d52] sm:mt-2 sm:text-base">{s.l}</p>
               </div>
             </Reveal>
           ))}
@@ -147,7 +147,7 @@ export default function Home() {
                   ["🦁", "Kids ABC game", "/brightkids/play/"],
                   ["🌙", "Ayah of the day", "/ilmai/ayah/"],
                 ].map(([e, l, h]) => (
-                  <Link key={h} href={h} className="flex items-center gap-3 rounded-2xl bg-white/[0.07] p-4 font-semibold ring-1 ring-white/10 transition-all hover:-translate-y-0.5 hover:bg-white/[0.12]">
+                  <Link key={h} href={h} className="flex items-center gap-2.5 rounded-2xl bg-white/[0.07] p-3.5 text-sm font-semibold leading-tight ring-1 sm:gap-3 sm:p-4 sm:text-base ring-white/10 transition-all hover:-translate-y-0.5 hover:bg-white/[0.12]">
                     <span className="text-2xl">{e}</span>
                     {l}
                   </Link>
