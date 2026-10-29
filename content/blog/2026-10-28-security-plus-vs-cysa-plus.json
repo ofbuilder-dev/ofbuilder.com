@@ -1,0 +1,15 @@
+{
+  "slug": "2026-10-28-security-plus-vs-cysa-plus",
+  "date": "2026-10-28",
+  "category": "Career",
+  "app": "security-plus",
+  "title": "Security+ vs CySA+: Which Should You Take First?",
+  "excerpt": "Security+ comes first for most people. CySA+ builds on it for analyst roles.",
+  "description": "Security+ vs CySA+: what each CompTIA certification covers, who it's for, and which one most people should take first.",
+  "tags": [
+    "Security+",
+    "CySA+",
+    "CompTIA"
+  ],
+  "body": "For most people, Security+ comes first. It's CompTIA's entry-level cybersecurity certification, and CySA+ is an intermediate certification that builds on it.\n\n## CompTIA Security+\n\n- Covers core security concepts, threats, security architecture, operations and governance\n- Often listed as a requirement for entry-level security jobs\n- A good first certification if you're moving into security\n\n## CompTIA CySA+\n\n- Focuses on the work of a security analyst: monitoring, vulnerability management and incident response\n- More hands-on and scenario-based\n- Best once you have Security+ or some security experience\n\n## Which to choose\n\n- New to security: start with Security+\n- Already working in a security operations role: CySA+ may suit you better\n- Planning a career in a SOC: take both, Security+ first\n\n## How to prepare for either\n\n- Use the official exam objectives as your checklist\n- Practise domain by domain and focus on your weakest areas\n- Book when you score 85% or more consistently in practice\n\nTry a free Security+ mini mock test below."
+}
