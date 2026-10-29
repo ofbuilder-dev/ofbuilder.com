@@ -107,6 +107,7 @@ export default function Footer() {
               {[
                 ["All apps", "/apps/"],
                 ["Free tests", "/free-tests/"],
+                ["Tests by country", "/tests/"],
                 ["Success stories", "/stories/"],
                 ["Blog", "/blog/"],
                 ["About", "/#studio"],

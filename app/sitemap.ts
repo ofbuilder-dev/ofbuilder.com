@@ -4,6 +4,7 @@ import type { MetadataRoute } from "next";
 import { apps, suites } from "@/lib/apps";
 import { getAllPosts } from "@/lib/blog";
 import { abs } from "@/lib/seo";
+import { countries } from "@/lib/countries";
 import { guideSlugs } from "@/lib/guides";
 import { localParams } from "@/lib/i18n";
 import { loadPractice, practiceSlugs } from "@/lib/questions";
@@ -39,6 +40,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       .filter((slug) => !loadPractice(slug).isSample)
       .flatMap((slug) => ["mock-test", "readiness", "practice", "questions"].map((p) => entry(`/${slug}/${p}/`, 0.85, "weekly"))),
     entry("/free-tests/", 0.9, "weekly"),
+    entry("/tests/", 0.85, "monthly"),
+    ...countries.map((c) => entry(`/tests/${c.id}/`, 0.85, "weekly")),
     ...guideSlugs().map((slug) => entry(`/${slug}/guide/`, 0.85, "monthly")),
     ...localParams().map(({ slug, lang }) => entry(`/${slug}/${lang}/`, 0.8, "monthly")),
     entry("/brightkids/play/", 0.7, "monthly"),
