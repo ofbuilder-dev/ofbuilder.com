@@ -343,6 +343,10 @@ export default function Quiz(p: QuizProps) {
                   <p className="font-semibold">
                     {i + 1}. {it.text}
                   </p>
+                  {it.image && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={it.image} alt="" className="mt-3 max-h-40 w-auto rounded-xl bg-white object-contain" loading="lazy" />
+                  )}
                   <p className="mt-2 text-sm">
                     <span className="font-bold text-emerald-700">✓ {it.options[it.correct]}</span>
                     {!ok && <span className="ml-3 text-rose-700">{a === undefined ? T.notAnswered : T.youChose(it.options[a])}</span>}
@@ -379,6 +383,10 @@ export default function Quiz(p: QuizProps) {
       <AnimatePresence mode="wait">
         <motion.div key={q.id} initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -30 }} transition={{ duration: 0.25 }}>
           <h2 className="font-display mt-8 text-2xl font-extrabold leading-snug sm:text-3xl">{q.text}</h2>
+          {q.image && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={q.image} alt="" className="mx-auto mt-5 max-h-64 w-auto rounded-2xl bg-white object-contain ring-1 ring-black/5" loading="lazy" />
+          )}
           <div className="mt-6 space-y-3">
             {q.options.map((opt, i) => {
               const isChosen = chosen === i;
