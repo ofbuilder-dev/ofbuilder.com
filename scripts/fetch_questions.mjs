@@ -68,7 +68,12 @@ for (const [file, [slug, mockSize]] of Object.entries(BANKS)) {
     fs.writeFileSync(path.join(OUT, `${slug}.meta.json`), JSON.stringify({ total: raw.length, source: file }) + "\n");
     const topics = new Set(free.map((q) => q.topic_slug)).size;
     // Shows which language a bank is written in (used for the translated mock test pages).
-    if (/german|danish|knm/.test(slug)) console.log(`  sample ${slug}: keys=[${Object.keys(free[0]).join(",")}] q="${String(free[0].question).slice(0, 90)}"`);
+    if (/german|danish|knm/.test(slug)) {
+      console.log(`  sample ${slug}: keys=[${Object.keys(free[0]).join(",")}] q="${String(free[0].question).slice(0, 90)}"`);
+      console.log(`  i18n ${slug}: ${JSON.stringify(free[0].i18n ?? null).slice(0, 700)}`);
+      const withImg = raw.filter((q) => q.image_url);
+      console.log(`  images ${slug}: ${withImg.length} in bank, ${free.filter((q) => q.image_url).length} published, e.g. ${JSON.stringify(withImg[0]?.image_url ?? null)}`);
+    }
     console.log(`✓ ${slug}: ${raw.length} in bank, ${raw.filter((q) => q.is_premium === false).length} flagged free, ${free.length} published across ${topics} topics`);
   } catch (e) {
     failed++;

@@ -16,6 +16,7 @@ export type RawQuestion = {
   correct_option?: string;
   explanation?: string;
   source_chapter?: string;
+  image_url?: string | null;
   handbook_ref?: string;
   handbook_page?: number;
   difficulty?: string;
@@ -35,6 +36,7 @@ export type QuizQuestion = {
   correct: number;
   explanation: string;
   chapter?: string;
+  image?: string; // picture the question refers to, e.g. a coat of arms
 };
 
 export type Topic = { slug: string; label: string; free: number; total: number };
@@ -109,7 +111,16 @@ function toQuiz(q: RawQuestion): QuizQuestion {
     correct: q.correct_index,
     explanation: q.explanation ?? "",
     chapter: q.source_chapter,
+    ...(imageUrl(q.image_url) ? { image: imageUrl(q.image_url) } : {}),
   };
+}
+
+// Question images live in the Supabase storage bucket; relative paths are resolved against it.
+const IMAGE_BASE = "https://ezprrwlxbvqsffedjrbt.supabase.co/storage/v1/object/public/";
+function imageUrl(u?: string | null) {
+  if (!u) return undefined;
+  if (/^https?:\/\//.test(u)) return u;
+  return IMAGE_BASE + u.replace(/^\/+/, "");
 }
 
 function bankSize(slug: string, fallback: number) {
