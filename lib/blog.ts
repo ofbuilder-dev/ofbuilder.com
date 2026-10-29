@@ -30,3 +30,19 @@ export function getAllPosts(): BlogPost[] {
 export function getPost(slug: string): BlogPost | undefined {
   return getAllPosts().find((p) => p.slug === slug);
 }
+
+// Pagination: page 1 shows the featured post plus FIRST_PAGE more; later pages show PER_PAGE each.
+const FIRST_PAGE = 12;
+const PER_PAGE = 12;
+
+export function blogPageCount(total: number) {
+  return 1 + Math.ceil(Math.max(0, total - 1 - FIRST_PAGE) / PER_PAGE);
+}
+
+export function blogPagePosts(all: BlogPost[], page: number) {
+  if (page === 1) return all.slice(1, 1 + FIRST_PAGE);
+  const start = 1 + FIRST_PAGE + (page - 2) * PER_PAGE;
+  return all.slice(start, start + PER_PAGE);
+}
+
+export const blogPageHref = (page: number) => (page === 1 ? "/blog/" : `/blog/page/${page}/`);

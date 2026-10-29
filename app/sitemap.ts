@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import type { MetadataRoute } from "next";
 import { apps, suites } from "@/lib/apps";
-import { getAllPosts } from "@/lib/blog";
+import { blogPageCount, getAllPosts } from "@/lib/blog";
 import { abs } from "@/lib/seo";
 import { countries } from "@/lib/countries";
 import { guideSlugs } from "@/lib/guides";
@@ -51,6 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry("/ilmai/ayah/", 0.7, "daily"),
     entry("/stories/", 0.5, "weekly"),
     entry("/blog/", 0.7, "daily"),
+    ...Array.from({ length: Math.max(0, blogPageCount(getAllPosts().length) - 1) }, (_, i) => entry(`/blog/page/${i + 2}/`, 0.4, "weekly")),
     ...getAllPosts().map((p) => entry(`/blog/${p.slug}/`, 0.6, "yearly", new Date(p.date))),
     entry("/contact/", 0.5, "yearly"),
     entry("/privacy/", 0.3, "yearly"),
