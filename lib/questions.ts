@@ -24,6 +24,8 @@ export type RawQuestion = {
   updated_year?: number;
   category?: string;
   is_premium: boolean;
+  // Translations, e.g. i18n.en for banks written in German, Danish or Dutch
+  i18n?: Record<string, { text?: string; options?: string[]; variants?: string[]; explanation?: string }>;
 };
 
 /** The slim shape sent to the browser. */
@@ -101,7 +103,13 @@ function labelFor(q: RawQuestion) {
   return q.topic_slug.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
-function toQuiz(q: RawQuestion): QuizQuestion {
+// English pages use the English translation when the bank is written in another language;
+// the translated pages (native = true) keep the original wording.
+function toQuiz(raw: RawQuestion, native = false): QuizQuestion {
+  const en = native ? undefined : raw.i18n?.en;
+  const q = en?.text && en.options?.length === raw.options.length
+    ? { ...raw, question: en.text, options: en.options, variants: en.variants?.length ? en.variants : [en.text], explanation: en.explanation ?? raw.explanation }
+    : raw;
   return {
     id: q.id,
     topic: q.topic_slug,
@@ -115,12 +123,10 @@ function toQuiz(q: RawQuestion): QuizQuestion {
   };
 }
 
-// Question images live in the Supabase storage bucket; relative paths are resolved against it.
-const IMAGE_BASE = "https://ezprrwlxbvqsffedjrbt.supabase.co/storage/v1/object/public/";
+// Only full image URLs are shown; relative paths (e.g. "de/maps/…") need their bucket location first.
 function imageUrl(u?: string | null) {
   if (!u) return undefined;
-  if (/^https?:\/\//.test(u)) return u;
-  return IMAGE_BASE + u.replace(/^\/+/, "");
+  return /^https?:\/\//.test(u) ? u : undefined;
 }
 
 function bankSize(slug: string, fallback: number) {
@@ -131,7 +137,8 @@ function bankSize(slug: string, fallback: number) {
   }
 }
 
-export function loadPractice(slug: string) {
+export function loadPractice(slug: string, { native = false }: { native?: boolean } = {}) {
+  const quiz = (q: RawQuestion) => toQuiz(q, native);
   const raw = JSON.parse(fs.readFileSync(file(slug), "utf-8")) as RawQuestion[];
   const sorted = [...raw].sort((a, b) => a.topic_id - b.topic_id || a.id - b.id);
   const free = sorted.filter((q) => !q.is_premium);
@@ -147,13 +154,13 @@ export function loadPractice(slug: string) {
 
   // Topic practice gets the first FREE_PER_TOPIC free questions of each topic; the mock draws from every free question.
   const byTopic: Record<string, QuizQuestion[]> = {};
-  for (const t of topics) byTopic[t.slug] = free.filter((q) => q.topic_slug === t.slug).slice(0, FREE_PER_TOPIC).map(toQuiz);
+  for (const t of topics) byTopic[t.slug] = free.filter((q) => q.topic_slug === t.slug).slice(0, FREE_PER_TOPIC).map(quiz);
 
   return {
     ...PRACTICE[slug],
     topics,
     byTopic,
-    mockPool: free.map(toQuiz),
+    mockPool: free.map(quiz),
     totalCount: bankSize(slug, raw.length),
     // The website only ships a free slice; the meta file records how big the full in-app bank is.
     premiumCount: Math.max(0, bankSize(slug, raw.length) - free.length),

@@ -42,7 +42,7 @@ export default async function LocalMockTest({ params }: { params: Promise<{ slug
   const page = local[slug]?.[lang];
   if (!app || !page) notFound();
   const m = page.mock;
-  const d = loadPractice(slug);
+  const d = loadPractice(slug, { native: true });
   const T = quizText[lang as Lang];
   const { primary, secondary, soft } = app.theme;
   const playUrl = trackedPlayUrl(app.playUrl, `mock_test_${lang}`);
