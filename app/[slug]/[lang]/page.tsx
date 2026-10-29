@@ -45,7 +45,7 @@ export default async function LocalPage({ params }: { params: Promise<{ slug: st
   return (
     <div lang={lang} className="relative min-h-screen">
       <JsonLd data={faqLd(t.faq)} />
-      <AppNav name={app.shortName} icon={app.icon} color={primary} playUrl={playUrl} base={base} practiceHref={practice ? `${base}mock-test/` : undefined} />
+      <AppNav name={app.shortName} icon={app.icon} color={primary} playUrl={playUrl} base={`${base}${lang}/`} sections={[]} ctaLabel={t.mock.getApp} />
 
       <section className="relative overflow-hidden px-5 pb-16 pt-36" style={{ background: soft }}>
         <Blobs colors={[primary, secondary, primary, "#ffffff"]} opacity={0.25} fade />
@@ -60,13 +60,12 @@ export default async function LocalPage({ params }: { params: Promise<{ slug: st
           <p className="mt-5 max-w-2xl text-lg text-[#3d3d52]">{t.intro}</p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             {practice && (
-              <Link href={`${base}mock-test/`} className="inline-flex h-16 items-center rounded-2xl px-7 font-bold text-white shadow-lg transition-transform hover:-translate-y-0.5" style={{ background: primary }}>
+              <Link href={`${base}${lang}/mock-test/`} className="inline-flex h-16 items-center rounded-2xl px-7 font-bold text-white shadow-lg transition-transform hover:-translate-y-0.5" style={{ background: primary }}>
                 {t.ui.mock} →
               </Link>
             )}
             <PlayBadge href={playUrl} />
           </div>
-          {practice && <p className="mt-3 text-sm text-[#6b6b80]">{t.ui.note}</p>}
         </div>
       </section>
 

@@ -7,6 +7,7 @@ export type CardInput = {
   icon: string; // same-origin image URL
   appName: string;
   url: string; // shown at the bottom, without protocol
+  cta?: string; // button text on the card, e.g. "Try it free →"
 };
 
 function loadImage(src: string) {
@@ -112,7 +113,7 @@ export async function drawScoreCard(c: CardInput): Promise<Blob | null> {
   ctx.fillStyle = "#0f0f1a";
   ctx.font = `700 36px ${body}`;
   ctx.textBaseline = "middle";
-  ctx.fillText("Try it free →", 120, S - 122);
+  ctx.fillText(c.cta ?? "Try it free →", 120, S - 122);
   ctx.textAlign = "right";
   ctx.fillStyle = c.color;
   ctx.font = `700 ${c.url.length > 30 ? 28 : 36}px ${body}`;

@@ -4,7 +4,11 @@ import PracticeShell from "@/components/practice/PracticeShell";
 import Quiz from "@/components/practice/Quiz";
 import { getApp } from "@/lib/apps";
 import { loadPractice, practiceSlugs, trackedPlayUrl } from "@/lib/questions";
+import { localesFor } from "@/lib/i18n";
 import { ogImage } from "@/lib/seo";
+import Link from "next/link";
+
+const LANG_LABEL: Record<string, string> = { de: "🇩🇪 Auf Deutsch", da: "🇩🇰 På dansk", nl: "🇳🇱 In het Nederlands" };
 
 export const dynamicParams = false;
 
@@ -22,7 +26,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: { absolute: title },
     description,
-    alternates: { canonical: `/${slug}/mock-test/` },
+    alternates: {
+      canonical: `/${slug}/mock-test/`,
+      ...(localesFor(slug).length
+        ? { languages: { en: `/${slug}/mock-test/`, ...Object.fromEntries(localesFor(slug).map((l) => [l, `/${slug}/${l}/mock-test/`])), "x-default": `/${slug}/mock-test/` } }
+        : {}),
+    },
     robots: d.isSample ? { index: false, follow: true } : undefined,
     openGraph: { title, description, url: `/${slug}/mock-test/`, images: ogImage(slug, app.name) },
   };
@@ -48,6 +57,15 @@ export default async function MockTestPage({ params }: { params: Promise<{ slug:
       premiumCount={d.premiumCount}
       isSample={d.isSample}
     >
+      {localesFor(slug).length > 0 && (
+        <div className="mb-4 flex justify-center gap-2">
+          {localesFor(slug).map((l) => (
+            <Link key={l} href={`/${slug}/${l}/mock-test/`} hrefLang={l} className="rounded-full bg-white px-4 py-2 text-sm font-semibold ring-1 ring-black/10 transition-colors hover:bg-black/5">
+              {LANG_LABEL[l] ?? l}
+            </Link>
+          ))}
+        </div>
+      )}
       <Quiz
         mode="mock"
         questions={d.mockPool}

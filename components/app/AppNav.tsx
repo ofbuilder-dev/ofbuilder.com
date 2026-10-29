@@ -22,6 +22,8 @@ export default function AppNav({
   darkHero,
   base = "",
   practiceHref,
+  sections = SECTIONS,
+  ctaLabel = "Get the app",
 }: {
   name: string;
   icon: string;
@@ -30,6 +32,8 @@ export default function AppNav({
   darkHero?: boolean;
   base?: string; // app page path when used on a sub-page, so section links point back to it
   practiceHref?: string; // adds a "Free test" link for apps with web practice
+  sections?: string[][]; // translated pages pass their own (or no) section links
+  ctaLabel?: string;
 }) {
   const { scrollY, scrollYProgress } = useScroll();
   const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 25 });
@@ -51,7 +55,7 @@ export default function AppNav({
               Free test
             </a>
           )}
-          {SECTIONS.map(([l, h]) => (
+          {sections.map(([l, h]) => (
             <a key={h} href={`${base}${h}`} className={`rounded-full px-4 py-2.5 transition-colors ${light ? "hover:bg-white/10" : "hover:bg-black/5"}`}>
               {l}
             </a>
@@ -62,7 +66,7 @@ export default function AppNav({
             by OfBuilder
           </Link>
           <a href={playUrl} target="_blank" rel="noopener noreferrer" className="whitespace-nowrap rounded-full px-4 py-2.5 text-sm font-bold text-white shadow-lg transition-transform hover:-translate-y-0.5 active:scale-95 sm:px-7 sm:py-3.5 sm:text-base" style={{ background: color }}>
-            Get the app
+            {ctaLabel}
           </a>
         </div>
       </nav>
