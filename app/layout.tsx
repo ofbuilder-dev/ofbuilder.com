@@ -23,8 +23,7 @@ export const metadata: Metadata = {
     default: "OfBuilder: apps that help you learn, pass, sleep & grow",
     template: "%s · OfBuilder",
   },
-  description:
-    "OfBuilder is an indie app studio with 24 Android apps across citizenship and driving theory tests, CompTIA exam prep, kids learning and bedtime stories, Islamic apps, AI sleep, brain games and private money tools.",
+  description: "Free mock tests and 24 Android apps from OfBuilder: citizenship tests, UK driving theory, CompTIA exam prep, kids learning, Islamic apps and AI sleep.",
   keywords: ["OfBuilder", "app studio", "citizenship test app", "driving theory test app", "CompTIA exam prep", "AI apps"],
   authors: [{ name: "OfBuilder" }],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } },

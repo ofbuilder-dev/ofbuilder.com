@@ -4,7 +4,7 @@ import PracticeShell from "@/components/practice/PracticeShell";
 import TopicPractice from "@/components/practice/TopicPractice";
 import { getApp } from "@/lib/apps";
 import { loadPractice, practiceSlugs, trackedPlayUrl } from "@/lib/questions";
-import { ogImage } from "@/lib/seo";
+import { metaDescription, ogImage } from "@/lib/seo";
 
 export const dynamicParams = false;
 
@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const app = getApp(slug)!;
   const d = loadPractice(slug);
   const title = `Free ${d.examName} Practice Questions 2026 by Topic`;
-  const description = `Practise for the ${d.examName} free: ${d.topics.length} topics with instant answers and explanations. No sign-up. Get ${d.premiumCount}+ more in the ${app.shortName} app.`;
+  const description = metaDescription(`Practise for the ${d.examName} free: ${d.topics.length} topics with instant answers and explanations. No sign-up. Get ${d.premiumCount}+ more in the ${app.shortName} app.`);
   return {
     title: { absolute: title },
     description,

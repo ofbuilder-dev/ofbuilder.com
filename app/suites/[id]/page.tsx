@@ -10,7 +10,7 @@ import Reveal from "@/components/ui/Reveal";
 import Tilt from "@/components/ui/Tilt";
 import { appsInSuite, getSuite, playDeveloperUrl, suites } from "@/lib/apps";
 import JsonLd from "@/components/site/JsonLd";
-import { breadcrumbLd, ogImage, suiteLd } from "@/lib/seo";
+import { breadcrumbLd, ogImage, suiteLd, metaDescription } from "@/lib/seo";
 
 export const dynamicParams = false;
 
@@ -21,7 +21,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const suite = getSuite((await params).id);
   if (!suite) return {};
-  return { title: suite.name, description: `${suite.tagline} ${suite.description}`, alternates: { canonical: `/suites/${suite.id}/` },
+  return { title: suite.name, description: metaDescription(`${suite.tagline} ${suite.description}`), alternates: { canonical: `/suites/${suite.id}/` },
     openGraph: { title: suite.name, description: suite.tagline, url: `/suites/${suite.id}/`, images: ogImage(`suite-${suite.id}`, suite.name) },
     twitter: { card: "summary_large_image", title: suite.name, description: suite.tagline, images: [`/og/suite-${suite.id}.png`] },
   };

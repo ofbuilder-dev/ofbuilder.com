@@ -9,6 +9,16 @@ export function ogImage(name: string, alt: string) {
   return [{ url: `/og/${name}.png`, width: 1200, height: 630, alt }];
 }
 
+/** Fits a meta description into search engines' 160-character limit, cutting at a sentence or word. */
+export function metaDescription(text: string, max = 158) {
+  const t = text.replace(/\s+/g, " ").trim();
+  if (t.length <= max) return t;
+  const cut = t.slice(0, max);
+  const sentence = cut.lastIndexOf(". ");
+  if (sentence > max * 0.55) return cut.slice(0, sentence + 1);
+  return cut.slice(0, cut.lastIndexOf(" ")).replace(/[,;:]$/, "") + "…";
+}
+
 /** Absolute URL for a site path, always with a trailing slash (the site is exported with trailingSlash). */
 export function abs(path = "/") {
   const p = path.startsWith("/") ? path : `/${path}`;
