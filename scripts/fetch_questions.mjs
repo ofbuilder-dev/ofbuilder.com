@@ -67,6 +67,8 @@ for (const [file, [slug, mockSize]] of Object.entries(BANKS)) {
     fs.writeFileSync(path.join(OUT, `${slug}.json`), JSON.stringify(free, null, 1) + "\n");
     fs.writeFileSync(path.join(OUT, `${slug}.meta.json`), JSON.stringify({ total: raw.length, source: file }) + "\n");
     const topics = new Set(free.map((q) => q.topic_slug)).size;
+    // Shows which language a bank is written in (used for the translated mock test pages).
+    if (/german|danish|knm/.test(slug)) console.log(`  sample ${slug}: keys=[${Object.keys(free[0]).join(",")}] q="${String(free[0].question).slice(0, 90)}"`);
     console.log(`✓ ${slug}: ${raw.length} in bank, ${raw.filter((q) => q.is_premium === false).length} flagged free, ${free.length} published across ${topics} topics`);
   } catch (e) {
     failed++;

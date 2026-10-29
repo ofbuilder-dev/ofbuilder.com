@@ -2,20 +2,22 @@
 
 import { useState } from "react";
 import { track } from "@/lib/analytics";
+import { quizText, type Lang } from "@/lib/quizText";
 import { drawScoreCard, type CardInput } from "@/lib/shareCard";
 
 // "Share my result" button: builds a score card image and opens the phone's share sheet,
 // or downloads the image and copies the link on desktop.
-export default function ShareResult({ card, path, slug, light = true }: { card: Omit<CardInput, "url">; path: string; slug: string; light?: boolean }) {
+export default function ShareResult({ card, path, slug, light = true, lang = "en" }: { card: Omit<CardInput, "url" | "cta">; path: string; slug: string; light?: boolean; lang?: Lang }) {
+  const T = quizText[lang];
   const [state, setState] = useState<"idle" | "busy" | "saved" | "copied">("idle");
 
   const share = async () => {
     setState("busy");
     const link = `https://ofbuilder.com${path}`;
-    const text = `${card.headline} ${card.big}. Try the free test: ${link}`;
+    const text = `${card.headline} ${card.big}. ${T.shareText} ${link}`;
     track("share_result", slug);
     try {
-      const blob = await drawScoreCard({ ...card, url: `ofbuilder.com${path}` });
+      const blob = await drawScoreCard({ ...card, url: `ofbuilder.com${path}`, cta: T.cardCta });
       const file = blob ? new File([blob], `${slug}-score.png`, { type: "image/png" }) : null;
       if (file && navigator.canShare?.({ files: [file] })) {
         await navigator.share({ files: [file], text, title: card.headline });
@@ -45,7 +47,7 @@ export default function ShareResult({ card, path, slug, light = true }: { card: 
     }
   };
 
-  const label = state === "busy" ? "Creating…" : state === "copied" ? "Image saved, link copied ✓" : state === "saved" ? "Image saved ✓" : "Share my result";
+  const label = state === "busy" ? T.creating : state === "copied" ? T.copied : state === "saved" ? T.saved : T.share;
 
   return (
     <button

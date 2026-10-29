@@ -44,6 +44,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...countries.map((c) => entry(`/tests/${c.id}/`, 0.85, "weekly")),
     ...guideSlugs().map((slug) => entry(`/${slug}/guide/`, 0.85, "monthly")),
     ...localParams().map(({ slug, lang }) => entry(`/${slug}/${lang}/`, 0.8, "monthly")),
+    ...localParams()
+      .filter(({ slug }) => practiceSlugs().includes(slug) && !loadPractice(slug).isSample)
+      .map(({ slug, lang }) => entry(`/${slug}/${lang}/mock-test/`, 0.85, "weekly")),
     entry("/brightkids/play/", 0.7, "monthly"),
     entry("/ilmai/ayah/", 0.7, "daily"),
     entry("/stories/", 0.5, "weekly"),

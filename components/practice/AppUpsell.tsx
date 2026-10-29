@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import PlayBadge from "@/components/ui/PlayBadge";
+import { quizText, type Lang } from "@/lib/quizText";
 
 // Post-quiz upsell card: a headline that reacts to the result, the app's benefits and a Play badge.
 export default function AppUpsell({
@@ -11,6 +12,7 @@ export default function AppUpsell({
   rating,
   headline,
   sub,
+  lang = "en",
 }: {
   appName: string;
   icon: string;
@@ -20,14 +22,10 @@ export default function AppUpsell({
   rating?: number;
   headline: string;
   sub: string;
+  lang?: Lang;
 }) {
-  const perks = [
-    premiumCount > 0 ? `${premiumCount}+ more practice questions` : "The full question bank",
-    "Unlimited timed mock tests",
-    "Mistakes review with explanations",
-    "Readiness score so you know when to book",
-    "Works offline, anywhere",
-  ];
+  const T = quizText[lang];
+  const perks = T.perks(premiumCount);
 
   return (
     <div className="relative overflow-hidden rounded-[2rem] bg-[#0f0f1a] p-6 text-white shadow-2xl sm:p-10">
@@ -42,10 +40,10 @@ export default function AppUpsell({
             <p className="text-sm text-white/60">
               {rating ? (
                 <>
-                  <span className="text-amber-400">★★★★★</span> {rating.toFixed(1)} on Google Play
+                  <span className="text-amber-400">★★★★★</span> {rating.toFixed(1)} {T.onPlay}
                 </>
               ) : (
-                <>Free on Google Play · Android</>
+                <>{T.freeOnPlay}</>
               )}
             </p>
           </div>
@@ -66,8 +64,8 @@ export default function AppUpsell({
         </ul>
 
         <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
-          <PlayBadge href={playUrl} dark={false} label="Download free on" />
-          <p className="text-sm text-white/55">Free download · No sign-up needed</p>
+          <PlayBadge href={playUrl} dark={false} label={T.badge} />
+          <p className="text-sm text-white/55">{T.freeDl}</p>
         </div>
       </div>
     </div>

@@ -12,6 +12,20 @@ export type LocalPage = {
   features: { title: string; body: string }[];
   ui: { mock: string; ready: string; app: string; factsTitle: string; featuresTitle: string; faqTitle: string; note: string; english: string };
   faq: Faq[];
+  // Translated free mock test page at /<app-slug>/<lang>/mock-test/
+  mock: {
+    title: string;
+    description: string;
+    eyebrow: string;
+    h1: string;
+    intro: string;
+    examName: string;
+    ctaTitle: string;
+    ctaBody: string;
+    getApp: string;
+    english: string;
+    back: string;
+  };
 };
 
 export const local: Record<string, Record<string, LocalPage>> = {
@@ -48,6 +62,19 @@ export const local: Record<string, Record<string, LocalPage>> = {
         { q: "Wie viele Fragen muss ich richtig beantworten?", a: "Du brauchst mindestens 17 richtige Antworten, um den Test zu bestehen." },
         { q: "Ist die App offiziell?", a: "Nein. Die App ist eine unabhängige Lernhilfe und nicht mit dem BAMF verbunden." },
       ],
+      mock: {
+        title: "Einbürgerungstest Probetest 2026: Kostenlos online üben",
+        description: "Kostenloser Einbürgerungstest-Probetest: 33 Fragen, 60 Minuten, 17 richtige zum Bestehen. Sofort Ergebnis und Erklärungen, ohne Anmeldung.",
+        eyebrow: "Kostenloser Probetest",
+        h1: "Einbürgerungstest Probetest",
+        intro: "33 Fragen in 60 Minuten, wie im echten Test. Du brauchst 17 richtige Antworten zum Bestehen. Am Ende siehst du dein Ergebnis und alle Erklärungen.",
+        examName: "Einbürgerungstest",
+        ctaTitle: "Mehr Fragen üben?",
+        ctaBody: "Alle Fragen, unbegrenzte Probetests und Fehlerwiederholung in der App.",
+        getApp: "App laden",
+        english: "English version",
+        back: "← Zur Übersicht",
+      },
     },
   },
   "danish-citizenship": {
@@ -82,6 +109,19 @@ export const local: Record<string, Record<string, LocalPage>> = {
         { q: "Hvornår afholdes prøven?", a: "Prøven afholdes på faste datoer i løbet af året. Tjek den officielle hjemmeside for næste dato." },
         { q: "Er appen officiel?", a: "Nej. Appen er et uafhængigt studieværktøj og er ikke tilknyttet de danske myndigheder." },
       ],
+      mock: {
+        title: "Indfødsretsprøven prøvetest 2026: Gratis online",
+        description: "Gratis prøvetest til indfødsretsprøven: øv spørgsmål om dansk samfund, kultur, historie og værdier. Få dit resultat og forklaringer med det samme.",
+        eyebrow: "Gratis prøvetest",
+        h1: "Prøvetest til indfødsretsprøven",
+        intro: "Øv dig med spørgsmål om dansk samfund, kultur, historie og værdier under tidspres. Til sidst ser du dit resultat og alle forklaringer. Dette er et øveformat, ikke den officielle prøve.",
+        examName: "Indfødsretsprøven",
+        ctaTitle: "Vil du øve flere spørgsmål?",
+        ctaBody: "Alle spørgsmål, ubegrænsede prøvetests og gennemgang af dine fejl i appen.",
+        getApp: "Hent appen",
+        english: "English version",
+        back: "← Tilbage til oversigten",
+      },
     },
   },
   "knm-inburgering": {
@@ -116,6 +156,19 @@ export const local: Record<string, Record<string, LocalPage>> = {
         { q: "Hoe meld ik me aan?", a: "Je meldt je aan bij DUO met je DigiD." },
         { q: "Is de app officieel?", a: "Nee. De app is een onafhankelijk hulpmiddel en is niet verbonden aan DUO." },
       ],
+      mock: {
+        title: "KNM proefexamen 2026: Gratis online oefenen",
+        description: "Gratis KNM-proefexamen voor je inburgering: oefen vragen over werk, zorg, wonen, onderwijs en geschiedenis. Direct je score en uitleg.",
+        eyebrow: "Gratis proefexamen",
+        h1: "KNM proefexamen",
+        intro: "Oefen vragen over werk, zorg, wonen, onderwijs, geschiedenis en Nederlandse normen en waarden op tijd. Aan het eind zie je je score en alle uitleg. Dit is een oefenformat, niet het officiële examen.",
+        examName: "KNM-examen",
+        ctaTitle: "Meer vragen oefenen?",
+        ctaBody: "Alle vragen, onbeperkt proefexamens en je fouten herhalen in de app.",
+        getApp: "Download de app",
+        english: "English version",
+        back: "← Terug naar overzicht",
+      },
     },
   },
 };
