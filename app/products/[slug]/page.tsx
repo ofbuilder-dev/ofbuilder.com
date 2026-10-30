@@ -12,6 +12,8 @@ const REDIRECTS: Record<string, string> = {
   shishuai: "/#studio",
   sakinahfit: "/#studio",
   mindfulmuslim: "/#studio",
+  myexpenses: "/budgetwise/", // BudgetWise was published as "My Expenses"
+  nurseup: "/apps/",
 };
 
 export const dynamicParams = false;
