@@ -11,6 +11,7 @@ export type BlogPost = {
   date: string;
   body: string;
   app?: string; // app slug for the call-to-action card at the end of the post
+  noindex?: boolean; // short, repetitive update posts: readable on the site, kept out of search engines
 };
 
 const BLOG_DIR = path.join(process.cwd(), "content/blog");

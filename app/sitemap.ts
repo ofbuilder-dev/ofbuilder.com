@@ -52,7 +52,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry("/stories/", 0.5, "weekly"),
     entry("/blog/", 0.7, "daily"),
     ...Array.from({ length: Math.max(0, blogPageCount(getAllPosts().length) - 1) }, (_, i) => entry(`/blog/page/${i + 2}/`, 0.4, "weekly")),
-    ...getAllPosts().map((p) => entry(`/blog/${p.slug}/`, 0.6, "yearly", new Date(p.date))),
+    ...getAllPosts()
+      .filter((p) => !p.noindex)
+      .map((p) => entry(`/blog/${p.slug}/`, 0.6, "yearly", new Date(p.date))),
     entry("/contact/", 0.5, "yearly"),
     entry("/privacy/", 0.3, "yearly"),
     ...[...publicPages("privacy"), ...publicPages("terms"), ...publicPages("delete-account")].map((p) => entry(p, 0.2, "yearly")),

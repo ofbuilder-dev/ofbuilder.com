@@ -22,6 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: post.title.length > 48 ? { absolute: post.title } : post.title,
     description: post.description ?? post.excerpt,
     alternates: { canonical: `/blog/${post.slug}/` },
+    ...(post.noindex ? { robots: { index: false, follow: true } } : {}),
     openGraph: { type: "article", title: post.title, description: post.description ?? post.excerpt, publishedTime: post.date, images: ogImage("home", post.title) },
   };
 }
