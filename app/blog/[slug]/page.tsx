@@ -7,16 +7,17 @@ import { hasPractice } from "@/lib/questions";
 import { notFound } from "next/navigation";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
-import { getAllPosts, getPost } from "@/lib/blog";
+import { getPost, readAllPosts } from "@/lib/blog";
 import { ogImage } from "@/lib/seo";
 
 export async function generateStaticParams() {
-  return getAllPosts().map((p) => ({ slug: p.slug }));
+  return readAllPosts().map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const post = getPost((await params).slug);
   if (!post) return {};
+  if (post.redirect) return { title: "Moved", robots: { index: false, follow: true }, alternates: { canonical: post.redirect } };
   return {
     // Long titles skip the "· OfBuilder" suffix so they fit in search results.
     title: post.title.length > 48 ? { absolute: post.title } : post.title,
@@ -31,6 +32,17 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) notFound();
+  // Merged post: forward to the page that replaced it.
+  if (post.redirect)
+    return (
+      <>
+        <meta httpEquiv="refresh" content={`0; url=${post.redirect}`} />
+        <link rel="canonical" href={`https://ofbuilder.com${post.redirect}`} />
+        <p style={{ padding: 40, fontFamily: "sans-serif" }}>
+          This post has moved. <a href={post.redirect}>Continue →</a>
+        </p>
+      </>
+    );
 
   const paragraphs = post.body.split("\n\n");
   const app = post.app ? getApp(post.app) : undefined;

@@ -11,12 +11,14 @@ export type BlogPost = {
   date: string;
   body: string;
   app?: string; // app slug for the call-to-action card at the end of the post
-  noindex?: boolean; // short, repetitive update posts: readable on the site, kept out of search engines
+  noindex?: boolean; // readable on the site, kept out of search engines
+  redirect?: string; // merged post: this address now forwards to another page
 };
 
 const BLOG_DIR = path.join(process.cwd(), "content/blog");
 
-export function getAllPosts(): BlogPost[] {
+/** Every post file, including old posts that now redirect elsewhere. */
+export function readAllPosts(): BlogPost[] {
   if (!fs.existsSync(BLOG_DIR)) return [];
   const files = fs.readdirSync(BLOG_DIR).filter((f) => f.endsWith(".json"));
   const posts = files.map((file) => {
@@ -28,8 +30,13 @@ export function getAllPosts(): BlogPost[] {
   );
 }
 
+/** Posts to list and index (redirected posts are left out). */
+export function getAllPosts(): BlogPost[] {
+  return readAllPosts().filter((p) => !p.redirect);
+}
+
 export function getPost(slug: string): BlogPost | undefined {
-  return getAllPosts().find((p) => p.slug === slug);
+  return readAllPosts().find((p) => p.slug === slug);
 }
 
 // Pagination: page 1 shows the featured post plus FIRST_PAGE more; later pages show PER_PAGE each.
