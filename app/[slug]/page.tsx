@@ -55,9 +55,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 const EXTRAS: Record<string, { emoji: string; title: string; body: string; href: string; cta: string }> = {
   brightkids: { emoji: "🦁", title: "Free games for little ones", body: "Letter Safari, Counting Garden and Colour Pop: quick learning games right in your browser, with sounds and stars.", href: "/kids/", cta: "Play now" },
   "network-plus": { emoji: "🧮", title: "Free subnet calculator", body: "Work out the network, broadcast, mask and host range for any IPv4 address. Handy for Network+ revision.", href: "/tools/subnet-calculator/", cta: "Open calculator" },
-  "security-plus": { emoji: "🔐", title: "Security+ acronyms cheat sheet", body: "A searchable list of the security acronyms you'll meet in the exam, with what each one means.", href: "/tools/security-plus-acronyms/", cta: "Open cheat sheet" },
+  "security-plus": { emoji: "🔐", title: "Free Security+ tools", body: "A searchable acronyms cheat sheet and a private password strength checker, handy for revision.", href: "/tools/security-plus-acronyms/", cta: "Open cheat sheet" },
   "a-plus-core-1": { emoji: "🔌", title: "Common ports cheat sheet", body: "Every port number the CompTIA exams ask about, searchable by number or protocol.", href: "/tools/common-ports/", cta: "Open cheat sheet" },
-  ilmai: { emoji: "🌙", title: "Ayah of the Day", body: "A short verse to reflect on every day, with its English meaning. Easy to share with family.", href: "/ilmai/ayah/", cta: "Read today's ayah" },
+  ilmai: { emoji: "🕌", title: "Prayer times & Qibla, free", body: "Today's prayer times and the Qibla direction for your location, plus an Ayah of the day to reflect on.", href: "/tools/prayer-times/", cta: "See prayer times" },
+  sleepwise: { emoji: "😴", title: "Free sleep calculator", body: "Find the best time to go to bed or wake up, based on 90-minute sleep cycles.", href: "/tools/sleep-calculator/", cta: "Work out my bedtime" },
+  renu: { emoji: "💸", title: "What do your subscriptions really cost?", body: "Add what you pay for and see the total per month, per year and over five years. Private, on your device.", href: "/tools/subscription-calculator/", cta: "Add up my subscriptions" },
+  budgetwise: { emoji: "💸", title: "Free subscription cost calculator", body: "See how much your monthly subscriptions add up to over a year.", href: "/tools/subscription-calculator/", cta: "Try the calculator" },
+  "driving-theory": { emoji: "🚗", title: "Stopping distances calculator", body: "Learn the Highway Code stopping distances from 20 to 70 mph, on dry, wet and icy roads.", href: "/tools/stopping-distances/", cta: "Open calculator" },
+  "motorcycle-theory": { emoji: "🏍️", title: "Stopping distances calculator", body: "Learn the Highway Code stopping distances from 20 to 70 mph, on dry, wet and icy roads.", href: "/tools/stopping-distances/", cta: "Open calculator" },
 };
 
 const LANG_LABEL: Record<string, string> = { de: "🇩🇪 Auf Deutsch", da: "🇩🇰 På dansk", nl: "🇳🇱 In het Nederlands" };
