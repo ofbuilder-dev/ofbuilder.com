@@ -19,7 +19,12 @@ function publicPages(dir: string) {
     .readdirSync(root)
     .filter((d) => fs.existsSync(path.join(root, d, "index.html")))
     // Redirect stubs (e.g. a privacy page for an app that isn't out yet) stay out of the sitemap.
-    .filter((d) => !fs.readFileSync(path.join(root, d, "index.html"), "utf-8").includes('http-equiv="refresh"'))
+    // Copies whose canonical points at a different page are left out too.
+    .filter((d) => {
+      const html = fs.readFileSync(path.join(root, d, "index.html"), "utf-8");
+      const canonical = html.match(/rel="canonical"\s+href="([^"]+)"/)?.[1];
+      return !html.includes('http-equiv="refresh"') && (!canonical || canonical.endsWith(`/${dir}/${d}/`));
+    })
     .map((d) => `/${dir}/${d}/`);
 }
 

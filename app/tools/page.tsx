@@ -35,6 +35,7 @@ const GROUPS: { name: string; color: string; tools: Tool[] }[] = [
     tools: [
       { href: "/tools/prayer-times/", emoji: "🕌", title: "Prayer times", body: "Today's Fajr, Dhuhr, Asr, Maghrib and Isha for your location." },
       { href: "/tools/qibla/", emoji: "🧭", title: "Qibla direction", body: "Find the direction of the Kaaba from wherever you are." },
+      { href: "/ilmai/ayah/", emoji: "🌙", title: "Ayah of the day", body: "A short Quran verse every day with its English meaning." },
     ],
   },
   {
