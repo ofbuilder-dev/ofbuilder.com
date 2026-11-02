@@ -57,6 +57,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entry("/tools/subnet-calculator/", 0.8, "monthly"),
     entry("/tools/common-ports/", 0.8, "monthly"),
     entry("/tools/security-plus-acronyms/", 0.8, "monthly"),
+    ...["sleep-calculator", "stopping-distances", "prayer-times", "qibla", "subscription-calculator", "password-strength-checker"].map((t) => entry(`/tools/${t}/`, 0.8, "monthly")),
     entry("/ilmai/ayah/", 0.7, "daily"),
     entry("/stories/", 0.5, "weekly"),
     entry("/blog/", 0.7, "daily"),

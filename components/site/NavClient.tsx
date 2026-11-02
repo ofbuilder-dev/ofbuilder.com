@@ -28,9 +28,9 @@ export default function NavClient({ suites, playUrl }: { suites: SuiteLink[]; pl
           <Logo size={46} />
         </Link>
 
-        <div className="hidden items-center gap-1.5 text-[17px] font-semibold text-[#3d3d52] md:flex">
+        <div className="hidden items-center gap-0.5 whitespace-nowrap text-[17px] font-semibold text-[#3d3d52] xl:flex">
           <div className="relative" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
-            <button className="rounded-full px-5 py-2.5 transition-colors hover:bg-black/5" aria-expanded={open}>
+            <button className="rounded-full px-3.5 py-2.5 2xl:px-5 transition-colors hover:bg-black/5" aria-expanded={open}>
               Suites ▾
             </button>
             <AnimatePresence>
@@ -59,11 +59,12 @@ export default function NavClient({ suites, playUrl }: { suites: SuiteLink[]; pl
               )}
             </AnimatePresence>
           </div>
-          <Link href="/apps/" className="rounded-full px-5 py-2.5 transition-colors hover:bg-black/5">All apps</Link>
-          <Link href="/free-tests/" className="rounded-full px-5 py-2.5 text-[#10b981] transition-colors hover:bg-black/5">Free tests</Link>
-          <Link href="/blog/" className="rounded-full px-5 py-2.5 transition-colors hover:bg-black/5">Blog</Link>
-          <Link href="/#studio" className="rounded-full px-5 py-2.5 transition-colors hover:bg-black/5">Studio</Link>
-          <Link href="/contact/" className="rounded-full px-5 py-2.5 transition-colors hover:bg-black/5">Contact</Link>
+          <Link href="/apps/" className="rounded-full px-3.5 py-2.5 2xl:px-5 transition-colors hover:bg-black/5">All apps</Link>
+          <Link href="/free-tests/" className="rounded-full px-3.5 py-2.5 2xl:px-5 text-[#10b981] transition-colors hover:bg-black/5">Free tests</Link>
+          <Link href="/tools/" className="rounded-full px-3.5 py-2.5 2xl:px-5 transition-colors hover:bg-black/5">Tools</Link>
+          <Link href="/blog/" className="rounded-full px-3.5 py-2.5 2xl:px-5 transition-colors hover:bg-black/5">Blog</Link>
+          <Link href="/#studio" className="rounded-full px-3.5 py-2.5 2xl:px-5 transition-colors hover:bg-black/5">Studio</Link>
+          <Link href="/contact/" className="rounded-full px-3.5 py-2.5 2xl:px-5 transition-colors hover:bg-black/5">Contact</Link>
         </div>
 
         <div className="flex items-center gap-2">
@@ -71,13 +72,13 @@ export default function NavClient({ suites, playUrl }: { suites: SuiteLink[]; pl
             href={playUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden rounded-full bg-[#0f0f1a] px-7 py-3.5 text-base font-bold text-white transition-all hover:-translate-y-0.5 hover:shadow-lg sm:inline-flex"
+            className="hidden whitespace-nowrap rounded-full bg-[#0f0f1a] px-7 py-3.5 text-base font-bold text-white transition-all hover:-translate-y-0.5 hover:shadow-lg sm:inline-flex"
           >
             Google Play ↗
           </a>
           <button
             onClick={() => setMenu((m) => !m)}
-            className="grid h-12 w-12 place-items-center rounded-full bg-white shadow ring-1 ring-black/5 md:hidden"
+            className="grid h-12 w-12 place-items-center rounded-full bg-white shadow ring-1 ring-black/5 xl:hidden"
             aria-label="Toggle menu"
             aria-expanded={menu}
           >
@@ -94,7 +95,7 @@ export default function NavClient({ suites, playUrl }: { suites: SuiteLink[]; pl
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              className="absolute inset-x-0 top-full mt-2 rounded-3xl bg-white p-3 shadow-2xl ring-1 ring-black/5 md:hidden"
+              className="absolute inset-x-0 top-full mt-2 rounded-3xl bg-white p-3 shadow-2xl ring-1 ring-black/5 xl:hidden"
             >
               {suites.map((s) => (
                 <Link key={s.id} href={`/suites/${s.id}/`} onClick={() => setMenu(false)} className="flex items-center gap-3 rounded-2xl p-3 font-medium hover:bg-black/5">
@@ -105,6 +106,7 @@ export default function NavClient({ suites, playUrl }: { suites: SuiteLink[]; pl
               {[
                 ["All apps", "/apps/"],
                 ["Free tests ✨", "/free-tests/"],
+                ["Free tools 🛠️", "/tools/"],
                 ["Success stories", "/stories/"],
                 ["Blog", "/blog/"],
                 ["Studio", "/#studio"],
