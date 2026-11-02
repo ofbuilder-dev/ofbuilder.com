@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withOg } from "@/lib/seo";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import Directory from "@/components/home/Directory";
@@ -6,11 +7,11 @@ import Blobs from "@/components/ui/Blobs";
 import Reveal from "@/components/ui/Reveal";
 import { apps, suites } from "@/lib/apps";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOg({
   title: "All apps",
   alternates: { canonical: "/apps/" },
   description: "Browse all 24 OfBuilder apps: citizenship tests, UK driving theory, CompTIA exam prep, kids apps, Islamic apps, AI sleep, brain games and money tools.",
-};
+});
 
 export default function AppsPage() {
   const items = apps.map((a) => ({

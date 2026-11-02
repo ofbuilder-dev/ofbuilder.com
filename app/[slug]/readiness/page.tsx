@@ -18,7 +18,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const app = getApp(slug)!;
   const d = loadPractice(slug);
-  const title = `Am I Ready for the ${d.examName}? Free ${COUNT}-Question Check`;
+  const long = `Am I Ready for the ${d.examName}? Free ${COUNT}-Question Check`;
+  const title = long.length <= 62 ? long : `Am I Ready for the ${d.examName}? Free Check`;
   const description = `Answer ${COUNT} quick questions across every topic and get a free readiness score for the ${d.examName}, plus the topics to practise next.`;
   return {
     title: { absolute: title },

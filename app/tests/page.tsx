@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withOg } from "@/lib/seo";
 import Link from "next/link";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
@@ -6,11 +7,11 @@ import Blobs from "@/components/ui/Blobs";
 import Reveal from "@/components/ui/Reveal";
 import { countries } from "@/lib/countries";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOg({
   title: { absolute: "Free Practice Tests by Country: UK, US, Canada & More" },
   description: "Find free practice tests for your country: citizenship tests for the UK, US, Canada, Australia, Germany, Denmark and the Netherlands, plus UK theory tests.",
   alternates: { canonical: "/tests/" },
-};
+});
 
 export default function CountriesPage() {
   return (

@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
+import { withOg } from "@/lib/seo";
 import SearchList from "@/components/tools/SearchList";
 import ToolShell from "@/components/tools/ToolShell";
 import { ports } from "@/lib/itTools";
 
-export const metadata: Metadata = {
-  title: { absolute: "Common Port Numbers Cheat Sheet for CompTIA A+, Network+ & Security+" },
+export const metadata: Metadata = withOg({
+  title: { absolute: "Common Port Numbers Cheat Sheet (CompTIA A+, Network+)" },
   description: "Searchable list of the common TCP and UDP port numbers you need for CompTIA A+, Network+ and Security+: FTP, SSH, DNS, DHCP, HTTPS, RDP and more.",
   alternates: { canonical: "/tools/common-ports/" },
-};
+}, "network-plus");
 
 export default function CommonPorts() {
   return (

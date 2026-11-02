@@ -1,4 +1,5 @@
 // Shared SEO helpers: absolute URLs, canonical paths and schema.org JSON-LD builders.
+import type { Metadata } from "next";
 import { contactEmail, playDeveloperUrl, socials, type App, type Faq, type Suite } from "./apps";
 
 export const siteUrl = "https://ofbuilder.com";
@@ -17,6 +18,20 @@ export function metaDescription(text: string, max = 158) {
   const sentence = cut.lastIndexOf(". ");
   if (sentence > max * 0.55) return cut.slice(0, sentence + 1);
   return cut.slice(0, cut.lastIndexOf(" ")).replace(/[,;:]$/, "") + "…";
+}
+
+/** Adds share-preview tags (Open Graph and Twitter) built from a page's own title, description and canonical URL,
+ *  so shared links never fall back to the home page's preview. */
+export function withOg(m: Metadata, image = "home"): Metadata {
+  const t = m.title as string | { absolute: string } | undefined;
+  const title = typeof t === "string" ? `${t} · ${siteName}` : (t?.absolute ?? siteName);
+  const description = m.description ?? undefined;
+  const url = (m.alternates?.canonical as string | undefined) ?? "/";
+  return {
+    ...m,
+    openGraph: { type: "website", siteName, title, description, url, images: ogImage(image, title), ...(m.openGraph ?? {}) },
+    twitter: { card: "summary_large_image", title, description, images: [`/og/${image}.png`] },
+  };
 }
 
 /** Absolute URL for a site path, always with a trailing slash (the site is exported with trailingSlash). */

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { withOg } from "@/lib/seo";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import Reveal from "@/components/ui/Reveal";
 
-export const metadata: Metadata = { title: "Privacy policies", description: "Privacy policies for every OfBuilder app: what data each app collects, how it is used, and how to delete your account.", alternates: { canonical: "/privacy/" } };
+export const metadata: Metadata = withOg({ title: "Privacy policies", description: "Privacy policies for every OfBuilder app: what data each app collects, how it is used, and how to delete your account.", alternates: { canonical: "/privacy/" } });
 
 const policies = [
   { name: "DreamNest AI", slug: "dreamnest-ai", emoji: "🌙" },

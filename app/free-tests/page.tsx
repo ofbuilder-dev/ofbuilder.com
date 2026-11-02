@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withOg } from "@/lib/seo";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import TestCard from "@/components/tests/TestCard";
@@ -9,11 +10,11 @@ import { getApp, suites } from "@/lib/apps";
 import { countries } from "@/lib/countries";
 import { practiceSlugs } from "@/lib/questions";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOg({
   title: { absolute: "Free Practice Tests 2026: Citizenship, Driving Theory & CompTIA" },
   description: "Free online mock tests and practice questions for citizenship tests, UK driving theory tests and CompTIA exams. Instant score, explanations, no sign-up.",
   alternates: { canonical: "/free-tests/" },
-};
+});
 
 // Hub of every free web test, grouped by suite.
 export default function FreeTestsPage() {

@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
+import { withOg } from "@/lib/seo";
 import Link from "next/link";
 import QiblaFinder from "@/components/tools/QiblaFinder";
 import ToolShell from "@/components/tools/ToolShell";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOg({
   title: { absolute: "Qibla Direction Finder: Find the Qibla From Your Location" },
   description: "Find the Qibla direction from anywhere: see the bearing to the Kaaba in Makkah, and use your phone's compass to face it. Free, no sign-up.",
   alternates: { canonical: "/tools/qibla/" },
-};
+}, "ilmai");
 
 export default function QiblaPage() {
   return (

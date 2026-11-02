@@ -16,7 +16,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const app = getApp(slug)!;
   const d = loadPractice(slug);
-  const title = `Free ${d.examName} Practice Questions 2026 by Topic`;
+  const long = `Free ${d.examName} Practice Questions 2026 by Topic`;
+  const title = long.length <= 62 ? long : `Free ${d.examName} Practice Questions 2026`;
   const description = metaDescription(`Practise for the ${d.examName} free: ${d.topics.length} topics with instant answers and explanations. No sign-up. Get ${d.premiumCount}+ more in the ${app.shortName} app.`);
   return {
     title: { absolute: title },

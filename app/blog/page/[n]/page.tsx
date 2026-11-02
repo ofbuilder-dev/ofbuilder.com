@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import BlogIndex from "@/components/blog/BlogIndex";
 import { blogPageCount, getAllPosts } from "@/lib/blog";
+import { withOg } from "@/lib/seo";
 
 export const dynamicParams = false;
 
@@ -13,11 +14,11 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ n: string }> }): Promise<Metadata> {
   const n = Number((await params).n);
-  return {
+  return withOg({
     title: `Blog: page ${n}`,
     description: `Exam guides, study tips and app updates from OfBuilder, page ${n} of ${blogPageCount(getAllPosts().length)}.`,
     alternates: { canonical: `/blog/page/${n}/` },
-  };
+  });
 }
 
 export default async function BlogPaged({ params }: { params: Promise<{ n: string }> }) {
