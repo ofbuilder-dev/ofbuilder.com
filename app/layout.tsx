@@ -3,6 +3,7 @@ import { Bricolage_Grotesque, Inter } from "next/font/google";
 import "./globals.css";
 import Analytics from "@/components/site/Analytics";
 import JsonLd from "@/components/site/JsonLd";
+import MotionProvider from "@/components/site/MotionProvider";
 import { ogImage, organizationLd, websiteLd } from "@/lib/seo";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
@@ -44,7 +45,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en" className={`${inter.variable} ${display.variable}`}>
       <body>
         <JsonLd data={[organizationLd(), websiteLd()]} />
-        {children}
+        <MotionProvider>{children}</MotionProvider>
         <Analytics />
       </body>
     </html>

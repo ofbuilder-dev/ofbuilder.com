@@ -2,7 +2,7 @@
 
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import { useMemo, useState } from "react";
 
 type Item = { slug: string; name: string; shortName: string; tagline: string; icon: string; suiteId: string; primary: string; soft: string; rating?: number };
@@ -27,7 +27,7 @@ export default function Directory({ items, suites }: { items: Item[]; suites: Su
             const active = suite === c.id;
             return (
               <button key={c.id} onClick={() => setSuite(c.id)} className="relative shrink-0 whitespace-nowrap rounded-full px-3.5 py-2.5 text-sm font-semibold transition-colors" style={{ color: active ? "#fff" : "#3d3d52" }}>
-                {active && <motion.span layoutId="chip" className="absolute inset-0 rounded-full" style={{ background: c.color }} transition={{ type: "spring", stiffness: 400, damping: 30 }} />}
+                {active && <m.span layoutId="chip" className="absolute inset-0 rounded-full" style={{ background: c.color }} transition={{ type: "spring", stiffness: 400, damping: 30 }} />}
                 {!active && <span className="absolute inset-0 rounded-full transition-colors hover:bg-black/5" />}
                 <span className="relative">
                   {c.emoji} {c.short}
@@ -52,10 +52,10 @@ export default function Directory({ items, suites }: { items: Item[]; suites: Su
         Showing {shown.length} {shown.length === 1 ? "app" : "apps"}
         {suite !== "all" && <> in {chips.find((c) => c.id === suite)?.short}</>}
       </p>
-      <motion.div layout className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <m.div layout className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <AnimatePresence mode="popLayout">
           {shown.map((a) => (
-            <motion.div key={a.slug} layout className="min-w-0" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} transition={{ type: "spring", stiffness: 300, damping: 28 }}>
+            <m.div key={a.slug} layout className="min-w-0" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} transition={{ type: "spring", stiffness: 300, damping: 28 }}>
               <Link href={`/${a.slug}/`} className="group flex h-full items-center gap-4 rounded-[1.75rem] bg-white p-5 ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:shadow-xl">
                 <img src={a.icon} alt={`${a.name} icon`} width={68} height={68} className="h-[68px] w-[68px] shrink-0 rounded-[1.1rem] shadow-md transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-110" loading="lazy" />
                 <div className="min-w-0 flex-1">
@@ -69,10 +69,10 @@ export default function Directory({ items, suites }: { items: Item[]; suites: Su
                   →
                 </span>
               </Link>
-            </motion.div>
+            </m.div>
           ))}
         </AnimatePresence>
-      </motion.div>
+      </m.div>
       {shown.length === 0 && <p className="mt-16 text-center text-[#6b6b80]">No apps match “{q}”.</p>}
     </div>
   );

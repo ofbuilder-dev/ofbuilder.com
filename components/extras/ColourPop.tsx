@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import { useEffect, useState } from "react";
 import { track } from "@/lib/analytics";
 import { pick, say } from "./kidsGame";
@@ -102,11 +102,11 @@ export default function ColourPop({ playUrl }: { playUrl: string }) {
         {round.balloons.map((b) => (
           <AnimatePresence key={`${i}-${b[0]}`}>
             {popped === b[0] ? (
-              <motion.div initial={{ scale: 1 }} animate={{ scale: 1.6, opacity: 0 }} transition={{ duration: 0.4 }} className="grid h-40 place-items-center text-6xl sm:h-52">
+              <m.div initial={{ scale: 1 }} animate={{ scale: 1.6, opacity: 0 }} transition={{ duration: 0.4 }} className="grid h-40 place-items-center text-6xl sm:h-52">
                 💥
-              </motion.div>
+              </m.div>
             ) : (
-              <motion.button
+              <m.button
                 whileTap={{ scale: 0.9 }}
                 animate={wrong === b[0] ? { x: [0, -10, 10, -6, 6, 0] } : { y: [0, -8, 0] }}
                 transition={wrong === b[0] ? { duration: 0.4 } : { duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
@@ -115,7 +115,7 @@ export default function ColourPop({ playUrl }: { playUrl: string }) {
                 className="h-40 sm:h-52"
               >
                 <Balloon color={b[1]} />
-              </motion.button>
+              </m.button>
             )}
           </AnimatePresence>
         ))}

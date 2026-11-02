@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import { useEffect, useState } from "react";
 import type { Screen } from "@/lib/apps";
 import { PhoneFrame, ScreenMock, type ScreenTheme } from "./ScreenMock";
@@ -14,16 +14,16 @@ export default function PhoneShowcase({ screens, theme, name, icon }: { screens:
   }, [screens.length]);
 
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, y: 80, rotate: 6 }}
       animate={{ opacity: 1, y: 0, rotate: -3 }}
       transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
       className="relative mx-auto w-[240px] sm:w-[270px]"
     >
-      <motion.div animate={{ y: [0, -14, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}>
+      <m.div animate={{ y: [0, -14, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}>
         <PhoneFrame>
           <AnimatePresence mode="popLayout">
-            <motion.div
+            <m.div
               key={i}
               initial={{ opacity: 0, x: 40 }}
               animate={{ opacity: 1, x: 0 }}
@@ -32,10 +32,10 @@ export default function PhoneShowcase({ screens, theme, name, icon }: { screens:
               className="absolute inset-0"
             >
               <ScreenMock screen={screens[i]} theme={theme} name={name} icon={icon} />
-            </motion.div>
+            </m.div>
           </AnimatePresence>
         </PhoneFrame>
-      </motion.div>
+      </m.div>
       <div className="mt-5 flex justify-center gap-1.5">
         {screens.map((_, n) => (
           <button
@@ -47,6 +47,6 @@ export default function PhoneShowcase({ screens, theme, name, icon }: { screens:
           />
         ))}
       </div>
-    </motion.div>
+    </m.div>
   );
 }

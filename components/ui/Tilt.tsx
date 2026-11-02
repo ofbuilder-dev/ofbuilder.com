@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { m, useMotionValue, useSpring, useTransform } from "framer-motion";
 import type { ReactNode } from "react";
 
 // 3D tilt-towards-cursor wrapper for cards.
@@ -11,7 +11,7 @@ export default function Tilt({ children, className = "", max = 10 }: { children:
   const ry = useSpring(useTransform(x, [0, 1], [-max, max]), { stiffness: 200, damping: 18 });
 
   return (
-    <motion.div
+    <m.div
       className={className}
       style={{ rotateX: rx, rotateY: ry, transformPerspective: 900 }}
       onPointerMove={(e) => {
@@ -25,6 +25,6 @@ export default function Tilt({ children, className = "", max = 10 }: { children:
       }}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 }

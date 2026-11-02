@@ -26,7 +26,7 @@ export default function ContactPage() {
       <section className="relative overflow-hidden px-5 pb-16 pt-40">
         <Blobs opacity={0.35} fade />
         <Reveal className="relative mx-auto max-w-6xl">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#ff6b6b]">Contact</p>
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#dc2626]">Contact</p>
           <h1 className="font-display mt-3 text-6xl font-extrabold sm:text-8xl">Say hello 👋</h1>
           <p className="mt-5 max-w-xl text-lg text-[#3d3d52]">
             We read every message. The fastest way to reach us is{" "}

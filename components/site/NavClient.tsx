@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-motion";
+import { AnimatePresence, m, useMotionValueEvent, useScroll } from "framer-motion";
 import { useState } from "react";
 import Logo from "./Logo";
 
@@ -16,7 +16,7 @@ export default function NavClient({ suites, playUrl }: { suites: SuiteLink[]; pl
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-3 pt-4">
-      <motion.nav
+      <m.nav
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
@@ -35,7 +35,7 @@ export default function NavClient({ suites, playUrl }: { suites: SuiteLink[]; pl
             </button>
             <AnimatePresence>
               {open && (
-                <motion.div
+                <m.div
                   initial={{ opacity: 0, y: 10, scale: 0.97 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 6, scale: 0.98 }}
@@ -55,12 +55,12 @@ export default function NavClient({ suites, playUrl }: { suites: SuiteLink[]; pl
                       </Link>
                     ))}
                   </div>
-                </motion.div>
+                </m.div>
               )}
             </AnimatePresence>
           </div>
           <Link href="/apps/" className="rounded-full px-3.5 py-2.5 2xl:px-5 transition-colors hover:bg-black/5">All apps</Link>
-          <Link href="/free-tests/" className="rounded-full px-3.5 py-2.5 2xl:px-5 text-[#10b981] transition-colors hover:bg-black/5">Free tests</Link>
+          <Link href="/free-tests/" className="rounded-full px-3.5 py-2.5 2xl:px-5 text-[#047857] transition-colors hover:bg-black/5">Free tests</Link>
           <Link href="/tools/" className="rounded-full px-3.5 py-2.5 2xl:px-5 transition-colors hover:bg-black/5">Tools</Link>
           <Link href="/blog/" className="rounded-full px-3.5 py-2.5 2xl:px-5 transition-colors hover:bg-black/5">Blog</Link>
           <Link href="/#studio" className="rounded-full px-3.5 py-2.5 2xl:px-5 transition-colors hover:bg-black/5">Studio</Link>
@@ -91,7 +91,7 @@ export default function NavClient({ suites, playUrl }: { suites: SuiteLink[]; pl
 
         <AnimatePresence>
           {menu && (
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
@@ -116,10 +116,10 @@ export default function NavClient({ suites, playUrl }: { suites: SuiteLink[]; pl
                   {l}
                 </Link>
               ))}
-            </motion.div>
+            </m.div>
           )}
         </AnimatePresence>
-      </motion.nav>
+      </m.nav>
     </header>
   );
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import { useEffect, useState } from "react";
 import { track } from "@/lib/analytics";
 
@@ -105,7 +105,7 @@ export default function LetterSafari({ playUrl }: { playUrl: string }) {
         <span>⭐ {stars}</span>
       </div>
       <button onClick={() => say(L)} aria-label={`Hear the letter ${L}`} className="mx-auto mt-4 block">
-        <motion.span
+        <m.span
           key={L + n}
           initial={{ scale: 0.4, rotate: -20, opacity: 0 }}
           animate={{ scale: 1, rotate: 0, opacity: 1 }}
@@ -115,13 +115,13 @@ export default function LetterSafari({ playUrl }: { playUrl: string }) {
         >
           {L}
           <span className="text-[0.55em]">{L.toLowerCase()}</span>
-        </motion.span>
+        </m.span>
         <span className="mt-1 block text-sm font-semibold text-[#6b6b80]">🔊 Tap to hear it</span>
       </button>
       <p className="font-display mt-4 text-2xl font-extrabold">Which one starts with {L}?</p>
       <div className="mt-6 grid grid-cols-3 gap-3 sm:gap-5">
         {round.choices.map((c) => (
-          <motion.button
+          <m.button
             key={c[1] + n}
             whileTap={{ scale: 0.9 }}
             animate={wrong === c[1] ? { x: [0, -10, 10, -6, 6, 0] } : {}}
@@ -130,14 +130,14 @@ export default function LetterSafari({ playUrl }: { playUrl: string }) {
           >
             {c[2]}
             {cheer && c[0] === L && <span className="mt-1 text-base font-bold text-emerald-700">{c[1]}</span>}
-          </motion.button>
+          </m.button>
         ))}
       </div>
       <AnimatePresence>
         {cheer && (
-          <motion.div initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} className="pointer-events-none absolute inset-0 grid place-items-center text-8xl">
+          <m.div initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} className="pointer-events-none absolute inset-0 grid place-items-center text-8xl">
             🎉
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </div>

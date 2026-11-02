@@ -25,7 +25,7 @@ export default function KidsPage() {
       <section className="relative overflow-hidden px-5 pb-12 pt-40">
         <Blobs colors={["#ec4899", "#f59e0b", "#4cc9f0", "#8b5cf6"]} opacity={0.3} fade />
         <Reveal className="relative mx-auto max-w-6xl">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#ec4899]">Kids corner</p>
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#be185d]">Kids corner</p>
           <h1 className="font-display mt-3 text-5xl font-extrabold sm:text-7xl">
             Learn through <span className="text-rainbow">play.</span>
           </h1>

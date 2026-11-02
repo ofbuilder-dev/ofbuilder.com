@@ -2,7 +2,8 @@
 
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { ink } from "@/lib/color";
+import { m, useInView, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 type SuiteCard = {
@@ -36,25 +37,25 @@ function Card({ s, index, total }: { s: SuiteCard; index: number; total: number 
 
   return (
     <div ref={ref} className="sticky top-[6.5rem] lg:top-24 lg:h-[min(78vh,640px)]" style={{ paddingTop: index * 14 }}>
-      <motion.div
+      <m.div
         style={{ scale, background: s.soft }}
         className="relative flex flex-col overflow-hidden rounded-[2rem] p-6 shadow-[0_30px_80px_-30px_rgba(15,15,26,0.35)] ring-1 ring-black/5 sm:rounded-[2.5rem] sm:p-12 lg:h-full lg:flex-row lg:items-center lg:gap-12"
       >
         <div aria-hidden className="blob -right-20 -top-20 h-80 w-80" style={{ background: s.color, opacity: 0.35 }} />
         <div className="relative z-10 sm:flex-1">
-          <span className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-xs font-semibold shadow-sm" style={{ color: s.color }}>
+          <span className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1.5 text-xs font-semibold shadow-sm" style={{ color: ink(s.color) }}>
             {s.emoji} Suite {String(index + 1).padStart(2, "0")} · {s.apps.length} {s.apps.length === 1 ? "app" : "apps"}
             {s.upcoming?.length ? ` · ${s.upcoming.length} coming soon` : ""}
           </span>
           <h3 className="font-display mt-3 text-3xl font-extrabold sm:mt-5 sm:text-6xl">{s.name}</h3>
-          <p className="mt-2 max-w-md text-base font-medium sm:mt-4 sm:text-lg" style={{ color: s.color }}>
+          <p className="mt-2 max-w-md text-base font-medium sm:mt-4 sm:text-lg" style={{ color: ink(s.color) }}>
             {s.tagline}
           </p>
           <p className="mt-3 line-clamp-3 max-w-md text-[15px] leading-relaxed text-[#3d3d52] sm:line-clamp-none sm:text-base">{s.description}</p>
           <Link
             href={`/suites/${s.id}/`}
             className="group mt-4 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition-transform hover:-translate-y-1 sm:mt-8 sm:px-6 sm:py-3.5 sm:text-base"
-            style={{ background: s.color }}
+            style={{ background: ink(s.color) }}
           >
             Explore the suite <span className="transition-transform group-hover:translate-x-1">→</span>
           </Link>
@@ -66,11 +67,13 @@ function Card({ s, index, total }: { s: SuiteCard; index: number; total: number 
             const hideOnPhone = onPhone && onDesktop ? "flex" : onPhone ? "flex sm:hidden" : "hidden sm:flex";
             return t.kind === "app" ? (
               <Link key={t.slug} href={`/${t.slug}/`} className={`group ${hideOnPhone} min-w-0 flex-col items-center gap-1.5 text-center sm:gap-2`}>
-                <motion.img
+                <m.img
                   src={t.icon}
-                  alt={t.shortName}
+                  alt={`${t.shortName} icon`}
                   width={96}
                   height={96}
+                  loading="lazy"
+                  decoding="async"
                   initial={{ opacity: 0, y: 30, rotate: i % 2 ? 8 : -8 }}
                   animate={inView ? { opacity: 1, y: 0, rotate: 0 } : undefined}
                   transition={{ delay: i * 0.07, type: "spring", stiffness: 140, damping: 14 }}
@@ -85,7 +88,7 @@ function Card({ s, index, total }: { s: SuiteCard; index: number; total: number 
                   {t.emoji}
                 </div>
                 <span className="w-full truncate text-[10px] font-semibold text-[#6b6b80] sm:whitespace-normal sm:text-sm">{t.name}</span>
-                <span className="-mt-1 rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide" style={{ background: s.color + "1a", color: s.color }}>
+                <span className="-mt-1 rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide" style={{ background: s.color + "1a", color: ink(s.color, 7) }}>
                   Soon
                 </span>
               </div>
@@ -100,7 +103,7 @@ function Card({ s, index, total }: { s: SuiteCard; index: number; total: number 
               <Link key={m.cls} href={`/suites/${s.id}/`} className={`group ${m.cls} min-w-0 flex-col items-center gap-1.5 text-center sm:gap-2`}>
                 <span
                   className="grid aspect-square w-full max-w-16 place-items-center rounded-[24%] text-lg font-extrabold text-white shadow-xl transition-transform group-hover:-translate-y-1 sm:max-w-24 sm:text-2xl"
-                  style={{ background: s.color }}
+                  style={{ background: ink(s.color) }}
                 >
                   +{m.extra}
                 </span>
@@ -108,7 +111,7 @@ function Card({ s, index, total }: { s: SuiteCard; index: number; total: number 
               </Link>
             ))}
         </div>
-      </motion.div>
+      </m.div>
     </div>
   );
 }

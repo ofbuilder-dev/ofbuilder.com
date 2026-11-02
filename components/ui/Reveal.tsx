@@ -1,13 +1,13 @@
 "use client";
 
-import { motion, type HTMLMotionProps } from "framer-motion";
+import { m, type HTMLMotionProps } from "framer-motion";
 
 type Props = HTMLMotionProps<"div"> & { delay?: number; y?: number };
 
 // Fades + slides children into view once when scrolled into the viewport.
 export default function Reveal({ delay = 0, y = 28, children, ...rest }: Props) {
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
@@ -15,6 +15,6 @@ export default function Reveal({ delay = 0, y = 28, children, ...rest }: Props) 
       {...rest}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 }

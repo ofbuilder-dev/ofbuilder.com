@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import { useEffect, useState } from "react";
 import { track } from "@/lib/analytics";
 import { NUMBER_WORDS, pick, say } from "./kidsGame";
@@ -86,16 +86,16 @@ export default function CountingGarden({ playUrl }: { playUrl: string }) {
       <button onClick={() => say(`How many ${round.thing[1]}?`)} className="mx-auto mt-2 block text-sm font-semibold text-[#6b6b80]">
         🔊 How many {round.thing[1]}?
       </button>
-      <motion.div key={i} initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="mx-auto mt-6 flex min-h-[200px] max-w-md flex-wrap content-center items-center justify-center gap-3 rounded-[2rem] bg-[#ecfdf5] p-5">
+      <m.div key={i} initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="mx-auto mt-6 flex min-h-[200px] max-w-md flex-wrap content-center items-center justify-center gap-3 rounded-[2rem] bg-[#ecfdf5] p-5">
         {Array.from({ length: round.n }, (_, k) => (
-          <motion.span key={k} initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: k * 0.06 }} className="text-4xl sm:text-5xl">
+          <m.span key={k} initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: k * 0.06 }} className="text-4xl sm:text-5xl">
             {round.thing[0]}
-          </motion.span>
+          </m.span>
         ))}
-      </motion.div>
+      </m.div>
       <div className="mt-6 grid grid-cols-3 gap-3 sm:gap-5">
         {round.choices.map((c) => (
-          <motion.button
+          <m.button
             key={`${i}-${c}`}
             whileTap={{ scale: 0.9 }}
             animate={wrong === c ? { x: [0, -10, 10, -6, 6, 0] } : {}}
@@ -103,14 +103,14 @@ export default function CountingGarden({ playUrl }: { playUrl: string }) {
             className={`font-display aspect-[4/3] rounded-[1.75rem] text-5xl font-extrabold transition-colors sm:text-6xl ${cheer && c === round.n ? "bg-emerald-100 text-emerald-700 ring-4 ring-emerald-400" : wrong === c ? "bg-rose-50 text-rose-400" : "bg-[#f0fdf4] text-[#0f0f1a] hover:bg-[#dcfce7]"}`}
           >
             {c}
-          </motion.button>
+          </m.button>
         ))}
       </div>
       <AnimatePresence>
         {cheer && (
-          <motion.div initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} className="pointer-events-none absolute inset-0 grid place-items-center text-8xl">
+          <m.div initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} className="pointer-events-none absolute inset-0 grid place-items-center text-8xl">
             🎉
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </div>

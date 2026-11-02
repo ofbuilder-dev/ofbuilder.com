@@ -20,7 +20,7 @@ export default function CountriesPage() {
       <section className="relative overflow-hidden px-5 pb-12 pt-40">
         <Blobs opacity={0.35} fade />
         <Reveal className="relative mx-auto max-w-6xl">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#10b981]">Tests by country</p>
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#047857]">Tests by country</p>
           <h1 className="font-display mt-3 text-5xl font-extrabold sm:text-7xl">
             Where are you <span className="text-rainbow">taking your test?</span>
           </h1>

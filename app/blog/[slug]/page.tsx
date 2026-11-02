@@ -55,7 +55,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           ← Back to blog
         </Link>
         <div className="mt-8">
-          <span className="inline-flex rounded-full bg-[#8b5cf6]/10 px-3 py-1 text-xs font-bold text-[#8b5cf6]">{post.category}</span>
+          <span className="inline-flex rounded-full bg-[#8b5cf6]/10 px-3 py-1 text-xs font-bold text-[#7c3aed]">{post.category}</span>
           <h1 className="font-display mt-4 text-4xl font-extrabold leading-tight sm:text-5xl">{post.title}</h1>
           <p className="mt-3 text-sm text-[#6b6b80]">
             {new Date(post.date).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}
