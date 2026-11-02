@@ -25,6 +25,7 @@ import InstallBar from "@/components/app/InstallBar";
 import { guides } from "@/lib/guides";
 import { localesFor } from "@/lib/i18n";
 import { reviewsFor, screensFor } from "@/lib/media";
+import { getAllPosts } from "@/lib/blog";
 
 export const dynamicParams = false;
 
@@ -84,6 +85,8 @@ export default async function AppPage({ params }: { params: Promise<{ slug: stri
   const seo = appSeo[app.slug];
   // Search-question FAQs come first: they target what people type into Google.
   const faq = [...seo.faq, ...app.faq];
+  // Up to three indexable articles about this app, newest first.
+  const posts = getAllPosts().filter((p) => p.app === app.slug && !p.noindex).slice(0, 3);
   const practice = hasPractice(app.slug) ? loadPractice(app.slug) : null;
   const screens = screensFor(app);
   const reviews = reviewsFor(app);
@@ -435,6 +438,27 @@ export default async function AppPage({ params }: { params: Promise<{ slug: stri
           </div>
         </Reveal>
       </section>
+
+      {/* ── From the blog ── */}
+      {posts.length > 0 && (
+        <section className="mx-auto max-w-6xl px-5 pb-24">
+          <Reveal className="flex flex-wrap items-end justify-between gap-4">
+            <h2 className="font-display text-3xl font-extrabold">Read more about {app.shortName}</h2>
+            <Link href="/blog/" className="font-semibold" style={{ color: ink(primary) }}>
+              All articles →
+            </Link>
+          </Reveal>
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            {posts.map((p) => (
+              <Link key={p.slug} href={`/blog/${p.slug}/`} className="group flex flex-col rounded-3xl bg-white p-6 ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:shadow-xl">
+                <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#6b6b80]">{p.category}</span>
+                <h3 className="mt-2 text-lg font-bold leading-snug">{p.title}</h3>
+                <p className="mt-2 line-clamp-3 text-sm text-[#3d3d52]">{p.excerpt}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* ── More from suite ── */}
       {siblings.length > 0 && (

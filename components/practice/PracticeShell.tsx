@@ -98,6 +98,31 @@ export default function PracticeShell({
         <div className="mx-auto max-w-3xl">{children}</div>
       </main>
 
+      <section className="px-5 pb-16" aria-labelledby="how-to-use">
+        <div className="mx-auto max-w-3xl rounded-[2rem] bg-white p-7 ring-1 ring-black/5 sm:p-9">
+          <h2 id="how-to-use" className="font-display text-2xl font-extrabold">How to use these free {app.shortName} pages</h2>
+          <p className="mt-3 leading-relaxed text-[#3d3d52]">
+            Each page does one job, and they work best together. Everything runs in your browser: no download, no account and nothing to pay.
+          </p>
+          <dl className="mt-5 grid gap-4 sm:grid-cols-2">
+            {[
+              ["⏱️ Mock test", "A timed test in the format of the real exam. Questions are shuffled every time, and you see your score with an explanation for every answer at the end."],
+              ["📊 Am I ready?", "Ten quick questions spread across the topics. You get a readiness score and a short list of the topics to practise next."],
+              ["🎯 Practice", "Questions grouped by topic, with the answer and explanation shown straight after you choose. Good for working on one weak area at a time."],
+              ["📖 Questions", "Sample questions with their answers, laid out to read through. Useful for a quick revision session or a first look at the exam."],
+            ].map(([t, b]) => (
+              <div key={t} className="rounded-2xl p-4" style={{ background: soft }}>
+                <dt className="font-bold">{t}</dt>
+                <dd className="mt-1 text-sm leading-relaxed text-[#3d3d52]">{b}</dd>
+              </div>
+            ))}
+          </dl>
+          <p className="mt-5 leading-relaxed text-[#3d3d52]">
+            A simple routine: read through the questions, practise the topics you find hard, then take the mock test. When you pass it comfortably a few times in a row, you are close to ready. The free pages use a small part of the question bank; the {app.shortName} app has the full set.
+          </p>
+        </div>
+      </section>
+
       <section className="px-5 pb-16">
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 rounded-[2rem] p-8 text-center text-white sm:flex-row sm:text-left" style={{ background: `linear-gradient(135deg, ${primary}, ${app.theme.secondary})` }}>
           <AppIcon src={app.icon} name={app.shortName} size={80} />

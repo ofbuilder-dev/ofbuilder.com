@@ -19,8 +19,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!post) return {};
   if (post.redirect) return { title: "Moved", robots: { index: false, follow: true }, alternates: { canonical: post.redirect } };
   return {
-    // Long titles skip the "· OfBuilder" suffix so they fit in search results.
-    title: post.title.length > 48 ? { absolute: post.title } : post.title,
+    // Titles get the "· OfBuilder" suffix when it still fits in search results; longer ones use a shorter seoTitle.
+    title: post.seoTitle ? { absolute: post.seoTitle } : post.title.length > 53 ? { absolute: post.title } : post.title,
     description: post.description ?? post.excerpt,
     alternates: { canonical: `/blog/${post.slug}/` },
     ...(post.noindex ? { robots: { index: false, follow: true } } : {}),

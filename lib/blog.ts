@@ -4,6 +4,7 @@ import path from "path";
 export type BlogPost = {
   slug: string;
   title: string;
+  seoTitle?: string; // search-result title when it should differ from the on-page heading
   excerpt: string;
   description?: string;
   category: string;
