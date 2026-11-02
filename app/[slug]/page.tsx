@@ -53,7 +53,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 // Free web extras for non-exam apps.
 const EXTRAS: Record<string, { emoji: string; title: string; body: string; href: string; cta: string }> = {
-  brightkids: { emoji: "🦁", title: "Play Letter Safari, free", body: "A quick ABC game for little ones, right in your browser. Hear a letter, tap the picture, collect stars.", href: "/brightkids/play/", cta: "Play now" },
+  brightkids: { emoji: "🦁", title: "Free games for little ones", body: "Letter Safari, Counting Garden and Colour Pop: quick learning games right in your browser, with sounds and stars.", href: "/kids/", cta: "Play now" },
+  "network-plus": { emoji: "🧮", title: "Free subnet calculator", body: "Work out the network, broadcast, mask and host range for any IPv4 address. Handy for Network+ revision.", href: "/tools/subnet-calculator/", cta: "Open calculator" },
+  "security-plus": { emoji: "🔐", title: "Security+ acronyms cheat sheet", body: "A searchable list of the security acronyms you'll meet in the exam, with what each one means.", href: "/tools/security-plus-acronyms/", cta: "Open cheat sheet" },
+  "a-plus-core-1": { emoji: "🔌", title: "Common ports cheat sheet", body: "Every port number the CompTIA exams ask about, searchable by number or protocol.", href: "/tools/common-ports/", cta: "Open cheat sheet" },
   ilmai: { emoji: "🌙", title: "Ayah of the Day", body: "A short verse to reflect on every day, with its English meaning. Easy to share with family.", href: "/ilmai/ayah/", cta: "Read today's ayah" },
 };
 

@@ -50,6 +50,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       .filter(({ slug }) => practiceSlugs().includes(slug) && !loadPractice(slug).isSample)
       .map(({ slug, lang }) => entry(`/${slug}/${lang}/mock-test/`, 0.85, "weekly")),
     entry("/brightkids/play/", 0.7, "monthly"),
+    entry("/kids/", 0.7, "monthly"),
+    entry("/kids/counting/", 0.7, "monthly"),
+    entry("/kids/colours/", 0.7, "monthly"),
+    entry("/tools/", 0.75, "monthly"),
+    entry("/tools/subnet-calculator/", 0.8, "monthly"),
+    entry("/tools/common-ports/", 0.8, "monthly"),
+    entry("/tools/security-plus-acronyms/", 0.8, "monthly"),
     entry("/ilmai/ayah/", 0.7, "daily"),
     entry("/stories/", 0.5, "weekly"),
     entry("/blog/", 0.7, "daily"),

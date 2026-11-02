@@ -39,7 +39,12 @@ export default async function PlayPage({ params }: { params: Promise<{ slug: str
           <div className="mt-8">
             <LetterSafari playUrl={playUrl} />
           </div>
-          <p className="mt-6 text-center text-sm text-[#6b6b80]">
+          <p className="mt-6 text-center font-bold">
+            <Link href="/kids/" className="text-[#ec4899] underline">
+              More free games: Counting Garden and Colour Pop →
+            </Link>
+          </p>
+          <p className="mt-3 text-center text-sm text-[#6b6b80]">
             For ages 2 to 6. No ads, no sign-up. Made by the team behind{" "}
             <Link href={`/${app.slug}/`} className="font-semibold underline">
               {app.shortName}
