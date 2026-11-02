@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
+import { withOg } from "@/lib/seo";
 import SubscriptionCalc from "@/components/tools/SubscriptionCalc";
 import ToolShell from "@/components/tools/ToolShell";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOg({
   title: { absolute: "Subscription Cost Calculator: How Much Do You Really Spend?" },
   description: "Add your subscriptions (streaming, music, cloud, gym) and see what they cost per month, per year and over 5 years. Free, private, no sign-up.",
   alternates: { canonical: "/tools/subscription-calculator/" },
-};
+}, "renu");
 
 export default function SubscriptionCalculator() {
   return (

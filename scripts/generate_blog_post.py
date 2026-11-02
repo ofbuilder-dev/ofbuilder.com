@@ -15,7 +15,7 @@ api_key = os.environ['OPENROUTER_API_KEY']
 app_slug = os.environ.get('APP_SLUG', '')
 # Exam topics also link the free web mock test, so readers can try it straight away.
 extra = (
-    f"\n5. This is a search-question post: answer the question in the first paragraph, use facts only from official sources, "
+    f"\n6. This is a search-question post: answer the question in the first paragraph, use facts only from official sources, "
     f"and link the free mock test at https://ofbuilder.com/{app_slug}/mock-test/ and the guide at https://ofbuilder.com/{app_slug}/guide/."
     if app_slug else ""
 )
@@ -34,19 +34,19 @@ Secondary keywords: {secondary}
 Date: {date}
 
 STRICT RULES:
-1. HUMAN TONE — avoid: "In today's fast-paced world", "We are excited to announce", "Discover the amazing features", "Transforming your experience". Use short sentences and real thoughts. Start with a specific story or problem. Include one honest struggle. Mention real numbers.
-2. Word count: 600-900 words exactly.
-3. Do NOT use: journey, game-changer, revolutionary, seamless, robust, leverage.
-4. Include the Play Store link and https://ofbuilder.com as backlinks naturally in the text.{extra}
+1. HUMAN TONE — avoid: "In today's fast-paced world", "We are excited to announce", "Discover the amazing features", "Transforming your experience". Use short sentences and clear, practical advice.
+2. FACTS ONLY — never invent statistics, download counts, ratings, user numbers, countries, quotes, testimonials, family members or personal anecdotes. Never invent app features: only describe what the topic and keywords make clear. If you are not sure a fact is true, leave it out. Exam facts (question counts, pass marks, fees) must match official sources; if unsure, tell readers to check the official website.
+3. Word count: 600-900 words.
+4. Do NOT use: journey, game-changer, revolutionary, seamless, robust, leverage.
+5. Include the Play Store link and https://ofbuilder.com as backlinks naturally in the text.{extra}
 
 STRUCTURE:
-- Hook (2-3 sentences): specific problem, story, or surprising fact — not generic
-- The Problem (1 paragraph): what the app solves and why it exists
-- The Build / Story (1-2 paragraphs): how it was built, one real challenge, one honest admission
-- Key Features (H2 section): 3-4 features in plain English, 1-2 sentences each — not a bullet dump
-- Real Numbers / Proof (1 paragraph): downloads, countries, user feedback — be honest, small numbers are fine
+- Hook (2-3 sentences): the reader's problem or question — not generic, no invented stories
+- The answer or main idea (1-2 paragraphs): practical and accurate
+- Practical tips (H2 section): 3-5 tips in plain English, 1-2 sentences each
+- How the app helps (1 short paragraph): only features you are sure of; no numbers, ratings or download counts
 - Play Store CTA: natural sentence linking to Play Store URL and mentioning ofbuilder.com
-- Closing (2-3 sentences): what is next for the app, one human thought
+- Closing (2-3 sentences): a helpful takeaway
 
 OUTPUT FORMAT — Return ONLY a valid JSON object with these exact fields:
 {{

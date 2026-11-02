@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
+import { withOg } from "@/lib/seo";
 import Link from "next/link";
 import PrayerTimes from "@/components/tools/PrayerTimes";
 import ToolShell from "@/components/tools/ToolShell";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOg({
   title: { absolute: "Prayer Times Today: Fajr, Dhuhr, Asr, Maghrib & Isha" },
   description: "Free prayer times for your location: Fajr, Sunrise, Dhuhr, Asr, Maghrib and Isha. Choose your calculation method and Asr method. No sign-up.",
   alternates: { canonical: "/tools/prayer-times/" },
-};
+}, "ilmai");
 
 export default function PrayerTimesPage() {
   return (

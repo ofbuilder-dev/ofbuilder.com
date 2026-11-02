@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
+import { withOg } from "@/lib/seo";
 import PasswordChecker from "@/components/tools/PasswordChecker";
 import ToolShell from "@/components/tools/ToolShell";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOg({
   title: { absolute: "Password Strength Checker: How Secure Is My Password?" },
   description: "Check how strong your password is and how long it could take to crack. Runs entirely on your device: nothing is sent or saved. Plus a passphrase generator.",
   alternates: { canonical: "/tools/password-strength-checker/" },
-};
+}, "security-plus");
 
 export default function PasswordStrength() {
   return (

@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
+import { withOg } from "@/lib/seo";
 import SleepCalc from "@/components/tools/SleepCalc";
 import ToolShell from "@/components/tools/ToolShell";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOg({
   title: { absolute: "Sleep Calculator: What Time Should I Go to Bed?" },
   description: "Free sleep calculator: find the best time to go to bed or wake up, based on 90-minute sleep cycles, so you wake up feeling refreshed.",
   alternates: { canonical: "/tools/sleep-calculator/" },
-};
+}, "sleepwise");
 
 export default function SleepCalculator() {
   return (

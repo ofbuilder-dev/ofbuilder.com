@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
+import { withOg } from "@/lib/seo";
 import StoppingCalc from "@/components/tools/StoppingCalc";
 import ToolShell from "@/components/tools/ToolShell";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOg({
   title: { absolute: "UK Stopping Distances Calculator (Highway Code)" },
   description: "UK stopping distances from 20 to 70 mph: thinking, braking and total distance from the Highway Code, plus wet and icy roads. Learn them for your theory test.",
   alternates: { canonical: "/tools/stopping-distances/" },
-};
+}, "driving-theory");
 
 const ROWS: [string, string, string, string][] = [
   ["20 mph", "6 m", "6 m", "12 m"],

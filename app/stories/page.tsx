@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import type { Metadata } from "next";
+import { withOg } from "@/lib/seo";
 import Link from "next/link";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
@@ -10,11 +11,11 @@ import Blobs from "@/components/ui/Blobs";
 import Reveal from "@/components/ui/Reveal";
 import { apps, getApp } from "@/lib/apps";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOg({
   title: "Passed with OfBuilder: success stories",
   description: "Real stories from people who passed their citizenship test, driving theory test or CompTIA exam with OfBuilder apps. Share yours.",
   alternates: { canonical: "/stories/" },
-};
+});
 
 // Stories live in content/stories.json: [{ "name", "app": "<slug>", "text", "date" }]. Only add real, approved submissions.
 type Story = { name: string; app: string; text: string; date?: string; country?: string };

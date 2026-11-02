@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
+import { withOg } from "@/lib/seo";
 import Link from "next/link";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import Blobs from "@/components/ui/Blobs";
 import Reveal from "@/components/ui/Reveal";
 
-export const metadata: Metadata = {
-  title: { absolute: "Free Tools: Subnet Calculator, Sleep Calculator, Prayer Times & More" },
-  description: "Free online tools from OfBuilder: subnet calculator, port and acronym cheat sheets, password checker, stopping distances, sleep calculator, prayer times and more.",
+export const metadata: Metadata = withOg({
+  title: { absolute: "Free Tools: Subnet, Sleep, Prayer Times & More" },
+  description: "Free online tools: subnet calculator, port and acronym cheat sheets, password checker, stopping distances, sleep calculator, prayer times and more.",
   alternates: { canonical: "/tools/" },
-};
+});
 
 type Tool = { href: string; emoji: string; title: string; body: string };
 const GROUPS: { name: string; color: string; tools: Tool[] }[] = [

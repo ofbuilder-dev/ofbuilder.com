@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
+import { withOg } from "@/lib/seo";
 import SearchList from "@/components/tools/SearchList";
 import ToolShell from "@/components/tools/ToolShell";
 import { acronyms } from "@/lib/itTools";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOg({
   title: { absolute: "Security+ Acronyms List (SY0-701): Searchable Cheat Sheet" },
   description: "Searchable list of common CompTIA Security+ acronyms with meanings: SIEM, SOAR, PKI, MFA, RTO, RPO, ALE and more. Free cheat sheet for exam revision.",
   alternates: { canonical: "/tools/security-plus-acronyms/" },
-};
+}, "security-plus");
 
 export default function SecurityAcronyms() {
   return (

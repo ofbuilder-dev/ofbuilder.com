@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     description: post.description ?? post.excerpt,
     alternates: { canonical: `/blog/${post.slug}/` },
     ...(post.noindex ? { robots: { index: false, follow: true } } : {}),
-    openGraph: { type: "article", title: post.title, description: post.description ?? post.excerpt, publishedTime: post.date, images: ogImage("home", post.title) },
+    openGraph: { type: "article", title: post.title, description: post.description ?? post.excerpt, url: `/blog/${post.slug}/`, publishedTime: post.date, images: ogImage(post.app ?? "home", post.title) },
   };
 }
 

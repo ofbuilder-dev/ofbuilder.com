@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withOg } from "@/lib/seo";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import Blobs from "@/components/ui/Blobs";
@@ -6,11 +7,11 @@ import Icon from "@/components/ui/Icon";
 import Reveal from "@/components/ui/Reveal";
 import { contactEmail, playDeveloperUrl, socials } from "@/lib/apps";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOg({
   title: "Contact",
   alternates: { canonical: "/contact/" },
   description: "Get in touch with OfBuilder for app support, partnerships or press.",
-};
+});
 
 const CARDS = [
   { icon: "LifeBuoy", title: "App support", body: "Questions or bugs in one of our apps? Tell us which app and what's happening.", subject: "App support", color: "#ff6b6b" },

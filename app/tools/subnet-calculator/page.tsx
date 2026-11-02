@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
+import { withOg } from "@/lib/seo";
 import SubnetCalc from "@/components/tools/SubnetCalc";
 import ToolShell from "@/components/tools/ToolShell";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOg({
   title: { absolute: "Subnet Calculator (IPv4): Network, Broadcast & Host Range" },
   description: "Free IPv4 subnet calculator: enter an IP address and CIDR prefix to get the network, broadcast, subnet mask, wildcard mask and usable host range.",
   alternates: { canonical: "/tools/subnet-calculator/" },
-};
+}, "network-plus");
 
 const SIZES: [string, string, string][] = [
   ["/24", "255.255.255.0", "254"],

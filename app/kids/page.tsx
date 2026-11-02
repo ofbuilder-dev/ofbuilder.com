@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withOg } from "@/lib/seo";
 import Link from "next/link";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
@@ -10,11 +11,11 @@ import Reveal from "@/components/ui/Reveal";
 import { getApp } from "@/lib/apps";
 import { trackedPlayUrl } from "@/lib/questions";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withOg({
   title: { absolute: "Free Learning Games for Kids: ABCs, Counting & Colours" },
   description: "Free learning games for toddlers and preschoolers: an ABC game, a counting game and a colours game. Play in the browser, no ads and no sign-up.",
   alternates: { canonical: "/kids/" },
-};
+}, "brightkids");
 
 export default function KidsPage() {
   const app = getApp("brightkids")!;
