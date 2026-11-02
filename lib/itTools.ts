@@ -1,0 +1,141 @@
+// Reference data for the free IT tools at /tools/. Port numbers are the well-known
+// assignments the CompTIA A+, Network+ and Security+ objectives list.
+export type Port = { port: string; protocol: string; transport: "TCP" | "UDP" | "TCP/UDP"; use: string };
+
+export const ports: Port[] = [
+  { port: "20, 21", protocol: "FTP", transport: "TCP", use: "File transfer (20 data, 21 control)" },
+  { port: "22", protocol: "SSH / SFTP / SCP", transport: "TCP", use: "Secure remote login and secure file transfer" },
+  { port: "23", protocol: "Telnet", transport: "TCP", use: "Unencrypted remote login (avoid)" },
+  { port: "25", protocol: "SMTP", transport: "TCP", use: "Sending email between mail servers" },
+  { port: "53", protocol: "DNS", transport: "TCP/UDP", use: "Name resolution (UDP for queries, TCP for zone transfers)" },
+  { port: "67, 68", protocol: "DHCP", transport: "UDP", use: "Automatic IP addressing (67 server, 68 client)" },
+  { port: "69", protocol: "TFTP", transport: "UDP", use: "Simple file transfer with no authentication" },
+  { port: "80", protocol: "HTTP", transport: "TCP", use: "Unencrypted web traffic" },
+  { port: "88", protocol: "Kerberos", transport: "TCP/UDP", use: "Network authentication (e.g. Active Directory)" },
+  { port: "110", protocol: "POP3", transport: "TCP", use: "Downloading email" },
+  { port: "123", protocol: "NTP", transport: "UDP", use: "Time synchronisation" },
+  { port: "137–139", protocol: "NetBIOS", transport: "TCP/UDP", use: "Legacy Windows name, datagram and session services" },
+  { port: "143", protocol: "IMAP", transport: "TCP", use: "Accessing email on the server" },
+  { port: "161, 162", protocol: "SNMP", transport: "UDP", use: "Network device monitoring (162 for traps)" },
+  { port: "389", protocol: "LDAP", transport: "TCP/UDP", use: "Directory services" },
+  { port: "427", protocol: "SLP", transport: "TCP/UDP", use: "Service discovery on local networks" },
+  { port: "443", protocol: "HTTPS", transport: "TCP", use: "Encrypted web traffic (HTTP over TLS)" },
+  { port: "445", protocol: "SMB / CIFS", transport: "TCP", use: "Windows file and printer sharing" },
+  { port: "465", protocol: "SMTPS", transport: "TCP", use: "SMTP over TLS" },
+  { port: "514", protocol: "Syslog", transport: "UDP", use: "Sending log messages to a log server" },
+  { port: "548", protocol: "AFP", transport: "TCP", use: "Apple file sharing (legacy)" },
+  { port: "587", protocol: "SMTP (submission)", transport: "TCP", use: "Email clients sending mail, usually with STARTTLS" },
+  { port: "636", protocol: "LDAPS", transport: "TCP", use: "LDAP over TLS" },
+  { port: "993", protocol: "IMAPS", transport: "TCP", use: "IMAP over TLS" },
+  { port: "995", protocol: "POP3S", transport: "TCP", use: "POP3 over TLS" },
+  { port: "1433", protocol: "Microsoft SQL Server", transport: "TCP", use: "Database connections" },
+  { port: "3306", protocol: "MySQL", transport: "TCP", use: "Database connections" },
+  { port: "3389", protocol: "RDP", transport: "TCP", use: "Windows Remote Desktop" },
+  { port: "5060, 5061", protocol: "SIP", transport: "TCP/UDP", use: "VoIP call setup (5061 over TLS)" },
+  { port: "5900", protocol: "VNC", transport: "TCP", use: "Remote desktop sharing" },
+];
+
+export type Acronym = { short: string; long: string; note?: string };
+
+export const acronyms: Acronym[] = [
+  { short: "AAA", long: "Authentication, Authorisation and Accounting" },
+  { short: "ABAC", long: "Attribute-Based Access Control" },
+  { short: "ACL", long: "Access Control List" },
+  { short: "AES", long: "Advanced Encryption Standard", note: "Symmetric encryption" },
+  { short: "ALE", long: "Annualised Loss Expectancy", note: "ALE = SLE × ARO" },
+  { short: "APT", long: "Advanced Persistent Threat" },
+  { short: "ARO", long: "Annualised Rate of Occurrence" },
+  { short: "ARP", long: "Address Resolution Protocol" },
+  { short: "BCP", long: "Business Continuity Plan" },
+  { short: "BIA", long: "Business Impact Analysis" },
+  { short: "BYOD", long: "Bring Your Own Device" },
+  { short: "CA", long: "Certificate Authority" },
+  { short: "CASB", long: "Cloud Access Security Broker" },
+  { short: "CHAP", long: "Challenge Handshake Authentication Protocol" },
+  { short: "CIA", long: "Confidentiality, Integrity and Availability" },
+  { short: "CRL", long: "Certificate Revocation List" },
+  { short: "CSR", long: "Certificate Signing Request" },
+  { short: "CSRF", long: "Cross-Site Request Forgery" },
+  { short: "CVE", long: "Common Vulnerabilities and Exposures" },
+  { short: "CVSS", long: "Common Vulnerability Scoring System" },
+  { short: "DDoS", long: "Distributed Denial of Service" },
+  { short: "DLP", long: "Data Loss Prevention" },
+  { short: "DMZ", long: "Demilitarised Zone", note: "A screened subnet" },
+  { short: "DNSSEC", long: "Domain Name System Security Extensions" },
+  { short: "DRP", long: "Disaster Recovery Plan" },
+  { short: "EAP", long: "Extensible Authentication Protocol" },
+  { short: "EDR", long: "Endpoint Detection and Response" },
+  { short: "FIM", long: "File Integrity Monitoring" },
+  { short: "HIDS", long: "Host-based Intrusion Detection System" },
+  { short: "HIPS", long: "Host-based Intrusion Prevention System" },
+  { short: "HMAC", long: "Hash-based Message Authentication Code" },
+  { short: "HOTP", long: "HMAC-based One-Time Password" },
+  { short: "HSM", long: "Hardware Security Module" },
+  { short: "IAM", long: "Identity and Access Management" },
+  { short: "IDS", long: "Intrusion Detection System" },
+  { short: "IoC", long: "Indicator of Compromise" },
+  { short: "IPS", long: "Intrusion Prevention System" },
+  { short: "IPsec", long: "Internet Protocol Security" },
+  { short: "MDM", long: "Mobile Device Management" },
+  { short: "MFA", long: "Multi-Factor Authentication" },
+  { short: "MOU", long: "Memorandum of Understanding" },
+  { short: "MSSP", long: "Managed Security Service Provider" },
+  { short: "MTBF", long: "Mean Time Between Failures" },
+  { short: "MTTR", long: "Mean Time To Repair (or Recover)" },
+  { short: "NAC", long: "Network Access Control" },
+  { short: "NGFW", long: "Next-Generation Firewall" },
+  { short: "OCSP", long: "Online Certificate Status Protocol" },
+  { short: "OSINT", long: "Open-Source Intelligence" },
+  { short: "PAM", long: "Privileged Access Management" },
+  { short: "PII", long: "Personally Identifiable Information" },
+  { short: "PKI", long: "Public Key Infrastructure" },
+  { short: "RADIUS", long: "Remote Authentication Dial-In User Service" },
+  { short: "RBAC", long: "Role-Based Access Control" },
+  { short: "RPO", long: "Recovery Point Objective", note: "How much data loss is acceptable" },
+  { short: "RTO", long: "Recovery Time Objective", note: "How long systems can be down" },
+  { short: "SAML", long: "Security Assertion Markup Language" },
+  { short: "SASE", long: "Secure Access Service Edge" },
+  { short: "SCADA", long: "Supervisory Control and Data Acquisition" },
+  { short: "SDN", long: "Software-Defined Networking" },
+  { short: "SIEM", long: "Security Information and Event Management" },
+  { short: "SLA", long: "Service Level Agreement" },
+  { short: "SLE", long: "Single Loss Expectancy" },
+  { short: "SOAR", long: "Security Orchestration, Automation and Response" },
+  { short: "SOC", long: "Security Operations Centre" },
+  { short: "SQLi", long: "SQL Injection" },
+  { short: "SSO", long: "Single Sign-On" },
+  { short: "TACACS+", long: "Terminal Access Controller Access-Control System Plus" },
+  { short: "TLS", long: "Transport Layer Security" },
+  { short: "TOTP", long: "Time-based One-Time Password" },
+  { short: "VPN", long: "Virtual Private Network" },
+  { short: "WAF", long: "Web Application Firewall" },
+  { short: "WPA3", long: "Wi-Fi Protected Access 3" },
+  { short: "XDR", long: "Extended Detection and Response" },
+  { short: "XSS", long: "Cross-Site Scripting" },
+  { short: "ZTNA", long: "Zero Trust Network Access" },
+];
+
+/** IPv4 subnet maths for the subnet calculator. Returns null for invalid input. */
+export function subnet(ip: string, prefix: number) {
+  const parts = ip.trim().split(".");
+  if (parts.length !== 4 || !parts.every((p) => /^\d{1,3}$/.test(p) && +p <= 255)) return null;
+  if (!Number.isInteger(prefix) || prefix < 0 || prefix > 32) return null;
+  const addr = parts.reduce((a, p) => (a * 256 + +p) >>> 0, 0);
+  const mask = prefix === 0 ? 0 : (0xffffffff << (32 - prefix)) >>> 0;
+  const network = (addr & mask) >>> 0;
+  const broadcast = (network | (~mask >>> 0)) >>> 0;
+  const total = 2 ** (32 - prefix);
+  const usable = prefix >= 31 ? total : total - 2;
+  const toIp = (n: number) => [n >>> 24, (n >>> 16) & 255, (n >>> 8) & 255, n & 255].join(".");
+  return {
+    network: toIp(network),
+    broadcast: prefix >= 31 ? "n/a" : toIp(broadcast),
+    first: toIp(prefix >= 31 ? network : network + 1),
+    last: toIp(prefix >= 31 ? broadcast : broadcast - 1),
+    mask: toIp(mask),
+    wildcard: toIp(~mask >>> 0),
+    total,
+    usable,
+    cidr: `${toIp(network)}/${prefix}`,
+  };
+}

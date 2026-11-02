@@ -144,7 +144,7 @@ export default function Home() {
                   ["🚗", "Car theory", "/driving-theory/mock-test/"],
                   ["🛡️", "Security+", "/security-plus/mock-test/"],
                   ["🇺🇸", "US citizenship", "/us-citizenship/mock-test/"],
-                  ["🦁", "Kids ABC game", "/brightkids/play/"],
+                  ["🦁", "Kids games", "/kids/"],
                   ["🌙", "Ayah of the day", "/ilmai/ayah/"],
                 ].map(([e, l, h]) => (
                   <Link key={h} href={h} className="flex items-center gap-2.5 rounded-2xl bg-white/[0.07] p-3.5 text-sm font-semibold leading-tight ring-1 sm:gap-3 sm:p-4 sm:text-base ring-white/10 transition-all hover:-translate-y-0.5 hover:bg-white/[0.12]">
