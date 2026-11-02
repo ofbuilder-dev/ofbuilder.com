@@ -46,7 +46,7 @@ export default function AppNav({
       <motion.div className="h-1 origin-left" style={{ scaleX: progress, background: color }} />
       <nav className={`mx-auto mt-3 flex max-w-7xl items-center justify-between gap-3 rounded-full px-4 py-3 transition-all duration-500 sm:px-6 ${solid ? "mx-3 bg-white/85 shadow-lg ring-1 ring-black/5 backdrop-blur-xl sm:mx-auto" : ""}`}>
         <a href={base ? base : "#top"} className="flex min-w-0 items-center gap-2.5 pl-1">
-          <img src={icon} alt="" className="h-10 w-10 shrink-0 rounded-xl shadow sm:h-12 sm:w-12 sm:rounded-2xl" />
+          <img src={icon} alt={`${name} icon`} className="h-10 w-10 shrink-0 rounded-xl shadow sm:h-12 sm:w-12 sm:rounded-2xl" />
           <span className={`font-display truncate text-lg font-extrabold sm:text-2xl ${light ? "text-white" : "text-[#0f0f1a]"}`}>{name}</span>
         </a>
         <div className={`hidden items-center gap-1 text-[17px] font-semibold lg:flex ${light ? "text-white/80" : "text-[#3d3d52]"}`}>

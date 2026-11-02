@@ -12,7 +12,7 @@ import Tilt from "@/components/ui/Tilt";
 import Icon from "@/components/ui/Icon";
 import AppIcon from "@/components/ui/AppIcon";
 import DailyQuestion from "@/components/practice/DailyQuestion";
-import { dailyPool, loadPractice, practiceSlugs } from "@/lib/questions";
+import { loadPractice, practiceSlugs } from "@/lib/questions";
 import { apps, appsInSuite, contactEmail, getApp, labApps, playDeveloperUrl, suites, type App } from "@/lib/apps";
 
 export const metadata: Metadata = { alternates: { canonical: "/" } };
@@ -67,7 +67,7 @@ export default function Home() {
     .filter((slug) => !loadPractice(slug).isSample)
     .map((slug) => {
       const a = getApp(slug)!;
-      return { slug, label: a.shortName, color: a.theme.primary, pool: dailyPool(slug, 30) };
+      return { slug, label: a.shortName, color: a.theme.primary };
     });
   const half = Math.ceil(apps.length / 2);
   const rows = [apps.slice(0, half), apps.slice(half)];
@@ -88,7 +88,7 @@ export default function Home() {
           <div key={r} className={`marquee ${r ? "marquee-reverse" : ""}`}>
             {[...row, ...row].map((a, i) => (
               <Link key={i} href={`/${a.slug}/`} className="mx-2 flex shrink-0 items-center gap-3 rounded-full bg-[#fffbf5] py-2 pl-2 pr-5 ring-1 ring-black/5 transition-colors hover:bg-black/5">
-                <img src={a.icon} alt="" width={36} height={36} className="h-9 w-9 rounded-xl" loading="lazy" />
+                <img src={a.icon} alt={`${a.shortName} icon`} width={36} height={36} className="h-9 w-9 rounded-xl" loading="lazy" />
                 <span className="whitespace-nowrap text-sm font-semibold">{a.shortName}</span>
               </Link>
             ))}

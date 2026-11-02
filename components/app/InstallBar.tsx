@@ -40,7 +40,7 @@ export default function InstallBar({ name, icon, color, playUrl }: { name: strin
           transition={{ type: "spring", stiffness: 260, damping: 28 }}
           className="fixed inset-x-3 bottom-3 z-40 flex items-center gap-3 rounded-2xl bg-white/95 p-2.5 shadow-[0_20px_50px_-15px_rgba(15,15,26,0.45)] ring-1 ring-black/5 backdrop-blur-xl sm:hidden"
         >
-          <img src={icon} alt="" className="h-11 w-11 shrink-0 rounded-xl" />
+          <img src={icon} alt={`${name} icon`} className="h-11 w-11 shrink-0 rounded-xl" />
           <div className="min-w-0 flex-1">
             <p className="truncate text-sm font-bold">{name}</p>
             <p className="text-xs text-[#6b6b80]">Free on Google Play</p>
