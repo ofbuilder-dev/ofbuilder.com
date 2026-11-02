@@ -1,8 +1,8 @@
 name: Generate Blog Post
 
+# The weekly schedule is switched off: posts are no longer published automatically.
+# It can still be run by hand from the Actions tab ("Run workflow").
 on:
-  schedule:
-    - cron: "0 2 * * 1"   # Every Monday 8:00 AM Bangladesh (UTC+6)
   workflow_dispatch:
 
 jobs:
