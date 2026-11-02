@@ -33,7 +33,7 @@ export default function KidsShell({ path, title, intro, emoji, children }: { pat
         <Blobs colors={["#ec4899", "#f59e0b", "#4cc9f0", "#8b5cf6"]} opacity={0.25} fade />
         <div className="relative mx-auto max-w-2xl">
           <div className="text-center">
-            <Link href="/kids/" className="text-sm font-bold uppercase tracking-[0.2em] text-[#ec4899]">
+            <Link href="/kids/" className="text-sm font-bold uppercase tracking-[0.2em] text-[#be185d]">
               Free kids games
             </Link>
             <h1 className="font-display mt-2 text-4xl font-extrabold sm:text-6xl">

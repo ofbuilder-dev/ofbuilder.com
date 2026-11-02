@@ -2,8 +2,9 @@
 
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import { motion, useMotionValueEvent, useScroll, useSpring } from "framer-motion";
+import { m, useMotionValueEvent, useScroll, useSpring } from "framer-motion";
 import { useState } from "react";
+import { ink } from "@/lib/color";
 
 const SECTIONS = [
   ["Features", "#features"],
@@ -43,7 +44,7 @@ export default function AppNav({
 
   return (
     <header className="fixed inset-x-0 top-0 z-50">
-      <motion.div className="h-1 origin-left" style={{ scaleX: progress, background: color }} />
+      <m.div className="h-1 origin-left" style={{ scaleX: progress, background: color }} />
       <nav className={`mx-auto mt-3 flex max-w-7xl items-center justify-between gap-3 rounded-full px-4 py-3 transition-all duration-500 sm:px-6 ${solid ? "mx-3 bg-white/85 shadow-lg ring-1 ring-black/5 backdrop-blur-xl sm:mx-auto" : ""}`}>
         <a href={base ? base : "#top"} className="flex min-w-0 items-center gap-2.5 pl-1">
           <img src={icon} alt={`${name} icon`} className="h-10 w-10 shrink-0 rounded-xl shadow sm:h-12 sm:w-12 sm:rounded-2xl" />
@@ -51,7 +52,7 @@ export default function AppNav({
         </a>
         <div className={`hidden items-center gap-1 text-[17px] font-semibold lg:flex ${light ? "text-white/80" : "text-[#3d3d52]"}`}>
           {practiceHref && (
-            <a href={practiceHref} className="rounded-full px-4 py-2.5 font-bold" style={{ color: light ? "#fff" : color }}>
+            <a href={practiceHref} className="rounded-full px-4 py-2.5 font-bold" style={{ color: light ? "#fff" : ink(color) }}>
               Free test
             </a>
           )}
@@ -65,7 +66,7 @@ export default function AppNav({
           <Link href="/" className={`hidden rounded-full px-3 py-2 text-sm font-semibold sm:block ${light ? "text-white/70 hover:text-white" : "text-[#6b6b80] hover:text-[#0f0f1a]"}`}>
             by OfBuilder
           </Link>
-          <a href={playUrl} target="_blank" rel="noopener noreferrer" className="whitespace-nowrap rounded-full px-4 py-2.5 text-sm font-bold text-white shadow-lg transition-transform hover:-translate-y-0.5 active:scale-95 sm:px-7 sm:py-3.5 sm:text-base" style={{ background: color }}>
+          <a href={playUrl} target="_blank" rel="noopener noreferrer" className="whitespace-nowrap rounded-full px-4 py-2.5 text-sm font-bold text-white shadow-lg transition-transform hover:-translate-y-0.5 active:scale-95 sm:px-7 sm:py-3.5 sm:text-base" style={{ background: ink(color) }}>
             {ctaLabel}
           </a>
         </div>

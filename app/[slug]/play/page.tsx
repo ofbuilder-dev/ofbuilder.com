@@ -32,7 +32,7 @@ export default async function PlayPage({ params }: { params: Promise<{ slug: str
         <Blobs colors={["#ec4899", "#f59e0b", "#4cc9f0", "#8b5cf6"]} opacity={0.25} fade />
         <div className="relative mx-auto max-w-2xl">
           <div className="text-center">
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#ec4899]">Free kids game</p>
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#be185d]">Free kids game</p>
             <h1 className="font-display mt-2 text-4xl font-extrabold sm:text-6xl">Letter Safari 🦁</h1>
             <p className="mt-3 text-lg text-[#3d3d52]">Hear the letter, then tap the picture that starts with it. Turn the sound on!</p>
           </div>
@@ -40,7 +40,7 @@ export default async function PlayPage({ params }: { params: Promise<{ slug: str
             <LetterSafari playUrl={playUrl} />
           </div>
           <p className="mt-6 text-center font-bold">
-            <Link href="/kids/" className="text-[#ec4899] underline">
+            <Link href="/kids/" className="text-[#be185d] underline">
               More free games: Counting Garden and Colour Pop →
             </Link>
           </p>

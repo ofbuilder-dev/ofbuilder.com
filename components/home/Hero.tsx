@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { BookOpen, Car, Earth, GraduationCap, Moon, Puzzle, ShieldCheck, Wallet, type LucideIcon } from "lucide-react";
-import { AnimatePresence, motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { AnimatePresence, m, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
 
 
@@ -86,7 +86,7 @@ export default function Hero({ playUrl }: { playUrl: string }) {
       {/* floating decorations */}
       <div aria-hidden className="pointer-events-none absolute inset-0 hidden sm:block">
         {FLOATERS.map((f, idx) => (
-          <motion.div
+          <m.div
             key={idx}
             className="absolute"
             style={{ left: `${f.x}%`, top: `${f.y}%`, x: idx % 2 ? px : pxInv, y: idx % 2 ? py : pyInv }}
@@ -97,13 +97,13 @@ export default function Hero({ playUrl }: { playUrl: string }) {
             <div className="animate-bob" style={{ animationDelay: `${-idx * 0.7}s`, animationDuration: `${4 + (idx % 4)}s`, ["--r" as string]: "0deg" }}>
               <Floater f={f} />
             </div>
-          </motion.div>
+          </m.div>
         ))}
       </div>
 
       <div className="relative z-10 mx-auto max-w-4xl text-center">
 
-        <motion.h1
+        <m.h1
           initial={{ y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
@@ -113,8 +113,8 @@ export default function Hero({ playUrl }: { playUrl: string }) {
           <br />
           you{" "}
           <span className="relative inline-flex min-w-[2.6em] justify-center align-bottom">
-            <AnimatePresence mode="wait">
-              <motion.span
+            <AnimatePresence mode="wait" initial={false}>
+              <m.span
                 key={WORDS[i].w}
                 initial={{ y: "60%", opacity: 0, rotateX: -80 }}
                 animate={{ y: "0%", opacity: 1, rotateX: 0 }}
@@ -124,10 +124,10 @@ export default function Hero({ playUrl }: { playUrl: string }) {
                 style={{ color: WORDS[i].c }}
               >
                 {WORDS[i].w}.
-              </motion.span>
+              </m.span>
             </AnimatePresence>
-            <motion.svg viewBox="0 0 300 20" className="absolute -bottom-2 left-0 w-full" aria-hidden>
-              <motion.path
+            <m.svg viewBox="0 0 300 20" className="absolute -bottom-2 left-0 w-full" aria-hidden>
+              <m.path
                 d="M5 15 Q 75 2 150 12 T 295 8"
                 fill="none"
                 stroke={WORDS[i].c}
@@ -138,20 +138,20 @@ export default function Hero({ playUrl }: { playUrl: string }) {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 key={i}
               />
-            </motion.svg>
+            </m.svg>
           </span>
-        </motion.h1>
+        </m.h1>
 
-        <motion.p
+        <m.p
           initial={{ y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.35 }}
           className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-[#3d3d52] sm:text-xl"
         >
           OfBuilder is an indie studio crafting bright, privacy-first apps for exams, citizenship, sleep, learning and money.
-        </motion.p>
+        </m.p>
 
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.5 }}
@@ -173,21 +173,21 @@ export default function Hero({ playUrl }: { playUrl: string }) {
           >
             ▶ View on Google Play
           </a>
-        </motion.div>
+        </m.div>
 
         {/* mobile tile row */}
         <div className="mt-12 flex justify-center gap-3 sm:hidden">
           {FLOATERS.filter((f): f is Tile => f.kind === "tile")
             .slice(0, 5)
             .map((f, idx) => (
-              <motion.div key={idx} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 + idx * 0.08 }}>
+              <m.div key={idx} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 + idx * 0.08 }}>
                 <Floater f={{ ...f, s: 40 }} />
-              </motion.div>
+              </m.div>
             ))}
         </div>
       </div>
 
-      <motion.div
+      <m.div
         aria-hidden
         className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-xs font-medium text-[#6b6b80] sm:flex"
         animate={{ y: [0, 8, 0] }}
@@ -197,7 +197,7 @@ export default function Hero({ playUrl }: { playUrl: string }) {
         <span className="h-8 w-5 rounded-full border-2 border-[#6b6b80]/40 p-1">
           <span className="block h-2 w-full rounded-full bg-[#6b6b80]/60" />
         </span>
-      </motion.div>
+      </m.div>
     </section>
   );
 }

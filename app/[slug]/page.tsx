@@ -17,6 +17,7 @@ import Terminal from "@/components/app/Terminal";
 import { apps, appsInSuite, contactEmail, getApp, getSuite } from "@/lib/apps";
 import JsonLd from "@/components/site/JsonLd";
 import { appLd, breadcrumbLd, faqLd, ogImage } from "@/lib/seo";
+import { ink } from "@/lib/color";
 import { appSeo } from "@/lib/appSeo";
 import { hasPractice, loadPractice } from "@/lib/questions";
 import DailyQuestion from "@/components/practice/DailyQuestion";
@@ -67,9 +68,10 @@ const EXTRAS: Record<string, { emoji: string; title: string; body: string; href:
 
 const LANG_LABEL: Record<string, string> = { de: "🇩🇪 Auf Deutsch", da: "🇩🇰 På dansk", nl: "🇳🇱 In het Nederlands" };
 
-function Eyebrow({ children, color }: { children: React.ReactNode; color: string }) {
+// Eyebrows sit on light backgrounds, so the brand colour is deepened until it's readable; pass onDark to keep it bright.
+function Eyebrow({ children, color, onDark = false }: { children: React.ReactNode; color: string; onDark?: boolean }) {
   return (
-    <p className="text-sm font-bold uppercase tracking-[0.2em]" style={{ color }}>
+    <p className="text-sm font-bold uppercase tracking-[0.2em]" style={{ color: onDark ? color : ink(color) }}>
       {children}
     </p>
   );
@@ -279,7 +281,7 @@ export default async function AppPage({ params }: { params: Promise<{ slug: stri
         <div className="mx-auto max-w-6xl px-5">
           <Reveal className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <Eyebrow color={dark ? secondary : primary}>Inside the app</Eyebrow>
+              <Eyebrow color={dark ? secondary : primary} onDark={dark}>Inside the app</Eyebrow>
               <h2 className="font-display mt-3 text-4xl font-extrabold sm:text-5xl">Take a look around.</h2>
             </div>
             <p className={`text-sm ${dark ? "text-white/60" : "text-[#6b6b80]"}`}>← Drag to explore →</p>

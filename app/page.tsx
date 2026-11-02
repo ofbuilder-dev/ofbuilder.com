@@ -166,7 +166,7 @@ export default function Home() {
       {/* Suites */}
       <section id="suites" className="mx-auto max-w-6xl px-5">
         <Reveal className="mb-14 max-w-2xl">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#8b5cf6]">Six suites</p>
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#7c3aed]">Six suites</p>
           <h2 className="font-display mt-3 text-5xl font-extrabold sm:text-6xl">
             One studio. <span className="text-rainbow">Six families</span> of apps.
           </h2>
@@ -179,7 +179,7 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-5 py-24">
         <Reveal className="mb-12 flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-xl">
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#ff6b6b]">Featured</p>
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#dc2626]">Featured</p>
             <h2 className="font-display mt-3 text-5xl font-extrabold">Every app has its own home.</h2>
             <p className="mt-4 text-lg text-[#3d3d52]">Tap any app to open its own mini-website, ready to share with friends, students or customers.</p>
           </div>
@@ -225,7 +225,7 @@ export default function Home() {
       {/* Studio */}
       <section id="studio" className="mx-auto grid max-w-6xl gap-12 px-5 py-28 lg:grid-cols-2 lg:items-center">
         <Reveal>
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#f59e0b]">The studio</p>
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#b45309]">The studio</p>
           <h2 className="font-display mt-3 text-5xl font-extrabold">Built by a tiny team that ships.</h2>
           <div className="mt-6 space-y-4 text-lg leading-relaxed text-[#3d3d52]">
             <p>OfBuilder started with a simple idea: everyday apps should be beautiful, honest and genuinely helpful. No bloat, no tricks and no mandatory subscriptions.</p>
@@ -247,7 +247,7 @@ export default function Home() {
                     <span className="block font-bold">{l.name}</span>
                     <span className="block text-sm text-[#6b6b80]">{l.note}</span>
                   </span>
-                  <span className="ml-auto rounded-full bg-[#8b5cf6]/10 px-3 py-1 text-xs font-semibold text-[#8b5cf6]">Coming soon</span>
+                  <span className="ml-auto rounded-full bg-[#8b5cf6]/10 px-3 py-1 text-xs font-semibold text-[#7c3aed]">Coming soon</span>
                 </li>
               ))}
             </ul>

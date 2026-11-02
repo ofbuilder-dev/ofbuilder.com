@@ -33,7 +33,7 @@ export default function AppsPage() {
       <section className="relative overflow-hidden px-5 pb-20 pt-40">
         <Blobs opacity={0.35} fade />
         <Reveal className="relative mx-auto max-w-6xl">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#8b5cf6]">The collection</p>
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#7c3aed]">The collection</p>
           <h1 className="font-display mt-3 text-6xl font-extrabold sm:text-8xl">
             All <span className="text-rainbow">{apps.length}</span> apps.
           </h1>

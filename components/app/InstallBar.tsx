@@ -1,7 +1,7 @@
 "use client";
 
 /* eslint-disable @next/next/no-img-element */
-import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-motion";
+import { AnimatePresence, m, useMotionValueEvent, useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const KEY = "ofb-installbar-hidden";
@@ -33,7 +33,7 @@ export default function InstallBar({ name, icon, color, playUrl }: { name: strin
   return (
     <AnimatePresence>
       {past && !hidden && (
-        <motion.div
+        <m.div
           initial={{ y: 120 }}
           animate={{ y: 0 }}
           exit={{ y: 120 }}
@@ -51,7 +51,7 @@ export default function InstallBar({ name, icon, color, playUrl }: { name: strin
           <button onClick={close} aria-label="Close" className="grid h-8 w-8 shrink-0 place-items-center rounded-full text-[#6b6b80] hover:bg-black/5">
             ✕
           </button>
-        </motion.div>
+        </m.div>
       )}
     </AnimatePresence>
   );

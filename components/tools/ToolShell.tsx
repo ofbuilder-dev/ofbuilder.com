@@ -44,7 +44,7 @@ export default function ToolShell({
           <Link href="/tools/" className="text-sm font-semibold text-[#6b6b80] hover:text-[#0f0f1a]">
             ← All free tools
           </Link>
-          <p className="mt-6 text-sm font-bold uppercase tracking-[0.2em] text-[#8b5cf6]">{eyebrow}</p>
+          <p className="mt-6 text-sm font-bold uppercase tracking-[0.2em] text-[#7c3aed]">{eyebrow}</p>
           <h1 className="font-display mt-3 text-4xl font-extrabold leading-tight sm:text-6xl">{title}</h1>
           <p className="mt-4 max-w-2xl text-lg text-[#3d3d52]">{intro}</p>
         </div>

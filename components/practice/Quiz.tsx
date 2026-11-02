@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { QuizQuestion } from "@/lib/questions";
 import { track } from "@/lib/analytics";
@@ -377,11 +377,11 @@ export default function Quiz(p: QuizProps) {
         )}
       </div>
       <div className="mt-3 h-2 overflow-hidden rounded-full bg-black/5">
-        <motion.div className="h-full rounded-full" style={{ background: p.color }} animate={{ width: `${((idx + 1) / items.length) * 100}%` }} />
+        <m.div className="h-full rounded-full" style={{ background: p.color }} animate={{ width: `${((idx + 1) / items.length) * 100}%` }} />
       </div>
 
       <AnimatePresence mode="wait">
-        <motion.div key={q.id} initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -30 }} transition={{ duration: 0.25 }}>
+        <m.div key={q.id} initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -30 }} transition={{ duration: 0.25 }}>
           <h2 className="font-display mt-8 text-2xl font-extrabold leading-snug sm:text-3xl">{q.text}</h2>
           {q.image && (
             // eslint-disable-next-line @next/next/no-img-element
@@ -418,12 +418,12 @@ export default function Quiz(p: QuizProps) {
             })}
           </div>
           {revealed && (
-            <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="mt-6 rounded-2xl p-5" style={{ background: chosen === q.correct ? "#ecfdf5" : "#fff7ed" }}>
+            <m.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="mt-6 rounded-2xl p-5" style={{ background: chosen === q.correct ? "#ecfdf5" : "#fff7ed" }}>
               <p className="font-bold">{chosen === q.correct ? "Correct! ✓" : `The answer is: ${q.options[q.correct]}`}</p>
               {q.explanation && <p className="mt-1 text-[#3d3d52]">{q.explanation}</p>}
-            </motion.div>
+            </m.div>
           )}
-        </motion.div>
+        </m.div>
       </AnimatePresence>
 
       <div className="mt-8 flex flex-wrap items-center justify-between gap-3">

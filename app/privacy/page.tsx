@@ -27,7 +27,7 @@ export default function PrivacyPage() {
       <Nav />
       <main className="mx-auto max-w-4xl px-5 pb-12 pt-40">
         <Reveal>
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#8b5cf6]">Legal</p>
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#7c3aed]">Legal</p>
           <h1 className="font-display mt-3 text-5xl font-extrabold sm:text-7xl">Privacy policies</h1>
           <p className="mt-4 text-lg text-[#3d3d52]">Pick an app to read its privacy policy.</p>
         </Reveal>

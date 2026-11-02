@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useEffect, useState } from "react";
 import { track } from "@/lib/analytics";
 import type { QuizQuestion } from "@/lib/questions";
@@ -157,13 +157,13 @@ export default function DailyQuestion({ sources, compact = false }: { sources: D
           })}
         </div>
         {done && (
-          <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="mt-5 rounded-2xl border-l-4 p-4" style={{ background: choice === q.correct ? "#ecfdf5" : "#fff7ed", borderColor: choice === q.correct ? "#10b981" : "#f59e0b" }}>
+          <m.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="mt-5 rounded-2xl border-l-4 p-4" style={{ background: choice === q.correct ? "#ecfdf5" : "#fff7ed", borderColor: choice === q.correct ? "#10b981" : "#f59e0b" }}>
             <p className="font-bold">{choice === q.correct ? "Correct! See you tomorrow 👋" : `Not quite. The answer is: ${q.options[q.correct]}`}</p>
             {q.explanation && <p className="mt-1 text-sm text-[#3d3d52]">{q.explanation}</p>}
             <a href={`/${src.slug}/mock-test/`} className="mt-3 inline-block text-sm font-bold" style={{ color }}>
               Want more? Take the free mock test →
             </a>
-          </motion.div>
+          </m.div>
         )}
       </div>
     </div>

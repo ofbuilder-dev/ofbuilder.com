@@ -38,7 +38,7 @@ export default function StoriesPage() {
       <section className="relative overflow-hidden px-5 pb-12 pt-40">
         <Blobs opacity={0.35} fade />
         <Reveal className="relative mx-auto max-w-6xl">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#ff6b6b]">Success stories</p>
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#dc2626]">Success stories</p>
           <h1 className="font-display mt-3 text-5xl font-extrabold sm:text-7xl">
             Passed with <span className="text-rainbow">OfBuilder</span> 🎉
           </h1>

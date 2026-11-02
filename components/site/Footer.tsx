@@ -30,7 +30,7 @@ const SOCIAL = [
 ];
 
 function Heading({ children }: { children: React.ReactNode }) {
-  return <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-white/40">{children}</h3>;
+  return <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-white/60">{children}</h3>;
 }
 
 export default function Footer() {

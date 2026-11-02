@@ -92,7 +92,7 @@ export default function PasswordChecker() {
           </button>
         </div>
       </label>
-      <p className="mt-2 text-xs font-semibold text-[#10b981]">🔒 Checked on your device. Your password is never sent or saved.</p>
+      <p className="mt-2 text-xs font-semibold text-[#047857]">🔒 Checked on your device. Your password is never sent or saved.</p>
 
       {pw && (
         <>
