@@ -941,3 +941,6 @@ export function getSuite(id: string) {
 export function appsInSuite(id: SuiteId) {
   return apps.filter((a) => a.suiteId === id);
 }
+
+// 72px copy of an app icon (public/icons/72/) for places that show it at 36–72px.
+export const smallIcon = (src: string) => src.replace("/icons/", "/icons/72/");

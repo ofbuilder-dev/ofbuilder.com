@@ -11,9 +11,11 @@ import CountUp from "@/components/ui/CountUp";
 import Tilt from "@/components/ui/Tilt";
 import Icon from "@/components/ui/Icon";
 import AppIcon from "@/components/ui/AppIcon";
+import JsonLd from "@/components/site/JsonLd";
+import { faqLd } from "@/lib/seo";
 import DailyQuestion from "@/components/practice/DailyQuestion";
 import { loadPractice, practiceSlugs } from "@/lib/questions";
-import { apps, appsInSuite, contactEmail, getApp, labApps, playDeveloperUrl, suites, type App } from "@/lib/apps";
+import { apps, appsInSuite, contactEmail, getApp, labApps, playDeveloperUrl, smallIcon, suites, type App } from "@/lib/apps";
 
 export const metadata: Metadata = { alternates: { canonical: "/" } };
 
@@ -23,6 +25,38 @@ const VALUES = [
   { icon: "Sparkles", title: "AI where it helps", body: "Personal stories, sleep plans and sourced answers, never AI for show.", color: "#ff6b6b" },
   { icon: "HeartHandshake", title: "No dark patterns", body: "Fair pricing, one-time unlocks where we can and no tricks.", color: "#10b981" },
   { icon: "Rocket", title: "Shipped fast, polished often", body: "Small studio, quick updates, and we listen to every review.", color: "#f59e0b" },
+];
+
+// Plain answers to what people ask before installing. Also published as FAQ structured data.
+const FAQ = [
+  {
+    q: "What is OfBuilder?",
+    a: "OfBuilder is a small independent studio that makes Android apps. We publish 24 apps on Google Play, grouped into six suites: citizenship test prep, UK driving theory, CompTIA IT certifications, Little Sparks for kids, Noor for everyday Muslim life, and Everyday Essentials for brain training, sleep and money.",
+  },
+  {
+    q: "Are OfBuilder apps free?",
+    a: "Every app is free to download from Google Play. Most include a free tier you can use for as long as you like, with an optional upgrade for the full question bank or extra features. Where we can, the upgrade is a one-time unlock rather than a subscription.",
+  },
+  {
+    q: "Can I practise without installing an app?",
+    a: "Yes. The free tests page has mock tests, readiness checks and practice questions for citizenship, driving theory and CompTIA exams. They run in your browser with no download and no sign-up. There are also free tools such as a subnet calculator, prayer times and a sleep calculator.",
+  },
+  {
+    q: "Which citizenship tests do you cover?",
+    a: "Seven countries: the UK (Life in the UK), the United States, Canada, Australia, Germany (Einbürgerungstest), Denmark (Indfødsretsprøven) and the Netherlands (KNM inburgering). Each app follows the topics in that country's official study material.",
+  },
+  {
+    q: "Do the apps work offline?",
+    a: "The study apps are built to work offline, so you can practise on the bus or on a break without a signal. Features that use AI, such as personalised bedtime stories, need a connection.",
+  },
+  {
+    q: "Are the apps available on iPhone?",
+    a: "Not yet. OfBuilder apps are currently Android only, on Google Play. The free browser tests on this website work on any phone, tablet or computer.",
+  },
+  {
+    q: "How do you handle my data?",
+    a: "We collect as little as possible. None of our money apps ask you to link a bank account, and every app has its own privacy policy that explains exactly what it stores.",
+  },
 ];
 
 function BentoCard({ app, className = "", big = false }: { app: App; className?: string; big?: boolean }) {
@@ -88,7 +122,7 @@ export default function Home() {
           <div key={r} className={`marquee ${r ? "marquee-reverse" : ""}`}>
             {[...row, ...row].map((a, i) => (
               <Link key={i} href={`/${a.slug}/`} className="mx-2 flex shrink-0 items-center gap-3 rounded-full bg-[#fffbf5] py-2 pl-2 pr-5 ring-1 ring-black/5 transition-colors hover:bg-black/5">
-                <img src={a.icon} alt={`${a.shortName} icon`} width={36} height={36} className="h-9 w-9 rounded-xl" loading="lazy" />
+                <img src={smallIcon(a.icon)} alt={`${a.shortName} icon`} width={36} height={36} className="h-9 w-9 rounded-xl" loading="lazy" />
                 <span className="whitespace-nowrap text-sm font-semibold">{a.shortName}</span>
               </Link>
             ))}
@@ -253,6 +287,26 @@ export default function Home() {
             </ul>
           </div>
         </Reveal>
+      </section>
+
+      {/* FAQ */}
+      <section id="faq" className="mx-auto max-w-4xl px-5 pb-28">
+        <JsonLd data={faqLd(FAQ)} />
+        <Reveal className="text-center">
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#0e7490]">Good to know</p>
+          <h2 className="font-display mt-3 text-4xl font-extrabold sm:text-5xl">Questions people ask</h2>
+        </Reveal>
+        <div className="mt-10 space-y-3">
+          {FAQ.map((f) => (
+            <details key={f.q} className="group rounded-2xl bg-white p-5 ring-1 ring-black/5 open:shadow-lg sm:p-6">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-bold [&::-webkit-details-marker]:hidden">
+                {f.q}
+                <span aria-hidden className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-black/[0.04] text-xl transition-transform group-open:rotate-45">+</span>
+              </summary>
+              <p className="mt-3 leading-relaxed text-[#3d3d52]">{f.a}</p>
+            </details>
+          ))}
+        </div>
       </section>
 
       {/* CTA */}

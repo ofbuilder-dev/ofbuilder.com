@@ -5,6 +5,9 @@ import Link from "next/link";
 import { AnimatePresence, m } from "framer-motion";
 import { useMemo, useState } from "react";
 
+// 72px icon copies (public/icons/72/) for the 68px tiles; full size for 2x screens.
+const small = (src: string) => src.replace("/icons/", "/icons/72/");
+
 type Item = { slug: string; name: string; shortName: string; tagline: string; icon: string; suiteId: string; primary: string; soft: string; rating?: number };
 type SuiteChip = { id: string; short: string; emoji: string; color: string };
 
@@ -57,7 +60,7 @@ export default function Directory({ items, suites }: { items: Item[]; suites: Su
           {shown.map((a) => (
             <m.div key={a.slug} layout className="min-w-0" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} transition={{ type: "spring", stiffness: 300, damping: 28 }}>
               <Link href={`/${a.slug}/`} className="group flex h-full items-center gap-4 rounded-[1.75rem] bg-white p-5 ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:shadow-xl">
-                <img src={a.icon} alt={`${a.name} icon`} width={68} height={68} className="h-[68px] w-[68px] shrink-0 rounded-[1.1rem] shadow-md transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-110" loading="lazy" />
+                <img src={small(a.icon)} srcSet={`${small(a.icon)} 1x, ${a.icon} 2x`} alt={`${a.name} icon`} width={68} height={68} className="h-[68px] w-[68px] shrink-0 rounded-[1.1rem] shadow-md transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-110" loading="lazy" />
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-2">
                     <h3 className="truncate font-bold">{a.shortName}</h3>
