@@ -17,7 +17,7 @@ export function ScreenMock({ screen, theme, name, icon }: { screen: Screen; them
   return (
     <div className="flex h-full w-full flex-col gap-3 p-4 pt-9 text-[10px]" style={{ background: bg, color: text }}>
       <div className="flex items-center gap-2">
-        <img src={icon} alt="" className="h-7 w-7 rounded-lg" />
+        <img src={icon} alt={`${name} icon`} className="h-7 w-7 rounded-lg" />
         <div className="flex-1">
           <div className="text-[11px] font-bold leading-tight">{name}</div>
           <div style={{ color: sub }}>{screen.caption}</div>

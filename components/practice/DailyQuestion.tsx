@@ -5,7 +5,8 @@ import { useEffect, useState } from "react";
 import { track } from "@/lib/analytics";
 import type { QuizQuestion } from "@/lib/questions";
 
-export type DailySource = { slug: string; label: string; color: string; pool: QuizQuestion[]; icon?: string };
+// Questions are fetched from /daily/<slug>.json when an exam is shown, keeping page HTML small.
+export type DailySource = { slug: string; label: string; color: string; icon?: string };
 
 const KEY = "ofb-daily";
 type Saved = { last?: string; streak?: number; answers?: Record<string, { day: string; choice: number }> };
@@ -34,10 +35,26 @@ export default function DailyQuestion({ sources, compact = false }: { sources: D
   const [active, setActive] = useState(0);
   const [choice, setChoice] = useState<number | null>(null);
   const [streak, setStreak] = useState(0);
+  const [pools, setPools] = useState<Record<string, QuizQuestion[]>>({});
 
   const src = sources[active];
+  const pool = src ? pools[src.slug] : undefined;
   // Offset by exam so different exams don't all show question #n on the same day.
-  const q = src ? src.pool[(dayNumber() + active * 7) % src.pool.length] : undefined;
+  const q = pool?.length ? pool[(dayNumber() + active * 7) % pool.length] : undefined;
+
+  useEffect(() => {
+    if (!mounted || !src || pools[src.slug]) return;
+    let live = true;
+    fetch(`/daily/${src.slug}.json`)
+      .then((r) => (r.ok ? r.json() : []))
+      .then((list: QuizQuestion[]) => live && setPools((p) => ({ ...p, [src.slug]: list })))
+      .catch(() => {
+        /* card stays hidden if the pool can't load */
+      });
+    return () => {
+      live = false;
+    };
+  }, [mounted, src, pools]);
 
   useEffect(() => {
     setMounted(true);

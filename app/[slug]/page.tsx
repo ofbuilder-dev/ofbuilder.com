@@ -18,7 +18,7 @@ import { apps, appsInSuite, contactEmail, getApp, getSuite } from "@/lib/apps";
 import JsonLd from "@/components/site/JsonLd";
 import { appLd, breadcrumbLd, faqLd, ogImage } from "@/lib/seo";
 import { appSeo } from "@/lib/appSeo";
-import { dailyPool, hasPractice, loadPractice } from "@/lib/questions";
+import { hasPractice, loadPractice } from "@/lib/questions";
 import DailyQuestion from "@/components/practice/DailyQuestion";
 import InstallBar from "@/components/app/InstallBar";
 import { guides } from "@/lib/guides";
@@ -185,7 +185,7 @@ export default async function AppPage({ params }: { params: Promise<{ slug: stri
                 </div>
               </div>
               <div className="mt-8">
-                <DailyQuestion sources={[{ slug: app.slug, label: app.shortName, color: primary, pool: dailyPool(app.slug) }]} compact />
+                <DailyQuestion sources={[{ slug: app.slug, label: app.shortName, color: primary, }]} compact />
               </div>
               {guide && (
                 <Link href={`/${app.slug}/guide/`} className="mt-4 flex items-center justify-between gap-4 rounded-2xl p-5 font-bold transition-colors hover:bg-black/[0.03]" style={{ background: soft }}>
