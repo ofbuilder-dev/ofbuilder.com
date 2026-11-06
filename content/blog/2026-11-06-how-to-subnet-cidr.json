@@ -1,0 +1,17 @@
+{
+  "slug": "2026-11-06-how-to-subnet-cidr",
+  "date": "2026-11-06",
+  "category": "Study tips",
+  "app": "network-plus",
+  "title": "How to Subnet: CIDR, Masks and Usable Hosts Made Simple",
+  "seoTitle": "How to Subnet an IP Address: CIDR & Usable Hosts Explained",
+  "excerpt": "A simple method for working out networks, broadcast addresses and usable hosts from CIDR notation.",
+  "description": "Learn to subnet an IPv4 address step by step: CIDR notation, subnet masks, block sizes, network and broadcast addresses and usable hosts, with a worked example.",
+  "tags": [
+    "subnetting",
+    "CIDR",
+    "Network+",
+    "IPv4"
+  ],
+  "body": "Subnetting looks hard at first, but most exam questions need only one idea: the block size. Once you can find the block size, the network address, broadcast address and usable hosts follow.\n\n## CIDR notation in one line\n\nAn IPv4 address has 32 bits. The number after the slash says how many of those bits belong to the network. In 192.168.10.0/24, the first 24 bits are the network and the last 8 bits are for hosts.\n\n## Usable hosts\n\nThe formula is 2 to the power of the host bits, minus 2. You subtract 2 because the first address is the network address and the last is the broadcast address, and neither can be given to a device.\n\n- **/24:** mask 255.255.255.0, 256 addresses, 254 usable hosts\n- **/25:** mask 255.255.255.128, 128 addresses, 126 usable hosts\n- **/26:** mask 255.255.255.192, 64 addresses, 62 usable hosts\n- **/27:** mask 255.255.255.224, 32 addresses, 30 usable hosts\n- **/28:** mask 255.255.255.240, 16 addresses, 14 usable hosts\n- **/29:** mask 255.255.255.248, 8 addresses, 6 usable hosts\n- **/30:** mask 255.255.255.252, 4 addresses, 2 usable hosts (often used for point-to-point links)\n\n## The block size method\n\nThe block size is 256 minus the last non-zero number in the mask. For a /26 the mask ends in 192, so the block size is 256 − 192 = 64. Subnets start at every multiple of the block size.\n\n## Worked example: 192.168.10.70/26\n\n- **Block size:** 64, so the subnets start at .0, .64, .128 and .192\n- **Network address:** 70 falls between 64 and 128, so the network is 192.168.10.64\n- **Broadcast address:** one less than the next subnet, so 192.168.10.127\n- **Usable hosts:** 192.168.10.65 to 192.168.10.126, which is 62 hosts\n\n## Common mistakes\n\n- Forgetting to subtract 2 for the network and broadcast addresses\n- Counting the block size from the wrong part of the mask\n- Mixing up the number of subnets with the number of hosts per subnet\n\n## Practise until it is quick\n\nWork a few by hand, then check your answers with the free [subnet calculator](/tools/subnet-calculator/), which shows the network, broadcast, mask and host range for any address. When you're ready, try subnetting questions in the free [Network+ mock test](/network-plus/mock-test/)."
+}

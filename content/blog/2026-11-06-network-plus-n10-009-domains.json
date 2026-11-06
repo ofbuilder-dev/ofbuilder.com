@@ -1,0 +1,17 @@
+{
+  "slug": "2026-11-06-network-plus-n10-009-domains",
+  "date": "2026-11-06",
+  "category": "Exam guide",
+  "app": "network-plus",
+  "title": "Network+ N10-009 Domains: What Each One Covers",
+  "seoTitle": "Network+ N10-009 Exam Domains & Weighting Explained",
+  "excerpt": "The five N10-009 domains, their weighting, and where to focus your study.",
+  "description": "The five CompTIA Network+ N10-009 domains and their weighting, plus the exam format, passing score and a sensible order to study them in.",
+  "tags": [
+    "Network+",
+    "N10-009",
+    "CompTIA",
+    "exam domains"
+  ],
+  "body": "CompTIA Network+ N10-009 tests five domains. Each one has a weighting, the share of the exam that comes from it, and two of them make up almost half of your marks.\n\n## The exam at a glance\n\n- Up to 90 questions in 90 minutes\n- Multiple-choice and performance-based questions (PBQs)\n- Passing score: 720 on a scale of 100 to 900\n- Booked through Pearson VUE, at a test centre or online\n\n## The five domains\n\n- **1.0 Networking Concepts: 23%.** The OSI model, networking appliances and functions, cloud concepts, ports and protocols, traffic types, transmission media, topologies and IPv4 addressing.\n- **2.0 Network Implementation: 20%.** Routing, switching (including VLANs), wireless settings and physical installation.\n- **3.0 Network Operations: 19%.** Documentation, high availability and disaster recovery, network services such as DHCP and DNS, and network access and management.\n- **4.0 Network Security: 14%.** Basic security concepts, common attacks and how to apply security features and defences.\n- **5.0 Network Troubleshooting: 24%.** The biggest domain. The troubleshooting method, cabling and physical problems, network service problems, performance problems and the tools used to find them.\n\n## Where to focus\n\nNetworking Concepts (23%) and Network Troubleshooting (24%) together make up almost half of the exam. Troubleshooting questions build on everything else, so it makes sense to learn the concepts first and practise troubleshooting last, once you understand how a healthy network should behave.\n\nTwo skills come up again and again:\n\n- **Ports and protocols.** Learn the common ones until you know them instantly. Our [common ports list](/tools/common-ports/) is a good place to start.\n- **Subnetting.** Expect questions on CIDR notation, subnet masks and usable hosts. Check your working with the free [subnet calculator](/tools/subnet-calculator/).\n\n## Check where you stand\n\nTake the free [Network+ mock test](/network-plus/mock-test/) or the quick [readiness check](/network-plus/readiness/) to see which domains need more work. For the format, booking and a study plan, see the [Network+ exam guide](/network-plus/guide/).\n\nCheck CompTIA's official exam objectives before you book, as CompTIA can update them."
+}

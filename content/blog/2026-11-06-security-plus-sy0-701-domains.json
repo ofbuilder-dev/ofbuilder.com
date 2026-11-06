@@ -1,0 +1,17 @@
+{
+  "slug": "2026-11-06-security-plus-sy0-701-domains",
+  "date": "2026-11-06",
+  "category": "Exam guide",
+  "app": "security-plus",
+  "title": "Security+ SY0-701 Domains and Weighting Explained",
+  "seoTitle": "Security+ SY0-701 Exam Domains & Weighting (2026 Guide)",
+  "excerpt": "The five SY0-701 domains, how much each one counts, and how to split your study time.",
+  "description": "The five CompTIA Security+ SY0-701 domains and their weighting, the exam format and passing score, and how to plan your study time around them.",
+  "tags": [
+    "Security+",
+    "SY0-701",
+    "CompTIA",
+    "exam domains"
+  ],
+  "body": "CompTIA Security+ SY0-701 is split into five domains. Each domain has a weighting: the share of the exam's questions that come from it. Knowing the weightings tells you where most of your marks are.\n\n## The exam at a glance\n\n- Up to 90 questions in 90 minutes\n- Multiple-choice and performance-based questions (PBQs)\n- Passing score: 750 on a scale of 100 to 900\n- Booked through Pearson VUE, at a test centre or online\n\n## The five domains\n\n- **1.0 General Security Concepts: 12%.** Security controls, the CIA triad, authentication and authorisation, change management and the basics of cryptography and PKI.\n- **2.0 Threats, Vulnerabilities and Mitigations: 22%.** Threat actors, attack vectors such as phishing, types of malware and attacks, and how to reduce the attack surface.\n- **3.0 Security Architecture: 18%.** Cloud, on-premises and hybrid models, secure network design, protecting data, and resilience and recovery.\n- **4.0 Security Operations: 28%.** The biggest domain. Hardening, asset and vulnerability management, monitoring, identity and access management, automation, incident response and digital forensics.\n- **5.0 Security Program Management and Oversight: 20%.** Governance, risk management, third-party risk, compliance, audits and security awareness.\n\n## How to use the weightings\n\nSecurity Operations (28%) and Threats, Vulnerabilities and Mitigations (22%) make up half of the exam between them, so give them the most time. General Security Concepts is only 12%, but its ideas, such as the CIA triad and access control, appear across every other domain, so learn it first.\n\nA simple order that works for many people:\n\n- Start with domain 1 to learn the vocabulary\n- Move on to domains 2 and 4, the two largest\n- Finish with domains 3 and 5\n- Learn the acronyms as you go with the [Security+ acronyms list](/tools/security-plus-acronyms/)\n\n## Check where you stand\n\nPractise by domain to find your weak areas, then take full timed exams. Start with the free [Security+ mock test](/security-plus/mock-test/) or the 10-question [readiness check](/security-plus/readiness/). For the format, booking and a study plan, see the [Security+ exam guide](/security-plus/guide/).\n\nAlways check CompTIA's official exam objectives before you book, as CompTIA can update them."
+}
