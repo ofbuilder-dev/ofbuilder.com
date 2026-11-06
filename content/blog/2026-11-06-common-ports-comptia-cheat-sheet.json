@@ -1,0 +1,18 @@
+{
+  "slug": "2026-11-06-common-ports-comptia-cheat-sheet",
+  "date": "2026-11-06",
+  "category": "Study tips",
+  "app": "a-plus-core-1",
+  "title": "Common Port Numbers for CompTIA A+, Network+ and Security+",
+  "seoTitle": "Common Port Numbers Cheat Sheet for CompTIA Exams",
+  "excerpt": "The port numbers that come up most in CompTIA exams, grouped so they are easier to remember.",
+  "description": "A cheat sheet of the common TCP and UDP port numbers asked about in CompTIA A+, Network+ and Security+, with tips for remembering them.",
+  "tags": [
+    "port numbers",
+    "CompTIA A+",
+    "Network+",
+    "Security+",
+    "cheat sheet"
+  ],
+  "body": "Port numbers come up in CompTIA A+, Network+ and Security+. You'll be asked which port a protocol uses, which protocol runs on a port, or which port to open or block in a scenario. These are the ones worth knowing by heart.\n\n## File transfer and remote access\n\n- **20 and 21:** FTP (20 for data, 21 for control)\n- **22:** SSH, and also SFTP and SCP, which run over SSH\n- **23:** Telnet (unencrypted, so a common \"what should you disable?\" answer)\n- **3389:** RDP, Remote Desktop Protocol\n\n## Email\n\n- **25:** SMTP, sending mail between servers\n- **587:** SMTP submission, used by mail clients to send mail\n- **110:** POP3\n- **143:** IMAP\n- **995:** POP3 over TLS (POP3S)\n- **993:** IMAP over TLS (IMAPS)\n\n## Web and name resolution\n\n- **80:** HTTP\n- **443:** HTTPS\n- **53:** DNS (UDP for most lookups, TCP for zone transfers and large replies)\n\n## Network services\n\n- **67 and 68:** DHCP (67 for the server, 68 for the client)\n- **69:** TFTP\n- **123:** NTP, time synchronisation\n- **161 and 162:** SNMP (162 for traps)\n- **389:** LDAP\n- **636:** LDAPS, LDAP over TLS\n- **445:** SMB, Windows file sharing\n- **137 to 139:** NetBIOS\n\n## Tips for remembering them\n\n- **Learn them in pairs.** Many secure versions have their own port: LDAP 389 and LDAPS 636, POP3 110 and POP3S 995, IMAP 143 and IMAPS 993, HTTP 80 and HTTPS 443.\n- **Think in scenarios.** Exams rarely ask for a bare number. A question might say a user can't reach a website over HTTPS, and you need to know the firewall must allow 443.\n- **Test yourself little and often.** Short daily sessions beat one long cram.\n\nSearch every port in our free [common ports list](/tools/common-ports/), then put them to the test with a free [A+ Core 1 mock test](/a-plus-core-1/mock-test/), [Network+ mock test](/network-plus/mock-test/) or [Security+ mock test](/security-plus/mock-test/)."
+}

@@ -8,7 +8,27 @@ import { notFound } from "next/navigation";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import { getPost, readAllPosts } from "@/lib/blog";
-import { ogImage } from "@/lib/seo";
+import { abs, breadcrumbLd, ogImage, siteUrl } from "@/lib/seo";
+import JsonLd from "@/components/site/JsonLd";
+
+// Inline markdown used in posts: **bold** and [text](/path) links (internal links stay in the site).
+function inline(text: string) {
+  return text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g).map((part, i) => {
+    const bold = part.match(/^\*\*(.+)\*\*$/);
+    if (bold) return <strong key={i} className="font-semibold text-[#0f0f1a]">{bold[1]}</strong>;
+    const link = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (link) {
+      const [, label, href] = link;
+      const cls = "font-semibold text-[#7c3aed] underline decoration-[#7c3aed]/30 underline-offset-4 hover:decoration-[#7c3aed]";
+      return href.startsWith("/") ? (
+        <Link key={i} href={href} className={cls}>{label}</Link>
+      ) : (
+        <a key={i} href={href} target="_blank" rel="noopener noreferrer" className={cls}>{label}</a>
+      );
+    }
+    return part;
+  });
+}
 
 export async function generateStaticParams() {
   return readAllPosts().map((p) => ({ slug: p.slug }));
@@ -49,6 +69,29 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   return (
     <div className="relative">
+      <JsonLd
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            headline: post.seoTitle ?? post.title,
+            description: post.description ?? post.excerpt,
+            datePublished: post.date,
+            dateModified: post.date,
+            url: abs(`/blog/${post.slug}/`),
+            mainEntityOfPage: abs(`/blog/${post.slug}/`),
+            image: `${siteUrl}/og/${post.app ?? "home"}.png`,
+            author: { "@id": `${siteUrl}/#organization` },
+            publisher: { "@id": `${siteUrl}/#organization` },
+            ...(post.tags?.length ? { keywords: post.tags.join(", ") } : {}),
+          },
+          breadcrumbLd([
+            { name: "Home", path: "/" },
+            { name: "Blog", path: "/blog/" },
+            { name: post.title, path: `/blog/${post.slug}/` },
+          ]),
+        ]}
+      />
       <Nav />
       <article className="mx-auto max-w-3xl px-5 pb-12 pt-36 [overflow-wrap:anywhere]">
         <Link href="/blog/" className="text-sm font-semibold text-[#6b6b80] transition-colors hover:text-[#0f0f1a]">
@@ -70,11 +113,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             ) : para.startsWith("- ") ? (
               <ul key={i} className="list-disc space-y-1.5 pl-6">
                 {para.split("\n").map((li, j) => (
-                  <li key={j}>{li.replace(/^- /, "").replace(/\*\*(.*?)\*\*/g, "$1")}</li>
+                  <li key={j}>{inline(li.replace(/^- /, ""))}</li>
                 ))}
               </ul>
             ) : (
-              <p key={i}>{para.replace(/\*\*(.*?)\*\*/g, "$1")}</p>
+              <p key={i}>{inline(para)}</p>
             ),
           )}
         </div>
