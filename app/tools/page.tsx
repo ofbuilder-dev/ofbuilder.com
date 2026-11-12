@@ -21,6 +21,8 @@ const GROUPS: { name: string; color: string; tools: Tool[] }[] = [
       { href: "/tools/subnet-calculator/", emoji: "🧮", title: "Subnet calculator", body: "Network, broadcast, mask and host range for any IPv4 address." },
       { href: "/tools/common-ports/", emoji: "🔌", title: "Common ports", body: "Every port number the CompTIA exams ask about, searchable." },
       { href: "/tools/security-plus-acronyms/", emoji: "🔐", title: "Security+ acronyms", body: "Searchable list of security acronyms and what they mean." },
+      { href: "/tools/osi-model/", emoji: "🧱", title: "OSI model cheat sheet", body: "All 7 layers with protocols, data units and devices, searchable." },
+      { href: "/tools/comptia-passing-scores/", emoji: "🎯", title: "CompTIA passing scores", body: "Pass marks, questions and time for A+, Network+, Security+ and CySA+." },
       { href: "/tools/password-strength-checker/", emoji: "🛡️", title: "Password strength checker", body: "How strong is your password? Checked privately on your device." },
     ],
   },

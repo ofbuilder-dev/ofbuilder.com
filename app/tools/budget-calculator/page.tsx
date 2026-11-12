@@ -32,6 +32,7 @@ export default function BudgetCalculator() {
       <section className="mt-10 rounded-2xl bg-[#ecfdf5] p-6">
         <h2 className="font-display text-xl font-extrabold">How to make the 50/30/20 rule work</h2>
         <ul className="mt-3 space-y-1.5 text-[#3d3d52]">
+          <li>• New to this? Read <a className="font-semibold text-[#047857] underline" href="/blog/2026-11-13-50-30-20-rule-explained/">the 50/30/20 rule explained, with examples</a>.</li>
           <li>• Track one month of spending first, so you know your real numbers.</li>
           <li>• Move the savings amount on payday, before you start spending.</li>
           <li>• Build an emergency fund first, then add to longer-term savings.</li>
