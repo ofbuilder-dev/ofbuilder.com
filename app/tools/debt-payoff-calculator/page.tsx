@@ -32,7 +32,7 @@ export default function DebtPayoffCalculator() {
       <section className="mt-10 rounded-2xl bg-[#ecfdf5] p-6">
         <h2 className="font-display text-xl font-extrabold">Ways to clear debt faster</h2>
         <ul className="mt-3 space-y-1.5 text-[#3d3d52]">
-          <li>• Not sure which method to pick? Read <a className="font-semibold text-[#047857] underline" href="/blog/2026-11-13-debt-avalanche-vs-snowball/">debt avalanche vs snowball, with a worked example</a>.</li>
+          <li>• Not sure which method to pick? Read <a className="font-semibold text-[#047857] underline" href="/blog/2026-11-12-debt-avalanche-vs-snowball/">debt avalanche vs snowball, with a worked example</a>.</li>
           <li>• Always pay at least the minimum on every debt to avoid fees.</li>
           <li>• Put any windfall, such as a bonus or tax refund, towards your target debt.</li>
           <li>• Ask your lender about a lower rate, or look at a balance transfer if you qualify.</li>
