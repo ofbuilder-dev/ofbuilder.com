@@ -32,6 +32,7 @@ export default function HijriDateConverter() {
       <section className="mt-10 rounded-2xl bg-[#ecfdf5] p-6">
         <h2 className="font-display text-xl font-extrabold">More free Islamic tools</h2>
         <ul className="mt-3 space-y-1.5 text-[#3d3d52]">
+          <li>• <a className="font-semibold text-[#0f766e] underline" href="/blog/2026-11-13-ramadan-2027-dates/">Ramadan 2027 and key Islamic dates</a> for the year ahead.</li>
           <li>• <a className="font-semibold text-[#0f766e] underline" href="/tools/prayer-times/">Prayer times</a> for your location today.</li>
           <li>• <a className="font-semibold text-[#0f766e] underline" href="/tools/qibla/">Qibla direction</a> from wherever you are.</li>
           <li>• <a className="font-semibold text-[#0f766e] underline" href="/ilmai/ayah/">Ayah of the day</a>, a short Quran verse to reflect on.</li>
