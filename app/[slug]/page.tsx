@@ -62,7 +62,7 @@ const EXTRAS: Record<string, { emoji: string; title: string; body: string; href:
   ilmai: { emoji: "🕌", title: "Prayer times & Qibla, free", body: "Today's prayer times and the Qibla direction for your location, plus an Ayah of the day to reflect on.", href: "/tools/prayer-times/", cta: "See prayer times" },
   sleepwise: { emoji: "😴", title: "Free sleep calculator", body: "Find the best time to go to bed or wake up, based on 90-minute sleep cycles.", href: "/tools/sleep-calculator/", cta: "Work out my bedtime" },
   renu: { emoji: "💸", title: "What do your subscriptions really cost?", body: "Add what you pay for and see the total per month, per year and over five years. Private, on your device.", href: "/tools/subscription-calculator/", cta: "Add up my subscriptions" },
-  budgetwise: { emoji: "💸", title: "Free subscription cost calculator", body: "See how much your monthly subscriptions add up to over a year.", href: "/tools/subscription-calculator/", cta: "Try the calculator" },
+  budgetwise: { emoji: "📊", title: "Free 50/30/20 budget calculator", body: "Split your take-home pay into needs, wants and savings, then plan your debt payoff and savings goals with our free money tools.", href: "/tools/budget-calculator/", cta: "Try the budget calculator" },
   "driving-theory": { emoji: "🚗", title: "Stopping distances calculator", body: "Learn the Highway Code stopping distances from 20 to 70 mph, on dry, wet and icy roads.", href: "/tools/stopping-distances/", cta: "Open calculator" },
   "motorcycle-theory": { emoji: "🏍️", title: "Stopping distances calculator", body: "Learn the Highway Code stopping distances from 20 to 70 mph, on dry, wet and icy roads.", href: "/tools/stopping-distances/", cta: "Open calculator" },
 };

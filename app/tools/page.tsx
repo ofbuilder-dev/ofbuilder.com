@@ -35,6 +35,7 @@ const GROUPS: { name: string; color: string; tools: Tool[] }[] = [
     tools: [
       { href: "/tools/prayer-times/", emoji: "🕌", title: "Prayer times", body: "Today's Fajr, Dhuhr, Asr, Maghrib and Isha for your location." },
       { href: "/tools/qibla/", emoji: "🧭", title: "Qibla direction", body: "Find the direction of the Kaaba from wherever you are." },
+      { href: "/tools/hijri-date-converter/", emoji: "📅", title: "Hijri date converter", body: "Today's Islamic date, and convert any date to or from the Hijri calendar." },
       { href: "/ilmai/ayah/", emoji: "🌙", title: "Ayah of the day", body: "A short Quran verse every day with its English meaning." },
     ],
   },
@@ -42,6 +43,9 @@ const GROUPS: { name: string; color: string; tools: Tool[] }[] = [
     name: "Money & sleep",
     color: "#10b981",
     tools: [
+      { href: "/tools/budget-calculator/", emoji: "📊", title: "50/30/20 budget calculator", body: "Split your take-home pay into needs, wants and savings." },
+      { href: "/tools/debt-payoff-calculator/", emoji: "💳", title: "Debt payoff calculator", body: "Avalanche vs snowball: when you'll be debt-free and the interest you'll pay." },
+      { href: "/tools/savings-goal-calculator/", emoji: "🎯", title: "Savings goal calculator", body: "How long to reach a goal, or how much to save each month." },
       { href: "/tools/subscription-calculator/", emoji: "💸", title: "Subscription calculator", body: "See what your subscriptions really cost per month and per year." },
       { href: "/tools/sleep-calculator/", emoji: "😴", title: "Sleep calculator", body: "The best time to go to bed or wake up, using 90-minute sleep cycles." },
     ],
