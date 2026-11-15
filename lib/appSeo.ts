@@ -247,13 +247,13 @@ export const appSeo: Record<string, AppSeo> = {
   },
   "mental-math": {
     title: "Mental Math Master: Brain Training & Math Games",
-    description: "Get faster at mental arithmetic with 150+ levels across 4 worlds, Speed Run mode, daily streaks and a global leaderboard. " + play,
-    keywords: ["mental math app", "math games", "brain training app", "mental arithmetic practice", "times tables game", "math speed training", "math puzzle game", "learn mental math"],
+    description: "Get faster at mental math with 9 math games, daily puzzles, a 150-level adventure and math tricks. No ads during play. " + play,
+    keywords: ["mental math app", "math games", "brain training app", "mental arithmetic practice", "math puzzle game", "cross math", "target 24 game", "math sudoku", "math tricks", "learn mental math"],
     heading: "Brain training and math games that make you faster",
-    intro: "Mental Math Master is a math game and brain training app with 150+ levels across 4 worlds. Practise addition, subtraction, multiplication and division, race the clock in Speed Run mode and climb the global leaderboard.",
+    intro: "Mental Math Master is a brain training app with 9 math games, including the Daily Equation, Cross Math, Target 24 and Math Sudoku, a 150-level adventure across 4 worlds and 24 short lessons on mental math tricks. Play offline, with no ads during play and no account.",
     faq: [
-      { q: "How can I get faster at mental math?", a: "Short, regular practice is the key. Timed rounds and daily streaks in Mental Math Master build speed and accuracy over time." },
-      { q: "Is Mental Math Master good for kids?", a: "Yes. Older kids can use it to practise times tables and arithmetic, and adults use it for brain training." },
+      { q: "How can I get faster at mental math?", a: "Short, regular practice and a few shortcuts. Mental Math Master combines daily puzzles, timed speed games and 24 lessons on tricks such as multiplying by 11, and brings back the questions you miss until they stick." },
+      { q: "Can it help with numerical and aptitude tests?", a: "Yes. Custom Practice lets you choose the operations, number range and timer, so you can drill times tables or practise for exams and aptitude tests." },
     ],
   },
   arrowgo: {
