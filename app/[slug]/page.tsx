@@ -103,6 +103,20 @@ export default async function AppPage({ params }: { params: Promise<{ slug: stri
         data={[
           appLd(app, seo.keywords),
           faqLd(faq),
+          ...(app.video
+            ? [
+                {
+                  "@context": "https://schema.org",
+                  "@type": "VideoObject",
+                  name: app.video.caption,
+                  description: app.tagline,
+                  thumbnailUrl: `https://ofbuilder.com${app.video.poster}`,
+                  contentUrl: `https://ofbuilder.com${app.video.src}`,
+                  uploadDate: "2026-11-15",
+                  duration: "PT30S",
+                },
+              ]
+            : []),
           breadcrumbLd([
             { name: "Home", path: "/" },
             { name: suite.name, path: `/suites/${suite.id}/` },
@@ -291,6 +305,24 @@ export default async function AppPage({ params }: { params: Promise<{ slug: stri
           </Reveal>
         </div>
         <Gallery screens={screens} theme={screenTheme} name={app.shortName} icon={app.icon} />
+        {app.video && (
+          <div className="mx-auto mt-16 max-w-4xl px-5">
+            <h3 className="font-display text-2xl font-extrabold sm:text-3xl">{app.video.caption}</h3>
+            {/* preload="none": the trailer downloads only when someone presses play. */}
+            <video
+              controls
+              playsInline
+              preload="none"
+              poster={app.video.poster}
+              width={1280}
+              height={720}
+              className="mt-5 aspect-video w-full rounded-[1.75rem] bg-black shadow-2xl ring-1 ring-black/10"
+            >
+              <source src={app.video.src} type="video/mp4" />
+              <a href={app.video.src}>Download the {app.shortName} trailer</a>
+            </video>
+          </div>
+        )}
       </section>
 
       {/* ── How it works ── */}

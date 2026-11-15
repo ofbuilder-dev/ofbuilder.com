@@ -55,6 +55,7 @@ export type App = {
   features: Feature[];
   howItWorks: Step[];
   screens: Screen[];
+  video?: { src: string; poster: string; caption: string }; // short trailer shown under the screens
   pricing: { free: string[]; pro: string[]; proPrice?: string };
   faq: Faq[];
   reviews: Review[];
@@ -763,6 +764,7 @@ export const apps: App[] = [
       { caption: "The level adventure", kind: "map" },
       { caption: "Your Brain Score", kind: "progress" },
     ],
+    video: { src: "/video/mental-math-trailer.mp4", poster: "/video/mental-math-trailer.jpg", caption: "Mental Math Master in 30 seconds" },
     pricing: {
       free: ["9 math games and 150 levels", "Daily puzzles and math tricks", "One free hint every day", "No ads during play"],
       pro: ["VIP status", "Extra hints", "Extra themes"],
