@@ -15,7 +15,11 @@ function analyse(pw: string) {
   let bits = pw.length ? pw.length * Math.log2(Math.max(pool, 1)) : 0;
   const tips: string[] = [];
   const low = pw.toLowerCase();
-  if (COMMON.some((c) => low.includes(c))) {
+  // Undo common look-alike swaps so "P@ssw0rd" is caught just like "password".
+  const plain = low.replace(/[@4]/g, "a").replace(/0/g, "o").replace(/[1!|]/g, "i").replace(/3/g, "e").replace(/[$5]/g, "s").replace(/7/g, "t");
+  // A common password counts against you when it's most of the password ("password123"),
+  // not when it's one word inside a long random passphrase.
+  if (COMMON.some((c) => (low.includes(c) || plain.includes(c.replace(/1/g, "i"))) && low.length - c.length < 8)) {
     bits = Math.min(bits, 10);
     tips.push("It contains a very common password. Attackers try these first.");
   }
@@ -59,18 +63,34 @@ const LEVELS = [
   ["Strong", "#10b981"],
 ];
 
-// Random passphrase made from words, using the browser's secure random numbers.
-const WORDS = "apple river tiger cloud piano rocket garden silver forest candle orbit maple lemon castle comet harbor pepper violet falcon meadow pixel canyon ember breeze coral glacier lantern mango nebula otter puzzle quartz saddle thunder velvet willow zebra anchor biscuit cobalt".split(" ");
-function passphrase() {
-  const r = new Uint32Array(5);
-  crypto.getRandomValues(r);
-  const words = Array.from(r.slice(0, 4), (n) => WORDS[n % WORDS.length]);
-  return `${words.map((w, i) => (i === 0 ? w[0].toUpperCase() + w.slice(1) : w)).join("-")}-${10 + (r[4] % 90)}!`;
+// Random passphrase: 5 words from the EFF long word list (7,776 words, loaded only when asked) plus a number,
+// using the browser's secure random numbers. The list is public, and it stays strong even if an attacker knows it.
+let wordList: Promise<string[]> | null = null;
+const loadWords = () =>
+  (wordList ??= fetch("/data/eff-wordlist.json")
+    .then((r) => r.json() as Promise<string[]>)
+    .catch((e) => {
+      wordList = null; // let the next click try again
+      throw e;
+    }));
+const pick = (n: number) => {
+  // Rejection sampling keeps every choice equally likely.
+  const max = Math.floor(0x100000000 / n) * n;
+  const r = new Uint32Array(1);
+  do crypto.getRandomValues(r);
+  while (r[0] >= max);
+  return r[0] % n;
+};
+async function passphrase() {
+  const words = await loadWords();
+  const chosen = Array.from({ length: 5 }, () => words[pick(words.length)]);
+  return `${chosen.map((w, i) => (i === 0 ? w[0].toUpperCase() + w.slice(1) : w)).join("-")}-${10 + pick(90)}`;
 }
 
 export default function PasswordChecker() {
   const [pw, setPw] = useState("");
   const [show, setShow] = useState(false);
+  const [busy, setBusy] = useState(false);
   const a = analyse(pw);
   const [label, color] = LEVELS[a.level];
 
@@ -135,15 +155,21 @@ export default function PasswordChecker() {
 
       <div className="mt-8 rounded-2xl bg-[#f3efff] p-5">
         <p className="font-bold">Need a strong one?</p>
-        <p className="mt-1 text-sm text-[#3d3d52]">Random words are long, strong and easy to remember.</p>
+        <p className="mt-1 text-sm text-[#3d3d52]">Five random words and a number: long, strong and easy to remember. Made on your device from the EFF word list.</p>
         <button
-          onClick={() => {
-            setPw(passphrase());
-            setShow(true);
+          onClick={async () => {
+            setBusy(true);
+            try {
+              setPw(await passphrase());
+              setShow(true);
+            } finally {
+              setBusy(false);
+            }
           }}
-          className="mt-3 h-11 rounded-full bg-[#8b5cf6] px-5 text-sm font-bold text-white"
+          disabled={busy}
+          className="mt-3 h-11 rounded-full bg-[#7c3aed] px-5 text-sm font-bold text-white disabled:opacity-60"
         >
-          Generate a passphrase
+          {busy ? "Generating…" : "Generate a passphrase"}
         </button>
       </div>
     </div>
