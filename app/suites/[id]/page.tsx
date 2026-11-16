@@ -60,6 +60,12 @@ export default async function SuitePage({ params }: { params: Promise<{ id: stri
             </p>
             <p className="mt-4 max-w-2xl text-lg text-[#3d3d52]">{suite.description}</p>
           </Reveal>
+          {suite.banner && (
+            <Reveal className="mt-10">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={suite.banner.src} alt={suite.banner.alt} width={suite.banner.width} height={suite.banner.height} className="w-full rounded-[2rem] shadow-2xl ring-1 ring-black/10" />
+            </Reveal>
+          )}
           <div className="mt-12 flex flex-wrap gap-4">
             {list.map((a, i) => (
               <Reveal key={a.slug} delay={0.1 + i * 0.06} y={40}>

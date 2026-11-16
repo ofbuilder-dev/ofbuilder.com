@@ -11,7 +11,7 @@ export function GET() {
   const lines: string[] = [
     "# OfBuilder",
     "",
-    `> OfBuilder is an independent studio that makes ${apps.length} Android apps on Google Play, grouped into ${suites.length} suites: citizenship test prep, UK driving theory, CompTIA IT certifications, kids learning, Islamic apps, and everyday apps for brain training, sleep and money. The website also has free browser-based mock tests and tools.`,
+    `> OfBuilder is an independent studio that makes ${apps.length} Android apps on Google Play, grouped into ${suites.length} suites: citizenship test prep, UK driving theory, CompTIA IT certifications, kids learning, Islamic apps, Playora brain games and puzzles, and everyday apps for sleep and money. The website also has free browser-based mock tests and tools.`,
     "",
     "## Main pages",
     `- [Home](${u("/")}): overview of the studio and all apps`,

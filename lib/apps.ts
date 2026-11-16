@@ -65,7 +65,7 @@ export type App = {
   disclaimer?: string;
 };
 
-export type SuiteId = "citizenship" | "driving" | "comptia" | "kids" | "noor" | "everyday";
+export type SuiteId = "citizenship" | "driving" | "comptia" | "kids" | "noor" | "playora" | "everyday";
 
 export type Suite = {
   id: SuiteId;
@@ -78,6 +78,7 @@ export type Suite = {
   emoji: string;
   why: Feature[];
   upcoming?: { name: string; emoji: string; note: string }[];
+  banner?: { src: string; alt: string; width: number; height: number }; // brand artwork shown on the suite page
 };
 
 export const playDeveloperUrl =
@@ -187,17 +188,35 @@ export const suites: Suite[] = [
     ],
   },
   {
+    id: "playora",
+    name: "Playora",
+    short: "Playora",
+    tagline: "One brand. Many games. Endless fun!",
+    description:
+      "Playora is OfBuilder's games label: brain games, puzzles and math challenges that are fun to pick up and make you a little sharper every day. Every game works offline, so you can play anywhere.",
+    color: "#6d28d9",
+    soft: "#f3efff",
+    emoji: "🎮",
+    why: [
+      { icon: "Brain", title: "Brain games", body: "Quick daily puzzles and speed games that keep your mind sharp." },
+      { icon: "Puzzle", title: "Puzzles for everyone", body: "Calm one-finger mazes and number puzzles, from easy to expert." },
+      { icon: "WifiOff", title: "Play anywhere", body: "Every game works offline, so it's ready on a flight, a commute or a quiet break." },
+    ],
+    upcoming: [{ name: "More games", emoji: "🚀", note: "New brain games and puzzles are on the way" }],
+    banner: { src: "/brand/playora-banner.webp", alt: "Playora by OfBuilder: Mental Math Master, ArrowGo and more games coming soon", width: 1600, height: 616 },
+  },
+  {
     id: "everyday",
     name: "Everyday Essentials",
     short: "Everyday",
-    tagline: "Small daily apps for a sharper mind, better sleep and calmer money.",
+    tagline: "Small daily apps for better sleep and calmer money.",
     description:
-      "Brain training and puzzles, an AI sleep coach, and private money tools that never ask for your bank login. Quick to open and genuinely useful every day.",
+      "An AI sleep coach, a subscription tracker and a private budget planner that never ask for your bank login. Quick to open and genuinely useful every day.",
     color: "#10b981",
     soft: "#e8fbf3",
     emoji: "🎯",
     why: [
-      { icon: "Gamepad2", title: "Fun that sticks", body: "Levels, streaks and rewards that make practice something you look forward to." },
+      { icon: "Moon", title: "Better sleep", body: "A CBT-I based sleep coach with a personal plan, sleep diary and wind-down routines." },
       { icon: "Lock", title: "Privacy-first money tools", body: "No bank linking, ever. Your financial data stays on your device." },
       { icon: "Zap", title: "Quick sessions", body: "Designed for two-minute bursts that fit into a busy day." },
     ],
@@ -739,7 +758,7 @@ export const apps: App[] = [
       "Solve the Daily Equation, Cross Math, Target 24 and Math Sudoku, race the clock in Speed Run, or play Math Duel with a friend on one phone. A 2-minute skill check-up and your Brain Score show how much faster you're getting.",
       "No ads during play, no account and no sign-in. It works offline, any correct answer counts, and your progress stays on your phone.",
     ],
-    suiteId: "everyday",
+    suiteId: "playora",
     icon: "/icons/mental-math.png",
     theme: { primary: "#f29a00", secondary: "#2e9e4f", soft: "#fff4e4" },
     motif: "math",
@@ -789,7 +808,7 @@ export const apps: App[] = [
       "ArrowGo is a satisfying swipe puzzle. Guide the arrow through twisting mazes, plan your moves and reach the goal. It's easy to learn, and the later levels get properly tricky.",
       "Hundreds of hand-tuned levels, crisp animations and a relaxing pace make it perfect for a quick break or a long session.",
     ],
-    suiteId: "everyday",
+    suiteId: "playora",
     icon: "/icons/arrowgo.png",
     theme: { primary: "#2563eb", secondary: "#facc15", soft: "#eef4ff" },
     motif: "maze",
