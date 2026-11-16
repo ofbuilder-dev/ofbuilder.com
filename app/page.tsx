@@ -31,7 +31,7 @@ const VALUES = [
 const FAQ = [
   {
     q: "What is OfBuilder?",
-    a: "OfBuilder is a small independent studio that makes Android apps. We publish 24 apps on Google Play, grouped into six suites: citizenship test prep, UK driving theory, CompTIA IT certifications, Little Sparks for kids, Noor for everyday Muslim life, and Everyday Essentials for brain training, sleep and money.",
+    a: "OfBuilder is a small independent studio that makes Android apps. We publish 24 apps on Google Play, grouped into seven suites: citizenship test prep, UK driving theory, CompTIA IT certifications, Little Sparks for kids, Noor for everyday Muslim life, Playora for brain games and puzzles, and Everyday Essentials for sleep and money.",
   },
   {
     q: "Are OfBuilder apps free?",
@@ -135,7 +135,7 @@ export default function Home() {
         <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
           {[
             { v: "24", l: "apps live on Google Play", c: "#ff6b6b" },
-            { v: "6", l: "focused product suites", c: "#f59e0b" },
+            { v: "7", l: "focused product suites", c: "#f59e0b" },
             { v: "176", l: "countries reached", c: "#4cc9f0" },
             { v: "7", l: "citizenship tests covered", c: "#8b5cf6" },
           ].map((s, i) => (
@@ -200,9 +200,9 @@ export default function Home() {
       {/* Suites */}
       <section id="suites" className="mx-auto max-w-6xl px-5">
         <Reveal className="mb-14 max-w-2xl">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#7c3aed]">Six suites</p>
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#7c3aed]">Seven suites</p>
           <h2 className="font-display mt-3 text-5xl font-extrabold sm:text-6xl">
-            One studio. <span className="text-rainbow">Six families</span> of apps.
+            One studio. <span className="text-rainbow">Seven families</span> of apps.
           </h2>
           <p className="mt-4 text-lg text-[#3d3d52]">Related apps share one polished system, so switching from one to the next feels familiar.</p>
         </Reveal>
@@ -263,7 +263,7 @@ export default function Home() {
           <h2 className="font-display mt-3 text-5xl font-extrabold">Built by a tiny team that ships.</h2>
           <div className="mt-6 space-y-4 text-lg leading-relaxed text-[#3d3d52]">
             <p>OfBuilder started with a simple idea: everyday apps should be beautiful, honest and genuinely helpful. No bloat, no tricks and no mandatory subscriptions.</p>
-            <p>Today we run 24 apps across six suites, used in 176 countries, from people passing their citizenship test to parents settling their kids at bedtime.</p>
+            <p>Today we run 24 apps across seven suites, used in 176 countries, from people passing their citizenship test to parents settling their kids at bedtime.</p>
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link href="/blog/" className="rounded-full bg-white px-6 py-3 font-semibold ring-1 ring-black/10 transition-transform hover:-translate-y-1">Read the blog</Link>

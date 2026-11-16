@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   formatDetection: { telephone: false },
   openGraph: {
     title: "OfBuilder: apps that help you learn, pass, sleep & grow",
-    description: "24 thoughtfully built Android apps across 6 suites.",
+    description: "24 thoughtfully built Android apps across 7 suites.",
     images: ogImage("home", "OfBuilder: apps that help you learn, pass, sleep & grow"),
     url: siteUrl,
     siteName: "OfBuilder",
