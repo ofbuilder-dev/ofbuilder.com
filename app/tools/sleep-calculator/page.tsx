@@ -30,6 +30,10 @@ export default function SleepCalculator() {
           <p className="mt-2 text-[#3d3d52]">Most adults need 7 to 9 hours a night. If you often feel tired, keep a regular bedtime and wake-up time, even at weekends.</p>
         </div>
       </section>
+      <p className="mt-6 text-[#3d3d52]">
+        Want the full picture? Read{" "}
+        <a className="font-semibold text-[#7c3aed] underline" href="/blog/2026-11-17-what-time-should-i-go-to-bed/">what time should I go to bed? Sleep cycles explained</a>.
+      </p>
       <p className="mt-6 text-sm text-[#6b6b80]">This tool gives general guidance only. If you have ongoing sleep problems, talk to a doctor.</p>
     </ToolShell>
   );
