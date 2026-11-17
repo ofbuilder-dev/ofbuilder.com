@@ -45,7 +45,7 @@ export default function OsiModel() {
           Layers 1 to 7: <strong>P</strong>lease <strong>D</strong>o <strong>N</strong>ot <strong>T</strong>hrow <strong>S</strong>ausage <strong>P</strong>izza <strong>A</strong>way. Then tie each layer to one device you know: hub at 1, switch at 2, router at 3.
         </p>
         <p className="mt-3 text-[#3d3d52]">
-          Exam questions often describe a problem and ask which layer it sits at. A broken cable is layer 1, a wrong VLAN is layer 2, a bad IP address or route is layer 3, and a blocked port is layer 4. Learn the ports too with the <a className="font-semibold text-[#7c3aed] underline" href="/tools/common-ports/">common ports list</a>.
+          Exam questions often describe a problem and ask which layer it sits at. A broken cable is layer 1, a wrong VLAN is layer 2, a bad IP address or route is layer 3, and a blocked port is layer 4. Learn the ports too with the <a className="font-semibold text-[#7c3aed] underline" href="/tools/common-ports/">common ports list</a>. More tips in <a className="font-semibold text-[#7c3aed] underline" href="/blog/2026-11-17-how-to-remember-osi-model/">how to remember the OSI model</a>.
         </p>
       </div>
       <ToolFaq items={FAQ} />

@@ -1,0 +1,18 @@
+{
+  "slug": "2026-11-17-how-to-remember-osi-model",
+  "date": "2026-11-17",
+  "category": "Study tips",
+  "app": "network-plus",
+  "title": "How to Remember the OSI Model for Network+ and Security+",
+  "seoTitle": "How to Remember the OSI Model: Mnemonics & Exam Tips",
+  "excerpt": "Mnemonics, one device per layer and the exam-style questions to practise, so the 7 layers finally stick.",
+  "description": "Easy ways to remember the 7 OSI model layers for CompTIA Network+ and Security+: mnemonics, data units, devices at each layer and how exam questions use them.",
+  "tags": [
+    "OSI model",
+    "Network+",
+    "Security+",
+    "CompTIA",
+    "study tips"
+  ],
+  "body": "The OSI model comes up in CompTIA Network+, Security+ and A+, and it's one of those topics that feels confusing until it clicks. Here's how to remember the seven layers and, more importantly, how to use them in exam questions.\n\n## The seven layers\n\nFrom the bottom up:\n\n- **1. Physical:** sends raw bits over cables or radio\n- **2. Data Link:** frames and MAC addresses on the local network\n- **3. Network:** IP addresses and routing between networks\n- **4. Transport:** TCP and UDP, ports and reliable delivery\n- **5. Session:** opens, manages and closes sessions\n- **6. Presentation:** formats, encrypts and compresses data\n- **7. Application:** network services for applications, such as HTTP and DNS\n\n## Use a mnemonic\n\nPick one direction and stick with it.\n\n- **From layer 1 up:** Please Do Not Throw Sausage Pizza Away (Physical, Data Link, Network, Transport, Session, Presentation, Application)\n- **From layer 7 down:** All People Seem To Need Data Processing\n\n## Link each layer to one thing you know\n\nA list of names is hard to remember. A list of names tied to real things is much easier.\n\n- **Layer 1:** hubs, cables and repeaters\n- **Layer 2:** switches and MAC addresses\n- **Layer 3:** routers and IP addresses\n- **Layer 4:** TCP, UDP and port numbers\n\nIf you remember that a switch works at layer 2 and a router at layer 3, the rest falls into place around them.\n\n## Remember the data units\n\nEach of the lower layers has its own name for a piece of data:\n\n- **Layer 1:** bit\n- **Layer 2:** frame\n- **Layer 3:** packet\n- **Layer 4:** segment for TCP, datagram for UDP\n\n## How exam questions use the OSI model\n\nExams rarely ask you to list the layers. Instead, they describe a problem and ask which layer it belongs to.\n\n- A cable is unplugged or damaged: **layer 1**\n- A device is on the wrong VLAN: **layer 2**\n- A wrong IP address or a missing route: **layer 3**\n- A firewall is blocking a port: **layer 4**\n\nIn troubleshooting questions, a good habit is to start at layer 1 and work up. A surprising number of \"network problems\" turn out to be a loose cable.\n\n## Compare it with the TCP/IP model\n\nThe TCP/IP model has four layers. Its Application layer covers OSI layers 5 to 7, Transport matches layer 4, Internet matches layer 3, and Network Access covers layers 1 and 2.\n\n## Practise\n\nKeep the free [OSI model cheat sheet](/tools/osi-model/) open while you study and search any term. Learn the ports that go with layer 4 from the [common ports list](/tools/common-ports/), then test yourself with the free [Network+ mock test](/network-plus/mock-test/)."
+}
