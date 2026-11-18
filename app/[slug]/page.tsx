@@ -112,8 +112,8 @@ export default async function AppPage({ params }: { params: Promise<{ slug: stri
                   description: app.tagline,
                   thumbnailUrl: `https://ofbuilder.com${app.video.poster}`,
                   contentUrl: `https://ofbuilder.com${app.video.src}`,
-                  uploadDate: "2026-11-15",
-                  duration: "PT30S",
+                  uploadDate: app.video.uploaded,
+                  duration: `PT${app.video.seconds}S`,
                 },
               ]
             : []),
