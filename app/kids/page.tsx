@@ -10,6 +10,7 @@ import PlayBadge from "@/components/ui/PlayBadge";
 import Reveal from "@/components/ui/Reveal";
 import { getApp } from "@/lib/apps";
 import { trackedPlayUrl } from "@/lib/questions";
+import ToolFaq from "@/components/tools/ToolFaq";
 
 export const metadata: Metadata = withOg({
   title: { absolute: "Free Learning Games for Kids: ABCs, Counting & Colours" },
@@ -57,6 +58,41 @@ export default function KidsPage() {
           </div>
           <PlayBadge href={trackedPlayUrl(app.playUrl, "kids_hub")} />
         </div>
+
+        <section className="mt-14">
+          <h2 className="font-display text-3xl font-extrabold">For parents</h2>
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            {[
+              ["🔤", "Letters and sounds", "Letter Safari says a letter out loud and asks your child to find the picture that starts with it, building early phonics."],
+              ["🔢", "Counting", "Counting Garden shows a group of pictures to count, then asks for the right number, linking counting to written numbers."],
+              ["🎨", "Colours", "Colour Pop names a colour and your child pops the matching balloon, practising listening and colour names together."],
+            ].map(([e, t, b]) => (
+              <div key={t} className="rounded-[1.75rem] bg-white p-6 ring-1 ring-black/5">
+                <span className="text-3xl">{e}</span>
+                <h3 className="mt-3 text-lg font-bold">{t}</h3>
+                <p className="mt-1.5 text-[#3d3d52]">{b}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-6 rounded-[1.75rem] bg-[#fdf2f8] p-6 text-[#3d3d52]">
+            <h3 className="text-lg font-bold text-[#0f0f1a]">Tips for playing together</h3>
+            <ul className="mt-2 space-y-1.5">
+              <li>• Keep sessions short: a few minutes is plenty for young children.</li>
+              <li>• Sit with them, say the letters, numbers and colours out loud and celebrate every try.</li>
+              <li>• Take it off the screen too: count apples in the kitchen or spot colours on a walk.</li>
+            </ul>
+          </div>
+        </section>
+
+        <ToolFaq
+          items={[
+            { q: "What age are these games for?", a: "They're made for children aged about 2 to 6. The youngest will enjoy tapping and listening with a grown-up, while older children can play on their own." },
+            { q: "Are the games really free?", a: "Yes. They're free to play in the browser, with no ads, no sign-up and nothing to buy." },
+            { q: "Do the games ask for any personal details?", a: "No. There are no accounts and nothing to fill in, and the games never ask for your child's name or any personal details. They simply run in your browser." },
+            { q: "Do they work on phones and tablets?", a: "Yes. They're designed for touch screens with big buttons, and also work on a computer with a mouse. Turn the sound on, because the games speak the letters, numbers and colours." },
+            { q: "Where can my child play more?", a: "The free BrightKids app on Google Play has more learning games for letters, phonics, numbers, shapes and colours." },
+          ]}
+        />
       </main>
       <Footer />
     </div>
