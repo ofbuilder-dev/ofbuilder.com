@@ -5,7 +5,7 @@ import { useMemo, useState } from "react";
 // A searchable reference table. Rows are matched on every column.
 export default function SearchList({ columns, rows, placeholder }: { columns: string[]; rows: string[][]; placeholder: string }) {
   const [q, setQ] = useState("");
-  const wide = columns.length > 4;
+  const wide = columns.length >= 4;
   const shown = useMemo(() => {
     const s = q.trim().toLowerCase();
     return s ? rows.filter((r) => r.some((c) => c.toLowerCase().includes(s))) : rows;
@@ -47,12 +47,12 @@ export default function SearchList({ columns, rows, placeholder }: { columns: st
           {shown.length === 0 && <li className="px-4 py-8 text-center text-[#6b6b80]">Nothing matches “{q}”.</li>}
         </ul>
       )}
-      <div className={`mt-3 overflow-hidden rounded-[1.5rem] bg-white ring-1 ring-black/5 ${wide ? "hidden sm:block" : ""}`}>
+      <div className={`mt-3 overflow-x-auto rounded-[1.5rem] bg-white ring-1 ring-black/5 ${wide ? "hidden sm:block" : ""}`}>
         <table className="w-full text-left text-sm sm:text-base">
           <thead className="bg-[#0f0f1a] text-white">
             <tr>
               {columns.map((c) => (
-                <th key={c} className="px-4 py-3 font-semibold">
+                <th key={c} className="px-3 py-3 font-semibold sm:px-4">
                   {c}
                 </th>
               ))}
@@ -62,7 +62,7 @@ export default function SearchList({ columns, rows, placeholder }: { columns: st
             {shown.map((r, i) => (
               <tr key={r.join("|")} className={i % 2 ? "bg-[#faf8f4]" : ""}>
                 {r.map((c, j) => (
-                  <td key={j} className={`px-4 py-3 align-top ${j === 0 ? "whitespace-nowrap font-bold" : "text-[#3d3d52]"}`}>
+                  <td key={j} className={`px-3 py-3 align-top sm:px-4 ${j === 0 ? "whitespace-nowrap font-bold" : "text-[#3d3d52]"}`}>
                     {c}
                   </td>
                 ))}
